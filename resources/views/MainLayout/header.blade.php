@@ -44,6 +44,10 @@
           /* position: absolute;
           bottom:0;
           width: 100%; */
+          position: fixed;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
       }
       .icons{
           font-size: 40px;
@@ -74,7 +78,7 @@
         <div class="collapse navbar-collapse " id="navbarNavDropdown">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="{{url('/fex')}}">FEX </a>
+              <a class="nav-link" href="{{url('/')}}">FEX </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">TERM</a>
