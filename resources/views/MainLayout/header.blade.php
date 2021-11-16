@@ -41,6 +41,9 @@
       .page-footer{
           background-color:#340856;
           color: white;
+          position: absolute;
+          bottom:0;
+          width: 100%;
       }
       .icons{
           font-size: 40px;
