@@ -119,16 +119,16 @@
         <!-- Grid column -->
         <div class="col-md-4 col-12 mt-md-0 mt-3">
             <div class="row icon_row">
-                <div class="col-lg-3 col-3 icon_div ">
+                <div class="col-lg-2 col-3 icon_div ">
                  <a href="#"><i class="fab fa-facebook-square icons"></i></a>
                 </div>
-                <div class="col-lg-3 col-3 icon_div">
+                <div class="col-lg-2 col-3 icon_div">
                     <a href="#"><i class="fab fa-linkedin icons"></i></a>
                    </div>
-                   <div class="col-lg-3 col-3 icon_div">
+                   <div class="col-lg-2 col-3 icon_div">
                     <a href="#"><i class="fab fa-twitter-square icons"></i></a>
                    </div>
-                   <div class="col-lg-3 col-3 icon_div">
+                   <div class="col-lg-2 col-3 icon_div">
                     <a href="#"><i class="fab fa-youtube icons"></i></a>
                    </div>
             </div>
