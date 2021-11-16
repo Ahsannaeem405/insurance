@@ -20,3 +20,4 @@ Route::view('/login','login');
 Route::view('/signup', 'signup');
 Route::view('/pricing', 'pricing');
 
+
