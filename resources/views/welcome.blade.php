@@ -29,6 +29,11 @@
      .carousel{
         height: 500px;
      }
+     @media only screen and (max-width: 425px)  {
+        .carousel{
+        height: 250px;
+     }
+     }
      .carousel-item img{
          width: 100%;
          max-height: 500px;
