@@ -11,7 +11,7 @@
         background-color: orange;
     text-align: center;
     border-radius: 11px;
-    width: 30%;
+    width: 70px;
     padding-top: 10px;
     padding-bottom: 10px;
     }
@@ -19,7 +19,7 @@
         background-color: purple;
     text-align: center;
     border-radius: 11px;
-    width: 30%;
+    width: 70px;
     padding-top: 10px;
     padding-bottom: 10px;
     }
@@ -28,19 +28,27 @@
     border: 1px solid orange;
     padding: 20px;
     border-radius: 10px;
+    height: 100%;
     }
     .box_purple{
         margin-top: 20px;
     border: 1px solid purple;
     padding: 20px;
     border-radius: 10px;
+    height: 100% !important;
+
     }
-    /* .btn-primary{
-
-  position: absolute;
-  bottom: 2;
-
-    } */
+    .btn-primary{
+        position: absolute;
+    right: 40%;
+    bottom: -8px;
+    /* left: auto;
+    }
+    /* @media only screen and (max-width: 768px) and (min-width: 768px) {
+        .box2{
+            width: 19% !important;
+        }
+} */
  </style>
 @section('content')
  <div class="container con1">
