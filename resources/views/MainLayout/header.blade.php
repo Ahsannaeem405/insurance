@@ -85,7 +85,7 @@
   <body>
     @section('header')
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#"><img src="{{asset('images/logo1.png')}}" alt="" class="logo"></a>
+        <a class="navbar-brand" href="{{url('/')}}"><img src="{{asset('images/logo1.png')}}" alt="" class="logo"></a>
         <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
