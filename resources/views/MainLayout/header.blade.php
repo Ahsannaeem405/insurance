@@ -144,7 +144,7 @@
 
           <!-- Content -->
           {{-- <h5 class="text-uppercase">Footer Content</h5> --}}
-          <p>Copyright © Insurance Toolkits, LLC.</p>
+          {{-- <p>Copyright © Insurance Toolkits, LLC.</p> --}}
 
         </div>
         <!-- Grid column -->
