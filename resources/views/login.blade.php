@@ -19,6 +19,8 @@
         text-decoration: none;
         background-color: #FFD84D !important;
         color: white !important;
+        box-shadow: none !important;
+
     }
     .image_div{
         padding-left: 20px !important;
