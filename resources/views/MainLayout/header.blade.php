@@ -171,13 +171,13 @@
 
           <ul class="list-unstyled">
             <li>
-              <a href="#!">Pricing</a>
+              <a href="{{url('/pricing')}}">Pricing</a>
             </li>
             <li>
-              <a href="#!">Login</a>
+              <a href="{{url('/login')}}">Login</a>
             </li>
             <li>
-              <a href="#!">Sign Up</a>
+              <a href="{{url('/signup')}}">Sign Up</a>
             </li>
 
           </ul>

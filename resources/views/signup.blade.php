@@ -255,7 +255,7 @@
                 </div>
             </div>
             <div class="col-lg-12 col-12" style="padding-top: 20px;">
-                <input type="text" class="form-control" placeholder="Name Or Card">
+                <input type="text" class="form-control" placeholder="Name On Card">
             </div>
             <div class="col-lg-12 col-12" style="padding-top: 20px;">
                 <input type="text" class="form-control" placeholder="Card Number">

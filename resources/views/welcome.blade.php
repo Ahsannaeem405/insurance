@@ -24,6 +24,7 @@
      }
      .con3{
         padding:50px 50px 50px 50px !important;
+        text-align: center;
      }
      .carousel{
         height: 500px;
@@ -207,7 +208,7 @@
    </div>
 
 <div class="container con3" >
-    <center><h3 style="color: #340856">Carriers We Support</h3></center><br>
+    <h3 style="color: #340856">Carriers We Support</h3><br>
     <div class="row row1">
 <div class="col-lg-3 col-6">
     <p style="color: gray">AIG (Guaranteed Issue)</p>
