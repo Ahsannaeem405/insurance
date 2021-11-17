@@ -65,7 +65,11 @@
       .list-unstyled li a{
           color: white;
       }
-
+      @media only screen and (max-width: 425px) {
+        .navbar-toggler{
+            margin-top: -32px;
+        }
+      }
       @media only screen and (max-width: 768px) {
     .active1{
         border: none;
