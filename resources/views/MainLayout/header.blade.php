@@ -25,7 +25,7 @@
       .nav-item{
         padding: 0px 7px 0px 7px;
       }
-      .active{
+      .active1{
           border-bottom: 2px solid darkblue;
       }
       .sign{
@@ -67,6 +67,12 @@
             font-size: 12px;
         }
       }
+      @media only screen and (max-width: 320px)  {
+        .text-uppercase{
+            font-size: 14px;
+        }
+
+    }
   </style>
   <body>
     @section('header')
@@ -77,7 +83,7 @@
         </button>
         <div class="collapse navbar-collapse " id="navbarNavDropdown">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
+            <li class="nav-item active1">
               <a class="nav-link" href="{{url('/')}}">FEX </a>
             </li>
             <li class="nav-item">
