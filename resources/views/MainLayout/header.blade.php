@@ -65,14 +65,16 @@
       .list-unstyled li a{
           color: white;
       }
+
       @media only screen and (max-width: 768px) {
     .active1{
         border: none;
     }
+
     }
       @media only screen and (max-width: 768px) and (min-width: 768px)  {
         .text-uppercase{
-            font-size: 12px;
+            font-size: 15px;
         }
       }
       @media only screen and (max-width: 320px)  {
@@ -157,11 +159,11 @@
         <hr class="clearfix w-100 d-md-none pb-3">
 
         <!-- Grid column -->
-        <div class="col-md-2 col-6 mb-md-0 mb-3">
+        <div class="col-md-2 col-6 mb-md-0 mb-3" style="text-align: left;">
 
           <!-- Links -->
           <b class="text-uppercase">
-            InsuranceToolkits</b>
+            Insurance</b>
 
           <ul class="list-unstyled">
             <li>
@@ -180,10 +182,10 @@
         <!-- Grid column -->
 
         <!-- Grid column -->
-        <div class="col-md-2 col-6 mb-md-0 mb-3">
+        <div class="col-md-2 col-6 mb-md-0 mb-3" style="text-align: left;">
 
           <!-- Links -->
-          <b class="text-uppercase">FexToolkit Tools</b>
+          <b class="text-uppercase">Tools</b>
 
           <ul class="list-unstyled">
             <li>
@@ -208,10 +210,10 @@
 
         </div>
         <!-- Grid column -->
-        <div class="col-md-2 col-6 mb-md-0 mb-3">
+        <div class="col-md-2 col-6 mb-md-0 mb-3" style="text-align: left;">
 
             <!-- Links -->
-            <b class="text-uppercase">TermToolkit Tools</b>
+            <b class="text-uppercase">Term Tools</b>
 
             <ul class="list-unstyled">
               <li>
@@ -236,7 +238,7 @@
 
           </div>
           <!-- Grid column -->
-          <div class="col-md-2 col-6 mb-md-0 mb-3">
+          <div class="col-md-2 col-6 mb-md-0 mb-3" style="text-align: left;">
 
             <!-- Links -->
             <b class="text-uppercase">Legal</b>
