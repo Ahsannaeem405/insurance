@@ -209,7 +209,8 @@
                             </div>
                             <div class="col-lg-5 col-md-5 col-10" style="text-align: center;    display: flex;">
                                 <div class="box1">
-                                    <i class="fas fa-briefcase" style="font-size: 40px; color:white"></i>
+                                    {{-- <i class="fas fa-briefcase" style="font-size: 40px; color:white"></i> --}}
+                                    <i class="fas fa-clipboard-list" style="font-size: 40px; color:white"></i>
 
                                 </div>
                                 <h5 class="heading" style="margin-top: 20px;margin-left: 16px;">Agency</h5>
@@ -274,16 +275,20 @@
                         34
                         .99</span>/month</p>
             </div>
-            <div class="col-lg-6 col-md-6 col-12" style="padding-top: 20px;">
+            <div class="col-lg-12 col-12" style="padding-top: 20px;">
                 <p>By signing up you agree to our <a href="#" style="color: indigo">Terms of Service</a></p>
             </div>
-            <div class="col-lg-12 col-md-12 col-12" style="padding-top: 20px; display:flex;">
+            <div class="col-lg-2 col-md-2 col-4" style="padding-top: 20px;">
                 <label class="switch">
                     <input type="checkbox" checked>
                     <span class="slider round"></span>
                 </label>
-                <p class="p-1">Receive occasional email updates from InsuranceToolkits</p>
             </div>
+            <div class="col-lg-10 col-md-10 col-8" style="padding-top: 20px;">
+            <p>Receive occasional email updates from InsuranceToolkits</p>
+
+            </div>
+
 
         </div>
     </div>

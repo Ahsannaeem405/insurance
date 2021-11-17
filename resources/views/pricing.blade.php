@@ -42,6 +42,7 @@
         position: absolute;
     right: 40%;
     bottom: -8px;
+    }
     /* left: auto;
     }
     /* @media only screen and (max-width: 768px) and (min-width: 768px) {
@@ -95,10 +96,11 @@
 
                     <div class="col-lg-6  col-12" style="text-align: center;    display: flex;">
                         <div class="box1">
-                            <i class="fas fa-briefcase" style="font-size: 40px; color:white"></i>
+                            {{-- <i class="fas fa-briefcase" style="font-size: 40px; color:white"></i> --}}
+                            <i class="fas fa-clipboard-list" style="font-size: 40px; color:white"></i>
 
                         </div>
-                        <h5 class="heading" style="margin-top: 20px;margin-left: 16px;">Bussiness</h5>
+                        <h5 class="heading" style="margin-top: 20px;margin-left: 16px;">Agency</h5>
 
                     </div>
                     <div class="col-lg-6 col-md-6 col-12" style="padding-top:20px; ">
