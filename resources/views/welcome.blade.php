@@ -121,7 +121,7 @@
     <h4 style="color: #340856">Services</h4><br>
 
     <div class="row">
-     <div class="col-md-4 col-12">
+     <div class="col-lg-4 col-sm-6 col-12">
       <div class="card baseBlock">
      <img class="card-img-top" data-src="holder.js/100px180/" alt="100%x180" style="height: 180px; width: 100%; display: block;" src="{{asset('images/CRM.png')}}" data-holder-rendered="true">
      <div class="card-body">
@@ -131,7 +131,7 @@
      </div>
    </div>
      </div>
-        <div class="col-md-4 col-12">
+        <div class="col-lg-4 col-sm-6 col-12">
       <div class="card baseBlock">
      <img class="card-img-top" data-src="holder.js/100px180/" alt="100%x180" style="height: 180px; width: 100%; display: block;" src="{{asset('images/drug.png')}}" data-holder-rendered="true">
      <div class="card-body">
@@ -141,7 +141,7 @@
      </div>
    </div>
      </div>
-        <div class="col-md-4 col-12">
+        <div class="col-lg-4 col-sm-6 col-12">
       <div class="card baseBlock">
      <img class="card-img-top" data-src="holder.js/100px180/" alt="100%x180" style="height: 180px; width: 100%; display: block;" src="{{asset('images/ultimate-insurance-cheat-sheet-0.png')}}" data-holder-rendered="true">
      <div class="card-body">
@@ -151,7 +151,7 @@
      </div>
    </div>
      </div>
-        <div class="col-md-4 col-12">
+        <div class="col-lg-4 col-sm-6 col-12">
       <div class="card baseBlock">
      <img class="card-img-top" data-src="holder.js/100px180/" alt="100%x180" style="height: 180px; width: 100%; display: block;" src="{{asset('images/image(1).jpg')}}" data-holder-rendered="true">
      <div class="card-body">
@@ -161,7 +161,7 @@
      </div>
    </div>
      </div>
-        <div class="col-md-4 col-12">
+        <div class="col-lg-4 col-sm-6 col-12">
       <div class="card baseBlock">
      <img class="card-img-top" data-src="holder.js/100px180/" alt="100%x180" style="height: 180px; width: 100%; display: block;" src="{{asset('images/images (2).png')}}" data-holder-rendered="true">
      <div class="card-body">
@@ -171,7 +171,7 @@
      </div>
    </div>
      </div>
-        <div class="col-md-4 col-12">
+        <div class="col-lg-4 col-sm-6 col-12">
       <div class="card baseBlock">
      <img class="card-img-top" data-src="holder.js/100px180/" alt="100%x180" style="height: 180px; width: 100%; display: block;" src="{{asset('images/Healthcare_terms_word_cloud.png')}}" data-holder-rendered="true">
      <div class="card-body">
