@@ -33,6 +33,11 @@
         .carousel{
         height: 250px;
      }
+     .carousel-item img {
+       min-height: 250px;
+
+     }
+
      }
      .carousel-item img{
          width: 100%;
