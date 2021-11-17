@@ -53,6 +53,7 @@
         background-color: #FFD84D !important;
         color: white !important;
         border: none !important;
+        box-shadow: none !important;
 
     }
 
