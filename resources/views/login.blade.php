@@ -46,7 +46,7 @@
 <div class="container con1">
     <div class="row row1">
         <div class="col lg-8 image_div">
-            <img src="{{asset('images/login.jpg')}}" alt="" style="max-height: 460px; width:100%;">
+            <img src="{{asset('images/20944573.jpg')}}" alt="" style="max-height: 500px; width:100%;">
         </div>
         <div class="col-lg-4 login">
             <h4 style="color: darkblue;" >Login</h4>

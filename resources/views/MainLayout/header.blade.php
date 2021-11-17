@@ -65,6 +65,11 @@
       .list-unstyled li a{
           color: white;
       }
+      @media only screen and (max-width: 768px) {
+    .active1{
+        border: none;
+    }
+    }
       @media only screen and (max-width: 768px) and (min-width: 768px)  {
         .text-uppercase{
             font-size: 12px;
