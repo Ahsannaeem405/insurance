@@ -59,6 +59,9 @@
       .icon_row{
           padding: 20px 50px 30px 0px;
       }
+      .list-unstyled{
+          text-align: left;
+      }
       .list-unstyled li a{
           color: white;
       }
