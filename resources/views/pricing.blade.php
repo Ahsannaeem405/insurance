@@ -42,6 +42,8 @@
         position: absolute;
     right: 40%;
     bottom: -8px;
+    box-shadow: none !important;
+    border: none !important;
     }
     /* left: auto;
     }
