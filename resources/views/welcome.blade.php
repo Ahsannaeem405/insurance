@@ -196,7 +196,7 @@
             <h3 style="color: #340856">Why do we need Insurance?</h3>
             <p>Insurance is a way of managing risks. When you buy insurance, you transfer the cost of a potential loss to the insurance company in exchange for a fee, known as the premium. Insurance companies invest the funds securely, so it can grow, and pay out when there’s a claim.</p>
         </div>
-        <div class="col-lg-6 col-md-6 col-12">
+        <div class="col-lg-6  col-12">
             <img src="{{asset('images/slider4.jpg')}}" style="width: 100%;border-radius:10px;" alt="">
         </div>
     </div><br><br>
