@@ -24,6 +24,11 @@ Route::view('/fex', 'fex');
 Route::view('/med', 'med');
 Route::view('/term', 'term');
 
+Route::prefix('user')->group(function () {
+route::view('/fex','Logged_pages.fex');
+
+});
+
 
 
 
