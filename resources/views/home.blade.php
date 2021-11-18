@@ -137,16 +137,43 @@
 
       <div class="carousel-item active">
         <img class="d-block w-100" src="{{asset('images/Slider2.jpg')}}" alt="First slide">
+        {{-- <div class="carousel-caption">
+            <h3 style="color: purple"><i class="fas fa-clinic-medical"></i> MedSupp Insurance</h3><br>
+            <div style="display: inline-flex">
+                <button style="background-color: purple" class="btn btn-dark">Start Free Trail</button>
+                <button style="margin-left: 20px;"  class="btn btn-dark">Demo</button>
+
+            </div>
+
+          </div> --}}
 
 
 
       </div>
       <div class="carousel-item">
         <img class="d-block w-100" src="{{asset('images/slider3.jpg')}}" alt="Second slide">
+        {{-- <div class="carousel-caption">
+            <h3 style="color: purple"><i class="fas fa-hourglass-end"></i> Term Insurance</h3><br>
+
+            <div style="display: inline-flex">
+                <button style="background-color: purple" class="btn btn-dark">Start Free Trail</button>
+                <button style="margin-left: 20px;"  class="btn btn-dark">Demo</button>
+
+            </div>
+          </div> --}}
 
       </div>
       <div class="carousel-item">
         <img class="d-block w-100" src="{{asset('images/slider4.jpg')}}" alt="Third slide">
+        <div class="carousel-caption">
+            <h3 style="color: purple"><i class="fas fa-briefcase-medical"></i> Fex Insurance</h3><br>
+
+            {{-- <div style="display: inline-flex">
+                <button style="background-color: purple" class="btn btn-dark">Start Free Trail</button>
+                <button style="margin-left: 20px;"  class="btn btn-dark">Demo</button>
+
+            </div> --}}
+          </div>
       </div>
     </div>
     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
