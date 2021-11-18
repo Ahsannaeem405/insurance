@@ -94,41 +94,33 @@
 	transform: translate(0, -8px);
 	box-shadow: 0 40px 40px rgba(0, 0, 0, 0.2);
 }
+.con_fluid{
+    background-color: whitesmoke;
+}
+.btn{
+    box-shadow: none !important;
+}
 
  </style>
 @section('content')
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-    <ol class="carousel-indicators">
-      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active" ></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-    </ol>
-    <div class="carousel-inner">
+<div class="container-fluid con_fluid">
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-12" style="padding: 150px 80px 20px 80px;">
+            <h1 style="color: purple"><i class="fas fa-clinic-medical"></i> MedSupp Insurance</h1><br>
+            <p style="color: purple">An underwriting, quoting, CRM, and sales software tool suite designed for Medicare Supplement insurance agents.</p> <br>
+            <div style="display: inline-flex">
+                <button style="background-color: purple" class="btn btn-dark">Start Free Trail</button>
+                <button style="margin-left: 20px;"  class="btn btn-dark">Demo</button>
 
-      <div class="carousel-item active">
-        <img class="d-block w-100" src="{{asset('images/Slider2.jpg')}}" alt="First slide">
-
-
-      </div>
-      <div class="carousel-item">
-        <img class="d-block w-100" src="{{asset('images/slider3.jpg')}}" alt="Second slide">
-
-      </div>
-      <div class="carousel-item">
-        <img class="d-block w-100" src="{{asset('images/slider4.jpg')}}" alt="Third slide">
-      </div>
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-12">
+            <img src="{{asset('images/abstract_566-removebg-preview.png')}}" style="width: 100%;max-height:550px;" alt="">
+        </div>
     </div>
-    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div>
+</div>
 
-  <div class="container" style="margin-top:40px;">
+  <div class="container" style="margin-top:80px;">
     <h4 style="color: #340856">Services</h4><br>
 
     <div class="row">
@@ -195,8 +187,8 @@
     </div>
    </div>
 
-   <div class="container con2">
-    <div class="row">
+   <div class="container con2" style="margin-top: 80px;">
+    <div class="row" >
         <div class="col-lg-6 col-12">
             <h3 style="color: #340856">Why do we need Insurance?</h3>
             <p>Insurance is a way of managing risks. When you buy insurance, you transfer the cost of a potential loss to the insurance company in exchange for a fee, known as the premium. Insurance companies invest the funds securely, so it can grow, and pay out when there’s a claim.</p>
@@ -205,7 +197,7 @@
             <img src="{{asset('images/slider4.jpg')}}" style="width: 100%;border-radius:10px;" alt="">
         </div>
     </div><br><br>
-    <div class="row">
+    <div class="row" style="margin-top: 40px;">
 
         <div class="col-lg-6 col-12">
             <img src="{{asset('images/slider4.jpg')}}" style="width: 100%;border-radius:10px;" alt="">
@@ -217,7 +209,7 @@
     </div>
    </div>
 
-<div class="container con3" >
+<div class="container con3" style="margin-top: 80px;" >
     <h3 style="color: #340856">Carriers We Support</h3><br>
     <div class="row row1">
 <div class="col-lg-3 col-6">
@@ -251,7 +243,7 @@
 
 
 
-<div class="container con1" style="margin-top: 30px;">
+<div class="container con1" style="margin-top: 80px;">
     <div class="row row1">
         <div class="col-lg-8 col-md-6 col-12">
             {{-- <img src="{{asset('images/message.jpg')}}" alt="" style="max-height: 460px; width:100%;"> --}}

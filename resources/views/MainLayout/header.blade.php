@@ -98,13 +98,13 @@
         <div class="collapse navbar-collapse " id="navbarNavDropdown">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active1">
-              <a class="nav-link" href="{{url('/')}}">FEX </a>
+              <a class="nav-link" href="{{url('/fex')}}">FEX </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">TERM</a>
+              <a class="nav-link" href="{{url('/term')}}">TERM</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">MED SUPP</a>
+              <a class="nav-link" href="{{url('/med')}}">MED SUPP</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{{url('/pricing')}}">PRICING</a>

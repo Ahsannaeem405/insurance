@@ -2,12 +2,13 @@
 @section('title')
  <title>Pricing</title>
  @endsection
+ <link rel="stylesheet" href="{{asset('css/pricing.css')}}">
  <style>
      .con1{
          padding:50px;
          text-align: center;
      }
-      .box{
+      /* .box{
         background-color: orange;
     text-align: center;
     border-radius: 11px;
@@ -44,7 +45,7 @@
     bottom: -8px;
     box-shadow: none !important;
     border: none !important;
-    }
+    } */
     /* left: auto;
     }
     /* @media only screen and (max-width: 768px) and (min-width: 768px) {
@@ -55,111 +56,51 @@
  </style>
 @section('content')
  <div class="container con1">
-     <h3>Pricing</h3>
-    <div class="row">
-        <div class="col-lg-6 col-md-6 col-12 " style="margin-top:20px;">
-            <div class="box_orange" >
-                <div class="row">
-
-                    <div class="col-lg-6  col-12" style="text-align: center;    display: flex;">
-                        <div class="box">
-                            <i class="fas fa-briefcase" style="font-size: 40px; color:white"></i>
-
+     <h2 style="color:#340856">Pricing</h2><br><br>
+     <div class="demo">
+        <div class="container">
+            <div class="row">
+                <div class="offset-md-3 col-md-6 col-sm-6">
+                    <div class="pricingTable">
+                        <div class="pricingTable-header">
+                            <h3 class="title">Bussiness</h3>
                         </div>
-                        <h5 class="heading" style="margin-top: 20px;margin-left: 16px;">Bussiness</h5>
+                        <div class="price-value">
+                            <span class="amount">$10</span>
+                        </div>
+                        <span class="time">Per Month</span>
+                        <ul class="pricing-content">
+                            <li> Unlimited use of FexToolkit, TermToolkit, and MedSuppToolkit</li>
+                            <li>Unlimited use of the quoter and underwriter</li>
+                            <li>Unlimited use of all in-field sales tools</li>
+                            <li>Access to CRM</li>
 
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-12" style="padding-top:20px; ">
-                        <b style="float:right;">
-                            $
-                            34
-                            .99
-                            /month</b>
-                    </div>
-
-                    <div class="col-lg-12 col-12" style="padding-top:20px; text-align:left; ">
-
-                            <p><i class="fas fa-check" style="color: orange;font-size:25px;"></i> Unlimited use of FexToolkit, TermToolkit, and MedSuppToolkit</p>
-                            <p><i class="fas fa-check" style="color: orange;font-size:25px;"></i> Unlimited use of the quoter and underwriter</p>
-                            <p><i class="fas fa-check" style="color: orange;font-size:25px;"></i> Unlimited use of all in-field sales tools</p>
-                            <p><i class="fas fa-check" style="color: orange;font-size:25px;"></i> Access to CRM</p>
-                            <p><i class="fas fa-check" style="color: orange;font-size:25px;"></i> Unlimited quotes per day on your shareable ‘Lite Link’. Every account comes with your own public URL that you can share with a colleague or bookmark on your phone.</p>
-
+                        </ul>
+                        <div class="pricingTable-signup">
+                            <a href="#">Start Free Trail</a>
+                        </div>
                     </div>
                 </div>
-
-
-                <center><button class="btn btn-primary" style="background-color: orange">Start Free Trail</button></center>
-            </div>
-        </div>
-        <div class="col-lg-6 col-md-6 col-12 " style="margin-top:20px;">
-            <div class="box_purple" style="height:390px;">
-                <div class="row">
-
-                    <div class="col-lg-6  col-12" style="text-align: center;    display: flex;">
-                        <div class="box1">
-                            {{-- <i class="fas fa-briefcase" style="font-size: 40px; color:white"></i> --}}
-                            <i class="fas fa-clipboard-list" style="font-size: 40px; color:white"></i>
-
+                {{-- <div class="col-md-4 col-sm-6">
+                    <div class="pricingTable green">
+                        <div class="pricingTable-header">
+                            <h3 class="title">Business</h3>
                         </div>
-                        <h5 class="heading" style="margin-top: 20px;margin-left: 16px;">Agency</h5>
-
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-12" style="padding-top:20px; ">
-                        <b style="float:right;">
-                            $
-                            34
-                            .99
-                            /month</b>
-                    </div>
-
-                    <div class="col-lg-12 col-12" style="padding-top:20px; text-align:left; ">
-
-                            <p><i class="fas fa-check" style="color: purple;font-size:25px;"></i>Create and remove agent accounts</p>
-                            <p><i class="fas fa-check" style="color: purple;font-size:25px;"></i> Includes 5 agent accounts. More accounts can be added at $24.99/account per month.</p>
-
-
-                    </div>
-                </div>
-
-                <center><button class="btn btn-primary" style="background-color: purple">Start Free Trail</button></center>
-
-            </div>
-        </div>
-         <div class=" offset-lg-2 offset-md-2 col-lg-8 col-md-8 col-12 " style="margin-top:20px;">
-            <div class="box_purple">
-                <div class="row">
-
-                    <div class="col-lg-6  col-12" style="text-align: center;    display: flex;">
-                        <div class="box1">
-                            <i class="fas fa-briefcase" style="font-size: 40px; color:white"></i>
-
+                        <div class="price-value">
+                            <span class="amount">$20</span>
                         </div>
-                        <h5 class="heading" style="margin-top: 20px;margin-left: 16px;">Bussiness</h5>
-
+                        <span class="time">Per Month</span>
+                        <ul class="pricing-content">
+                            <li>50GB Disk Space</li>
+                            <li>50 Email Accounts</li>
+                            <li>50GB Bandwidth</li>
+                            <li>15 Subdomains</li>
+                        </ul>
+                        <div class="pricingTable-signup">
+                            <a href="#">Sign Up</a>
+                        </div>
                     </div>
-
-                    <div class="col-lg-6 col-12" style="padding-top:20px; ">
-                        <b style="float:right;">
-                            $
-                            34
-                            .99
-                            /month</b>
-                    </div>
-
-                    <div class="col-lg-12 col-12" style="padding-top:20px; text-align:left; ">
-                <center><b>All the features of the Agency Plan, plus..</b></center>
-
-
-                            <p><i class="fas fa-check" style="color: purple;font-size:25px;"></i>Create and remove agent accounts</p>
-                            <p><i class="fas fa-check" style="color: purple;font-size:25px;"></i> Includes 5 agent accounts. More accounts can be added at $24.99/account per month.</p>
-
-
-                    </div>
-                </div>
-
-                <center><button class="btn btn-primary" style="background-color: purple">Start Free Trail</button></center>
-
+                </div> --}}
             </div>
         </div>
     </div>
