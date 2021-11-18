@@ -115,7 +115,7 @@
             </div>
         </div>
         <div class="col-lg-6 col-md-6 col-12">
-            <img src="{{asset('images/abstract_566-removebg-preview.png')}}" style="width: 100%;max-height:550px;" alt="">
+            <img src="{{asset('images/container-fluid.png')}}" style="width: 100%;max-height:550px;" alt="">
         </div>
     </div>
 </div>
@@ -262,5 +262,14 @@
     </div>
 
 </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
+<script>
+         $(document).ready(function(){
+
+    $('.nav-item').removeClass("active1");
+    $('#term').addClass("active1");
+
+});
+     </script>
 @endsection

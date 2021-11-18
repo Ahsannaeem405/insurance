@@ -25,6 +25,10 @@
       .nav-item{
         padding: 0px 7px 0px 7px;
       }
+      /* .nav-item:hover{
+        border-bottom: 2px solid darkblue;
+
+      } */
       .active1{
           border-bottom: 2px solid darkblue;
       }
@@ -97,20 +101,20 @@
         </button>
         <div class="collapse navbar-collapse " id="navbarNavDropdown">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item active1">
-              <a class="nav-link" href="{{url('/fex')}}">FEX </a>
+            <li class="nav-item">
+              <a class="nav-link "  id="fex" href="{{url('/fex')}}">FEX </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{url('/term')}}">TERM</a>
+              <a class="nav-link" id="term" href="{{url('/term')}}">TERM</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{url('/med')}}">MED SUPP</a>
+              <a class="nav-link"  id="med" href="{{url('/med')}}">MED SUPP</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{url('/pricing')}}">PRICING</a>
+                <a class="nav-link"  id="pricing" href="{{url('/pricing')}}">PRICING</a>
               </li>
               <li class="nav-item ">
-                <a class="nav-link" href="{{url('/login')}}">LOGIN</a>
+                <a class="nav-link"  id="login" href="{{url('/login')}}">LOGIN</a>
               </li>
               <li class="nav-item sign_tag">
                 <a class="nav-link sign" href="{{url('/signup')}}">SIGN UP</a>
@@ -288,5 +292,6 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
   </body>
 </html>
