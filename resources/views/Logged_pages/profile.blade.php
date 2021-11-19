@@ -87,11 +87,11 @@
         <div class="container-fluid" style="padding: 50px;">
            <div class="row">
                 <div class="col-lg-1 col-md-3 col-12 ">
-                    <a href="{{url('/user/invoice')}}" style="background-color: white; color:black;" class="btn btn-dark mt-2 mt-lg-0 mt-md-0">Overview</a>
+                    <a href="{{url('/user/account')}}" style="background-color: #340856; color:white;" class="btn btn-dark mt-2 mt-lg-0 mt-md-0">Overview</a>
 
                 </div>
                 <div class="col-lg-1 col-md-3 col-12 ">
-                    <a href="{{url('/user/account')}}" style="background-color: #340856;" class="btn btn-dark mt-2 mt-lg-0 mt-md-0">Invoice</a>
+                    <a href="{{url('/user/invoice')}}" style="background-color: white; color:black;" class="btn btn-dark mt-2 mt-lg-0 mt-md-0">Invoice</a>
                 </div>
                 <div class="col-lg-1 col-md-3 col-12 ">
                     <a href="{{url('/user/creditcard')}}" style="background-color: white; color:black; " class="btn btn-dark mt-2 mt-lg-0 mt-md-0">Credit Card</a>
