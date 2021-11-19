@@ -32,6 +32,7 @@ Route::view('/crm','Logged_pages.crm');
 Route::view('/account','Logged_pages.profile');
 Route::view('/invoice', 'Logged_pages.invoice');
 Route::view('/creditcard', 'Logged_pages.creditcard');
+Route::view('/overview', 'Logged_pages.overview');
 
 
 
