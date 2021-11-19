@@ -113,7 +113,7 @@
                         </h4><br>
                         <input type="text " value="Visa XXXX-XXXX-XXXX-7353" class="form-control" readonly>
                         <br>
-                        <button class="btn btn-dark" style="background-color: #340856; float: right;">Add Card</button>
+                        <button class="btn btn-dark" data-toggle="modal" data-target="#exampleModal" style="background-color: #340856; float: right;">Add Card</button>
                     </div>
                     <div class="col-lg-7 col-12 mt-lg-5 status">
                         <h6 style="color: #340856;">Cards on file</h6>
@@ -122,7 +122,7 @@
                         </h4><br>
                         <input type="text " value="Visa XXXX-XXXX-XXXX-7353" class="form-control" readonly>
                         <br>
-                        <button class="btn btn-dark" style="background-color: #340856; float: right;">Add Card</button>
+                        {{-- <button class="btn btn-dark" style="background-color: #340856; float: right;">Add Card</button> --}}
                     </div>
 
 
@@ -134,6 +134,35 @@
     </div>
 
 </div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Add Card</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="container" style="text-align: center;">
+              <img src="{{asset('images/credit-cards.png')}}" class="mb-5" style="width: 80%;" alt="">
+
+              <input type="text" placeholder="Name on card" class="form-control"><br>
+              <input type="text" placeholder="Card Number" class="form-control"><br>
+              <input type="text" placeholder="Exp Date" class="form-control"><br>
+              <input type="text" placeholder="CVC" class="form-control"><br>
+
+
+
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-dark" style="background-color: #340856;">Add Card</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
 @endsection
