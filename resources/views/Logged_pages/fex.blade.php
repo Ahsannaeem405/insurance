@@ -28,7 +28,7 @@
 
         <!-- Tab panes -->
         <div class="tab-content">
-            <div role="tabpanel" class="tab-pane fade in active" id="Quoter">
+            <div role="tabpanel" class="tab-pane  active" id="Quoter">
                 <div class="container-fluid" style="padding-top: 50px;">
                     <center>
                         <h3 style="color: rgb(52, 8, 86)">Get a Final Expense Quote</h3>
