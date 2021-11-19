@@ -106,16 +106,16 @@
               <a class="nav-link "  id="fex" href="{{url('/user/fex')}}">FEX </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" id="term" href="{{url('/term')}}">TERM</a>
+              <a class="nav-link" id="term" href="{{url('/user/term')}}">TERM</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link"  id="med" href="{{url('/med')}}">MED SUPP</a>
+              <a class="nav-link"  id="med" href="{{url('/user/quoter')}}">Quoter</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link"  id="pricing" href="{{url('/pricing')}}">CRM</a>
-              </li>
+            {{-- <li class="nav-item">
+                <a class="nav-link"  id="pricing" href="{{url('/user/crm')}}">CRM</a>
+              </li> --}}
               <li class="nav-item ">
-                <a class="nav-link"  id="login" href="{{url('/login')}}">Accounts</a>
+                <a class="nav-link"  id="login" href="{{url('/user/account')}}">Accounts</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="{{url('/signup')}}">Logout</a>

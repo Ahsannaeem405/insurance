@@ -74,7 +74,7 @@ display: block;
             <div role="tabpanel" class="tab-pane  active" id="Quoter">
                 <div class="container-fluid" style="padding-top: 50px;">
                     <center>
-                        <h3 style="color: rgb(52, 8, 86)">Get a Final Expense Quote</h3>
+                        <h3 style="color: rgb(52, 8, 86)">Get a Term Quote</h3>
                     </center>
                     <div class="row" style="margin-top: 40px;">
                         <div class="col-lg-6 col-12" style="border-right: 1px solid lightgray ">

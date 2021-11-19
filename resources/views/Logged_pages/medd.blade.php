@@ -1,6 +1,6 @@
 @extends('MainLayout.logged_header')
 @section('title')
-    <title>Fex</title>
+    <title>Quoter</title>
 @endsection
 <style>
 .table{
@@ -58,7 +58,7 @@ display: block;
             <li class="nav-item">
                 <a class="nav-link" href="#Quotecompare" role="tab" data-toggle="tab">Quote Compare</a>
             </li>
-            <li class="nav-item">
+            {{-- <li class="nav-item">
                 <a class="nav-link" href="#drug" role="tab" data-toggle="tab">Drug Lookup</a>
             </li>
             <li class="nav-item">
@@ -66,7 +66,7 @@ display: block;
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#references" role="tab" data-toggle="tab">Customize Carriers</a>
-            </li>
+            </li> --}}
         </ul>
 
         <!-- Tab panes -->
@@ -74,7 +74,7 @@ display: block;
             <div role="tabpanel" class="tab-pane  active" id="Quoter">
                 <div class="container-fluid" style="padding-top: 50px;">
                     <center>
-                        <h3 style="color: rgb(52, 8, 86)">Get a Final Expense Quote</h3>
+                        <h3 style="color: rgb(52, 8, 86)">Quoter</h3>
                     </center>
                     <div class="row" style="margin-top: 40px;">
                         <div class="col-lg-6 col-12" style="border-right: 1px solid lightgray ">
@@ -320,7 +320,7 @@ display: block;
                     </div>
                 </div>
             </div>
-            <div role="tabpanel" class="tab-pane fade" id="drug">
+            {{-- <div role="tabpanel" class="tab-pane fade" id="drug">
                 <div class="container" style="text-align: center;width:50%;padding-top:50px;">
                     <h3 style="color: rgb(52, 8, 86)">Fex Drug Lookup</h3>
 
@@ -356,7 +356,7 @@ display: block;
                     <button class="btn btn-dark" style="background-color: #340856">Lookup</button>
 
                 </div>
-            </div>
+            </div> --}}
         </div>
 
         <div class="container table">
