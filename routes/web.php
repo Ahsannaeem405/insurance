@@ -40,6 +40,20 @@ Route::view('/overview', 'Logged_pages.overview');
 
 });
 
+Route::prefix('admin')->group(function () {
+    Route::view('/index','Admin_asstes.index');
+    Route::view('/viewuser', 'Admin_asstes.viewuser');
+    Route::view('/edituser', 'Admin_asstes.edituser');
+    Route::view('/subscriptions', 'Admin_asstes.subscriptions');
+    Route::view('/setting', 'Admin_asstes.setting');
+    Route::view('/profile', 'Admin_asstes.profile');
+
+
+
+
+    });
+
+
 
 
 
