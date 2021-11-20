@@ -495,7 +495,7 @@ display: block;
                               </div>
                           </div>
 
-                          <div class="row" style="margin-top: 40px;">
+                          <div class="row">
 
                               <div class="col-lg-7" style="margin-top: 40px;">
                                   <label for="cars">Nicotine Use:</label>
