@@ -33,7 +33,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('admin/admin/app-assets/css/core/colors/palette-gradient.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('admin/admin/app-assets/css/custom.css') }}">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.css" id="theme-styles">
-    <link rel="stylesheet" type="text/css" href="{{asset('admin/admin//app-assets/css/plugins/forms/wizard.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('admin/admin/app-assets/css/plugins/forms/wizard.css')}}">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{asset('admin/admin/app-assets/vendors/css/charts/apexcharts.css')}}">
 
@@ -81,7 +81,7 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {
 <div class="sidenav-overlay"></div>
 <div class="drag-target"></div>
 
-<script src="{{ asset('admin/admin/app-assets/vendors/js/vendors.min.js') }}"></script>
+<script src="{{asset('admin/admin/app-assets/vendors/js/vendors.min.js') }}"></script>
 <script src="{{asset('admin/admin/app-assets/js/scripts/datatables/datatable.js') }}"></script>
 
 
