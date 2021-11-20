@@ -57,11 +57,11 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {
 <body class="vertical-layout vertical-menu-modern 2-columns  navbar-floating footer-static  " data-open="click" data-menu="vertical-menu-modern" data-col="2-columns">
 
 <!-- BEGIN: Navbar-->
-@include('admin_asstes.layouts.navbar')
+@include('Admin_asstes.layouts.navbar')
 <!--End: Navbar-->
 
 <!-- BEGIN: Sidebar-->
-@include('admin_asstes.layouts.sidebar')
+@include('Admin_asstes.layouts.sidebar')
 <!-- END: Sidebar-->
 
 
