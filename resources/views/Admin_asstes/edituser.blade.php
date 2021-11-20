@@ -36,7 +36,7 @@
                         <input type="password" class="form-control" placeholder="Confirm Password">
                     </div>
                     <div class="col-lg-12 col-12 mt-2">
-                        <button class="btn btn-dark" style="float: right;">Update</button>
+                        <button class="btn btn-dark" style="float: right;">Update User</button>
                     </div>
 
                  </div>
