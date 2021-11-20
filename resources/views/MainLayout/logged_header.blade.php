@@ -4,6 +4,8 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" type="image/x-icon" href="{{asset('images/images2.png')}}" />
+
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -15,6 +17,12 @@
 
   </head>
   <style>
+           nav {
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+}
+         body{
+        font-family: "Times New Roman", Times, serif;
+      }
       .nav-link{
           font-weight: 700;
           color: darkblue !important;
@@ -26,22 +34,22 @@
       .nav-item{
         padding: 0px 7px 0px 7px;
       }
-      .nav-item:hover{
+      /* .nav-item:hover{
+        border-bottom: 1px solid darkblue;
+
+      } */
+      .active1{
+          border-bottom: 1px solid darkblue;
+      }
+      .sign{
+        color: #0000A8 !important;
+      }
+      .sign_tag:hover{
         border-bottom: 1px solid darkblue;
 
       }
-      .active1{
-          border-bottom: 2px solid darkblue;
-      }
-      .sign{
-          color: #FF7036 !important;
-      }
-      .sign_tag:hover{
-        border-bottom: 2px solid darkblue;
-
-      }
       .logo{
-          width: 25%;
+          width: 60px;
       }
       .page-footer{
           background-color:#340856;
@@ -72,7 +80,7 @@
       }
       @media only screen and (max-width: 425px) {
         .navbar-toggler{
-            margin-top: -32px;
+            margin-top: -10px;
         }
       }
       @media only screen and (max-width: 768px) {

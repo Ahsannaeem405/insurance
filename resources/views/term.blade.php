@@ -61,11 +61,14 @@
     }
     .btn-submit{
         text-decoration: none;
-        background-color: #FFD84D !important;
+        background-color: #340856 !important;
         color: white !important;
         border: none !important;
         box-shadow: none !important;
 
+    }
+    .btn-submit:hover{
+        box-shadow:1px 1px 1px 1px #3b145a !important;
     }
 
     .image_div{
@@ -106,10 +109,10 @@
 <div class="container-fluid con_fluid">
     <div class="row">
         <div class="col-lg-6 col-md-6 col-12" style="padding: 150px 80px 20px 80px;">
-            <h1 style="color: purple"><i class="fas fa-hourglass-end"></i> Term Insurance</h1><br>
-            <p style="color: purple">An underwriting, quoting, CRM, and sales software tool suite designed for Term insurance agents.</p> <br>
+            <h1 style="color: #340856"><i class="fas fa-hourglass-end"></i> Term Insurance</h1><br>
+            <p style="color: #340856">An underwriting, quoting, CRM, and sales software tool suite designed for Term insurance agents.</p> <br>
             <div style="display: inline-flex">
-                <button style="background-color: purple" class="btn btn-dark">Start Free Trail</button>
+                <button style="background-color: #340856" class="btn btn-dark">Start Free Trail</button>
                 <button style="margin-left: 20px;"  class="btn btn-dark">Demo</button>
 
             </div>

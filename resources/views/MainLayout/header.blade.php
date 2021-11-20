@@ -4,6 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" type="image/x-icon" href="{{asset('images/images2.png')}}" />
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -15,6 +16,12 @@
 
   </head>
   <style>
+      nav {
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+}
+      body{
+        font-family: "Times New Roman", Times, serif;
+      }
       .nav-link{
           font-weight: 700;
           color: darkblue !important;
@@ -24,23 +31,26 @@
       }
       .nav-item{
         padding: 0px 7px 0px 7px;
+
       }
       /* .nav-item:hover{
-        border-bottom: 2px solid darkblue;
+        border-bottom: 1px solid darkblue;
+        color: #00004b !important;
+
 
       } */
       .active1{
           border-bottom: 2px solid darkblue;
       }
       .sign{
-          color: #FF7036 !important;
+          color: #0000A8 !important;
       }
       .sign_tag:hover{
-        border-bottom: 2px solid darkblue;
+        border-bottom: 1px solid darkblue;
 
       }
       .logo{
-          width: 25%;
+          width: 60px;
       }
       .page-footer{
           background-color:#340856;
@@ -69,9 +79,15 @@
       .list-unstyled li a{
           color: white;
       }
+
+
+
+
+
+
       @media only screen and (max-width: 425px) {
         .navbar-toggler{
-            margin-top: -32px;
+            margin-top: -10px;
         }
       }
       @media only screen and (max-width: 768px) {
@@ -95,7 +111,7 @@
   <body>
     @section('header')
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="{{url('/')}}"><img src="{{asset('images/logo1.png')}}" alt="" class="logo"></a>
+        <a class="navbar-brand" href="{{url('/')}}"><img src="{{asset('images/images2.png')}}" alt="" class="logo"></a>
         <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -108,7 +124,7 @@
               <a class="nav-link" id="term" href="{{url('/term')}}">TERM</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link"  id="med" href="{{url('/med')}}">MED SUPP</a>
+              <a class="nav-link"  id="med" href="{{url('/quotes')}}">QUOTES</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link"  id="pricing" href="{{url('/pricing')}}">PRICING</a>
@@ -202,12 +218,9 @@
             <li>
               <a href="#!">Quotes Compare</a>
             </li>
-            <li>
+            {{-- <li>
               <a href="#!">FexToolkit Lite</a>
-            </li>
-            <li>
-              <a href="#!">CRM</a>
-            </li>
+            </li> --}}
             <li>
                 <a href="#!">Health Cheat Sheet</a>
               </li>
@@ -231,11 +244,11 @@
                 <a href="#!">Quotes Compare</a>
               </li>
               <li>
-                <a href="#!">TermToolkit Lite</a>
+                <a href="#!">Term Lite</a>
               </li>
-              <li>
+              {{-- <li>
                 <a href="#!">CRM</a>
-              </li>
+              </li> --}}
               <li>
                   <a href="#!">Health Cheat Sheet</a>
                 </li>

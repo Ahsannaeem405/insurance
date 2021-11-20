@@ -21,7 +21,7 @@ Route::view('/signup', 'signup');
 Route::view('/pricing', 'pricing');
 Route::view('/test', 'test');
 Route::view('/fex', 'fex');
-Route::view('/med', 'med');
+Route::view('/quotes', 'med');
 Route::view('/term', 'term');
 
 Route::prefix('user')->group(function () {
