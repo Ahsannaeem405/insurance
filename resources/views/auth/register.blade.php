@@ -8,6 +8,9 @@
         padding: 20px;
         color: darkblue;
     }
+    .hide{
+        display: none;
+    }
 
     .con1 {
         /* padding: 50px 30px 50px 30px !important; */
@@ -128,6 +131,7 @@
     }
 
 </style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 @section('content')
     <div class="containerfluid con">
@@ -135,20 +139,23 @@
     </div>
     <div class="container con1">
         <h5 style="color: gray; margin-top:20px">Personal Information</h5>
-        <form method="post" class="my-5" action="{{route('register')}}">
+        <form role="form" action="{{ url('register_user') }}" method="post" class="require-validation"
+              data-cc-on-file="false"
+              data-stripe-publishable-key="{{ env('STRIPE_KEY')}}"
+              id="payment-form">
             @csrf
 
             <div class="row">
                 <div class="col-lg-6 col-12">
-                    <input type="text" name="f_name" class="form-control" style="margin-top:20px" required
+                    <input type="text" name="f_name" value="{{old('f_name')}}" class="form-control" style="margin-top:20px" required
                            placeholder="First Name">
                 </div>
                 <div class="col-lg-6 col-12">
-                    <input type="text" name="l_name" class="form-control" required style="margin-top:20px"
+                    <input type="text" name="l_name" value="{{old('l_name')}}" class="form-control" required style="margin-top:20px"
                            placeholder="Last Name">
                 </div>
                 <div class="col-lg-12 col-12" style="margin-top:20px">
-                    <input type="email" name="email" class="form-control" required placeholder="Email">
+                    <input type="email" name="email" class="form-control" value="{{old('email')}}" required placeholder="Email">
 
                     @if($errors->has('email'))
 
@@ -158,18 +165,18 @@
                     @endif
                 </div>
                 <div class="col-lg-12 col-12" style="margin-top:20px">
-                    <input type="password" name="passowrd" class="form-control" required placeholder="Password">
+                    <input type="password" name="password" class="form-control" required placeholder="Password">
 
-                    @if($errors->has('passowrd'))
+                    @if($errors->has('password'))
 
                         <span style="color: red">
-                                        <strong>{{$errors->first('passowrd')}}</strong>
+                                        <strong>{{$errors->first('password')}}</strong>
                                     </span>
                     @endif
 
                 </div>
                 <div class="col-lg-12 col-12" style="margin-top:20px">
-                    <textarea name="info" name="about" class="form-control" id="" required
+                    <textarea  name="about" class="form-control" id="" required
                               placeholder="How did you hear about us?" cols="2" rows="5"></textarea>
 
                     @if($errors->has('about'))
@@ -188,10 +195,10 @@
                 <div class="col-lg-3 col-md-3 col-12" style="margin-top:20px">
                     <input type="text" placeholder="Promo" name="promo" class="form-control">
 
-                    @if($errors->has('about'))
+                    @if($errors->has('promo'))
 
                         <span style="color: red">
-                                        <strong>{{$errors->first('about')}}</strong>
+                                        <strong>{{$errors->first('promo')}}</strong>
                                     </span>
                     @endif
 
@@ -227,6 +234,7 @@
                                         plus..
                                     </center>
                                     <ul>
+                                        <li>14 days free trail</li>
                                         <li>Create and remove agent accounts</li>
                                         <li>Includes 5 agent accounts. More accounts can be added at $24.99/account per
                                             month.
@@ -241,7 +249,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-12 col-12" style="padding-top: 20px;">
+
+                <div class="col-lg-12 col-12 mb-3" style="padding-top: 20px;">
                     <h5 style="color: gray;">Payment</h5>
                     <div class="container">
                         <div class="row">
@@ -251,20 +260,53 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-12 col-12" style="padding-top: 20px;">
-                    <input type="text" class="form-control" placeholder="Name On Card">
-                </div>
-                <div class="col-lg-12 col-12" style="padding-top: 20px;">
-                    <input type="text" class="form-control" placeholder="Card Number">
-                </div>
-                <div class="col-lg-6 col-12" style="padding-top: 20px;">
-                    <input type="text" class="form-control" placeholder="Exp Date">
-                </div>
-                <div class="col-lg-6 col-12" style="padding-top: 20px;">
-                    <input type="text" class="form-control" placeholder="CVC">
-                </div>
+
+
+
+                    <div class='col-lg-6 form-group required'>
+                        <label class='control-label'>Name on Card</label> <input
+                            class='form-control' size='4' type='text'>
+                    </div>
+
+
+
+                    <div class='col-lg-6 form-group card required'>
+                        <label class='control-label'>Card Number</label> <input
+                            autocomplete='off' class='form-control card-number' size='20'
+                            type='text'>
+                    </div>
+
+
+
+                    <div class=' col-md-4 form-group cvc required'>
+                        <label class='control-label'>CVC</label> <input autocomplete='off'
+                                                                        class='form-control card-cvc' placeholder='ex. 311' size='4'
+                                                                        type='text'>
+                    </div>
+                    <div class=' col-md-4 form-group expiration required'>
+                        <label class='control-label'>Expiration Month</label> <input
+                            class='form-control card-expiry-month' placeholder='MM' size='2'
+                            type='text'>
+                    </div>
+                    <div class=' col-md-4 form-group expiration required'>
+                        <label class='control-label'>Expiration Year</label> <input
+                            class='form-control card-expiry-year' placeholder='YYYY' size='4'
+                            type='text'>
+                    </div>
+
+
+
+                    <div class='col-md-12 error form-group hide'>
+                        <div class='alert-danger alert'>Please correct the errors and try
+                            again.</div>
+                    </div>
+
+
+
+
+
                 <div class="col-lg-6 col-md-6 col-12" style="padding-top: 20px;">
-                    <button type="submit" class="btn btn-primary">Start 14 Days Free Trail</button>
+                    <button type="submit" class="btn btn-primary">Register Now</button>
                 </div>
                 <div class="col-lg-6 col-md-6 col-12" style="padding-top: 20px;">
                     <p><span style="font-size: 19px; font-weight:bold">Total:
@@ -290,5 +332,63 @@
 
         </form>
     </div>
+
+
+
+    <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+    <script type="text/javascript">
+        $(function() {
+            var $form         = $(".require-validation");
+            $('form.require-validation').bind('submit', function(e) {
+                var $form         = $(".require-validation"),
+                    inputSelector = ['input[type=email]', 'input[type=password]',
+                        'input[type=text]', 'input[type=file]',
+                        'textarea'].join(', '),
+                    $inputs       = $form.find('.required').find(inputSelector),
+                    $errorMessage = $form.find('div.error'),
+                    valid         = true;
+                $errorMessage.addClass('hide');
+
+                $('.has-error').removeClass('has-error');
+                $inputs.each(function(i, el) {
+                    var $input = $(el);
+                    if ($input.val() === '') {
+                        $input.parent().addClass('has-error');
+                        $errorMessage.removeClass('hide');
+                        e.preventDefault();
+                    }
+                });
+
+                if (!$form.data('cc-on-file')) {
+                    e.preventDefault();
+                    Stripe.setPublishableKey($form.data('stripe-publishable-key'));
+                    Stripe.createToken({
+                        number: $('.card-number').val(),
+                        cvc: $('.card-cvc').val(),
+                        exp_month: $('.card-expiry-month').val(),
+                        exp_year: $('.card-expiry-year').val()
+                    }, stripeResponseHandler);
+                }
+
+            });
+
+            function stripeResponseHandler(status, response) {
+                if (response.error) {
+                    $('.error')
+                        .removeClass('hide')
+                        .find('.alert')
+                        .text(response.error.message);
+                } else {
+                    // token contains id, last4, and card type
+                    var token = response['id'];
+                    // insert the token into the form so it gets submitted to the server
+                    $form.find('input[type=text]').empty();
+                    $form.append("<input type='hidden' name='stripeToken' value='" + token + "'/>");
+                    $form.get(0).submit();
+                }
+            }
+
+        });
+    </script>
 
 @endsection

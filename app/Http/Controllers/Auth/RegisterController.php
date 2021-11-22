@@ -5,9 +5,12 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\Models\User;
+
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Stripe;
 
 class RegisterController extends Controller
 {
@@ -29,7 +32,21 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = RouteServiceProvider::HOME;
+    protected function redirectTo(){
+
+
+        if (auth()->user()->role== 'user') {
+
+            return '/user/fex';
+        }
+        elseif (auth()->user()->role== 'admin') {
+            return '/admin/index';
+        }
+
+
+        return redirect()->back()->withError('whoops! You are not authorized to visit this link.');
+
+    }
 
     /**
      * Create a new controller instance.
@@ -47,6 +64,41 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \Illuminate\Contracts\Validation\Validator
      */
+
+
+public function registeruser(Request $request)
+{
+    $this->validate($request,[
+        'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+        'password' => ['required', 'string', 'min:8'],
+        'about' => ['required'],
+    ]);
+
+    Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
+    Stripe\Charge::create ([
+        "amount" => 100 * 100,
+        "currency" => "usd",
+        "source" => $request->stripeToken,
+        "description" => "Insurance Payment"
+    ]);
+
+
+$user=new User();
+$user->name=$request->f_name .' '. $request->l_name;
+$user->email=$request->email;
+$user->password=Hash::make($request->password);
+$user->about=$request->about;
+$user->role='user';
+$user->register=44;
+$user->save();
+
+\Auth::login($user);
+
+return redirect('user/fex')->with('success','Register Successfully!');
+
+
+}
+
     protected function validator(array $data)
     {
         return Validator::make($data, [

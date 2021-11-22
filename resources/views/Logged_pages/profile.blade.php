@@ -1,4 +1,4 @@
-@extends('MainLayout.logged_header')
+@extends('MainLayout.header')
 @section('title')
     <title>Profile</title>
 @endsection

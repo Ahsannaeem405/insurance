@@ -50,9 +50,21 @@
             </div>
             <div class="col-lg-4 login">
                 <h4 style="color: darkblue;" >Login</h4>
-                <input type="email" class="form-control" placeholder="Enter Your Email" style="margin-top:20px;">
-                <input type="password" class="form-control" placeholder="Enter Your Password" style="margin-top:20px;">
+               <form action="{{url('login')}}" method="post">
+                   @csrf
+                <input type="email" value="{{old('email')}}" required name="email" class="form-control" placeholder="Enter Your Email" style="margin-top:20px;">
+
+                   @if($errors->has('email'))
+
+                       <span style="color: red">
+                                        <strong>{{$errors->first('email')}}</strong>
+                                    </span>
+                   @endif
+                <input type="password" required name="password" class="form-control" placeholder="Enter Your Password" style="margin-top:20px;">
+
+
                 <button class="form-control btn-submit"  style="margin-top:20px;">Submit</button><br>
+               </form>
                 <a href="#" >Forgot Password</a>
 
             </div>

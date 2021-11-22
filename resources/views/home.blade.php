@@ -9,9 +9,7 @@
         margin-bottom: 30px;
         padding: 50px 40px 50px 40px !important;
         border-radius: 10px;
-        /* padding-left: 20px ;
-       padding-top: 50px;
-       padding-bottom: 50px; */
+
         background-color: #F6F8FA;
 
     }
