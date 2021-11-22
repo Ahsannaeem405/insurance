@@ -17,6 +17,9 @@ Route::get('/', function () {
     return view('home');
 });
 
+Route::post('register_user',[\App\Http\Controllers\Auth\RegisterController::class,'registeruser']);
+Route::get('/logout', [\App\Http\Controllers\HomeController::class,'logout']);
+
 // App::setlocale('en');
 
 
@@ -26,7 +29,7 @@ Route::view('/fex', 'fex');
 Route::view('/quotes', 'med');
 Route::view('/term', 'term');
 
-Route::prefix('user')->group(function () {
+Route::prefix('user')->middleware(['auth','user'])->group(function () {
 Route::view('/fex','Logged_pages.fex');
 Route::view('/quoter','Logged_pages.medd');
 Route::view('/term','Logged_pages.term');
@@ -42,15 +45,14 @@ Route::view('/overview', 'Logged_pages.overview');
 
 });
 
-Route::prefix('admin')->group(function () {
+Route::prefix('admin')->middleware(['auth','admin'])->group(function () {
     Route::view('/index','Admin_asstes.index');
-    Route::view('/viewuser', 'Admin_asstes.viewuser');
+    Route::get('/viewuser', [\App\Http\Controllers\AdminController::class,'user']);
+    Route::get('/delete/user/{id}', [\App\Http\Controllers\AdminController::class,'user_del']);
     Route::view('/edituser', 'Admin_asstes.edituser');
     Route::view('/subscriptions', 'Admin_asstes.subscriptions');
     Route::view('/setting', 'Admin_asstes.setting');
     Route::view('/profile', 'Admin_asstes.profile');
-
-
 
 
     });
@@ -63,4 +65,3 @@ Route::prefix('admin')->group(function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

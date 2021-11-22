@@ -110,6 +110,8 @@
   </style>
   <body>
     @section('header')
+
+        @if(!Auth::check())
     <nav class="navbar navbar-expand-lg navbar-light bg-white">
         <a class="navbar-brand" href="{{url('/')}}"><img src="{{asset('images/images2.png')}}" alt="" class="logo"></a>
         <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -140,6 +142,42 @@
         </div>
       </nav>
 
+
+        @else
+
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-white">
+                <a class="navbar-brand" href="{{url('user/fex')}}"><img src="{{asset('images/images2.png')}}" alt="" class="logo"></a>
+                <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse " id="navbarNavDropdown">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link "  id="fex" href="{{url('/user/fex')}}">{{__('profile.FEX')}} </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="term" href="{{url('/user/term')}}">TERM</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"  id="med" href="{{url('/user/quoter')}}">Quoter</a>
+                        </li>
+                        {{-- <li class="nav-item">
+                            <a class="nav-link"  id="pricing" href="{{url('/user/crm')}}">CRM</a>
+                          </li> --}}
+                        <li class="nav-item ">
+                            <a class="nav-link"  id="login" href="{{url('/user/account')}}">Accounts</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{url('/logout')}}">Logout</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+
+
+        @endif
 
     @show
 
