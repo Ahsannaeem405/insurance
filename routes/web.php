@@ -21,12 +21,8 @@ Route::get('/', function () {
 
 
 Route::view('/pricing', 'pricing');
-// Route::view('/fex', 'fex');
-Route::get('/fex', function () {
-\Illuminate\Support\Facades\App::setLocale('en');
+Route::view('/fex', 'fex');
 
-return view ('fex');
-});
 Route::view('/quotes', 'med');
 Route::view('/term', 'term');
 
