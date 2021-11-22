@@ -46,13 +46,16 @@ Route::view('/overview', 'Logged_pages.overview');
 });
 
 Route::prefix('admin')->middleware(['auth','admin'])->group(function () {
-    Route::view('/index','Admin_asstes.index');
+    Route::get('/index',[\App\Http\Controllers\AdminController::class,'dashboard']);
     Route::get('/viewuser', [\App\Http\Controllers\AdminController::class,'user']);
     Route::get('/delete/user/{id}', [\App\Http\Controllers\AdminController::class,'user_del']);
-    Route::view('/edituser', 'Admin_asstes.edituser');
-    Route::view('/subscriptions', 'Admin_asstes.subscriptions');
-    Route::view('/setting', 'Admin_asstes.setting');
-    Route::view('/profile', 'Admin_asstes.profile');
+    Route::get('/edit/user/{id}', [\App\Http\Controllers\AdminController::class,'user_edit']);
+    Route::post('/update/user/{id}', [\App\Http\Controllers\AdminController::class,'user_update']);
+    Route::post('/update/profile/{id}', [\App\Http\Controllers\AdminController::class,'user_update']);
+
+    Route::get('/subscriptions', [\App\Http\Controllers\AdminController::class,'subscriptions']);
+    Route::get('/setting', [\App\Http\Controllers\AdminController::class,'setting']);
+    Route::get('/profile', [\App\Http\Controllers\AdminController::class,'profile']);
 
 
     });

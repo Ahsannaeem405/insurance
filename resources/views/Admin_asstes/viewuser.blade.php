@@ -1,7 +1,12 @@
 @extends('Admin_asstes.layouts.main')
 
+@section('user')
+    active
+@endsection
+@section('heading')
 
-
+    user
+@endsection
 
 @section('content')
     <div class="row">
@@ -26,7 +31,8 @@
                                     <td>{{$user->name}}</td>
                                     <td>{{$user->email}}</td>
                                     <td>
-                                        <a href="{{url('/admin/edituser')}}" class="btn btn-primary">Edit</a>
+                                        <a href="{{url('/admin/edit/user/'.$user->id.'')}}"
+                                           class="btn btn-primary">Edit</a>
 
                                         <a href="{{url('admin/delete/user/'.$user->id.'')}}"
                                            onclick="return confirm('Are you sure you want to delete this user?');">
