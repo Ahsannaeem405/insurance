@@ -99,16 +99,19 @@ return [
 'Status'=>'Status',
 'Current Plan: Agency'=>'Current Plan: Agency',
 'DOWNLOAD PLAN'=>'DOWNLOAD PLAN',
-'Invoices'=>'Invoices',
+'Invoice'=>'Invoices',
 'Credit Cards'=>'Credit Cards',
 'Next Payment'=>'Next Payment',
 'Agency (Monthly)'=>'Agency (Monthly)',
 'Cards on file'=>'Cards on file',
 'Default Card'=>'Default Card',
-
-
-
-
+// SignUp page
+'Personal Information'=>'Personal Information',
+'Register Now'=>'Register Now',
+// login page
+'signIn'=>'Sign In',
+'submit'=>'Submit',
+'Forgot Password'=>'Forgot Password',
 
 
 

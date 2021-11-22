@@ -138,7 +138,7 @@
         <h2>Sign Up</h2>
     </div>
     <div class="container con1">
-        <h5 style="color: gray; margin-top:20px">Personal Information</h5>
+        <h5 style="color: gray; margin-top:20px">{{__('profile.Personal Information')}}</h5>
         <form role="form" action="{{ url('register_user') }}" method="post" class="require-validation"
               data-cc-on-file="false"
               data-stripe-publishable-key="{{ env('STRIPE_KEY')}}"
@@ -306,7 +306,7 @@
 
 
                 <div class="col-lg-6 col-md-6 col-12" style="padding-top: 20px;">
-                    <button type="submit" class="btn btn-primary">Register Now</button>
+                    <button type="submit" class="btn btn-primary">{{__('profile.Register Now')}}</button>
                 </div>
                 <div class="col-lg-6 col-md-6 col-12" style="padding-top: 20px;">
                     <p><span style="font-size: 19px; font-weight:bold">Total:

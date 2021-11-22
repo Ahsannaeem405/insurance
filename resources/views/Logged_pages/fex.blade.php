@@ -130,10 +130,10 @@ display: block;
                 <a class="nav-link" href="#drug" role="tab" data-toggle="tab">Drug Lookup</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#setting" role="tab" data-toggle="tab">Settings</a>
+                <a class="nav-link" href="#setting" role="tab" data-toggle="tab">{{__('profile.Settings')}}</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#Customize" role="tab" data-toggle="tab">Customize Carriers</a>
+                <a class="nav-link" href="#Customize" role="tab" data-toggle="tab">{{__('profile.Customize Carriers')}}</a>
             </li>
         </ul>
 
@@ -142,11 +142,11 @@ display: block;
             <div role="tabpanel" class="tab-pane  active" id="Quoter">
                 <div class="container-fluid" style="padding-top: 50px;">
                     <center>
-                        <h3 style="color: rgb(52, 8, 86)">Get a Final Expense Quote</h3>
+                        <h3 style="color: rgb(52, 8, 86)">{{__('profile.Get a Final Expense Quote')}}</h3>
                     </center>
                     <div class="row" style="margin-top: 40px;">
                         <div class="col-lg-6 col-12" style="border-right: 1px solid lightgray ">
-                            <h5>Coverage Options</h5>
+                            <h5>{{__('Coverage Options.TERM')}}</h5>
                             <div class="row" style="margin-top: 40px;">
                                 <div class="col-lg-5">
                                     <input type="text" class="form-control" placeholder="Face Amount">
@@ -158,7 +158,7 @@ display: block;
                                     <input type="text" class="form-control" placeholder="Face Amount">
                                 </div>
                                 <div class="col-lg-6" style="margin-top: 20px;">
-                                    <label for="cars">Coverage Type:</label>
+                                    <label for="cars">{{__('profile.Coverage Type:')}}</label>
 
                                     <select name="type" class="form-control">
                                         <option value="Graded/Modified">Graded/Modified</option>
@@ -167,14 +167,14 @@ display: block;
                                     </select>
                                 </div>
                             </div><br><br>
-                            <h5>About the client</h5><br>
-                            <p>Sex:</p>
+                            <h5>{{__('profile.About the client')}}</h5><br>
+                            <p>{{__('profile.Sex:')}}</p>
                             <input type="radio" name="gender" value="male">
                             <label for="Male">Male</label><br>
                             <input type="radio" id="css" name="gender" value="female">
-                            <label for="Female">Female</label><br><br>
+                            <label for="{{__('profile.Female')}}">{{__('profile.Female')}}</label><br><br>
 
-                            <label for="cars">State:</label>
+                            <label for="cars">{{__('profile.State:')}}</label>
 
                             <select name="type" class="form-control">
                                 <option value="Graded/Modified">UnitedKingdom</option>
@@ -183,7 +183,7 @@ display: block;
                             </select>
                             <div class="row" style="margin-top: 40px;">
                                 <div class="col-lg-2 pt-1" style="margin-top: 20px;">
-                                    <p>Birthday:</p>
+                                    <p>{{__('profile.Birthday:')}}</p>
                                 </div>
                                 <div class="col-lg-2" style="margin-top: 20px;">
                                     <input type="text" class="form-control" placeholder="dd">
@@ -204,8 +204,7 @@ display: block;
 
                             <div class="row" style="margin-top: 40px;">
                                 <div class="col-lg-4 pt-1" style="margin-top: 20px;">
-                                    <p>Height/Weight
-                                        (optional):</p>
+                                    <p>{{__('profile.Height/Weight (optional):')}}</p>
                                 </div>
                                 <div class="col-lg-2" style="margin-top: 20px;">
                                     <input type="text" class="form-control" placeholder="ft">
@@ -217,7 +216,7 @@ display: block;
                                     <input type="text" class="form-control" placeholder="lbs">
                                 </div>
                                 <div class="col-lg-7" style="margin-top: 40px;">
-                                    <label for="cars">Nicotine Use:</label>
+                                    <label for="cars">{{__('profile.Nicotine Use:')}}</label>
 
                                     <select name="type" class="form-control">
                                         <option value="None">None</option>
@@ -226,7 +225,7 @@ display: block;
                                     </select>
                                 </div>
                                 <div class="col-lg-7" style="margin-top: 40px;">
-                                    <label for="cars">Payment Type:</label>
+                                    <label for="cars">{{__('profile.Payment Type:')}}</label>
 
                                     <select name="type" class="form-control">
                                         <option value="Bank">Bank</option>
@@ -245,14 +244,14 @@ display: block;
 
                         </div>
                         <div class="col-lg-6 col-12">
-                            <h4>Drug and Health Information</h4><br>
+                            <h4>{{__('profile.Drug and Health Information')}}</h4><br>
                             <input type="text" class="form-control" placeholder="Enter Health Condition"><br>
                             <input type="text" class="form-control" placeholder="Enter Medication"><br>
 
 
                         </div>
                         <div class="col-lg-12 col-12" style="text-align: center;margin-top:50px;">
-                            <button style="background-color: #340856" class="btn btn-dark">Get Quote</button><br><br>
+                            <button style="background-color: #340856" class="btn btn-dark">{{__('profile.Get Quote')}}</button><br><br>
 
                         </div>
 
@@ -262,7 +261,7 @@ display: block;
             <div role="tabpanel" class="tab-pane fade" id="Quotecompare">
                 <div class="container-fluid" style="padding-top: 50px;">
                     <center>
-                        <h3 style="color: rgb(52, 8, 86)">Compare Final Expense Quotes</h3>
+                        <h3 style="color: rgb(52, 8, 86)">{{__('profile.Compare Final Expense Quotes')}}</h3>
                     </center>
                     <div class="row" style="margin-top: 40px;">
                         <div class="col-lg-6 col-12" style="border-right: 1px solid lightgray ">
@@ -280,7 +279,7 @@ display: block;
 
 
                                 <div class="col-lg-7" style="margin-top: 20px;">
-                                    <label for="cars">Company:</label>
+                                    <label for="cars">{{__('profile.Company:')}}</label>
 
                                     <select name="type" class="form-control">
                                         <option value="Graded/Modified">AIG</option>
@@ -289,7 +288,7 @@ display: block;
                                     </select>
                                 </div>
                                 <div class="col-lg-7" style="margin-top: 20px;">
-                                    <label for="cars">Coverage Type:</label>
+                                    <label for="cars">{{__('profile.Coverage Type:')}}</label>
 
                                     <select name="type" class="form-control">
                                         <option value="Graded/Modified">Graded/Modified</option>
@@ -307,14 +306,14 @@ display: block;
 
                         </div>
                         <div class="col-lg-6 col-12">
-                            <h5>About the client</h5><br>
-                            <p>Sex:</p>
+                            <h5>{{__('profile.About the client')}}</h5><br>
+                            <p>{{__('profile.Sex:')}}</p>
                             <input type="radio" name="gender" value="male">
-                            <label for="Male">Male</label><br>
+                            <label for="{{__('profile.Male')}}">{{__('profile.Male')}}</label><br>
                             <input type="radio" id="css" name="gender" value="female">
-                            <label for="Female">Female</label><br>
+                            <label for="{{__('profile.Female')}}">{{__('profile.Female')}}</label><br>
 
-                            <label for="cars">State:</label>
+                            <label for="cars">{{__('profile.State:')}}</label>
 
                             <select name="type" class="form-control">
                                 <option value="Graded/Modified">UnitedKingdom</option>
@@ -323,7 +322,7 @@ display: block;
                             </select>
                             <div class="row" style="margin-top: 40px;">
                                 <div class="col-lg-2 pt-1" style="margin-top: 20px;">
-                                    <p>Birthday:</p>
+                                    <p>{{__('profile.Birthday:')}}</p>
                                 </div>
                                 <div class="col-lg-2" style="margin-top: 20px;">
                                     <input type="text" class="form-control" placeholder="dd">
@@ -344,8 +343,7 @@ display: block;
 
                             <div class="row" style="margin-top: 40px;">
                                 <div class="col-lg-4 pt-1" style="margin-top: 20px;">
-                                    <p>Height/Weight
-                                        (optional):</p>
+                                    <p>{{__('profile.Height/Weight (optional):')}}</p>
                                 </div>
                                 <div class="col-lg-2" style="margin-top: 20px;">
                                     <input type="text" class="form-control" placeholder="ft">
@@ -357,7 +355,7 @@ display: block;
                                     <input type="text" class="form-control" placeholder="lbs">
                                 </div>
                                 <div class="col-lg-7" style="margin-top: 40px;">
-                                    <label for="cars">Nicotine Use:</label>
+                                    <label for="cars">{{__('profile.Nicotine Use:')}}</label>
 
                                     <select name="type" class="form-control">
                                         <option value="None">None</option>
@@ -366,7 +364,7 @@ display: block;
                                     </select>
                                 </div>
                                 <div class="col-lg-7" style="margin-top: 40px;">
-                                    <label for="cars">Payment Type:</label>
+                                    <label for="cars">{{__('profile.Payment Type:')}}</label>
 
                                     <select name="type" class="form-control">
                                         <option value="Bank">Bank</option>
@@ -382,7 +380,7 @@ display: block;
 
                         </div>
                         <div class="col-lg-12 col-12" style="text-align: center;margin-top:50px;">
-                            <button style="background-color: #340856" class="btn btn-dark">Compare Quote</button>
+                            <button style="background-color: #340856" class="btn btn-dark">{{__('profile.Compare Quote')}}</button>
                         </div>
 
                     </div>
@@ -390,19 +388,19 @@ display: block;
             </div>
             <div role="tabpanel" class="tab-pane fade" id="setting">
               <div class="container p-3">
-                  <h3 style="color: #340856;" class="text-center">Insurance Toolkit</h3>
+                  <h3 style="color: #340856;" class="text-center">{{__('profile.Insurance Toolkit')}}</h3>
                   <div class="row">
                     <div class="col-lg-6 col-12 p-2">
-                        <h3 class="">Your Link</h3>
+                        <h3 class="">{{__('profile.Your Link')}}</h3>
                         <input type="text" class="form-control" value="https://insurancetoolkits.com/fex/lite/?token=wfuXPwcxBHjk5lzx0OI8zd7oF-xQ7RPVqIMtTEC5" readonly>
                     <p>This is your personal FexToolkit link, which allows anyone with the URL to run a basic quote.
                         You can share it with a colleague, bookmark it on your phone or computer, or otherwise share it around as you see fit.</p>
-                    <h3 class="mt-5">Your Widget HTML Code</h3>
+                    <h3 class="mt-5">{{__('profile.Your Widget HTML Code')}}</h3>
                     <input type="text" value="link" class="form-control mt-3" readonly>
                     <p>Copy the code above to your website to allow people to run quotes directly from your website.</p>
                     </div>
                     <div class="col-lg-6 col-12 p-5">
-                        <h5>Final Expense Quoter</h5>
+                        <h5>{{__('profile.Final Expense Quoter')}}</h5>
                         <div class="row" style="margin-top: 40px;">
                             <div class="col-lg-5">
                                 <input type="text" class="form-control" placeholder="Face Amount">
@@ -414,7 +412,7 @@ display: block;
                                 <input type="text" class="form-control" placeholder="Face Amount">
                             </div>
                             <div class="col-lg-6" style="margin-top: 20px;">
-                                <label for="cars">Coverage Type:</label>
+                                <label for="cars">{{__('profile.Coverage Type:')}}</label>
 
                                 <select name="type" class="form-control">
                                     <option value="Graded/Modified">Graded/Modified</option>
@@ -423,14 +421,14 @@ display: block;
                                 </select>
                             </div>
                         </div><br><br>
-                        <h5>About the client</h5><br>
-                        <p>Sex:</p>
+                        <h5>{{__('profile.About the client')}}</h5><br>
+                        <p>{{__('profile.Sex:')}}</p>
                         <input type="radio" name="gender" value="male">
-                        <label for="Male">Male</label><br>
+                        <label for="{{__('profile.Male')}}">{{__('profile.Male')}}</label><br>
                         <input type="radio" id="css" name="gender" value="female">
-                        <label for="Female">Female</label><br><br>
+                        <label for="{{__('profile.Female')}}">{{__('profile.Female')}}</label><br><br>
 
-                        <label for="cars">State:</label>
+                        <label for="cars">{{__('profile.State:')}}</label>
 
                         <select name="type" class="form-control">
                             <option value="Graded/Modified">UnitedKingdom</option>
@@ -439,7 +437,7 @@ display: block;
                         </select>
                         <div class="row" style="margin-top: 40px;">
                             <div class="col-lg-2 pt-1" style="margin-top: 20px;">
-                                <p>Birthday:</p>
+                                <p>{{__('profile.Birthday:')}}</p>
                             </div>
                             <div class="col-lg-2" style="margin-top: 20px;">
                                 <input type="text" class="form-control" placeholder="dd">
@@ -461,7 +459,7 @@ display: block;
                         <div class="row">
 
                             <div class="col-lg-7" style="margin-top: 40px;">
-                                <label for="cars">Nicotine Use:</label>
+                                <label for="cars">{{__('profile.Nicotine Use:')}}</label>
 
                                 <select name="type" class="form-control">
                                     <option value="None">None</option>
@@ -482,7 +480,7 @@ display: block;
 
                              <div class="col-lg-12" style="margin-top: 40px;">
 
-                                <button class="btn btn-primary text-center">Get a Quote</button>
+                                <button class="btn btn-primary text-center">{{__('profile.Get a Quote')}}</button>
                              </div>
 
 
@@ -501,7 +499,7 @@ display: block;
             </div>
             <div role="tabpanel" class="tab-pane fade" id="Customize">
                 <div class="container-fluid " style="padding: 50px;">
-                    <h3 class="text-center" style="color: #340856;">Insurance Customization</h3>
+                    <h3 class="text-center" style="color: #340856;">{{__('profile.Insurance Customization')}}</h3>
                     <div class="row">
                         <div class="col-lg-5 col-12 mt-3  p-3 company" style="display: inline-flex;">
                             <h5>AIG</h5>
@@ -542,16 +540,16 @@ display: block;
         <div class="container table">
           <div class="row header" >
             <div class="col-lg-3">
-                <b>Company Name</b>
+                <b>{{__('profile.Company Name')}}</b>
             </div>
             <div class="col-lg-3">
-                <b>Monthly</b>
+                <b>{{__('profile.Monthly')}}</b>
             </div>
             <div class="col-lg-3">
-                <b>Coverage Type</b>
+                <b>{{__('profile.Coverage Type')}}</b>
             </div>
             <div class="col-lg-3">
-                <b>Actions</b>
+                <b>{{__('profile.Actions')}}</b>
             </div>
           </div>
           <div class="row data">

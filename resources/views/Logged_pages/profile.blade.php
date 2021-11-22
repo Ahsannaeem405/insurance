@@ -32,10 +32,10 @@
 @section('content')
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item">
-        <a class="nav-link active" href="#info" role="tab" data-toggle="tab">Personal Information</a>
+        <a class="nav-link active" href="#info" role="tab" data-toggle="tab">{{__('profile.Personal Information')}}</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="#Subscription" role="tab" data-toggle="tab">Subscription</a>
+        <a class="nav-link" href="#Subscription" role="tab" data-toggle="tab">{{__('profile.Subscription')}}</a>
     </li>
     {{-- <li class="nav-item">
         <a class="nav-link" href="#drug" role="tab" data-toggle="tab">Drug Lookup</a>
@@ -50,29 +50,29 @@
 <div class="tab-content">
     <div role="tabpanel" class="tab-pane  active" id="info">
         <div class="container account">
-            <h3 style="color: #340856">Personal Information</h3>
+            <h3 style="color: #340856">{{__('profile.Personal Information')}}</h3>
             <div class="row account">
                 <div class="col-lg-6 col-12">
-                    <label>Email</label>
+                    <label>{{__('profile.Email')}}</label>
                     <input type="text" class="form-control" placeholder="Example@gmail.com"><br>
-                    <label>First Name</label>
+                    <label>{{__('profile.First Name')}}</label>
                     <input type="text" class="form-control" placeholder="First Name"><br>
                     <label>Last Name</label>
                     <input type="text" class="form-control" placeholder="Last Name"><br>
-                    <label>Password</label>
+                    <label>{{__('profile.Password')}}</label>
                     <input type="text" class="form-control" placeholder="Password"><br>
-                    <label>Confirm Password</label>
+                    <label>{{__('profile.Confirm Password')}}</label>
                     <input type="password" class="form-control"><br>
-                    <button style="background-color: #340856;float: right;" class="btn btn-dark">Update</button>
+                    <button style="background-color: #340856;float: right;" class="btn btn-dark">{{__('profile.Update')}}</button>
                 </div>
                 <div class="col-lg-6 col-12">
-                    <h5>Referral Link</h5><br>
+                    <h5>{{__('profile.Referral Link')}}</h5><br>
                     <input type="text" value="https://insurancetoolkits.com/signup/?referral=4192" class="form-control" readonly><br>
                     <b style="color: #340856">*Special Offer</b><br>
                     <p style="color: gray">Get a $20 credit for every person you refer that successfully signs up and pays for Insurance Toolkits using your link.</p>
                 </div>
                 <div class="col-lg-6 col-12">
-                    <h3 style="color: #340856">Preference</h3><br>
+                    <h3 style="color: #340856">{{__('profile.Preference')}}</h3><br>
                     <label>State</label>
                     <select name="state" class="form-control" id="">
                         <option value="Florida">Florida</option>
@@ -93,24 +93,24 @@
 
                 </div>
                 <div class="col-lg-1 col-md-3 col-12 ">
-                    <a href="{{url('/user/invoice')}}" style="background-color: white; color:black;" class="btn btn-dark mt-2 mt-lg-0 mt-md-0">Invoice</a>
+                    <a href="{{url('/user/invoice')}}" style="background-color: white; color:black;" class="btn btn-dark mt-2 mt-lg-0 mt-md-0">{{__('profile.Invoice')}}</a>
                 </div>
                 <div class="col-lg-1 col-md-3 col-12 ">
-                    <a href="{{url('/user/creditcard')}}" style="background-color: white; color:black; " class="btn btn-dark mt-2 mt-lg-0 mt-md-0">Credit Card</a>
+                    <a href="{{url('/user/creditcard')}}" style="background-color: white; color:black; " class="btn btn-dark mt-2 mt-lg-0 mt-md-0">{{__('profile.Credit Cards')}}</a>
                 </div>
 
 
 
             </div><br>
             <center>  <h4 style="color: #340856;">
-                Subscription Overview
+                {{__('profile.Subscription Overview')}}
             </h4></center>
             <div class="row" style="margin-top: 30px;">
 
                 <div class="col-lg-6 col-12 status">
-                    <b style="color: #340856;">Status</b><br>
+                    <b style="color: #340856;">{{__('profile.Status')}}Status</b><br>
                     <h3>
-                        Current Plan: Agency
+                        {{__('profile.Current Plan: Agency')}}
                     </h3><br>
                     <p>
                         Your subscription is suspended.
@@ -140,7 +140,8 @@
 
                                 </ul>
                                 <div class="pricingTable-signup">
-                                    <a href="#">Download Plan</a>
+                                    <a href="#">
+                                        {{__('profile.DOWNLOAD PLAN')}}</a>
                                 </div>
                             </div>
                         </div>
