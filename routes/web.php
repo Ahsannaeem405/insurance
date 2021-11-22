@@ -17,8 +17,16 @@ Route::get('/', function () {
     return view('home');
 });
 
+// App::setlocale('en');
+
+
 Route::view('/pricing', 'pricing');
-Route::view('/fex', 'fex');
+// Route::view('/fex', 'fex');
+Route::get('/fex', function () {
+\Illuminate\Support\Facades\App::setLocale('en');
+
+return view ('fex');
+});
 Route::view('/quotes', 'med');
 Route::view('/term', 'term');
 

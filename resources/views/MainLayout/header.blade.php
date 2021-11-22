@@ -118,10 +118,10 @@
         <div class="collapse navbar-collapse " id="navbarNavDropdown">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link "  id="fex" href="{{url('/fex')}}">FEX </a>
+              <a class="nav-link "  id="fex" href="{{url('/fex')}}">{{__('profile.FEX')}} </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" id="term" href="{{url('/term')}}">TERM</a>
+              <a class="nav-link" id="term" href="{{url('/term')}}">{{__('profile.TERM')}}</a>
             </li>
             <li class="nav-item">
               <a class="nav-link"  id="med" href="{{url('/quotes')}}">QUOTES</a>
