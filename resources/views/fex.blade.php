@@ -109,11 +109,11 @@
 <div class="container-fluid con_fluid">
     <div class="row">
         <div class="col-lg-6 col-md-6 col-12" style="padding: 150px 80px 20px 80px;">
-            <h1 style="color: #340856"><i class="fas fa-briefcase-medical"></i> Fex Insurance</h1><br>
-            <p style="color: #340856">An underwriting, quoting, CRM, and sales software tool suite designed for Term insurance agents.</p> <br>
+            <h1 style="color: #340856"><i class="fas fa-briefcase-medical"></i> {{__('profile.Fex Insurance')}}</h1><br>
+            <p style="color: #340856">{{__('profile.An underwriting, quoting, CRM, and sales software tool suite designed for Term insurance agents.')}}</p> <br>
             <div style="display: inline-flex">
-                <button style="background-color: #340856" class="btn btn-dark">Start Free Trail</button>
-                <button style="margin-left: 20px;"  class="btn btn-dark">Demo</button>
+                <button style="background-color: #340856" class="btn btn-dark">{{__('profile.Start Free Trail')}}</button>
+                <button style="margin-left: 20px;"  class="btn btn-dark">{{__('profile.Demo')}}</button>
 
             </div>
         </div>
@@ -124,14 +124,14 @@
 </div>
 
   <div class="container" style="margin-top:80px;">
-    <h4 style="color: #340856">Services</h4><br>
+    <h4 style="color: #340856">{{__('profile.Services')}}</h4><br>
 
     <div class="row">
      <div class="col-lg-4 col-sm-6 col-12">
       <div class="card baseBlock">
      <img class="card-img-top" data-src="holder.js/100px180/" alt="100%x180" style="height: 180px; width: 100%; display: block;" src="{{asset('images/CRM.png')}}" data-holder-rendered="true">
      <div class="card-body">
-       <h4 class="card-title">CRM</h4>
+       <h4 class="card-title">{{__('profile.CRM')}}</h4>
        <p class="card-text">Use our inherent CRM which permits you to handily save customer data, take notes, and view deals insights</p>
        {{-- <a href="#" class="btn btn-primary">View</a> --}}
      </div>
@@ -141,7 +141,7 @@
       <div class="card baseBlock">
      <img class="card-img-top" data-src="holder.js/100px180/" alt="100%x180" style="height: 180px; width: 100%; display: block;" src="{{asset('images/drug.png')}}" data-holder-rendered="true">
      <div class="card-body">
-       <h4 class="card-title">Drug Lookup</h4>
+       <h4 class="card-title">{{__('profile.Drug Lookup')}}</h4>
        <p class="card-text">Straightaway reference a medication or blend of medications without expecting to run a full statement</p>
        {{-- <a href="#" class="btn btn-primary">View</a> --}}
      </div>
@@ -151,7 +151,7 @@
       <div class="card baseBlock">
      <img class="card-img-top" data-src="holder.js/100px180/" alt="100%x180" style="height: 180px; width: 100%; display: block;" src="{{asset('images/ultimate-insurance-cheat-sheet-0.png')}}" data-holder-rendered="true">
      <div class="card-body">
-       <h4 class="card-title">Health Cheat Sheet</h4>
+       <h4 class="card-title">{{__('profile.Health Cheat Sheet')}}</h4>
        <p class="card-text">The quickest method for checking endorsing boundaries on an assortment of medical issue</p>
        {{-- <a href="#" class="btn btn-primary">View</a> --}}
      </div>
@@ -161,7 +161,7 @@
       <div class="card baseBlock">
      <img class="card-img-top" data-src="holder.js/100px180/" alt="100%x180" style="height: 180px; width: 100%; display: block;" src="{{asset('images/image(1).jpg')}}" data-holder-rendered="true">
      <div class="card-body">
-       <h4 class="card-title">Quoter</h4>
+       <h4 class="card-title">{{__('profile.Quoter')}}</h4>
        <p class="card-text">Enter your prospect's information and let FexToolkit take care of the rest</p>
        {{-- <a href="#" class="btn btn-primary">View</a> --}}
      </div>
@@ -171,7 +171,7 @@
       <div class="card baseBlock">
      <img class="card-img-top" data-src="holder.js/100px180/" alt="100%x180" style="height: 180px; width: 100%; display: block;" src="{{asset('images/images (2).png')}}" data-holder-rendered="true">
      <div class="card-body">
-       <h4 class="card-title">Quote Compare</h4>
+       <h4 class="card-title">{{__('profile.Quote Compare')}}</h4>
        <p class="card-text">Need to run numerous statements on the double? With Quote Compare you can immediately run three statements one next to the other</p>
        {{-- <a href="#" class="btn btn-primary">View</a> --}}
      </div>
@@ -181,7 +181,7 @@
       <div class="card baseBlock">
      <img class="card-img-top" data-src="holder.js/100px180/" alt="100%x180" style="height: 180px; width: 100%; display: block;" src="{{asset('images/Healthcare_terms_word_cloud.png')}}" data-holder-rendered="true">
      <div class="card-body">
-       <h4 class="card-title">Insurance Lite</h4>
+       <h4 class="card-title">{{__('profile.Insurance Lite')}}</h4>
        <p class="card-text">A personal URL that you can bookmark, share with a colleague, or even integrate directly into your website</p>
        {{-- <a href="#" class="btn btn-primary">View</a> --}}
      </div>
@@ -213,7 +213,7 @@
    </div>
 
 <div class="container con3" style="margin-top:80px;" >
-    <h3 style="color: #340856">Carriers We Support</h3><br>
+    <h3 style="color: #340856">{{__('profile.Carriers We Support')}}</h3><br>
     <div class="row row1">
 <div class="col-lg-3 col-6">
     <p style="color: gray">AIG (Guaranteed Issue)</p>
@@ -253,7 +253,7 @@
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3401.5227719268473!2d74.33887921428163!3d31.5097988813731!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3919045c800b7a65%3A0x9bfe5a537cfceea4!2sMonal%20Restaurant!5e0!3m2!1sen!2s!4v1637134261216!5m2!1sen!2s" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
         <div class="col-lg-4 col-md-6 login">
-            <h4 style="color: darkblue;" >Message Us</h4>
+            <h4 style="color: darkblue;" >{{__('profile.Message Us')}}</h4>
             <input type="text" class="form-control" placeholder="Name" style="margin-top:20px;">
 
             <input type="email" class="form-control" placeholder="Enter Your Email" style="margin-top:20px;">
