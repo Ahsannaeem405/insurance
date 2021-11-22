@@ -155,8 +155,8 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {
     });
 </script>
 <script>
-    @if(session('message'))
-    toastr.success("{{ session('message') }}");
+    @if(session('success'))
+    toastr.success("{{ session('success') }}");
     @elseif(session('error'))
     toastr.error("{{ session('error') }}");
     @endif

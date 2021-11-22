@@ -1,5 +1,7 @@
 @extends('Admin_asstes.layouts.main')
-
+@section('dashboard')
+    active
+@endsection
 
 @section('content')
 <section id="dashboard-ecommerce">

@@ -12,25 +12,26 @@
     </div>
     <div class="shadow-bottom"></div>
     <div class="main-menu-content">
+
         <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
 
               <li class=" navigation-header">.
             </li>
-            <li class="{{ Request::is('adminn')? 'active' : '' }}"><a href="{{url('admin/index')}}"><i class="feather icon-home"></i><span class="menu-title" data-i18n="Dashboard">Dashboard</span></a>
+            <li class="@yield('dashboard')"><a href="{{url('admin/index')}}"><i class="feather icon-home"></i><span class="menu-title" data-i18n="Dashboard">Dashboard</span></a>
             </li>
 
-            <li class="{{ Request::is('admin/readings')? 'active' : '' }}" ><a href="{{url('/admin/viewuser')}}"><i class="feather icon-user"></i><span class="menu-title" data-i18n="profile">User</span></a>
-
-
-            </li>
-
-
-
-            <li><a href="{{url('/admin/subscriptions')}}"><i class="feather icon-user"></i><span class="menu-title" data-i18n="profile">Subscriptions</span></a>
+            <li class="@yield('user')" ><a href="{{url('/admin/viewuser')}}"><i class="feather icon-user"></i><span class="menu-title" data-i18n="profile">User</span></a>
 
 
             </li>
-            <li><a href="{{url('/admin/setting')}}"><i class="fas fa-cog"></i></i><span class="menu-title" data-i18n="profile">Setting</span></a>
+
+
+
+            <li class="@yield('subsription')"><a href="{{url('/admin/subscriptions')}}"><i class="feather icon-user"></i><span class="menu-title" data-i18n="profile">Subscriptions</span></a>
+
+
+            </li>
+            <li class="@yield('setting')"><a href="{{url('/admin/setting')}}"><i class="fas fa-cog"></i></i><span class="menu-title" data-i18n="profile">Setting</span></a>
 
 
             </li>

@@ -22,6 +22,8 @@ class CreateUsersTable extends Migration
             $table->string('role')->nullable();
             $table->string('about')->nullable();
             $table->integer('register')->default(0);
+            $table->string('number')->nullable();
+            $table->string('profile')->default('img_avatar.png');
             $table->integer('refral_id')->nullable();
             $table->rememberToken();
             $table->timestamps();
