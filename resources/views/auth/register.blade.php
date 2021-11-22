@@ -131,7 +131,7 @@
 
 @section('content')
     <div class="containerfluid con">
-        <h2>{{__('profile.About the client')}}</h2>
+        <h2>Sign Up</h2>
     </div>
     <div class="container con1">
         <h5 style="color: gray; margin-top:20px">Personal Information</h5>
