@@ -131,7 +131,7 @@
 
 @section('content')
     <div class="containerfluid con">
-        <h2>Sign Up</h2>
+        <h2>{{__('auth.password')}}</h2>
     </div>
     <div class="container con1">
         <h5 style="color: gray; margin-top:20px">Personal Information</h5>
