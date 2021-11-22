@@ -110,7 +110,7 @@
   </style>
   <body>
     @section('header')
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
         <a class="navbar-brand" href="{{url('/')}}"><img src="{{asset('images/images2.png')}}" alt="" class="logo"></a>
         <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -133,7 +133,7 @@
                 <a class="nav-link"  id="login" href="{{url('/login')}}">LOGIN</a>
               </li>
               <li class="nav-item sign_tag">
-                <a class="nav-link sign" href="{{url('/signup')}}">SIGN UP</a>
+                <a class="nav-link sign" href="{{url('/register')}}">SIGN UP</a>
               </li>
 
           </ul>

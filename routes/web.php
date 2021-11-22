@@ -16,10 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('home');
 });
-Route::view('/login','login');
-Route::view('/signup', 'signup');
+
 Route::view('/pricing', 'pricing');
-Route::view('/test', 'test');
 Route::view('/fex', 'fex');
 Route::view('/quotes', 'med');
 Route::view('/term', 'term');
@@ -58,3 +56,7 @@ Route::prefix('admin')->group(function () {
 
 
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
