@@ -13,6 +13,7 @@ class AdminController extends Controller
 
        return view('Admin_asstes.viewuser',compact('user'));
    }
+   
 
    public function user_del($id)
    {
