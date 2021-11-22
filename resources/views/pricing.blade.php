@@ -63,21 +63,21 @@
                 <div class="offset-md-3 col-md-6 col-sm-6">
                     <div class="pricingTable">
                         <div class="pricingTable-header">
-                            <h3 class="title">Bussiness</h3>
+                            <h3 class="title">{{__('profile.BUSSINESS')}}</h3>
                         </div>
                         <div class="price-value">
                             <span class="amount">$10</span>
                         </div>
-                        <span class="time">Per Month</span>
+                        <span class="time">{{__('profile.PER MONTH')}}</span>
                         <ul class="pricing-content">
-                            <li> Unlimited use of FexToolkit, TermToolkit, and MedSuppToolkit</li>
-                            <li>Unlimited use of the quoter and underwriter</li>
-                            <li>Unlimited use of all in-field sales tools</li>
-                            <li>Access to CRM</li>
+                            <li> {{__('profile.Unlimited use of FexToolkit, TermToolkit, and MedSuppToolkit')}}</li>
+                            <li>{{__('profile.Unlimited use of the quoter and underwriter')}}</li>
+                            <li>{{__('profile.Unlimited use of all in-field sales tools')}}</li>
+                            <li>{{__('profile.Access to CRM')}}</li>
 
                         </ul>
                         <div class="pricingTable-signup">
-                            <a href="#">Start Free Trail</a>
+                            <a href="#">{{__('profile.START FREE TRAIL')}}</a>
                         </div>
                     </div>
                 </div>

@@ -124,16 +124,16 @@
               <a class="nav-link" id="term" href="{{url('/term')}}">{{__('profile.TERM')}}</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link"  id="med" href="{{url('/quotes')}}">QUOTES</a>
+              <a class="nav-link"  id="med" href="{{url('/quotes')}}"> {{__('profile.QUOTES')}}</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link"  id="pricing" href="{{url('/pricing')}}">PRICING</a>
+                <a class="nav-link"  id="pricing" href="{{url('/pricing')}}">{{__('profile.PRICING')}}</a>
               </li>
               <li class="nav-item ">
-                <a class="nav-link"  id="login" href="{{url('/login')}}">LOGIN</a>
+                <a class="nav-link"  id="login" href="{{url('/login')}}">{{__('profile.LOGIN')}}</a>
               </li>
               <li class="nav-item sign_tag">
-                <a class="nav-link sign" href="{{url('/register')}}">SIGN UP</a>
+                <a class="nav-link sign" href="{{url('/register')}}">{{__('profile.SIGN UP')}}</a>
               </li>
 
           </ul>
@@ -187,17 +187,17 @@
 
           <!-- Links -->
           <b class="text-uppercase">
-            Insurance</b>
+            {{__('profile.INSURANCE')}}</b>
 
           <ul class="list-unstyled">
             <li>
-              <a href="{{url('/pricing')}}">Pricing</a>
+              <a href="{{url('/pricing')}}">{{__('profile.PRICING')}}</a>
             </li>
             <li>
-              <a href="{{url('/login')}}">Login</a>
+              <a href="{{url('/login')}}">{{__('profile.LOGIN')}}</a>
             </li>
             <li>
-              <a href="{{url('/signup')}}">Sign Up</a>
+              <a href="{{url('/signup')}}">{{__('profile.SIGN UP')}}</a>
             </li>
 
           </ul>
@@ -209,23 +209,23 @@
         <div class="col-md-2 col-6 mb-md-0 mb-3" style="text-align: left;">
 
           <!-- Links -->
-          <b class="text-uppercase">Tools</b>
+          <b class="text-uppercase">{{__('profile.TOOLS')}}</b>
 
           <ul class="list-unstyled">
             <li>
-              <a href="#!">Quotes</a>
+              <a href="#!">{{__('profile.Quotes')}}</a>
             </li>
             <li>
-              <a href="#!">Quotes Compare</a>
+              <a href="#!">{{__('profile.Quotes Compare')}}</a>
             </li>
             {{-- <li>
               <a href="#!">FexToolkit Lite</a>
             </li> --}}
             <li>
-                <a href="#!">Health Cheat Sheet</a>
+                <a href="#!">{{__('profile.Health Cheat Sheet')}}</a>
               </li>
               <li>
-                <a href="#!">Drug Lookup</a>
+                <a href="#!">{{__('profile.Drug Lookup')}}</a>
               </li>
           </ul>
 
@@ -234,26 +234,26 @@
         <div class="col-md-2 col-6 mb-md-0 mb-3" style="text-align: left;">
 
             <!-- Links -->
-            <b class="text-uppercase">Term Tools</b>
+            <b class="text-uppercase">{{__('profile.TERM TOOLS')}}</b>
 
             <ul class="list-unstyled">
               <li>
-                <a href="#!">Quotes</a>
+                <a href="#!">{{__('profile.Quotes')}}</a>
               </li>
               <li>
-                <a href="#!">Quotes Compare</a>
+                <a href="#!">{{__('profile.Quotes Compare')}}</a>
               </li>
               <li>
-                <a href="#!">Term Lite</a>
+                <a href="#!">{{__('profile.Term Lite')}}</a>
               </li>
               {{-- <li>
                 <a href="#!">CRM</a>
               </li> --}}
               <li>
-                  <a href="#!">Health Cheat Sheet</a>
+                  <a href="#!">{{__('profile.Health Cheat Sheet')}}</a>
                 </li>
                 <li>
-                  <a href="#!">Drug Lookup</a>
+                  <a href="#!">{{__('profile.Drug Lookup')}}</a>
                 </li>
             </ul>
 
@@ -262,20 +262,20 @@
           <div class="col-md-2 col-6 mb-md-0 mb-3" style="text-align: left;">
 
             <!-- Links -->
-            <b class="text-uppercase">Legal</b>
+            <b class="text-uppercase">{{__('profile.LEGAL')}}</b>
 
 
 
 
             <ul class="list-unstyled">
               <li>
-                <a href="#!">Contact</a>
+                <a href="#!">{{__('profile.Contact')}}</a>
               </li>
               <li>
-                <a href="#!">Terms of Service</a>
+                <a href="#!">{{__('profile.Terms of Service')}}</a>
               </li>
               <li>
-                <a href="#!">Privacy</a>
+                <a href="#!">{{__('profile.Privacy')}}</a>
               </li>
 
             </ul>
