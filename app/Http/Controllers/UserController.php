@@ -69,7 +69,7 @@ class UserController extends Controller
 
            if (\Hash::check($request->old_password, $user->password)) {
                $user->fill([
-                   'password' => Has::make($request->password)
+                   'password' => Hash::make($request->password)
                ])->save();
 
            } else {
