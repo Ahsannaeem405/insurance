@@ -23,36 +23,17 @@
                               </tr>
                             </thead>
                             <tbody>
+                            @php $count=1; @endphp
+                            @foreach($subsription as $sub)
                                 <tr>
-                                    <th scope="row">1</th>
-                                    <td>Mark</td>
-                                    <td>Mark@gmail.com</td>
-                                    <td>$ 120</td>
-
-                                    <td>
-                                       12-2-2021
-                                    </td>
+                                    <th scope="row">{{$count++}}</th>
+                                    <td>{{$sub->user->name}}</td>
+                                    <td>{{$sub->user->email}}</td>
+                                    <td>$ {{$sub->price}}</td>
+                                    <td>{{$sub->created_at}}</td>
                                   </tr>
-                                  <tr>
-                                    <th scope="row">2</th>
-                                    <td>Mark</td>
-                                    <td>Mark@gmail.com</td>
-                                    <td>$ 120</td>
+                            @endforeach
 
-                                    <td>
-                                       12-2-2021
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <th scope="row">3</th>
-                                    <td>Mark</td>
-                                    <td>Mark@gmail.com</td>
-                                    <td>$ 120</td>
-
-                                    <td>
-                                       12-2-2021
-                                    </td>
-                                  </tr>
                             </tbody>
                           </table>
                     </div>

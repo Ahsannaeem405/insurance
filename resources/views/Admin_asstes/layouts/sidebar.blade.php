@@ -31,6 +31,14 @@
 
 
             </li>
+
+
+
+            <li class="@yield('coupan')"><a href="{{url('/admin/coupon')}}"><i class="feather icon-user"></i><span class="menu-title" data-i18n="profile">Coupon </span></a>
+
+
+            </li>
+
             <li class="@yield('setting')"><a href="{{url('/admin/setting')}}"><i class="fas fa-cog"></i></i><span class="menu-title" data-i18n="profile">Setting</span></a>
 
 

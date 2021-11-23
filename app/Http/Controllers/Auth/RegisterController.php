@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Models\Setting;
+use App\Models\Subsription;
 use App\Providers\RouteServiceProvider;
 use App\Models\User;
 
@@ -73,10 +75,10 @@ public function registeruser(Request $request)
         'password' => ['required', 'string', 'min:8'],
         'about' => ['required'],
     ]);
-
+    $pricing=Setting::first();
     Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
     Stripe\Charge::create ([
-        "amount" => 100 * 100,
+        "amount" => 100 * $pricing->p_cost,
         "currency" => "usd",
         "source" => $request->stripeToken,
         "description" => "Insurance Payment"
@@ -89,8 +91,14 @@ $user->email=$request->email;
 $user->password=Hash::make($request->password);
 $user->about=$request->about;
 $user->role='user';
-$user->register=44;
+$user->register=14+intval($pricing->p_days);
 $user->save();
+
+
+$subsription=new Subsription();
+$subsription->user_id=$user->id;
+$subsription->price=$pricing->p_cost;
+$subsription->save();
 
 \Auth::login($user);
 

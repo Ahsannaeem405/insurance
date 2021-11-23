@@ -23,7 +23,7 @@ Route::get('/logout', [\App\Http\Controllers\HomeController::class,'logout']);
 // App::setlocale('en');
 
 
-Route::view('/pricing', 'pricing');
+Route::get('/pricing', [\App\Http\Controllers\PricingController::class,'pricing']);
 Route::view('/fex', 'fex');
 
 Route::view('/quotes', 'med');
@@ -34,7 +34,10 @@ Route::view('/fex','Logged_pages.fex');
 Route::view('/quoter','Logged_pages.medd');
 Route::view('/term','Logged_pages.term');
 Route::view('/crm','Logged_pages.crm');
-Route::view('/account','Logged_pages.profile');
+Route::get('/account',[\App\Http\Controllers\UserController::class,'account']);
+Route::post('/update/profile',[\App\Http\Controllers\UserController::class,'profile_update']);
+Route::get('/buy/plan',[\App\Http\Controllers\UserController::class,'buy_now']);
+Route::post('/pay',[\App\Http\Controllers\UserController::class,'buy_now_pay']);
 Route::view('/invoice', 'Logged_pages.invoice');
 Route::view('/creditcard', 'Logged_pages.creditcard');
 Route::view('/overview', 'Logged_pages.overview');
@@ -55,6 +58,11 @@ Route::prefix('admin')->middleware(['auth','admin'])->group(function () {
 
     Route::get('/subscriptions', [\App\Http\Controllers\AdminController::class,'subscriptions']);
     Route::get('/setting', [\App\Http\Controllers\AdminController::class,'setting']);
+    Route::get('/coupon', [\App\Http\Controllers\AdminController::class,'coupon']);
+    Route::post('/coupan/add', [\App\Http\Controllers\AdminController::class,'coupon_add']);
+    Route::get('/coupan/del/{id}', [\App\Http\Controllers\AdminController::class,'coupon_del']);
+    Route::post('/coupan/edit/{id}', [\App\Http\Controllers\AdminController::class,'coupon_edit']);
+    Route::post('/update/setting', [\App\Http\Controllers\AdminController::class,'update_setting']);
     Route::get('/profile', [\App\Http\Controllers\AdminController::class,'profile']);
 
 

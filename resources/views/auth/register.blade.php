@@ -206,6 +206,8 @@
                 <div class="col-lg-12" style="margin-top:20px">
                     <h5 style="color: gray">Choose Your Plan</h5>
                 </div>
+
+                @php  $pricing=\App\Models\Setting::first(); @endphp
                 <div class="options">
 
                     <div class="col-lg-12 " style="margin-top:20px">
@@ -218,21 +220,17 @@
                                         <i class="fas fa-clipboard-list" style="font-size: 40px; color:white"></i>
 
                                     </div>
-                                    <h5 class="heading" style="margin-top: 20px;margin-left: 16px;">Agency</h5>
+                                    <h5 class="heading" style="margin-top: 20px;margin-left: 16px;">{{$pricing->p_name}}</h5>
 
                                 </div>
                                 <div class="col-lg-5 col-12" style="padding-top:20px; ">
                                     <b style="float:right;">
 
-                                        $ 34.99
-                                        /month</b>
+                                       ${{$pricing->p_cost}} / {{$pricing->p_days}} days</b>
                                 </div>
 
                                 <div class="col-lg-12 col-12" style="padding-top:20px; ">
-                                    <center style="color: gray; padding-bottom:20px;">All the features of the Business
-                                        Plan,
-                                        plus..
-                                    </center>
+
                                     <ul>
                                         <li>14 days free trail</li>
                                         <li>Create and remove agent accounts</li>
@@ -310,7 +308,7 @@
                 </div>
                 <div class="col-lg-6 col-md-6 col-12" style="padding-top: 20px;">
                     <p><span style="font-size: 19px; font-weight:bold">Total:
-                        $34.99</span>/month</p>
+                        ${{$pricing->p_cost}}</span>/{{$pricing->p_days}} days</p>
                 </div>
                 {{--                <div class="col-lg-12 col-12" style="padding-top: 20px;">--}}
                 {{--                    <p>By signing up you agree to our <a href="#" style="color: indigo">Terms of Service</a></p>--}}
