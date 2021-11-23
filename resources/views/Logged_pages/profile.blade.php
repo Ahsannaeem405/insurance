@@ -32,19 +32,20 @@
 @section('content')
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item">
-        <a class="nav-link active" href="#info" role="tab" data-toggle="tab">Personal Information</a>
+        <a class="nav-link active" href="#info" role="tab" data-toggle="tab">{{__('profile.Personal Information')}}</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="#Subscription" role="tab" data-toggle="tab">Subscription</a>
+        <a class="nav-link" href="#Subscription" role="tab" data-toggle="tab">{{__('profile.Subscription')}}</a>
     </li>
 
 </ul>
 <div class="tab-content">
     <div role="tabpanel" class="tab-pane  active" id="info">
         <div class="container account">
-            <h3 style="color: #340856">Personal Information</h3>
+            <h3 style="color: #340856">{{__('profile.Personal Information')}}</h3>
             <div class="row account">
                 <div class="col-lg-6 col-12">
+
                     <form method="post" action="{{url('user/update/profile')}}">
                         @csrf
 
@@ -100,6 +101,7 @@
     <div role="tabpanel" class="tab-pane fade" id="Subscription">
         <div class="container-fluid" style="padding: 50px;">
 
+
             <center>  <h4 class="my-5" style="color: #340856;">
                 Subscription Overview
             </h4></center>
@@ -109,6 +111,7 @@
                     <b style="color: #340856;">Status</b><br>
                     <h3>
                         Current Plan: {{$setting->p_name}}
+
                     </h3><br>
                     <p>
 
@@ -131,7 +134,8 @@
 
             </div>
 
-        </div>
+
+
 
     </div>
 

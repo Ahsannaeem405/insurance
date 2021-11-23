@@ -49,7 +49,7 @@
                 <img src="{{asset('images/20944573.jpg')}}" alt="" style="max-height: 500px; width:100%;">
             </div>
             <div class="col-lg-4 login">
-                <h4 style="color: darkblue;" >Login</h4>
+                <h4 style="color: darkblue;" >{{__('profile.signIn')}}</h4>
                <form action="{{url('login')}}" method="post">
                    @csrf
                 <input type="email" value="{{old('email')}}" required name="email" class="form-control" placeholder="Enter Your Email" style="margin-top:20px;">
@@ -63,9 +63,9 @@
                 <input type="password" required name="password" class="form-control" placeholder="Enter Your Password" style="margin-top:20px;">
 
 
-                <button class="form-control btn-submit"  style="margin-top:20px;">Submit</button><br>
+                <button class="form-control btn-submit"  style="margin-top:20px;">{{__('profile.submit')}}</button><br>
                </form>
-                <a href="#" >Forgot Password</a>
+                <a href="#" >{{__('profile.Forgot Password')}}</a>
 
             </div>
         </div>

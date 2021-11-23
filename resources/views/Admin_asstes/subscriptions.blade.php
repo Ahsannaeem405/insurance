@@ -26,12 +26,16 @@
                             @php $count=1; @endphp
                             @foreach($subsription as $sub)
                                 <tr>
+
                                     <th scope="row">{{$count++}}</th>
                                     <td>{{$sub->user->name}}</td>
                                     <td>{{$sub->user->email}}</td>
                                     <td>$ {{$sub->price}}</td>
                                     <td>{{$sub->created_at}}</td>
+
+
                                   </tr>
+                                
                             @endforeach
 
                             </tbody>

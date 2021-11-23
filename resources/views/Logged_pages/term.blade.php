@@ -142,7 +142,7 @@ display: block;
             <div role="tabpanel" class="tab-pane  active" id="Quoter">
                 <div class="container-fluid" style="padding-top: 50px;">
                     <center>
-                        <h3 style="color: rgb(52, 8, 86)">Get a Term Quote</h3>
+                        <h3 style="color: rgb(52, 8, 86)">{{__('profile.Get a Term Quote')}}</h3>
                     </center>
                     <div class="row" style="margin-top: 40px;">
                         <div class="col-lg-6 col-12" style="border-right: 1px solid lightgray ">
@@ -390,7 +390,7 @@ display: block;
             </div>
             <div role="tabpanel" class="tab-pane fade" id="drug">
                 <div class="container" style="text-align: center;width:50%;padding-top:50px;">
-                    <h3 style="color: rgb(52, 8, 86)">Fex Drug Lookup</h3>
+                    <h3 style="color: rgb(52, 8, 86)">{{__('profile.Fex Drug Lookup')}}</h3>
 
                     <label for="cars" style="float: left">State:</label>
 
@@ -421,7 +421,7 @@ display: block;
                     </div><br>
 
                     <input type="text" class="form-control" placeholder="Enter Medication"><br>
-                    <button class="btn btn-dark" style="background-color: #340856">Lookup</button>
+                    <button class="btn btn-dark" style="background-color: #340856">{{__('profile.Lookup')}}</button>
 
                 </div>
             </div>

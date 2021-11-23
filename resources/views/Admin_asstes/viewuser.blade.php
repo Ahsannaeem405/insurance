@@ -24,7 +24,34 @@
                             </tr>
                             </thead>
                             <tbody>
-                            @php $count=1; @endphp
+
+
+
+
+
+
+                                <tr>
+                                    <th scope="row"></th>
+                                    <td></td>
+                                    <td></td>
+                                    <td>
+                                        <a href="" style="margin-top: 10px;width: 100px"
+                                           class="btn btn-primary">Edit</a>
+
+                                        <a href=""
+                                           onclick="return confirm('Are you sure you want to delete this user?');">
+                                            <button class="btn btn-danger" style="margin-top: 10px;width: 100px">Delete</button>
+                                        </a>
+                                    </td>
+                                </tr>
+
+
+
+
+
+
+
+                          @php $count=1; @endphp
                             @foreach($user as $user)
                                 <tr>
                                     <th scope="row">{{$count++}}</th>
