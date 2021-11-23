@@ -25,15 +25,15 @@
 
                     <div class="col-lg-6 col-12 ">
                         <label class="mb-1">Package Name :</label>
-                        <input type="text" name="p_name" class="form-control" placeholder="Package Name" value="{{$setting->p_name}}">
+                        <input type="text" required name="p_name" class="form-control" placeholder="Package Name" value="{{$setting->p_name}}">
                     </div>
                     <div class="col-lg-6 col-12 ">
                         <label class="mb-1">Package Cost :</label>
-                        <input type="text" name="p_cost" class="form-control" value="{{$setting->p_cost}}" placeholder="Package Cost/Month">
+                        <input type="text req" required name="p_cost" class="form-control" value="{{$setting->p_cost}}" placeholder="Package Cost/Month">
                     </div>
                     <div class="col-lg-6 col-12 mt-2">
                         <label class="mb-1">Number Of Days :</label>
-                        <input type="number"  class="form-control" value="{{$setting->p_days}}" name="p_days" min="1" >
+                        <input type="number" required class="form-control" value="{{$setting->p_days}}" name="p_days" min="1" >
                     </div>
 
 

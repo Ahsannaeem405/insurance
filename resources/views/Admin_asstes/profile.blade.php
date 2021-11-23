@@ -17,21 +17,21 @@
                         <input name="profile"  type="file" data-default-file="{{asset('upload/images/'.$user->profile.'')}}" class="dropify"  data-height="100" />
                     </div>
                     <div class="col-lg-6 col-12 mt-2">
-                        <input type="text" class="form-control" name="name" value="{{$user->name}}" placeholder=" Name">
+                        <input type="text" required class="form-control" name="name" value="{{$user->name}}" placeholder=" Name">
                     </div>
 
 
                     <div class="col-lg-6 col-12 mt-2">
-                        <input type="text" class="form-control" name="number" value="{{$user->number}}" placeholder="Number">
+                        <input type="text" required class="form-control" name="number" value="{{$user->number}}" placeholder="Number">
                     </div>
                     <div class="col-lg-6 col-12 mt-2">
-                        <input type="email" class="form-control" name="email" value="{{$user->email}}" placeholder="Email">
+                        <input type="email" required class="form-control" name="email" value="{{$user->email}}" placeholder="Email">
                     </div>
                     <div class="col-lg-6 col-12 mt-2">
-                        <input type="password" class="form-control" placeholder="Password">
+                        <input type="password"  class="form-control" placeholder="Password">
                     </div>
                     <div class="col-lg-12 col-12 mt-2">
-                        <textarea  class="form-control" name="about"  placeholder="About"> {{$user->about}}</textarea>
+                        <textarea  class="form-control" name="about" required  placeholder="About"> {{$user->about}}</textarea>
                     </div>
 
 
