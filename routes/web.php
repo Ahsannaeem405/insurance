@@ -19,6 +19,7 @@ Route::get('/', function () {
 
 Route::post('register_user',[\App\Http\Controllers\Auth\RegisterController::class,'registeruser']);
 Route::get('/logout', [\App\Http\Controllers\HomeController::class,'logout']);
+Route::get('/promo', [\App\Http\Controllers\UserController::class,'promo']);
 
 // App::setlocale('en');
 

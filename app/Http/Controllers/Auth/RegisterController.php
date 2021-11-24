@@ -76,23 +76,40 @@ public function registeruser(Request $request)
         'about' => ['required'],
     ]);
     $pricing=Setting::first();
-    Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
+    if(floatval($request->f_price)!=0)
+    {
+        Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
     Stripe\Charge::create ([
-        "amount" => 100 * $pricing->p_cost,
+        "amount" => 100 * floatval($request->f_price),
         "currency" => "usd",
         "source" => $request->stripeToken,
         "description" => "Insurance Payment"
     ]);
-
+    }
 
 $user=new User();
 $user->name=$request->f_name .' '. $request->l_name;
 $user->email=$request->email;
 $user->password=Hash::make($request->password);
 $user->about=$request->about;
+$user->refral_id=$request->refral;
 $user->role='user';
-$user->register=14+intval($pricing->p_days);
+    if(floatval($request->f_price)!=0) {
+        $user->register = 14 + intval($pricing->p_days);
+    }
+    else{
+        $user->register = 14;
+
+    }
 $user->save();
+
+if(intval($request->refral)!=0)
+{
+    $user=User::find(intVal($request->refral));
+    $user->register=$user->register+30;
+    $user->update();
+
+}
 
 
 $subsription=new Subsription();

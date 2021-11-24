@@ -48,7 +48,7 @@
             <div class="col lg-8 image_div">
                 <img src="{{asset('images/20944573.jpg')}}" alt="" style="max-height: 500px; width:100%;">
             </div>
-            <div class="col-lg-4 login">
+            <div class="col-lg-4 login" style="height: 350px">
                 <h4 style="color: darkblue;" >{{__('profile.signIn')}}</h4>
                <form action="{{url('login')}}" method="post">
                    @csrf
@@ -65,7 +65,7 @@
 
                 <button class="form-control btn-submit"  style="margin-top:20px;">{{__('profile.submit')}}</button><br>
                </form>
-                <a href="#" >{{__('profile.Forgot Password')}}</a>
+                <a href="{{route('password.request')}}" >{{__('profile.Forgot Password')}}</a>
 
             </div>
         </div>

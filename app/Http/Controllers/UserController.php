@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Coupan;
 use App\Models\Setting;
 use App\Models\Subsription;
 use App\Models\User;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Testing\Fluent\Concerns\Has;
@@ -14,6 +16,32 @@ use Stripe;
 class UserController extends Controller
 {
 
+    public function promo(Request $request)
+    {
+    $code=$request->promo;
+        $price=Setting::first();
+    $coupan=Coupan::where('title',$code)->first();
+    if($coupan)
+    {
+        if($coupan->date>=Carbon::now())
+        {
+
+
+            $cost=$price->p_cost;
+            $cost=floatval($price->p_cost) - (floatval($price->p_cost) * (floatval($coupan->discount)/100));
+            return response()->json(['success'=>true,'message'=>'Apply successfully','price'=>$cost]);
+
+        }
+        else{
+            return response()->json(['success'=>false,'message'=>'The coupan has expired','price'=>$price->p_cost]);
+
+        }
+
+    }
+    else{
+        return response()->json(['success'=>false,'message'=>'Invalid coupan code','price'=>$price->p_cost]);
+    }
+    }
     public function buy_now()
     {
         $price=Setting::first();

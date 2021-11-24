@@ -25,8 +25,8 @@
                  @csrf
 
                  <div class="form-group">
-                     <label for="exampleInputEmail1">Coupan Title</label>
-                     <input type="text" name="title" required class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="title">
+                     <label for="exampleInputEmail1">Coupan Code</label>
+                     <input type="text" name="title" required class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="code">
                  </div>
 
 
@@ -71,7 +71,7 @@
                             <thead>
                             <tr>
                                 <th scope="col">No</th>
-                                <th scope="col">Title</th>
+                                <th scope="col">Code</th>
                                 <th scope="col">Discount</th>
                                 <th scope="col">Valid until</th>
                                 <th scope="col">Action</th>
@@ -112,8 +112,8 @@
                                                     @csrf
 
                                                     <div class="form-group">
-                                                        <label for="exampleInputEmail1">Coupan Title</label>
-                                                        <input type="text" name="title" value="{{$co->title}}" required class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="title">
+                                                        <label for="exampleInputEmail1">Coupan Code</label>
+                                                        <input type="text" name="title" value="{{$co->title}}" required class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Code">
                                                     </div>
 
 

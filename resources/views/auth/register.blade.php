@@ -145,6 +145,19 @@
               id="payment-form">
             @csrf
 
+            @if(isset($_GET['referral']))
+                @php $refral=$_GET['referral']; @endphp
+
+            @else
+                @php $refral=0; @endphp
+
+                @endif
+
+            @php $price=\App\Models\Setting::first(); @endphp
+
+            <input type="hidden" name="refral" value="{{$refral}}">
+            <input type="hidden" name="f_price" id="f_price" value="{{$price->p_cost}}">
+
             <div class="row">
                 <div class="col-lg-6 col-12">
                     <input type="text" name="f_name" value="{{old('f_name')}}" class="form-control" style="margin-top:20px" required
@@ -193,7 +206,13 @@
 
                 </div>
                 <div class="col-lg-3 col-md-3 col-12" style="margin-top:20px">
-                    <input type="text" placeholder="Promo" name="promo" class="form-control">
+                    <input type="text" placeholder="Promo Code" name="promo" id="promo_code" class="form-control">
+                    <span style="color: red" id="promo_code_msg">
+
+                                    </span>
+                    <span style="color: green" id="promo_code_msg2">
+
+                                    </span>
 
                     @if($errors->has('promo'))
 
@@ -268,7 +287,7 @@
 
 
 
-                    <div class='col-lg-6 form-group card required'>
+                    <div class='col-lg-6 form-group  required'>
                         <label class='control-label'>Card Number</label> <input
                             autocomplete='off' class='form-control card-number' size='20'
                             type='text'>
@@ -308,22 +327,14 @@
                 </div>
                 <div class="col-lg-6 col-md-6 col-12" style="padding-top: 20px;">
                     <p><span style="font-size: 19px; font-weight:bold">Total:
-                        ${{$pricing->p_cost}}</span>/{{$pricing->p_days}} days</p>
+                        $
+
+                            <span id="total_bill">{{$pricing->p_cost}}</span>
+
+
+
+                        </span>/{{$pricing->p_days}} days</p>
                 </div>
-                {{--                <div class="col-lg-12 col-12" style="padding-top: 20px;">--}}
-                {{--                    <p>By signing up you agree to our <a href="#" style="color: indigo">Terms of Service</a></p>--}}
-                {{--                </div>--}}
-                {{--                <div class="col-lg-2 col-md-2 col-4" style="padding-top: 20px;">--}}
-                {{--                    <label class="switch">--}}
-                {{--                        <input type="checkbox" checked>--}}
-                {{--                        <span class="slider round"></span>--}}
-                {{--                    </label>--}}
-                {{--                </div>--}}
-                {{--                <div class="col-lg-10 col-md-10 col-8" style="padding-top: 20px;">--}}
-                {{--                    <p>Receive occasional email updates from InsuranceToolkits</p>--}}
-
-                {{--                </div>--}}
-
 
             </div>
 
@@ -332,7 +343,43 @@
     </div>
 
 
+    <script>
+        $(document).ready(function(){
 
+            $("#promo_code").change(function(){
+var promo=$(this).val();
+
+                $.ajax({
+                    type: 'get',
+                    url: '{{url('promo')}}',
+                    data: {'promo': promo, },
+
+
+                    success: function (response) {
+
+if(response['success']!=true)
+{
+$('#promo_code_msg').text(response['message']);
+$('#promo_code_msg2').text('');
+    $('#total_bill').text(response['price']);
+    $('#f_price').val(response['price']);
+
+}
+else {
+    $('#promo_code_msg').text();
+    $('#total_bill').text(response['price']);
+    $('#f_price').val(response['price']);
+    $('#promo_code_msg2').text(response['message']);
+    $('#promo_code_msg').text('');
+
+
+}
+
+                    }
+                });
+            });
+        });
+    </script>
     <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
     <script type="text/javascript">
         $(function() {
