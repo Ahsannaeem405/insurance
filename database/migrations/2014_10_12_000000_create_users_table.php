@@ -23,6 +23,7 @@ class CreateUsersTable extends Migration
             $table->string('about')->nullable();
             $table->integer('register')->default(0);
             $table->string('number')->nullable();
+            $table->integer('status')->default(1);
             $table->string('profile')->default('img_avatar.png');
             $table->integer('refral_id')->nullable();
             $table->rememberToken();

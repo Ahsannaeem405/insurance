@@ -4,9 +4,9 @@ return [
 
     // header
     'FEX' => 'FEX',
-    'TERM' => 'TERM',
-    'Legeal checker'=>'Legeal checker',
-    'Accounts'=>'Accounts',
+    'TERM' => 'TÉRMINO',
+    'Legeal checker'=>'Rastreador legal',
+    'Accounts'=>'Cuentas',
     'QUOTES' => 'QUOTES',
     'PRICING' => 'PRICING',
     'LOGIN' => 'LOGIN',

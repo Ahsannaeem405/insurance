@@ -126,15 +126,11 @@ display: block;
             <li class="nav-item">
                 <a class="nav-link" href="#Quotecompare" role="tab" data-toggle="tab">Quote Compare</a>
             </li>
+
             <li class="nav-item">
-                <a class="nav-link" href="#drug" role="tab" data-toggle="tab">Drug Lookup</a>
+                <a class="nav-link" href="#setting" role="tab" data-toggle="tab">Settings</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#setting" role="tab" data-toggle="tab">{{__('profile.Settings')}}</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#Customize" role="tab" data-toggle="tab">{{__('profile.Customize Carriers')}}</a>
-            </li>
+
         </ul>
 
         <!-- Tab panes -->
@@ -497,48 +493,20 @@ display: block;
 
               </div>
             </div>
-            <div role="tabpanel" class="tab-pane fade" id="Customize">
-                <div class="container-fluid " style="padding: 50px;">
-                    <h3 class="text-center" style="color: #340856;">{{__('profile.Insurance Customization')}}</h3>
-                    <div class="row">
-                        <div class="col-lg-5 col-12 mt-3  p-3 company" style="display: inline-flex;">
-                            <h5>AIG</h5>
-                            <label class="switch ml-auto">
-                                <input type="checkbox" checked>
-                                <span class="slider round"></span>
-                              </label>
-                        </div>
-                        <div class=" offset-lg-2 col-lg-5 col-12 mt-3 p-3 company" style="display: inline-flex;">
-                            <h5>AIG</h5>
-                            <label class="switch ml-auto">
-                                <input type="checkbox" checked>
-                                <span class="slider round"></span>
-                              </label>
-                        </div>
-                        <div class="col-lg-5 col-12 mt-3 p-3 company" style="display: inline-flex;">
-                            <h5>AIG</h5>
-                            <label class="switch ml-auto">
-                                <input type="checkbox" checked>
-                                <span class="slider round"></span>
-                              </label>
-                        </div>
-                        <div class="offset-lg-2  col-lg-5 col-12 mt-3 p-3 company" style="display: inline-flex;">
-                            <h5>AIG</h5>
-                            <label class="switch ml-auto">
-                                <input type="checkbox" checked>
-                                <span class="slider round"></span>
-                              </label>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
 
 
             </div>
         </div>
 
-        <div class="container table">
-          <div class="row header" >
+
+
+
+
+    </div>
+
+    <div class="container mb-5">
+        <div class="row header" >
             <div class="col-lg-3">
                 <b>{{__('profile.Company Name')}}</b>
             </div>
@@ -551,43 +519,30 @@ display: block;
             <div class="col-lg-3">
                 <b>{{__('profile.Actions')}}</b>
             </div>
-          </div>
-          <div class="row data">
+        </div>
+        <div class="row data">
             <div class="col-lg-3  col-12 center">
-               <img src="{{asset('images/transam.png')}}" style="width: 220px;" alt="">
+                <img src="{{asset('images/transam.png')}}" style="width: 220px;" alt="">
             </div>
             <div class="col-lg-3  col-12 center v_class" style="">
-              <p>$14.80</p>
+                <p>$14.80</p>
             </div>
             <div class="col-lg-3  col-12 center v_class" >
-               <p>Family Choice Immediate</p>
+                <p>Family Choice Immediate</p>
             </div>
             <div class="col-lg-3  col-12 center v_class" >
-              <button class="btn btn-dark">Compare</button> &nbsp;<i class="fas fa-chevron-down"></i>
+                <button class="btn btn-dark">Compare</button> &nbsp;<i class="fas fa-chevron-down"></i>
             </div>
 
-             <div class="col-lg-6 col-12 center div_show div_hide" style="padding:10px">
+            <div class="col-lg-6 col-12 center div_show div_hide" style="padding:10px">
                 <p>Annual Rate: $168.20</p>
                 <p>+Accidental Death Monthly Rate: $16.12</p>
                 <p>+Accidental Death Annual Rate: $183.20</p>
             </div>
             <div class="col-lg-6 col-12 center div_show v_class div_hide" style="padding:10px">
-               <button class="btn btn-dark" style="background-color: #340856"><i class="fas fa-plus"></i> Push To CRM</button>
+                <button class="btn btn-dark" style="background-color: #340856"><i class="fas fa-plus"></i> Push To CRM</button>
             </div>
-          </div>
-          {{-- <div class="row div">
-            <div class="col-lg-6 col-12 center" style="padding:10px">
-                <p>Annual Rate: $168.20</p>
-                <p>+Accidental Death Monthly Rate: $16.12</p>
-                <p>+Accidental Death Annual Rate: $183.20</p>
-            </div>
-            <div class="col-lg-6 col-12 center  v_class " style="padding:10px">
-               <button class="btn btn-dark" style="background-color: #340856"><i class="fas fa-plus"></i> Push To CRM</button>
-            </div>
-          </div> --}}
-
         </div>
-
 
 
     </div>

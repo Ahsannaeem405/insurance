@@ -16,6 +16,27 @@ use Stripe;
 class UserController extends Controller
 {
 
+    public function __construct()
+    {
+     //  \App::setLocale('sp');
+    }
+
+    public function home()
+    {
+      //  \App::setLocale('sp');
+
+        return view('home');
+    }
+
+    public function lang($lang)
+    {
+
+  \Session::put('lang',$lang);
+        \App::setLocale($lang);
+return back();
+
+    }
+
     public function promo(Request $request)
     {
     $code=$request->promo;

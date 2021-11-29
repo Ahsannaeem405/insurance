@@ -109,8 +109,13 @@
         }
 
     }
+      .dropdown-toggle::after {
+          content: none;
+      }
   </style>
   <body>
+
+
     @section('header')
 
         @if(!Auth::check())
@@ -122,14 +127,13 @@
         <div class="collapse navbar-collapse " id="navbarNavDropdown">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
+
               <a class="nav-link "  id="fex" href="{{url('/fex')}}">{{__('profile.FEX')}} </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" id="term" href="{{url('/term')}}">{{__('profile.TERM')}}</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link"  id="med" href="{{url('/quotes')}}"> {{__('profile.QUOTES')}}</a>
-            </li>
+
             <li class="nav-item">
                 <a class="nav-link"  id="pricing" href="{{url('/pricing')}}">{{__('profile.PRICING')}}</a>
               </li>
@@ -139,6 +143,25 @@
               <li class="nav-item sign_tag">
                 <a class="nav-link sign" href="{{url('/register')}}">{{__('profile.SIGN UP')}}</a>
               </li>
+
+
+              <li class="nav-item sign_tag">
+
+
+
+                  <div class="dropdown">
+
+
+                          <i style="font-size: 25px" class="fas fa-globe-americas dropdown-toggle mt-2" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+
+                      <div style="margin-left: -130px" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item" href="{{url('lang/en')}}">English</a>
+                          <a class="dropdown-item" href="{{url('lang/sp')}}">Spanish</a>
+
+                      </div>
+                  </div>
+              </li>
+{{--              @dd(App::getLocale())--}}
 
           </ul>
         </div>
@@ -159,19 +182,35 @@
                             <a class="nav-link "  id="fex" href="{{url('/user/fex')}}">{{__('profile.FEX')}} </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" id="term" href="{{url('/user/term')}}">TERM</a>
+                            <a class="nav-link" id="term" href="{{url('/user/term')}}">{{__('profile.TERM')}}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link"  id="med" href="{{url('/user/quoter')}}">Quoter</a>
+                            <a class="nav-link" id="term" href="{{url('/user/legeal/checket')}}">{{__('profile.Legeal checker')}}</a>
                         </li>
-                        {{-- <li class="nav-item">
-                            <a class="nav-link"  id="pricing" href="{{url('/user/crm')}}">CRM</a>
-                          </li> --}}
+
+
                         <li class="nav-item ">
-                            <a class="nav-link"  id="login" href="{{url('/user/account')}}">Accounts</a>
+                            <a class="nav-link"  id="login" href="{{url('/user/account')}}">{{__('profile.Accounts')}}</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{url('/logout')}}">Logout</a>
+                        </li>
+
+                        <li class="nav-item sign_tag">
+
+
+
+                            <div class="dropdown">
+
+
+                                <i style="font-size: 25px" class="fas fa-globe-americas dropdown-toggle mt-2" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+
+                                <div style="margin-left: -130px" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="{{url('lang/en')}}">English</a>
+                                    <a class="dropdown-item" href="{{url('lang/sp')}}">Spanish</a>
+
+                                </div>
+                            </div>
                         </li>
 
                     </ul>

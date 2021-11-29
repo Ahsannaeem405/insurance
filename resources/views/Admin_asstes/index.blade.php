@@ -31,8 +31,8 @@
                             <i class="feather icon-shopping-cart text-danger font-medium-5"></i>
                         </div>
                     </div>
-                    <h2 class="text-bold-700 mt-1">1</h2>
-                    <p class="mb-0">Packages</p>
+                    <h2 class="text-bold-700 mt-1">{{\App\Models\Subsription::whereMonth('created_at', date('m'))->count()}}</h2>
+                    <p class="mb-0">Monthly Subscribers</p>
                 </div>
                 <div class="card-content">
                     <div id="line-area-chart-3"></div>
@@ -47,14 +47,34 @@
                             <i class="feather icon-package text-warning font-medium-5"></i>
                         </div>
                     </div>
-                    <h2 class="text-bold-700 mt-1">$ {{\App\Models\Subsription::all()->sum('price')}}</h2>
-                    <p class="mb-0">Revenue</p>
+
+                    <h2 class="text-bold-700 mt-1">$ {{\App\Models\Subsription::whereMonth('created_at', date('m'))->sum('price')}}</h2>
+                    <p class="mb-0">{{date('M')}} revenue</p>
                 </div>
                 <div class="card-content">
                     <div id="line-area-chart-4"></div>
                 </div>
             </div>
         </div>
+
+
+        <div class="col-lg-4 col-sm-4 col-12">
+            <div class="card">
+                <div class="card-header d-flex flex-column align-items-start pb-0">
+                    <div class="avatar bg-rgba-danger p-50 m-0">
+                        <div class="avatar-content">
+                            <i class="feather icon-shopping-cart text-danger font-medium-5"></i>
+                        </div>
+                    </div>
+                    <h2 class="text-bold-700 mt-1">{{\App\Models\User::where('role','user')->where('status',1)->count()}}/{{\App\Models\User::where('role','user')->count()}}</h2>
+                    <p class="mb-0"> Subscribers</p>
+                </div>
+                <div class="card-content">
+                    <div id="line-area-chart-5"></div>
+                </div>
+            </div>
+        </div>
+
     </div>
 
     <div class="row">

@@ -13,27 +13,27 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', [\App\Http\Controllers\UserController::class,'home'])->middleware('lang');
 
-Route::post('register_user',[\App\Http\Controllers\Auth\RegisterController::class,'registeruser']);
-Route::get('/logout', [\App\Http\Controllers\HomeController::class,'logout']);
-Route::get('/promo', [\App\Http\Controllers\UserController::class,'promo']);
+Route::post('register_user',[\App\Http\Controllers\Auth\RegisterController::class,'registeruser'])->middleware('lang');
+Route::get('/logout', [\App\Http\Controllers\HomeController::class,'logout'])->middleware('lang');
+Route::get('/promo', [\App\Http\Controllers\UserController::class,'promo'])->middleware('lang');
 
 // App::setlocale('en');
 
 
-Route::get('/pricing', [\App\Http\Controllers\PricingController::class,'pricing']);
-Route::view('/fex', 'fex');
+Route::get('/pricing', [\App\Http\Controllers\PricingController::class,'pricing'])->middleware('lang');
+Route::view('/fex', 'fex')->middleware('lang');
 
-Route::view('/quotes', 'med');
-Route::view('/term', 'term');
+Route::view('/quotes', 'med')->middleware('lang');
+Route::view('/term', 'term')->middleware('lang');
+Route::get('/lang/{lang}', [\App\Http\Controllers\UserController::class,'lang'])->middleware('lang');
 
-Route::prefix('user')->middleware(['auth','user'])->group(function () {
+Route::prefix('user')->middleware(['auth','user','lang'])->group(function () {
 Route::view('/fex','Logged_pages.fex');
 Route::view('/quoter','Logged_pages.medd');
 Route::view('/term','Logged_pages.term');
+Route::view('/legeal/checket','Logged_pages.legeal');
 Route::view('/crm','Logged_pages.crm');
 Route::get('/account',[\App\Http\Controllers\UserController::class,'account']);
 Route::post('/update/profile',[\App\Http\Controllers\UserController::class,'profile_update']);

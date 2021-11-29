@@ -13,6 +13,8 @@ class AdminController extends Controller
 
     public function dashboard()
     {
+
+
         $user=User::where('role','user')->orderby('id','desc')->limit(6)->get();
 
         return view('Admin_asstes.index',compact('user'));
