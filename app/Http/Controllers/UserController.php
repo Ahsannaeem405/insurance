@@ -3,12 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Models\Coupan;
+use App\Models\maleNonSmoker_level;
 use App\Models\Setting;
 use App\Models\Subsription;
 use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Http;
 use Illuminate\Testing\Fluent\Concerns\Has;
 use Stripe;
 
@@ -21,8 +23,96 @@ class UserController extends Controller
      //  \App::setLocale('sp');
     }
 
+    public function import()
+    {
+        return view('import');
+
+    }
+    public function import_data(Request $request)
+    {
+        if ($request->hasFile('file')) {
+            $file = $request->file('file');
+
+            // File Details
+            $filename = $file->getClientOriginalName().time();
+            $extension = $file->getClientOriginalExtension();
+            $tempPath = $file->getRealPath();
+            $fileSize = $file->getSize();
+            $mimeType = $file->getMimeType();
+
+            // Valid File Extensions
+            $valid_extension = array("csv");
+
+            // 2MB in Bytes
+            $maxFileSize = 2097152555;
+
+            // Check file extension
+            if (in_array(strtolower($extension), $valid_extension)) {
+
+                // Check file size
+                if ($fileSize <= $maxFileSize) {
+
+                    // File upload location
+                    $location = 'uploads/appsetting/';
+
+                    // Upload file
+                    $file->move($location, $filename);
+
+                    // Import CSV to Database
+                    $filepath = ($location . "/" . $filename);
+
+                    // Reading file
+                    $file = fopen($filepath, "r");
+
+                    $importData_arr = array();
+                    $i = 0;
+                    $key_word=maleNonSmoker_level::truncate();
+                    $i=0;
+                    while (($filedata = fgetcsv($file, 1000, ",")) !== FALSE) {
+                        $num = count($filedata);
+
+
+                        if($i!=0)
+                        {
+
+
+                            for ($c=0; $c < $num; $c++) {
+                                $importData_arr[$i][] = $filedata [$c];
+
+                            }
+                        }
+
+                        $i++;
+
+
+
+                    }
+                    fclose($file);
+
+                    foreach($importData_arr as $importData){
+
+                        $keyword=new maleNonSmoker_level();
+                        $keyword->Age=utf8_decode($importData[0]);
+                        $keyword->Amount=utf8_decode($importData[1]);
+                        $keyword->price=utf8_decode($importData[2]);
+                        $keyword->Company=utf8_decode($importData[3]);
+                        $keyword->Tagline=utf8_decode($importData[4]);
+                        $keyword->company_id=utf8_decode($importData[5]);
+                        $keyword->save();
+                    }
+
+
+
+
+                }
+            }
+        }
+    }
+
     public function home()
     {
+
+
       //  \App::setLocale('sp');
 
         return view('home');

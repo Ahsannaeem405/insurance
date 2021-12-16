@@ -13,6 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('import',[\App\Http\Controllers\UserController::class,'import']);
+Route::post('import/data',[\App\Http\Controllers\UserController::class,'import_data']);
+
 Route::get('/', [\App\Http\Controllers\UserController::class,'home'])->middleware('lang');
 
 Route::post('register_user',[\App\Http\Controllers\Auth\RegisterController::class,'registeruser'])->middleware('lang');
@@ -42,6 +45,7 @@ Route::post('/pay',[\App\Http\Controllers\UserController::class,'buy_now_pay']);
 Route::view('/invoice', 'Logged_pages.invoice');
 Route::view('/creditcard', 'Logged_pages.creditcard');
 Route::view('/overview', 'Logged_pages.overview');
+Route::post('/get_quote_fex', [\App\Http\Controllers\FexController::class,'quoter']);
 
 
 
