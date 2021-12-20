@@ -3,17 +3,19 @@
     <title>Fex</title>
 @endsection
 <style>
-    .table{
+    .table {
         margin-top: 80px;
     }
-    .header{
+
+    .header {
         background-color: #340856;
         color: white;
         padding: 25px;
         text-align: center;
         border-radius: 10px;
     }
-    .data{
+
+    .data {
         margin-top: 40px;
         box-shadow: 0 3px 15px 0 rgb(5 5 5 / 5%);
         padding: 10px;
@@ -21,21 +23,24 @@
         border: 1px solid #c9c6c6;
 
     }
-    .center{
+
+    .center {
         text-align: center;
     }
-    .v_class{
+
+    .v_class {
         padding-top: 10px;
         vertical-align: middle;
-        margin:auto;
+        margin: auto;
     }
 
 
-    .show{
+    .show {
         display: block !important;
     }
-    .company{
-        box-shadow: 0 0 11px rgba(33,33,33,.2);
+
+    .company {
+        box-shadow: 0 0 11px rgba(33, 33, 33, .2);
         border-radius: 10px;
     }
 
@@ -103,18 +108,34 @@
 
 
     @media only screen and (max-width: 768px) {
-        .header{
+        .header {
             display: none !important;
         }
-        .div_hide{
+
+        .div_hide {
             display: block !important;
         }
-        .fa-chevron-down{
+
+        .fa-chevron-down {
             display: none !important;
         }
 
 
     }
+
+    .dropdown-item {
+        cursor: pointer;
+        padding: 0.5em 0.8em !important;
+        border: 1px solid #e8e7e7 !important;
+
+    }
+
+    .dropdown-container {
+        margin: 0 1em;
+        border-radius: 0 0 3px 3px;
+        overflow: hidden;
+    }
+
 
 </style>
 
@@ -126,7 +147,7 @@
 
     <div class="toast mt-3" style="position: fixed;width: 100%;right: 0;background-color: #e57b7b;top: 0;z-index: 999">
 
-        <div class="toast-body" style="color: white" >
+        <div class="toast-body" style="color: white">
 
 
         </div>
@@ -154,8 +175,7 @@
             <div role="tabpanel" class="tab-pane  active" id="Quoter">
                 <div class="container-fluid" style="padding-top: 50px;">
 
-                    <form  id="form1">
-
+                    <form id="form1">
 
 
                         <center>
@@ -167,7 +187,8 @@
                                 <div class="row" style="margin-top: 40px;">
                                     <div class="col-lg-5">
                                         <p>{{'Face Amount'}}</p>
-                                        <input type="number" class="form-control" id="face_amount1" name="face_amount" placeholder="Face Amount">
+                                        <input type="number" class="form-control" id="face_amount1" name="face_amount"
+                                               placeholder="Face Amount">
                                     </div>
                                     <div class="col-lg-5"></div>
 
@@ -176,14 +197,13 @@
 
                                         <select name="type" class="form-control">
                                             <option selected value="levels">Level</option>
-                                            <option value="modified">Modified</option>
-                                            <option value="Guaranteed">Guaranteed</option>
-                                            <option value="Limited">Limited Pay</option>
+                                            <option value="modifieds">Graded/Modified</option>
+                                            <option value="Guaranteeds">Guaranteed</option>
+                                            <option value="Limiteds">Limited Pay</option>
                                         </select>
                                     </div>
-                                </div><br>
-
-
+                                </div>
+                                <br>
 
 
                                 <input type="hidden" id="gender" name="gender" value="male">
@@ -212,7 +232,6 @@
                                 </div>
 
 
-
                                 <label for="cars">{{__('profile.State:')}}</label>
 
                                 <select name="state" class="form-control">
@@ -231,7 +250,8 @@
                                         <input type="number" value="12" class="form-control" placeholder="mm">
                                     </div>
                                     <div class="col-lg-2 col-3 p-1" style="margin-top: 20px;">
-                                        <input type="number" style="text-align: center" id="year" value="1999" class="form-control" placeholder="yy">
+                                        <input type="number" style="text-align: center" id="year" value="1999"
+                                               class="form-control" placeholder="yy">
                                     </div>
 
                                     <div class="col-lg-2 col-3 p-1" style="margin-top: 20px;">
@@ -260,7 +280,7 @@
 
                                         <select name="cigrate" class="form-control">
                                             <option selected value="non_smoker">None</option>
-                                            <option value="smoker">Cigerette</option>
+                                            <option value="smoker">Smoking + Nicotine</option>
 
                                         </select>
                                     </div>
@@ -275,23 +295,107 @@
                                     </div>
 
 
-
                                 </div>
-
-
-
 
 
                             </div>
                             <div class="col-lg-6 col-12">
                                 <h4>{{__('profile.Drug and Health Information')}}</h4><br>
-                                <input type="text" class="form-control" placeholder="Enter Health Condition"><br>
-                                <input type="text" class="form-control" placeholder="Enter Medication"><br>
+                                <input type="text" style="border-left: 15px solid var(--orange);" class="form-control"
+                                       placeholder="Enter Health Condition">
+
+
+                                <div class="dropdown-container" style="">
+
+                                    <div style=""
+                                         class="dropdown-item">
+                                        Aneurysm (Corrected)
+                                    </div>
+
+                                    <div style="" class="dropdown-item">
+                                        Aneurysm (Corrected)
+                                    </div>
+
+
+                                </div>
+                                <br>
+                                <input type="text" style="border-left: 15px solid var(--indigo);" class="form-control"
+                                       placeholder="Enter Medication">
+                                <div class="dropdown-container" style="">
+
+                                    <div style=""
+                                         class="dropdown-item">
+                                        Aneurysm (Corrected)
+                                    </div>
+
+                                    <div style="" class="dropdown-item">
+                                        Aneurysm (Corrected)
+                                    </div>
+
+
+                                </div>
+
+                                <br>
+
+
+                                <div style="border-left: 15px solid var(--orange)!important;" class="dropdown-item"  >
+                                    Aneurysm (Corrected)
+
+                                    <i style="float: right;color: purple" class="fa fa-edit p-1"> </i>
+                                    <i style="float: right;color: red" class="fa fa-trash p-1"> </i>
+                                </div>
+                                <div class="dropdown-container"
+                                     style="background-color: white;   box-shadow: 0 3px 15px 0 rgb(0 0 0 / 20%);height: 200px ">
+
+                                    <div>
+                                        <h3 class="text-center mt-2">Date of correction</h3>
+                                        <div class="container">
+                                        <div class="row m-0 mt-3 ">
+                                            <div class="col-lg-8 d-flex m-auto">
+                                           <div class="col-4">
+
+                                            <select class="form-control">
+                                                <option  value="1">Jan</option>
+
+                                            </select>
+                                           </div>
+                                            <div class="col-4">
+
+                                                <select class="form-control">
+                                                    <option  value="1">Jan</option>
+
+                                                </select>
+                                            </div>
+                                            <div class="col-4">
+
+                                                <select class="form-control">
+                                                    <option  value="1">Jan</option>
+
+                                                </select>
+                                            </div>
+                                            </div>
+
+                                        </div>
+
+                                            <div class="row mt-5 text-center">
+                                                <div class="m-auto">
+
+                                                <input type="button" value="back" class="btn btn-secondary">
+                                                <span>1 / 2</span>
+                                                <input type="button" value="next" class="btn btn-primary">
+                                                </div>
+                                            </div>
+                                    </div>
+                                    </div>
+
+                                </div>
 
 
                             </div>
                             <div class="col-lg-12 col-12" style="text-align: center;margin-top:50px;">
-                                <button id="get_quote_fex" type="button" style="background-color: #340856" class="btn btn-dark">{{__('profile.Get Quote')}}</button><br><br>
+                                <button id="get_quote_fex" type="button" style="background-color: #340856;padding: 20px"
+                                        class="btn btn-dark">{{__('profile.Get Quote')}}</button>
+                                <br><br>
 
                             </div>
 
@@ -337,12 +441,8 @@
                                         <option value="Limited Pay">Limited Pay</option>
                                     </select>
                                 </div>
-                            </div><br><br>
-
-
-
-
-
+                            </div>
+                            <br><br>
 
 
                         </div>
@@ -415,13 +515,13 @@
                                 </div>
 
 
-
                             </div>
 
 
                         </div>
                         <div class="col-lg-12 col-12" style="text-align: center;margin-top:50px;">
-                            <button style="background-color: #340856" class="btn btn-dark">{{__('profile.Compare Quote')}}</button>
+                            <button style="background-color: #340856"
+                                    class="btn btn-dark">{{__('profile.Compare Quote')}}</button>
                         </div>
 
                     </div>
@@ -433,12 +533,17 @@
                     <div class="row">
                         <div class="col-lg-6 col-12 p-2">
                             <h3 class="">{{__('profile.Your Link')}}</h3>
-                            <input type="text" class="form-control" value="https://insurancetoolkits.com/fex/lite/?token=wfuXPwcxBHjk5lzx0OI8zd7oF-xQ7RPVqIMtTEC5" readonly>
-                            <p>This is your personal FexToolkit link, which allows anyone with the URL to run a basic quote.
-                                You can share it with a colleague, bookmark it on your phone or computer, or otherwise share it around as you see fit.</p>
+                            <input type="text" class="form-control"
+                                   value="https://insurancetoolkits.com/fex/lite/?token=wfuXPwcxBHjk5lzx0OI8zd7oF-xQ7RPVqIMtTEC5"
+                                   readonly>
+                            <p>This is your personal FexToolkit link, which allows anyone with the URL to run a basic
+                                quote.
+                                You can share it with a colleague, bookmark it on your phone or computer, or otherwise
+                                share it around as you see fit.</p>
                             <h3 class="mt-5">{{__('profile.Your Widget HTML Code')}}</h3>
                             <input type="text" value="link" class="form-control mt-3" readonly>
-                            <p>Copy the code above to your website to allow people to run quotes directly from your website.</p>
+                            <p>Copy the code above to your website to allow people to run quotes directly from your
+                                website.</p>
                         </div>
                         <div class="col-lg-6 col-12 p-5">
                             <h5>{{__('profile.Final Expense Quoter')}}</h5>
@@ -461,7 +566,8 @@
                                         <option value="Limited Pay">Limited Pay</option>
                                     </select>
                                 </div>
-                            </div><br><br>
+                            </div>
+                            <br><br>
                             <h5>{{__('profile.About the client')}}</h5><br>
                             <p>{{__('profile.Sex:')}}</p>
                             <input type="radio" name="gender" value="male">
@@ -521,16 +627,11 @@
 
                                 <div class="col-lg-12" style="margin-top: 40px;">
 
-                                    <button  class="btn btn-primary text-center">{{__('profile.Get a Quote')}}</button>
+                                    <button class="btn btn-primary text-center">{{__('profile.Get a Quote')}}</button>
                                 </div>
 
 
-
-
                             </div>
-
-
-
 
 
                         </div>
@@ -538,7 +639,6 @@
 
                 </div>
             </div>
-
 
 
         </div>
@@ -551,7 +651,7 @@
     </div>
 
     <div class="container mb-5">
-        <div class="row header" >
+        <div class="row header">
             <div class="col-lg-3">
                 <b>{{__('profile.Company Name')}}</b>
             </div>
@@ -574,29 +674,27 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
-        $(document).ready(function(){
+        $(document).ready(function () {
 
 
+            $(document).on('keyup', '#year', function () {
 
 
-            $(document).on('keyup','#year',function(){
+                var year = $(this).val();
 
+                var date = new Date().getFullYear()
+                $('#age').val(date - year);
 
-var year=$(this).val();
-
-                var date=   new Date().getFullYear()
-                $('#age').val(date-year);
-
-                var fina=date-year;
-                $('#age_text').empty().append("age("+fina+")");
+                var fina = date - year;
+                $('#age_text').empty().append("age(" + fina + ")");
 
             });
 
-            $(document).on('click','.fa-chevron-down',function(){
+            $(document).on('click', '.fa-chevron-down', function () {
 
-             var id=   $(this).attr('id');
+                var id = $(this).attr('id');
 
-                $(".div_show"+id).toggleClass('show');
+                $(".div_show" + id).toggleClass('show');
             });
 
 
@@ -615,32 +713,29 @@ var year=$(this).val();
             $("#get_quote_fex").click(function () {
 
 
-var check=true;
-var message='';
+                var check = true;
+                var message = '';
 
 
-if($('#face_amount1').val()==null || $('#face_amount1').val()=='' )
-                {
+                if ($('#face_amount1').val() == null || $('#face_amount1').val() == '') {
 
-                    check=false;
-                    message='Please Enter Face Amount'
+                    check = false;
+                    message = 'Please Enter Face Amount'
                 }
-if(check==false)
-{
-    $('.toast-body').empty();
-    $('.toast-body').text(message);
+                if (check == false) {
+                    $('.toast-body').empty();
+                    $('.toast-body').text(message);
 
-    $('.toast').toast({
+                    $('.toast').toast({
 
-        delay: 3000
-    });
+                        delay: 3000
+                    });
 
-    $('.toast').toast('show');
-}
+                    $('.toast').toast('show');
+                }
 
 
-                if(check==true)
-                {
+                if (check == true) {
                     $('#get_quote_fex').prop('disabled', true);
                     var formData = new FormData((document.getElementById('form1')));
 
