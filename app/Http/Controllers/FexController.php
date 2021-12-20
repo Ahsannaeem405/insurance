@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\companies;
 use Illuminate\Http\Request;
 
 class FexController extends Controller
@@ -15,8 +16,32 @@ $type=$request->type;
 
 $table=$gender.'_'.$cigrate.'_'.$type;
 
-$data=\DB::table($table)->where('Age',$request->age)->where('Amount',$request->face_amount)->get();
+$data=array();
+$datanot=array();
+$companies=companies::all();
 
-return view('Logged_pages.response.fex.quoter',compact('data'));
+foreach ($companies as $com)
+    {
+        $rec=\DB::table($table)->where('Age',$request->age)->where('Amount',$request->face_amount)->where('company_id',$com->id)->first();
+        if($rec)
+        {
+            $data[]=array(
+
+                'data'=>$rec
+            );
+        }
+        else{
+            $datanot[]=array(
+
+                'data'=>$com
+            );
+        }
+
+    }
+
+
+
+
+return view('Logged_pages.response.fex.quoter',compact('data','datanot'));
  }
 }

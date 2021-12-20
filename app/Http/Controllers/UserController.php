@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\companies;
 use App\Models\Coupan;
 use App\Models\maleNonSmoker_level;
 use App\Models\Setting;
@@ -66,7 +67,7 @@ class UserController extends Controller
 
                     $importData_arr = array();
                     $i = 0;
-                    $key_word=maleNonSmoker_level::truncate();
+                    $key_word=companies::truncate();
                     $i=0;
                     while (($filedata = fgetcsv($file, 1000, ",")) !== FALSE) {
                         $num = count($filedata);
@@ -91,13 +92,9 @@ class UserController extends Controller
 
                     foreach($importData_arr as $importData){
 
-                        $keyword=new maleNonSmoker_level();
-                        $keyword->Age=utf8_decode($importData[0]);
-                        $keyword->Amount=utf8_decode($importData[1]);
-                        $keyword->price=utf8_decode($importData[2]);
-                        $keyword->Company=utf8_decode($importData[3]);
-                        $keyword->Tagline=utf8_decode($importData[4]);
-                        $keyword->company_id=utf8_decode($importData[5]);
+                        $keyword=new companies();
+                        $keyword->name=utf8_decode($importData[0]);
+                        $keyword->tagline=utf8_decode($importData[1]);
                         $keyword->save();
                     }
 

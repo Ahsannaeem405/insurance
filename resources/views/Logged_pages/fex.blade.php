@@ -15,9 +15,11 @@
     }
     .data{
         margin-top: 40px;
-        box-shadow: 0 30px 60px 0 rgba(0,0,0,0.1);
+        box-shadow: 0 3px 15px 0 rgb(5 5 5 / 5%);
         padding: 10px;
         border-radius: 10px;
+        border: 1px solid #c9c6c6;
+
     }
     .center{
         text-align: center;
@@ -115,7 +117,23 @@
     }
 
 </style>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
 @section('content')
+
+
+    <div class="toast mt-3" style="position: fixed;width: 100%;right: 0;background-color: #e57b7b;top: 0;z-index: 999">
+
+        <div class="toast-body" style="color: white" >
+
+
+        </div>
+    </div>
+
+
+
     <div class="container-fluid" style="min-height: 500px;padding-bottom:100px;">
         <ul class="nav nav-tabs" role="tablist">
             <li class="nav-item">
@@ -149,7 +167,7 @@
                                 <div class="row" style="margin-top: 40px;">
                                     <div class="col-lg-5">
                                         <p>{{'Face Amount'}}</p>
-                                        <input type="number" class="form-control" name="face_amount" placeholder="Face Amount">
+                                        <input type="number" class="form-control" id="face_amount1" name="face_amount" placeholder="Face Amount">
                                     </div>
                                     <div class="col-lg-5"></div>
 
@@ -554,8 +572,10 @@
 
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
         $(document).ready(function(){
+
 
 
 
@@ -595,23 +615,51 @@ var year=$(this).val();
             $("#get_quote_fex").click(function () {
 
 
+var check=true;
+var message='';
 
-                var formData = new FormData((document.getElementById('form1')));
+
+if($('#face_amount1').val()==null || $('#face_amount1').val()=='' )
+                {
+
+                    check=false;
+                    message='Please Enter Face Amount'
+                }
+if(check==false)
+{
+    $('.toast-body').empty();
+    $('.toast-body').text(message);
+
+    $('.toast').toast({
+
+        delay: 3000
+    });
+
+    $('.toast').toast('show');
+}
 
 
-                $.ajax({
-                    type: 'POST',
-                    url: "{{ url('user/get_quote_fex')}}",
-                    data: formData,
-                    cache: false,
-                    contentType: false,
-                    processData: false,
+                if(check==true)
+                {
+                    $('#get_quote_fex').prop('disabled', true);
+                    var formData = new FormData((document.getElementById('form1')));
 
-                    success: function (response) {
 
-                        $('.result').empty().append(response);
-                    }
-                });
+                    $.ajax({
+                        type: 'POST',
+                        url: "{{ url('user/get_quote_fex')}}",
+                        data: formData,
+                        cache: false,
+                        contentType: false,
+                        processData: false,
+
+                        success: function (response) {
+                            $('#get_quote_fex').prop('disabled', false);
+                            $('.result').empty().append(response);
+                        }
+                    });
+                }
+
             });
 
 
