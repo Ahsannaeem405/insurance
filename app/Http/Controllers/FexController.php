@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\companies;
+use App\Models\condition;
 use Illuminate\Http\Request;
 
 class FexController extends Controller
@@ -43,5 +44,25 @@ foreach ($companies as $com)
 
 
 return view('Logged_pages.response.fex.quoter',compact('data','datanot'));
+ }
+
+
+ public function condition(Request $request)
+ {
+
+     $condition=$request->condition;
+     $rec=condition::where('condition_e','like',"%$condition%")->limit(5)->get()->unique('condition_e');
+
+     return view('Logged_pages.response.fex.condition',compact('rec'));
+
+ }
+
+ public function condition_qa(Request $request)
+ {
+     $rec=condition::find($request->id);
+     return view('Logged_pages.response.fex.condition_qa',compact('rec'));
+
+
+
  }
 }

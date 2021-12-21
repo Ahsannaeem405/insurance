@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\companies;
+use App\Models\condition;
 use App\Models\Coupan;
 use App\Models\maleNonSmoker_level;
 use App\Models\Setting;
@@ -67,7 +68,7 @@ class UserController extends Controller
 
                     $importData_arr = array();
                     $i = 0;
-                    $key_word=companies::truncate();
+                    $key_word=condition::truncate();
                     $i=0;
                     while (($filedata = fgetcsv($file, 1000, ",")) !== FALSE) {
                         $num = count($filedata);
@@ -92,9 +93,31 @@ class UserController extends Controller
 
                     foreach($importData_arr as $importData){
 
-                        $keyword=new companies();
-                        $keyword->name=utf8_decode($importData[0]);
-                        $keyword->tagline=utf8_decode($importData[1]);
+                        $keyword=new condition();
+                        $keyword->condition_e=utf8_decode($importData[0]);
+                        $keyword->condition_s=utf8_decode($importData[1]);
+                        $keyword->company=utf8_decode($importData[2]);
+                        $keyword->tagline=utf8_decode($importData[3]);
+                        $keyword->allowed=utf8_decode($importData[4]);
+                        $keyword->decline=utf8_decode($importData[5]);
+
+                        $keyword->treatment_allowed_from=utf8_decode($importData[6]);
+                        $keyword->treatment_allowed_to=utf8_decode($importData[7]);
+                        $keyword->diagnose_allowed_from=utf8_decode($importData[8]);
+                        $keyword->diagnose_allowed_to=utf8_decode($importData[9]);
+                        $keyword->treatment_decline_from=utf8_decode($importData[10]);
+                        $keyword->treatment_decline_to=utf8_decode($importData[11]);
+                        $keyword->diagnose_decline_from=utf8_decode($importData[12]);
+                        $keyword->diagnose_decline_to=utf8_decode($importData[13]);
+
+                        $keyword->category=utf8_decode($importData[14]);
+                        $keyword->reason_e=utf8_decode($importData[15]);
+                        $keyword->reason_s=utf8_decode($importData[16]);
+                        $keyword->plan_info_e=utf8_decode($importData[17]);
+                        $keyword->plan_info_s=utf8_decode($importData[18]);
+                        $keyword->agent_compensation_e=utf8_decode($importData[19]);
+                        $keyword->agent_compensation_s=utf8_decode($importData[20]);
+                        $keyword->coverage_type=utf8_decode($importData[21]);
                         $keyword->save();
                     }
 

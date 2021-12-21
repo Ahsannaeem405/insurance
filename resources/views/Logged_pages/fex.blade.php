@@ -182,7 +182,37 @@
                             <h3 style="color: rgb(52, 8, 86)">{{__('profile.Get a Final Expense Quote')}}</h3>
                         </center>
                         <div class="row" style="margin-top: 40px;">
-                            <div class="col-lg-6 col-12" style="border-right: 1px solid lightgray ">
+
+                            <div class="col-lg-6 col-12">
+                                <h4>{{__('profile.Drug and Health Information')}}</h4><br>
+                                <input type="text"  style="border-left: 15px solid var(--orange);"
+                                       class="form-control condition"
+                                       placeholder="Enter Health Condition">
+
+
+                                <div class="dropdown-container condition_result" style="">
+
+
+
+
+
+                                </div>
+                                <br>
+                                <input type="text" style="border-left: 15px solid var(--indigo);" class="form-control"
+                                       placeholder="Enter Medication">
+
+
+                                <br>
+
+                                <div class="condition_qa_result">
+                                </div>
+
+
+
+
+
+                            </div>
+                            <div class="col-lg-6 col-12" >
                                 <h5>{{__('Coverage Options.TERM')}}</h5>
                                 <div class="row" style="margin-top: 40px;">
                                     <div class="col-lg-5">
@@ -299,99 +329,7 @@
 
 
                             </div>
-                            <div class="col-lg-6 col-12">
-                                <h4>{{__('profile.Drug and Health Information')}}</h4><br>
-                                <input type="text" style="border-left: 15px solid var(--orange);" class="form-control"
-                                       placeholder="Enter Health Condition">
 
-
-                                <div class="dropdown-container" style="">
-
-                                    <div style=""
-                                         class="dropdown-item">
-                                        Aneurysm (Corrected)
-                                    </div>
-
-                                    <div style="" class="dropdown-item">
-                                        Aneurysm (Corrected)
-                                    </div>
-
-
-                                </div>
-                                <br>
-                                <input type="text" style="border-left: 15px solid var(--indigo);" class="form-control"
-                                       placeholder="Enter Medication">
-                                <div class="dropdown-container" style="">
-
-                                    <div style=""
-                                         class="dropdown-item">
-                                        Aneurysm (Corrected)
-                                    </div>
-
-                                    <div style="" class="dropdown-item">
-                                        Aneurysm (Corrected)
-                                    </div>
-
-
-                                </div>
-
-                                <br>
-
-
-                                <div style="border-left: 15px solid var(--orange)!important;" class="dropdown-item"  >
-                                    Aneurysm (Corrected)
-
-                                    <i style="float: right;color: purple" class="fa fa-edit p-1"> </i>
-                                    <i style="float: right;color: red" class="fa fa-trash p-1"> </i>
-                                </div>
-                                <div class="dropdown-container"
-                                     style="background-color: white;   box-shadow: 0 3px 15px 0 rgb(0 0 0 / 20%);height: 200px ">
-
-                                    <div>
-                                        <h3 class="text-center mt-2">Date of correction</h3>
-                                        <div class="container">
-                                        <div class="row m-0 mt-3 ">
-                                            <div class="col-lg-8 d-flex m-auto">
-                                           <div class="col-4">
-
-                                            <select class="form-control">
-                                                <option  value="1">Jan</option>
-
-                                            </select>
-                                           </div>
-                                            <div class="col-4">
-
-                                                <select class="form-control">
-                                                    <option  value="1">Jan</option>
-
-                                                </select>
-                                            </div>
-                                            <div class="col-4">
-
-                                                <select class="form-control">
-                                                    <option  value="1">Jan</option>
-
-                                                </select>
-                                            </div>
-                                            </div>
-
-                                        </div>
-
-                                            <div class="row mt-5 text-center">
-                                                <div class="m-auto">
-
-                                                <input type="button" value="back" class="btn btn-secondary">
-                                                <span>1 / 2</span>
-                                                <input type="button" value="next" class="btn btn-primary">
-                                                </div>
-                                            </div>
-                                    </div>
-                                    </div>
-
-                                </div>
-
-
-                            </div>
                             <div class="col-lg-12 col-12" style="text-align: center;margin-top:50px;">
                                 <button id="get_quote_fex" type="button" style="background-color: #340856;padding: 20px"
                                         class="btn btn-dark">{{__('profile.Get Quote')}}</button>
@@ -757,7 +695,77 @@
 
             });
 
+            $(".condition").keyup(function () {
 
-        });
+            var condition=$(this).val();
+
+                    $.ajax({
+                        type: 'get',
+                        url: "{{ url('user/get_condition_fex')}}",
+                        data: {'condition':condition},
+
+
+                        success: function (response) {
+                            $('.condition_result').empty().append(response);
+                        }
+                    });
+
+
+            });
+
+            $(document).on('click','.con_data',function () {
+
+                var id=$(this).attr('id');
+
+
+             $('.condition_result').empty();
+             $('.condition').val('');
+
+
+                $.ajax({
+                    type: 'get',
+                    url: "{{ url('user/get_condition_qa_fex')}}",
+                    data: {'id':id},
+
+
+                    success: function (response) {
+                        $('.condition_qa_result').append(response);
+                    }
+                });
+
+
+            });
+
+
+            $(document).on('click','.con_remove',function () {
+
+                var id=$(this).attr('id_data');
+                $('#con_div_'+id).remove();
+
+            });
+
+
+
+            $(document).on('click','.con_edit',function () {
+
+                var id=$(this).attr('id_data');
+                var status=$(this).attr('status');
+                if(status=='show')
+                {
+                    $('#con_div_'+id).find('div:nth-child(2)').hide();
+                    $(this).attr('status','hide');
+                }
+                else{
+                    $('#con_div_'+id).find('div:nth-child(2)').show();
+                    $(this).attr('status','show');
+                }
+
+            });
+
+              });
+
+
+
+
     </script>
 @endsection
