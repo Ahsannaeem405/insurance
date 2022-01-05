@@ -28,8 +28,8 @@
           font-weight: 700;
           color: darkblue !important;
       }
-      .nav-link{
-          text-align: right;
+      .nav-link,.dropdown{
+          text-align: center;
       }
       .nav-item{
         padding: 0px 7px 0px 7px;
@@ -112,6 +112,9 @@
       .dropdown-toggle::after {
           content: none;
       }
+      .dropdown-menu{
+     left: -130px
+      }
   </style>
   <body>
 
@@ -154,7 +157,7 @@
 
                           <i style="font-size: 25px" class="fas fa-globe-americas dropdown-toggle mt-2" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
 
-                      <div style="margin-left: -130px" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <div style="" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                           <a class="dropdown-item" href="{{url('lang/en')}}">English</a>
                           <a class="dropdown-item" href="{{url('lang/sp')}}">Spanish</a>
 
@@ -370,7 +373,7 @@
 
     <!-- Copyright -->
     <div class="footer-copyright text-center py-3">© 2020 Copyright:
-      <a href="#">Insurance.com</a>
+      <a href="{{url('/')}}">Insurance.com</a>
     </div>
     <!-- Copyright -->
 

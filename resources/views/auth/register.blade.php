@@ -153,7 +153,7 @@
 
                 @endif
 
-            @php $price=\App\Models\Setting::first(); @endphp
+
 
             <input type="hidden" name="refral" value="{{$refral}}">
             <input type="hidden" name="f_price" id="f_price" value="{{$price->p_cost}}">
@@ -226,7 +226,7 @@
                     <h5 style="color: gray">Choose Your Plan</h5>
                 </div>
 
-                @php  $pricing=\App\Models\Setting::first(); @endphp
+
                 <div class="options">
 
                     <div class="col-lg-12 " style="margin-top:20px">
@@ -239,13 +239,13 @@
                                         <i class="fas fa-clipboard-list" style="font-size: 40px; color:white"></i>
 
                                     </div>
-                                    <h5 class="heading" style="margin-top: 20px;margin-left: 16px;">{{$pricing->p_name}}</h5>
+                                    <h5 class="heading" style="margin-top: 20px;margin-left: 16px;">{{$price->p_name}}</h5>
 
                                 </div>
                                 <div class="col-lg-5 col-12" style="padding-top:20px; ">
                                     <b style="float:right;">
 
-                                       ${{$pricing->p_cost}} / {{$pricing->p_days}} days</b>
+                                       ${{$price->p_cost}} / {{$price->p_days}} days</b>
                                 </div>
 
                                 <div class="col-lg-12 col-12" style="padding-top:20px; ">
@@ -329,11 +329,11 @@
                     <p><span style="font-size: 19px; font-weight:bold">Total:
                         $
 
-                            <span id="total_bill">{{$pricing->p_cost}}</span>
+                            <span id="total_bill">{{$price->p_cost}}</span>
 
 
 
-                        </span>/{{$pricing->p_days}} days</p>
+                        </span>/{{$price->p_days}} days</p>
                 </div>
 
             </div>
@@ -351,7 +351,7 @@ var promo=$(this).val();
 
                 $.ajax({
                     type: 'get',
-                    url: '{{url('promo')}}',
+                    url: "promo",
                     data: {'promo': promo, },
 
 
