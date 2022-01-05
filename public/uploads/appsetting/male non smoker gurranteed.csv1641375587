@@ -1,0 +1,2922 @@
+Age,Amount,"Price
+",Company,Tagline,ID
+50,5000,$22.50 ,Gerber Life Insurance Company,Guaranteed Issue,30
+50,6000,$26.82 ,Gerber Life Insurance Company,Guaranteed Issue,30
+50,7000,$31.14 ,Gerber Life Insurance Company,Guaranteed Issue,30
+50,8000,$35.46 ,Gerber Life Insurance Company,Guaranteed Issue,30
+50,9000,$39.77 ,Gerber Life Insurance Company,Guaranteed Issue,30
+50,10000,$44.09 ,Gerber Life Insurance Company,Guaranteed Issue,30
+50,11000,$48.41 ,Gerber Life Insurance Company,Guaranteed Issue,30
+50,12000,$52.73 ,Gerber Life Insurance Company,Guaranteed Issue,30
+50,13000,$57.04 ,Gerber Life Insurance Company,Guaranteed Issue,30
+50,14000,$61.36 ,Gerber Life Insurance Company,Guaranteed Issue,30
+50,15000,$65.68 ,Gerber Life Insurance Company,Guaranteed Issue,30
+50,16000,$70.00 ,Gerber Life Insurance Company,Guaranteed Issue,30
+50,17000,$74.31 ,Gerber Life Insurance Company,Guaranteed Issue,30
+50,18000,$78.63 ,Gerber Life Insurance Company,Guaranteed Issue,30
+50,19000,$82.95 ,Gerber Life Insurance Company,Guaranteed Issue,30
+50,20000,$87.27 ,Gerber Life Insurance Company,Guaranteed Issue,30
+50,21000,$91.58 ,Gerber Life Insurance Company,Guaranteed Issue,30
+50,22000,$95.90 ,Gerber Life Insurance Company,Guaranteed Issue,30
+50,23000,$100.22 ,Gerber Life Insurance Company,Guaranteed Issue,30
+50,24000,$104.54 ,Gerber Life Insurance Company,Guaranteed Issue,30
+50,25000,$108.85 ,Gerber Life Insurance Company,Guaranteed Issue,30
+51,5000,$24.15 ,Gerber Life Insurance Company,Guaranteed Issue,30
+51,6000,$28.80 ,Gerber Life Insurance Company,Guaranteed Issue,30
+51,7000,$33.45 ,Gerber Life Insurance Company,Guaranteed Issue,30
+51,8000,$38.10 ,Gerber Life Insurance Company,Guaranteed Issue,30
+51,9000,$42.74 ,Gerber Life Insurance Company,Guaranteed Issue,30
+51,10000,$47.39 ,Gerber Life Insurance Company,Guaranteed Issue,30
+51,11000,$52.04 ,Gerber Life Insurance Company,Guaranteed Issue,30
+51,12000,$56.69 ,Gerber Life Insurance Company,Guaranteed Issue,30
+51,13000,$61.33 ,Gerber Life Insurance Company,Guaranteed Issue,30
+51,14000,$65.98 ,Gerber Life Insurance Company,Guaranteed Issue,30
+51,15000,$70.63 ,Gerber Life Insurance Company,Guaranteed Issue,30
+51,16000,$75.28 ,Gerber Life Insurance Company,Guaranteed Issue,30
+51,17000,$79.92 ,Gerber Life Insurance Company,Guaranteed Issue,30
+51,18000,$84.57 ,Gerber Life Insurance Company,Guaranteed Issue,30
+51,19000,$89.22 ,Gerber Life Insurance Company,Guaranteed Issue,30
+51,20000,$93.87 ,Gerber Life Insurance Company,Guaranteed Issue,30
+51,21000,$98.51 ,Gerber Life Insurance Company,Guaranteed Issue,30
+51,22000,$103.16 ,Gerber Life Insurance Company,Guaranteed Issue,30
+51,23000,$107.81 ,Gerber Life Insurance Company,Guaranteed Issue,30
+51,24000,$112.46 ,Gerber Life Insurance Company,Guaranteed Issue,30
+51,25000,$117.10 ,Gerber Life Insurance Company,Guaranteed Issue,30
+52,5000,$25.67 ,Gerber Life Insurance Company,Guaranteed Issue,30
+52,6000,$30.62 ,Gerber Life Insurance Company,Guaranteed Issue,30
+52,7000,$35.57 ,Gerber Life Insurance Company,Guaranteed Issue,30
+52,8000,$40.52 ,Gerber Life Insurance Company,Guaranteed Issue,30
+52,9000,$45.47 ,Gerber Life Insurance Company,Guaranteed Issue,30
+52,10000,$50.42 ,Gerber Life Insurance Company,Guaranteed Issue,30
+52,11000,$55.37 ,Gerber Life Insurance Company,Guaranteed Issue,30
+52,12000,$60.32 ,Gerber Life Insurance Company,Guaranteed Issue,30
+52,13000,$65.27 ,Gerber Life Insurance Company,Guaranteed Issue,30
+52,14000,$70.22 ,Gerber Life Insurance Company,Guaranteed Issue,30
+52,15000,$75.17 ,Gerber Life Insurance Company,Guaranteed Issue,30
+52,16000,$80.12 ,Gerber Life Insurance Company,Guaranteed Issue,30
+52,17000,$85.07 ,Gerber Life Insurance Company,Guaranteed Issue,30
+52,18000,$90.02 ,Gerber Life Insurance Company,Guaranteed Issue,30
+52,19000,$94.97 ,Gerber Life Insurance Company,Guaranteed Issue,30
+52,20000,$99.92 ,Gerber Life Insurance Company,Guaranteed Issue,30
+52,21000,$104.87 ,Gerber Life Insurance Company,Guaranteed Issue,30
+52,22000,$109.82 ,Gerber Life Insurance Company,Guaranteed Issue,30
+52,23000,$114.77 ,Gerber Life Insurance Company,Guaranteed Issue,30
+52,24000,$119.72 ,Gerber Life Insurance Company,Guaranteed Issue,30
+52,25000,$124.67 ,Gerber Life Insurance Company,Guaranteed Issue,30
+53,5000,$27.09 ,Gerber Life Insurance Company,Guaranteed Issue,30
+53,6000,$32.32 ,Gerber Life Insurance Company,Guaranteed Issue,30
+53,7000,$37.56 ,Gerber Life Insurance Company,Guaranteed Issue,30
+53,8000,$42.79 ,Gerber Life Insurance Company,Guaranteed Issue,30
+53,9000,$48.02 ,Gerber Life Insurance Company,Guaranteed Issue,30
+53,10000,$53.26 ,Gerber Life Insurance Company,Guaranteed Issue,30
+53,11000,$58.49 ,Gerber Life Insurance Company,Guaranteed Issue,30
+53,12000,$63.73 ,Gerber Life Insurance Company,Guaranteed Issue,30
+53,13000,$68.96 ,Gerber Life Insurance Company,Guaranteed Issue,30
+53,14000,$74.20 ,Gerber Life Insurance Company,Guaranteed Issue,30
+53,15000,$79.43 ,Gerber Life Insurance Company,Guaranteed Issue,30
+53,16000,$84.66 ,Gerber Life Insurance Company,Guaranteed Issue,30
+53,17000,$89.90 ,Gerber Life Insurance Company,Guaranteed Issue,30
+53,18000,$95.13 ,Gerber Life Insurance Company,Guaranteed Issue,30
+53,19000,$100.37 ,Gerber Life Insurance Company,Guaranteed Issue,30
+53,20000,$105.60 ,Gerber Life Insurance Company,Guaranteed Issue,30
+53,21000,$110.83 ,Gerber Life Insurance Company,Guaranteed Issue,30
+53,22000,$116.07 ,Gerber Life Insurance Company,Guaranteed Issue,30
+53,23000,$121.30 ,Gerber Life Insurance Company,Guaranteed Issue,30
+53,24000,$126.54 ,Gerber Life Insurance Company,Guaranteed Issue,30
+53,25000,$131.77 ,Gerber Life Insurance Company,Guaranteed Issue,30
+54,5000,$28.32 ,Gerber Life Insurance Company,Guaranteed Issue,30
+54,6000,$33.81 ,Gerber Life Insurance Company,Guaranteed Issue,30
+54,7000,$39.29 ,Gerber Life Insurance Company,Guaranteed Issue,30
+54,8000,$44.77 ,Gerber Life Insurance Company,Guaranteed Issue,30
+54,9000,$50.25 ,Gerber Life Insurance Company,Guaranteed Issue,30
+54,10000,$55.73 ,Gerber Life Insurance Company,Guaranteed Issue,30
+54,11000,$61.22 ,Gerber Life Insurance Company,Guaranteed Issue,30
+54,12000,$66.70 ,Gerber Life Insurance Company,Guaranteed Issue,30
+54,13000,$72.18 ,Gerber Life Insurance Company,Guaranteed Issue,30
+54,14000,$77.66 ,Gerber Life Insurance Company,Guaranteed Issue,30
+54,15000,$83.14 ,Gerber Life Insurance Company,Guaranteed Issue,30
+54,16000,$88.62 ,Gerber Life Insurance Company,Guaranteed Issue,30
+54,17000,$94.10 ,Gerber Life Insurance Company,Guaranteed Issue,30
+54,18000,$99.59 ,Gerber Life Insurance Company,Guaranteed Issue,30
+54,19000,$105.07 ,Gerber Life Insurance Company,Guaranteed Issue,30
+54,20000,$110.55 ,Gerber Life Insurance Company,Guaranteed Issue,30
+54,21000,$116.03 ,Gerber Life Insurance Company,Guaranteed Issue,30
+54,22000,$121.51 ,Gerber Life Insurance Company,Guaranteed Issue,30
+54,23000,$127.00 ,Gerber Life Insurance Company,Guaranteed Issue,30
+54,24000,$132.48 ,Gerber Life Insurance Company,Guaranteed Issue,30
+54,25000,$137.96 ,Gerber Life Insurance Company,Guaranteed Issue,30
+55,5000,$29.43 ,Gerber Life Insurance Company,Guaranteed Issue,30
+55,6000,$35.13 ,Gerber Life Insurance Company,Guaranteed Issue,30
+55,7000,$40.83 ,Gerber Life Insurance Company,Guaranteed Issue,30
+55,8000,$46.53 ,Gerber Life Insurance Company,Guaranteed Issue,30
+55,9000,$52.23 ,Gerber Life Insurance Company,Guaranteed Issue,30
+55,10000,$57.93 ,Gerber Life Insurance Company,Guaranteed Issue,30
+55,11000,$63.64 ,Gerber Life Insurance Company,Guaranteed Issue,30
+55,12000,$69.34 ,Gerber Life Insurance Company,Guaranteed Issue,30
+55,13000,$75.04 ,Gerber Life Insurance Company,Guaranteed Issue,30
+55,14000,$80.74 ,Gerber Life Insurance Company,Guaranteed Issue,30
+55,15000,$86.44 ,Gerber Life Insurance Company,Guaranteed Issue,30
+55,16000,$92.14 ,Gerber Life Insurance Company,Guaranteed Issue,30
+55,17000,$97.85 ,Gerber Life Insurance Company,Guaranteed Issue,30
+55,18000,$103.55 ,Gerber Life Insurance Company,Guaranteed Issue,30
+55,19000,$109.25 ,Gerber Life Insurance Company,Guaranteed Issue,30
+55,20000,$114.95 ,Gerber Life Insurance Company,Guaranteed Issue,30
+55,21000,$120.65 ,Gerber Life Insurance Company,Guaranteed Issue,30
+55,22000,$126.35 ,Gerber Life Insurance Company,Guaranteed Issue,30
+55,23000,$132.06 ,Gerber Life Insurance Company,Guaranteed Issue,30
+55,24000,$137.76 ,Gerber Life Insurance Company,Guaranteed Issue,30
+55,25000,$143.46 ,Gerber Life Insurance Company,Guaranteed Issue,30
+56,5000,$30.25 ,Gerber Life Insurance Company,Guaranteed Issue,30
+56,6000,$36.12 ,Gerber Life Insurance Company,Guaranteed Issue,30
+56,7000,$41.98 ,Gerber Life Insurance Company,Guaranteed Issue,30
+56,8000,$47.85 ,Gerber Life Insurance Company,Guaranteed Issue,30
+56,9000,$53.72 ,Gerber Life Insurance Company,Guaranteed Issue,30
+56,10000,$59.58 ,Gerber Life Insurance Company,Guaranteed Issue,30
+56,11000,$65.45 ,Gerber Life Insurance Company,Guaranteed Issue,30
+56,12000,$71.32 ,Gerber Life Insurance Company,Guaranteed Issue,30
+56,13000,$77.18 ,Gerber Life Insurance Company,Guaranteed Issue,30
+56,14000,$83.05 ,Gerber Life Insurance Company,Guaranteed Issue,30
+56,15000,$88.92 ,Gerber Life Insurance Company,Guaranteed Issue,30
+56,16000,$94.78 ,Gerber Life Insurance Company,Guaranteed Issue,30
+56,17000,$100.65 ,Gerber Life Insurance Company,Guaranteed Issue,30
+56,18000,$106.52 ,Gerber Life Insurance Company,Guaranteed Issue,30
+56,19000,$112.38 ,Gerber Life Insurance Company,Guaranteed Issue,30
+56,20000,$118.25 ,Gerber Life Insurance Company,Guaranteed Issue,30
+56,21000,$124.12 ,Gerber Life Insurance Company,Guaranteed Issue,30
+56,22000,$129.98 ,Gerber Life Insurance Company,Guaranteed Issue,30
+56,23000,$135.85 ,Gerber Life Insurance Company,Guaranteed Issue,30
+56,24000,$141.72 ,Gerber Life Insurance Company,Guaranteed Issue,30
+56,25000,$147.58 ,Gerber Life Insurance Company,Guaranteed Issue,30
+57,5000,$30.98 ,Gerber Life Insurance Company,Guaranteed Issue,30
+57,6000,$37.00 ,Gerber Life Insurance Company,Guaranteed Issue,30
+57,7000,$43.01 ,Gerber Life Insurance Company,Guaranteed Issue,30
+57,8000,$49.02 ,Gerber Life Insurance Company,Guaranteed Issue,30
+57,9000,$55.04 ,Gerber Life Insurance Company,Guaranteed Issue,30
+57,10000,$61.05 ,Gerber Life Insurance Company,Guaranteed Issue,30
+57,11000,$67.06 ,Gerber Life Insurance Company,Guaranteed Issue,30
+57,12000,$73.08 ,Gerber Life Insurance Company,Guaranteed Issue,30
+57,13000,$79.09 ,Gerber Life Insurance Company,Guaranteed Issue,30
+57,14000,$85.10 ,Gerber Life Insurance Company,Guaranteed Issue,30
+57,15000,$91.12 ,Gerber Life Insurance Company,Guaranteed Issue,30
+57,16000,$97.13 ,Gerber Life Insurance Company,Guaranteed Issue,30
+57,17000,$103.14 ,Gerber Life Insurance Company,Guaranteed Issue,30
+57,18000,$109.16 ,Gerber Life Insurance Company,Guaranteed Issue,30
+57,19000,$115.17 ,Gerber Life Insurance Company,Guaranteed Issue,30
+57,20000,$121.18 ,Gerber Life Insurance Company,Guaranteed Issue,30
+57,21000,$127.20 ,Gerber Life Insurance Company,Guaranteed Issue,30
+57,22000,$133.21 ,Gerber Life Insurance Company,Guaranteed Issue,30
+57,23000,$139.22 ,Gerber Life Insurance Company,Guaranteed Issue,30
+57,24000,$145.24 ,Gerber Life Insurance Company,Guaranteed Issue,30
+57,25000,$151.25 ,Gerber Life Insurance Company,Guaranteed Issue,30
+58,5000,$31.63 ,Gerber Life Insurance Company,Guaranteed Issue,30
+58,6000,$37.77 ,Gerber Life Insurance Company,Guaranteed Issue,30
+58,7000,$43.91 ,Gerber Life Insurance Company,Guaranteed Issue,30
+58,8000,$50.05 ,Gerber Life Insurance Company,Guaranteed Issue,30
+58,9000,$56.19 ,Gerber Life Insurance Company,Guaranteed Issue,30
+58,10000,$62.33 ,Gerber Life Insurance Company,Guaranteed Issue,30
+58,11000,$68.48 ,Gerber Life Insurance Company,Guaranteed Issue,30
+58,12000,$74.62 ,Gerber Life Insurance Company,Guaranteed Issue,30
+58,13000,$80.76 ,Gerber Life Insurance Company,Guaranteed Issue,30
+58,14000,$86.90 ,Gerber Life Insurance Company,Guaranteed Issue,30
+58,15000,$93.04 ,Gerber Life Insurance Company,Guaranteed Issue,30
+58,16000,$99.18 ,Gerber Life Insurance Company,Guaranteed Issue,30
+58,17000,$105.33 ,Gerber Life Insurance Company,Guaranteed Issue,30
+58,18000,$111.47 ,Gerber Life Insurance Company,Guaranteed Issue,30
+58,19000,$117.61 ,Gerber Life Insurance Company,Guaranteed Issue,30
+58,20000,$123.75 ,Gerber Life Insurance Company,Guaranteed Issue,30
+58,21000,$129.89 ,Gerber Life Insurance Company,Guaranteed Issue,30
+58,22000,$136.03 ,Gerber Life Insurance Company,Guaranteed Issue,30
+58,23000,$142.18 ,Gerber Life Insurance Company,Guaranteed Issue,30
+58,24000,$148.32 ,Gerber Life Insurance Company,Guaranteed Issue,30
+58,25000,$154.46 ,Gerber Life Insurance Company,Guaranteed Issue,30
+59,5000,$32.08 ,Gerber Life Insurance Company,Guaranteed Issue,30
+59,6000,$38.32 ,Gerber Life Insurance Company,Guaranteed Issue,30
+59,7000,$44.55 ,Gerber Life Insurance Company,Guaranteed Issue,30
+59,8000,$50.78 ,Gerber Life Insurance Company,Guaranteed Issue,30
+59,9000,$57.02 ,Gerber Life Insurance Company,Guaranteed Issue,30
+59,10000,$63.25 ,Gerber Life Insurance Company,Guaranteed Issue,30
+59,11000,$69.48 ,Gerber Life Insurance Company,Guaranteed Issue,30
+59,12000,$75.72 ,Gerber Life Insurance Company,Guaranteed Issue,30
+59,13000,$81.95 ,Gerber Life Insurance Company,Guaranteed Issue,30
+59,14000,$88.18 ,Gerber Life Insurance Company,Guaranteed Issue,30
+59,15000,$94.42 ,Gerber Life Insurance Company,Guaranteed Issue,30
+59,16000,$100.65 ,Gerber Life Insurance Company,Guaranteed Issue,30
+59,17000,$106.88 ,Gerber Life Insurance Company,Guaranteed Issue,30
+59,18000,$113.12 ,Gerber Life Insurance Company,Guaranteed Issue,30
+59,19000,$119.35 ,Gerber Life Insurance Company,Guaranteed Issue,30
+59,20000,$125.58 ,Gerber Life Insurance Company,Guaranteed Issue,30
+59,21000,$131.82 ,Gerber Life Insurance Company,Guaranteed Issue,30
+59,22000,$138.05 ,Gerber Life Insurance Company,Guaranteed Issue,30
+59,23000,$144.28 ,Gerber Life Insurance Company,Guaranteed Issue,30
+59,24000,$150.52 ,Gerber Life Insurance Company,Guaranteed Issue,30
+59,25000,$156.75 ,Gerber Life Insurance Company,Guaranteed Issue,30
+60,5000,$32.40 ,Gerber Life Insurance Company,Guaranteed Issue,30
+60,6000,$38.70 ,Gerber Life Insurance Company,Guaranteed Issue,30
+60,7000,$45.00 ,Gerber Life Insurance Company,Guaranteed Issue,30
+60,8000,$51.30 ,Gerber Life Insurance Company,Guaranteed Issue,30
+60,9000,$57.59 ,Gerber Life Insurance Company,Guaranteed Issue,30
+60,10000,$63.89 ,Gerber Life Insurance Company,Guaranteed Issue,30
+60,11000,$70.19 ,Gerber Life Insurance Company,Guaranteed Issue,30
+60,12000,$76.49 ,Gerber Life Insurance Company,Guaranteed Issue,30
+60,13000,$82.78 ,Gerber Life Insurance Company,Guaranteed Issue,30
+60,14000,$89.08 ,Gerber Life Insurance Company,Guaranteed Issue,30
+60,15000,$95.38 ,Gerber Life Insurance Company,Guaranteed Issue,30
+60,16000,$101.68 ,Gerber Life Insurance Company,Guaranteed Issue,30
+60,17000,$107.97 ,Gerber Life Insurance Company,Guaranteed Issue,30
+60,18000,$114.27 ,Gerber Life Insurance Company,Guaranteed Issue,30
+60,19000,$120.57 ,Gerber Life Insurance Company,Guaranteed Issue,30
+60,20000,$126.87 ,Gerber Life Insurance Company,Guaranteed Issue,30
+60,21000,$133.16 ,Gerber Life Insurance Company,Guaranteed Issue,30
+60,22000,$139.46 ,Gerber Life Insurance Company,Guaranteed Issue,30
+60,23000,$145.76 ,Gerber Life Insurance Company,Guaranteed Issue,30
+60,24000,$152.06 ,Gerber Life Insurance Company,Guaranteed Issue,30
+60,25000,$158.35 ,Gerber Life Insurance Company,Guaranteed Issue,30
+61,5000,$34.74 ,Gerber Life Insurance Company,Guaranteed Issue,30
+61,6000,$41.51 ,Gerber Life Insurance Company,Guaranteed Issue,30
+61,7000,$48.27 ,Gerber Life Insurance Company,Guaranteed Issue,30
+61,8000,$55.04 ,Gerber Life Insurance Company,Guaranteed Issue,30
+61,9000,$61.80 ,Gerber Life Insurance Company,Guaranteed Issue,30
+61,10000,$68.57 ,Gerber Life Insurance Company,Guaranteed Issue,30
+61,11000,$75.33 ,Gerber Life Insurance Company,Guaranteed Issue,30
+61,12000,$82.10 ,Gerber Life Insurance Company,Guaranteed Issue,30
+61,13000,$88.86 ,Gerber Life Insurance Company,Guaranteed Issue,30
+61,14000,$95.63 ,Gerber Life Insurance Company,Guaranteed Issue,30
+61,15000,$102.39 ,Gerber Life Insurance Company,Guaranteed Issue,30
+61,16000,$109.16 ,Gerber Life Insurance Company,Guaranteed Issue,30
+61,17000,$115.92 ,Gerber Life Insurance Company,Guaranteed Issue,30
+61,18000,$122.69 ,Gerber Life Insurance Company,Guaranteed Issue,30
+61,19000,$129.45 ,Gerber Life Insurance Company,Guaranteed Issue,30
+61,20000,$136.22 ,Gerber Life Insurance Company,Guaranteed Issue,30
+61,21000,$142.98 ,Gerber Life Insurance Company,Guaranteed Issue,30
+61,22000,$149.75 ,Gerber Life Insurance Company,Guaranteed Issue,30
+61,23000,$156.51 ,Gerber Life Insurance Company,Guaranteed Issue,30
+61,24000,$163.28 ,Gerber Life Insurance Company,Guaranteed Issue,30
+61,25000,$170.04 ,Gerber Life Insurance Company,Guaranteed Issue,30
+62,5000,$36.94 ,Gerber Life Insurance Company,Guaranteed Issue,30
+62,6000,$44.15 ,Gerber Life Insurance Company,Guaranteed Issue,30
+62,7000,$51.35 ,Gerber Life Insurance Company,Guaranteed Issue,30
+62,8000,$58.56 ,Gerber Life Insurance Company,Guaranteed Issue,30
+62,9000,$65.76 ,Gerber Life Insurance Company,Guaranteed Issue,30
+62,10000,$72.97 ,Gerber Life Insurance Company,Guaranteed Issue,30
+62,11000,$80.17 ,Gerber Life Insurance Company,Guaranteed Issue,30
+62,12000,$87.38 ,Gerber Life Insurance Company,Guaranteed Issue,30
+62,13000,$94.58 ,Gerber Life Insurance Company,Guaranteed Issue,30
+62,14000,$101.79 ,Gerber Life Insurance Company,Guaranteed Issue,30
+62,15000,$108.99 ,Gerber Life Insurance Company,Guaranteed Issue,30
+62,16000,$116.20 ,Gerber Life Insurance Company,Guaranteed Issue,30
+62,17000,$123.40 ,Gerber Life Insurance Company,Guaranteed Issue,30
+62,18000,$130.61 ,Gerber Life Insurance Company,Guaranteed Issue,30
+62,19000,$137.81 ,Gerber Life Insurance Company,Guaranteed Issue,30
+62,20000,$145.02 ,Gerber Life Insurance Company,Guaranteed Issue,30
+62,21000,$152.22 ,Gerber Life Insurance Company,Guaranteed Issue,30
+62,22000,$159.43 ,Gerber Life Insurance Company,Guaranteed Issue,30
+62,23000,$166.63 ,Gerber Life Insurance Company,Guaranteed Issue,30
+62,24000,$173.84 ,Gerber Life Insurance Company,Guaranteed Issue,30
+62,25000,$181.04 ,Gerber Life Insurance Company,Guaranteed Issue,30
+63,5000,$39.05 ,Gerber Life Insurance Company,Guaranteed Issue,30
+63,6000,$46.68 ,Gerber Life Insurance Company,Guaranteed Issue,30
+63,7000,$54.30 ,Gerber Life Insurance Company,Guaranteed Issue,30
+63,8000,$61.93 ,Gerber Life Insurance Company,Guaranteed Issue,30
+63,9000,$69.56 ,Gerber Life Insurance Company,Guaranteed Issue,30
+63,10000,$77.18 ,Gerber Life Insurance Company,Guaranteed Issue,30
+63,11000,$84.81 ,Gerber Life Insurance Company,Guaranteed Issue,30
+63,12000,$92.44 ,Gerber Life Insurance Company,Guaranteed Issue,30
+63,13000,$100.06 ,Gerber Life Insurance Company,Guaranteed Issue,30
+63,14000,$107.69 ,Gerber Life Insurance Company,Guaranteed Issue,30
+63,15000,$115.32 ,Gerber Life Insurance Company,Guaranteed Issue,30
+63,16000,$122.94 ,Gerber Life Insurance Company,Guaranteed Issue,30
+63,17000,$130.57 ,Gerber Life Insurance Company,Guaranteed Issue,30
+63,18000,$138.20 ,Gerber Life Insurance Company,Guaranteed Issue,30
+63,19000,$145.82 ,Gerber Life Insurance Company,Guaranteed Issue,30
+63,20000,$153.45 ,Gerber Life Insurance Company,Guaranteed Issue,30
+63,21000,$161.08 ,Gerber Life Insurance Company,Guaranteed Issue,30
+63,22000,$168.70 ,Gerber Life Insurance Company,Guaranteed Issue,30
+63,23000,$176.33 ,Gerber Life Insurance Company,Guaranteed Issue,30
+63,24000,$183.96 ,Gerber Life Insurance Company,Guaranteed Issue,30
+63,25000,$191.58 ,Gerber Life Insurance Company,Guaranteed Issue,30
+64,5000,$41.07 ,Gerber Life Insurance Company,Guaranteed Issue,30
+64,6000,$49.10 ,Gerber Life Insurance Company,Guaranteed Issue,30
+64,7000,$57.13 ,Gerber Life Insurance Company,Guaranteed Issue,30
+64,8000,$65.16 ,Gerber Life Insurance Company,Guaranteed Issue,30
+64,9000,$73.19 ,Gerber Life Insurance Company,Guaranteed Issue,30
+64,10000,$81.22 ,Gerber Life Insurance Company,Guaranteed Issue,30
+64,11000,$89.25 ,Gerber Life Insurance Company,Guaranteed Issue,30
+64,12000,$97.28 ,Gerber Life Insurance Company,Guaranteed Issue,30
+64,13000,$105.31 ,Gerber Life Insurance Company,Guaranteed Issue,30
+64,14000,$113.34 ,Gerber Life Insurance Company,Guaranteed Issue,30
+64,15000,$121.37 ,Gerber Life Insurance Company,Guaranteed Issue,30
+64,16000,$129.40 ,Gerber Life Insurance Company,Guaranteed Issue,30
+64,17000,$137.43 ,Gerber Life Insurance Company,Guaranteed Issue,30
+64,18000,$145.46 ,Gerber Life Insurance Company,Guaranteed Issue,30
+64,19000,$153.49 ,Gerber Life Insurance Company,Guaranteed Issue,30
+64,20000,$161.52 ,Gerber Life Insurance Company,Guaranteed Issue,30
+64,21000,$169.55 ,Gerber Life Insurance Company,Guaranteed Issue,30
+64,22000,$177.58 ,Gerber Life Insurance Company,Guaranteed Issue,30
+64,23000,$185.61 ,Gerber Life Insurance Company,Guaranteed Issue,30
+64,24000,$193.64 ,Gerber Life Insurance Company,Guaranteed Issue,30
+64,25000,$201.67 ,Gerber Life Insurance Company,Guaranteed Issue,30
+66,13000,$114.96 ,Gerber Life Insurance Company,Guaranteed Issue,30
+66,14000,$123.73 ,Gerber Life Insurance Company,Guaranteed Issue,30
+66,15000,$132.50 ,Gerber Life Insurance Company,Guaranteed Issue,30
+66,16000,$141.28 ,Gerber Life Insurance Company,Guaranteed Issue,30
+66,17000,$150.05 ,Gerber Life Insurance Company,Guaranteed Issue,30
+66,18000,$158.82 ,Gerber Life Insurance Company,Guaranteed Issue,30
+66,19000,$167.59 ,Gerber Life Insurance Company,Guaranteed Issue,30
+66,20000,$176.37 ,Gerber Life Insurance Company,Guaranteed Issue,30
+66,21000,$185.14 ,Gerber Life Insurance Company,Guaranteed Issue,30
+66,22000,$193.91 ,Gerber Life Insurance Company,Guaranteed Issue,30
+66,23000,$202.68 ,Gerber Life Insurance Company,Guaranteed Issue,30
+66,24000,$211.46 ,Gerber Life Insurance Company,Guaranteed Issue,30
+66,25000,$220.23 ,Gerber Life Insurance Company,Guaranteed Issue,30
+67,5000,$46.29 ,Gerber Life Insurance Company,Guaranteed Issue,30
+67,6000,$55.37 ,Gerber Life Insurance Company,Guaranteed Issue,30
+67,7000,$64.44 ,Gerber Life Insurance Company,Guaranteed Issue,30
+67,8000,$73.52 ,Gerber Life Insurance Company,Guaranteed Issue,30
+67,9000,$82.59 ,Gerber Life Insurance Company,Guaranteed Issue,30
+67,10000,$91.67 ,Gerber Life Insurance Company,Guaranteed Issue,30
+67,11000,$100.74 ,Gerber Life Insurance Company,Guaranteed Issue,30
+67,12000,$109.82 ,Gerber Life Insurance Company,Guaranteed Issue,30
+67,13000,$118.89 ,Gerber Life Insurance Company,Guaranteed Issue,30
+67,14000,$127.97 ,Gerber Life Insurance Company,Guaranteed Issue,30
+67,15000,$137.04 ,Gerber Life Insurance Company,Guaranteed Issue,30
+67,16000,$146.12 ,Gerber Life Insurance Company,Guaranteed Issue,30
+67,17000,$155.19 ,Gerber Life Insurance Company,Guaranteed Issue,30
+67,18000,$164.27 ,Gerber Life Insurance Company,Guaranteed Issue,30
+67,19000,$173.34 ,Gerber Life Insurance Company,Guaranteed Issue,30
+67,20000,$182.42 ,Gerber Life Insurance Company,Guaranteed Issue,30
+67,21000,$191.49 ,Gerber Life Insurance Company,Guaranteed Issue,30
+67,22000,$200.57 ,Gerber Life Insurance Company,Guaranteed Issue,30
+67,23000,$209.64 ,Gerber Life Insurance Company,Guaranteed Issue,30
+67,24000,$218.72 ,Gerber Life Insurance Company,Guaranteed Issue,30
+67,25000,$227.79 ,Gerber Life Insurance Company,Guaranteed Issue,30
+68,5000,$47.71 ,Gerber Life Insurance Company,Guaranteed Issue,30
+68,6000,$57.07 ,Gerber Life Insurance Company,Guaranteed Issue,30
+68,7000,$66.43 ,Gerber Life Insurance Company,Guaranteed Issue,30
+68,8000,$75.79 ,Gerber Life Insurance Company,Guaranteed Issue,30
+68,9000,$85.15 ,Gerber Life Insurance Company,Guaranteed Issue,30
+68,10000,$94.51 ,Gerber Life Insurance Company,Guaranteed Issue,30
+68,11000,$103.87 ,Gerber Life Insurance Company,Guaranteed Issue,30
+68,12000,$113.23 ,Gerber Life Insurance Company,Guaranteed Issue,30
+68,13000,$122.59 ,Gerber Life Insurance Company,Guaranteed Issue,30
+68,14000,$131.95 ,Gerber Life Insurance Company,Guaranteed Issue,30
+68,15000,$141.30 ,Gerber Life Insurance Company,Guaranteed Issue,30
+68,16000,$150.66 ,Gerber Life Insurance Company,Guaranteed Issue,30
+68,17000,$160.02 ,Gerber Life Insurance Company,Guaranteed Issue,30
+68,18000,$169.38 ,Gerber Life Insurance Company,Guaranteed Issue,30
+68,19000,$178.74 ,Gerber Life Insurance Company,Guaranteed Issue,30
+68,20000,$188.10 ,Gerber Life Insurance Company,Guaranteed Issue,30
+68,21000,$197.46 ,Gerber Life Insurance Company,Guaranteed Issue,30
+68,22000,$206.82 ,Gerber Life Insurance Company,Guaranteed Issue,30
+68,23000,$216.18 ,Gerber Life Insurance Company,Guaranteed Issue,30
+68,24000,$225.54 ,Gerber Life Insurance Company,Guaranteed Issue,30
+68,25000,$234.90 ,Gerber Life Insurance Company,Guaranteed Issue,30
+69,5000,$48.95 ,Gerber Life Insurance Company,Guaranteed Issue,30
+69,6000,$58.56 ,Gerber Life Insurance Company,Guaranteed Issue,30
+69,7000,$68.16 ,Gerber Life Insurance Company,Guaranteed Issue,30
+69,8000,$77.77 ,Gerber Life Insurance Company,Guaranteed Issue,30
+69,9000,$87.38 ,Gerber Life Insurance Company,Guaranteed Issue,30
+69,10000,$96.98 ,Gerber Life Insurance Company,Guaranteed Issue,30
+69,11000,$106.59 ,Gerber Life Insurance Company,Guaranteed Issue,30
+69,12000,$116.20 ,Gerber Life Insurance Company,Guaranteed Issue,30
+69,13000,$125.80 ,Gerber Life Insurance Company,Guaranteed Issue,30
+69,14000,$135.41 ,Gerber Life Insurance Company,Guaranteed Issue,30
+69,15000,$145.02 ,Gerber Life Insurance Company,Guaranteed Issue,30
+69,16000,$154.62 ,Gerber Life Insurance Company,Guaranteed Issue,30
+69,17000,$164.23 ,Gerber Life Insurance Company,Guaranteed Issue,30
+69,18000,$173.84 ,Gerber Life Insurance Company,Guaranteed Issue,30
+69,19000,$183.44 ,Gerber Life Insurance Company,Guaranteed Issue,30
+69,20000,$193.05 ,Gerber Life Insurance Company,Guaranteed Issue,30
+69,21000,$202.66 ,Gerber Life Insurance Company,Guaranteed Issue,30
+69,22000,$212.26 ,Gerber Life Insurance Company,Guaranteed Issue,30
+69,23000,$221.87 ,Gerber Life Insurance Company,Guaranteed Issue,30
+69,24000,$231.48 ,Gerber Life Insurance Company,Guaranteed Issue,30
+69,25000,$241.08 ,Gerber Life Insurance Company,Guaranteed Issue,30
+70,5000,$50.05 ,Gerber Life Insurance Company,Guaranteed Issue,30
+70,6000,$59.88 ,Gerber Life Insurance Company,Guaranteed Issue,30
+70,7000,$69.70 ,Gerber Life Insurance Company,Guaranteed Issue,30
+70,8000,$79.53 ,Gerber Life Insurance Company,Guaranteed Issue,30
+70,9000,$89.36 ,Gerber Life Insurance Company,Guaranteed Issue,30
+70,10000,$99.18 ,Gerber Life Insurance Company,Guaranteed Issue,30
+70,11000,$109.01 ,Gerber Life Insurance Company,Guaranteed Issue,30
+70,12000,$118.84 ,Gerber Life Insurance Company,Guaranteed Issue,30
+70,13000,$128.66 ,Gerber Life Insurance Company,Guaranteed Issue,30
+70,14000,$138.49 ,Gerber Life Insurance Company,Guaranteed Issue,30
+70,15000,$148.32 ,Gerber Life Insurance Company,Guaranteed Issue,30
+70,16000,$158.14 ,Gerber Life Insurance Company,Guaranteed Issue,30
+70,17000,$167.97 ,Gerber Life Insurance Company,Guaranteed Issue,30
+70,18000,$177.80 ,Gerber Life Insurance Company,Guaranteed Issue,30
+70,19000,$187.62 ,Gerber Life Insurance Company,Guaranteed Issue,30
+70,20000,$197.45 ,Gerber Life Insurance Company,Guaranteed Issue,30
+70,21000,$207.28 ,Gerber Life Insurance Company,Guaranteed Issue,30
+70,22000,$217.10 ,Gerber Life Insurance Company,Guaranteed Issue,30
+70,23000,$226.93 ,Gerber Life Insurance Company,Guaranteed Issue,30
+70,24000,$236.76 ,Gerber Life Insurance Company,Guaranteed Issue,30
+70,25000,$246.58 ,Gerber Life Insurance Company,Guaranteed Issue,30
+71,5000,$54.54 ,Gerber Life Insurance Company,Guaranteed Issue,30
+71,6000,$65.27 ,Gerber Life Insurance Company,Guaranteed Issue,30
+71,7000,$75.99 ,Gerber Life Insurance Company,Guaranteed Issue,30
+71,8000,$86.72 ,Gerber Life Insurance Company,Guaranteed Issue,30
+71,9000,$97.44 ,Gerber Life Insurance Company,Guaranteed Issue,30
+71,10000,$108.17 ,Gerber Life Insurance Company,Guaranteed Issue,30
+71,11000,$118.89 ,Gerber Life Insurance Company,Guaranteed Issue,30
+71,12000,$129.62 ,Gerber Life Insurance Company,Guaranteed Issue,30
+71,13000,$140.34 ,Gerber Life Insurance Company,Guaranteed Issue,30
+71,14000,$151.07 ,Gerber Life Insurance Company,Guaranteed Issue,30
+71,15000,$161.79 ,Gerber Life Insurance Company,Guaranteed Issue,30
+71,16000,$172.52 ,Gerber Life Insurance Company,Guaranteed Issue,30
+71,17000,$183.24 ,Gerber Life Insurance Company,Guaranteed Issue,30
+71,18000,$193.97 ,Gerber Life Insurance Company,Guaranteed Issue,30
+71,19000,$204.69 ,Gerber Life Insurance Company,Guaranteed Issue,30
+71,20000,$215.42 ,Gerber Life Insurance Company,Guaranteed Issue,30
+71,21000,$226.14 ,Gerber Life Insurance Company,Guaranteed Issue,30
+71,22000,$236.87 ,Gerber Life Insurance Company,Guaranteed Issue,30
+71,23000,$247.59 ,Gerber Life Insurance Company,Guaranteed Issue,30
+71,24000,$258.32 ,Gerber Life Insurance Company,Guaranteed Issue,30
+71,25000,$269.04 ,Gerber Life Insurance Company,Guaranteed Issue,30
+72,5000,$58.94 ,Gerber Life Insurance Company,Guaranteed Issue,30
+72,6000,$70.55 ,Gerber Life Insurance Company,Guaranteed Issue,30
+72,7000,$82.15 ,Gerber Life Insurance Company,Guaranteed Issue,30
+72,8000,$93.76 ,Gerber Life Insurance Company,Guaranteed Issue,30
+72,9000,$105.36 ,Gerber Life Insurance Company,Guaranteed Issue,30
+72,10000,$116.97 ,Gerber Life Insurance Company,Guaranteed Issue,30
+72,11000,$128.57 ,Gerber Life Insurance Company,Guaranteed Issue,30
+72,12000,$140.18 ,Gerber Life Insurance Company,Guaranteed Issue,30
+72,13000,$151.78 ,Gerber Life Insurance Company,Guaranteed Issue,30
+72,14000,$163.39 ,Gerber Life Insurance Company,Guaranteed Issue,30
+72,15000,$174.99 ,Gerber Life Insurance Company,Guaranteed Issue,30
+72,16000,$186.60 ,Gerber Life Insurance Company,Guaranteed Issue,30
+72,17000,$198.20 ,Gerber Life Insurance Company,Guaranteed Issue,30
+72,18000,$209.81 ,Gerber Life Insurance Company,Guaranteed Issue,30
+72,19000,$221.41 ,Gerber Life Insurance Company,Guaranteed Issue,30
+72,20000,$233.02 ,Gerber Life Insurance Company,Guaranteed Issue,30
+72,21000,$244.62 ,Gerber Life Insurance Company,Guaranteed Issue,30
+72,22000,$256.23 ,Gerber Life Insurance Company,Guaranteed Issue,30
+72,23000,$267.83 ,Gerber Life Insurance Company,Guaranteed Issue,30
+72,24000,$279.44 ,Gerber Life Insurance Company,Guaranteed Issue,30
+72,25000,$291.04 ,Gerber Life Insurance Company,Guaranteed Issue,30
+73,5000,$63.07 ,Gerber Life Insurance Company,Guaranteed Issue,30
+73,6000,$75.50 ,Gerber Life Insurance Company,Guaranteed Issue,30
+73,7000,$87.93 ,Gerber Life Insurance Company,Guaranteed Issue,30
+73,8000,$100.36 ,Gerber Life Insurance Company,Guaranteed Issue,30
+73,9000,$112.79 ,Gerber Life Insurance Company,Guaranteed Issue,30
+73,10000,$125.22 ,Gerber Life Insurance Company,Guaranteed Issue,30
+73,11000,$137.65 ,Gerber Life Insurance Company,Guaranteed Issue,30
+73,12000,$150.08 ,Gerber Life Insurance Company,Guaranteed Issue,30
+73,13000,$162.51 ,Gerber Life Insurance Company,Guaranteed Issue,30
+73,14000,$174.94 ,Gerber Life Insurance Company,Guaranteed Issue,30
+73,15000,$187.37 ,Gerber Life Insurance Company,Guaranteed Issue,30
+73,16000,$199.80 ,Gerber Life Insurance Company,Guaranteed Issue,30
+73,17000,$212.23 ,Gerber Life Insurance Company,Guaranteed Issue,30
+73,18000,$224.66 ,Gerber Life Insurance Company,Guaranteed Issue,30
+73,19000,$237.09 ,Gerber Life Insurance Company,Guaranteed Issue,30
+73,20000,$249.52 ,Gerber Life Insurance Company,Guaranteed Issue,30
+73,21000,$261.95 ,Gerber Life Insurance Company,Guaranteed Issue,30
+73,22000,$274.38 ,Gerber Life Insurance Company,Guaranteed Issue,30
+73,23000,$286.81 ,Gerber Life Insurance Company,Guaranteed Issue,30
+73,24000,$299.24 ,Gerber Life Insurance Company,Guaranteed Issue,30
+73,25000,$311.67 ,Gerber Life Insurance Company,Guaranteed Issue,30
+74,5000,$66.92 ,Gerber Life Insurance Company,Guaranteed Issue,30
+74,6000,$80.12 ,Gerber Life Insurance Company,Guaranteed Issue,30
+74,7000,$93.32 ,Gerber Life Insurance Company,Guaranteed Issue,30
+74,8000,$106.52 ,Gerber Life Insurance Company,Guaranteed Issue,30
+74,9000,$119.72 ,Gerber Life Insurance Company,Guaranteed Issue,30
+74,10000,$132.92 ,Gerber Life Insurance Company,Guaranteed Issue,30
+74,11000,$146.12 ,Gerber Life Insurance Company,Guaranteed Issue,30
+74,12000,$159.32 ,Gerber Life Insurance Company,Guaranteed Issue,30
+74,13000,$172.52 ,Gerber Life Insurance Company,Guaranteed Issue,30
+74,14000,$185.72 ,Gerber Life Insurance Company,Guaranteed Issue,30
+74,15000,$198.92 ,Gerber Life Insurance Company,Guaranteed Issue,30
+74,16000,$212.12 ,Gerber Life Insurance Company,Guaranteed Issue,30
+74,17000,$225.32 ,Gerber Life Insurance Company,Guaranteed Issue,30
+74,18000,$238.52 ,Gerber Life Insurance Company,Guaranteed Issue,30
+74,19000,$251.72 ,Gerber Life Insurance Company,Guaranteed Issue,30
+74,20000,$264.92 ,Gerber Life Insurance Company,Guaranteed Issue,30
+74,21000,$278.12 ,Gerber Life Insurance Company,Guaranteed Issue,30
+74,22000,$291.32 ,Gerber Life Insurance Company,Guaranteed Issue,30
+74,23000,$304.52 ,Gerber Life Insurance Company,Guaranteed Issue,30
+74,24000,$317.72 ,Gerber Life Insurance Company,Guaranteed Issue,30
+74,25000,$330.92 ,Gerber Life Insurance Company,Guaranteed Issue,30
+75,5000,$70.22 ,Gerber Life Insurance Company,Guaranteed Issue,30
+75,6000,$84.08 ,Gerber Life Insurance Company,Guaranteed Issue,30
+75,7000,$97.94 ,Gerber Life Insurance Company,Guaranteed Issue,30
+75,8000,$111.80 ,Gerber Life Insurance Company,Guaranteed Issue,30
+75,9000,$125.66 ,Gerber Life Insurance Company,Guaranteed Issue,30
+75,10000,$139.52 ,Gerber Life Insurance Company,Guaranteed Issue,30
+75,11000,$153.38 ,Gerber Life Insurance Company,Guaranteed Issue,30
+75,12000,$167.24 ,Gerber Life Insurance Company,Guaranteed Issue,30
+75,13000,$181.10 ,Gerber Life Insurance Company,Guaranteed Issue,30
+75,14000,$194.96 ,Gerber Life Insurance Company,Guaranteed Issue,30
+75,15000,$208.82 ,Gerber Life Insurance Company,Guaranteed Issue,30
+75,16000,$222.68 ,Gerber Life Insurance Company,Guaranteed Issue,30
+75,17000,$236.54 ,Gerber Life Insurance Company,Guaranteed Issue,30
+75,18000,$250.40 ,Gerber Life Insurance Company,Guaranteed Issue,30
+75,19000,$264.26 ,Gerber Life Insurance Company,Guaranteed Issue,30
+75,20000,$278.12 ,Gerber Life Insurance Company,Guaranteed Issue,30
+75,21000,$291.98 ,Gerber Life Insurance Company,Guaranteed Issue,30
+75,22000,$305.84 ,Gerber Life Insurance Company,Guaranteed Issue,30
+75,23000,$319.70 ,Gerber Life Insurance Company,Guaranteed Issue,30
+75,24000,$333.56 ,Gerber Life Insurance Company,Guaranteed Issue,30
+75,25000,$347.42 ,Gerber Life Insurance Company,Guaranteed Issue,30
+76,5000,$81.90 ,Gerber Life Insurance Company,Guaranteed Issue,30
+76,6000,$98.10 ,Gerber Life Insurance Company,Guaranteed Issue,30
+76,7000,$114.30 ,Gerber Life Insurance Company,Guaranteed Issue,30
+76,8000,$130.50 ,Gerber Life Insurance Company,Guaranteed Issue,30
+76,9000,$146.69 ,Gerber Life Insurance Company,Guaranteed Issue,30
+76,10000,$162.89 ,Gerber Life Insurance Company,Guaranteed Issue,30
+76,11000,$179.09 ,Gerber Life Insurance Company,Guaranteed Issue,30
+76,12000,$195.29 ,Gerber Life Insurance Company,Guaranteed Issue,30
+76,13000,$211.48 ,Gerber Life Insurance Company,Guaranteed Issue,30
+76,14000,$227.68 ,Gerber Life Insurance Company,Guaranteed Issue,30
+76,15000,$243.88 ,Gerber Life Insurance Company,Guaranteed Issue,30
+76,16000,$260.08 ,Gerber Life Insurance Company,Guaranteed Issue,30
+76,17000,$276.27 ,Gerber Life Insurance Company,Guaranteed Issue,30
+76,18000,$292.47 ,Gerber Life Insurance Company,Guaranteed Issue,30
+76,19000,$308.67 ,Gerber Life Insurance Company,Guaranteed Issue,30
+76,20000,$324.87 ,Gerber Life Insurance Company,Guaranteed Issue,30
+76,21000,$341.06 ,Gerber Life Insurance Company,Guaranteed Issue,30
+76,22000,$357.26 ,Gerber Life Insurance Company,Guaranteed Issue,30
+76,23000,$373.46 ,Gerber Life Insurance Company,Guaranteed Issue,30
+76,24000,$389.66 ,Gerber Life Insurance Company,Guaranteed Issue,30
+76,25000,$413.33 ,Gerber Life Insurance Company,Guaranteed Issue,30
+77,5000,$93.13 ,Gerber Life Insurance Company,Guaranteed Issue,30
+77,6000,$111.58 ,Gerber Life Insurance Company,Guaranteed Issue,30
+77,7000,$130.02 ,Gerber Life Insurance Company,Guaranteed Issue,30
+77,8000,$148.46 ,Gerber Life Insurance Company,Guaranteed Issue,30
+77,9000,$166.91 ,Gerber Life Insurance Company,Guaranteed Issue,30
+77,10000,$185.35 ,Gerber Life Insurance Company,Guaranteed Issue,30
+77,11000,$203.79 ,Gerber Life Insurance Company,Guaranteed Issue,30
+77,12000,$222.24 ,Gerber Life Insurance Company,Guaranteed Issue,30
+77,13000,$240.68 ,Gerber Life Insurance Company,Guaranteed Issue,30
+77,14000,$259.12 ,Gerber Life Insurance Company,Guaranteed Issue,30
+77,15000,$277.57 ,Gerber Life Insurance Company,Guaranteed Issue,30
+77,16000,$296.01 ,Gerber Life Insurance Company,Guaranteed Issue,30
+77,17000,$314.45 ,Gerber Life Insurance Company,Guaranteed Issue,30
+77,18000,$332.90 ,Gerber Life Insurance Company,Guaranteed Issue,30
+77,19000,$351.34 ,Gerber Life Insurance Company,Guaranteed Issue,30
+77,20000,$369.78 ,Gerber Life Insurance Company,Guaranteed Issue,30
+77,21000,$388.23 ,Gerber Life Insurance Company,Guaranteed Issue,30
+77,22000,$406.67 ,Gerber Life Insurance Company,Guaranteed Issue,30
+77,23000,$425.11 ,Gerber Life Insurance Company,Guaranteed Issue,30
+77,24000,$443.56 ,Gerber Life Insurance Company,Guaranteed Issue,30
+77,25000,$462.00 ,Gerber Life Insurance Company,Guaranteed Issue,30
+78,5000,$103.90 ,Gerber Life Insurance Company,Guaranteed Issue,30
+78,6000,$124.50 ,Gerber Life Insurance Company,Guaranteed Issue,30
+78,7000,$145.10 ,Gerber Life Insurance Company,Guaranteed Issue,30
+78,8000,$165.70 ,Gerber Life Insurance Company,Guaranteed Issue,30
+78,9000,$186.29 ,Gerber Life Insurance Company,Guaranteed Issue,30
+78,10000,$206.89 ,Gerber Life Insurance Company,Guaranteed Issue,30
+78,11000,$227.49 ,Gerber Life Insurance Company,Guaranteed Issue,30
+78,12000,$248.09 ,Gerber Life Insurance Company,Guaranteed Issue,30
+78,13000,$268.68 ,Gerber Life Insurance Company,Guaranteed Issue,30
+78,14000,$289.28 ,Gerber Life Insurance Company,Guaranteed Issue,30
+78,15000,$309.88 ,Gerber Life Insurance Company,Guaranteed Issue,30
+78,16000,$330.48 ,Gerber Life Insurance Company,Guaranteed Issue,30
+78,17000,$351.07 ,Gerber Life Insurance Company,Guaranteed Issue,30
+78,18000,$371.67 ,Gerber Life Insurance Company,Guaranteed Issue,30
+78,19000,$392.27 ,Gerber Life Insurance Company,Guaranteed Issue,30
+78,20000,$412.87 ,Gerber Life Insurance Company,Guaranteed Issue,30
+78,21000,$433.46 ,Gerber Life Insurance Company,Guaranteed Issue,30
+78,22000,$454.06 ,Gerber Life Insurance Company,Guaranteed Issue,30
+78,23000,$474.66 ,Gerber Life Insurance Company,Guaranteed Issue,30
+78,24000,$495.26 ,Gerber Life Insurance Company,Guaranteed Issue,30
+78,25000,$515.85 ,Gerber Life Insurance Company,Guaranteed Issue,30
+79,5000,$114.22 ,Gerber Life Insurance Company,Guaranteed Issue,30
+79,6000,$136.88 ,Gerber Life Insurance Company,Guaranteed Issue,30
+79,7000,$159.54 ,Gerber Life Insurance Company,Guaranteed Issue,30
+79,8000,$182.20 ,Gerber Life Insurance Company,Guaranteed Issue,30
+79,9000,$204.86 ,Gerber Life Insurance Company,Guaranteed Issue,30
+79,10000,$227.52 ,Gerber Life Insurance Company,Guaranteed Issue,30
+79,11000,$250.18 ,Gerber Life Insurance Company,Guaranteed Issue,30
+79,12000,$272.84 ,Gerber Life Insurance Company,Guaranteed Issue,30
+79,13000,$295.50 ,Gerber Life Insurance Company,Guaranteed Issue,30
+79,14000,$318.16 ,Gerber Life Insurance Company,Guaranteed Issue,30
+79,15000,$340.82 ,Gerber Life Insurance Company,Guaranteed Issue,30
+79,16000,$363.48 ,Gerber Life Insurance Company,Guaranteed Issue,30
+79,17000,$386.14 ,Gerber Life Insurance Company,Guaranteed Issue,30
+79,18000,$408.80 ,Gerber Life Insurance Company,Guaranteed Issue,30
+79,19000,$431.46 ,Gerber Life Insurance Company,Guaranteed Issue,30
+79,20000,$454.12 ,Gerber Life Insurance Company,Guaranteed Issue,30
+79,21000,$476.78 ,Gerber Life Insurance Company,Guaranteed Issue,30
+79,22000,$499.44 ,Gerber Life Insurance Company,Guaranteed Issue,30
+79,23000,$522.10 ,Gerber Life Insurance Company,Guaranteed Issue,30
+79,24000,$544.76 ,Gerber Life Insurance Company,Guaranteed Issue,30
+79,25000,$567.42 ,Gerber Life Insurance Company,Guaranteed Issue,30
+80,5000,$124.12 ,Gerber Life Insurance Company,Guaranteed Issue,30
+80,6000,$148.76 ,Gerber Life Insurance Company,Guaranteed Issue,30
+80,7000,$173.40 ,Gerber Life Insurance Company,Guaranteed Issue,30
+80,8000,$198.04 ,Gerber Life Insurance Company,Guaranteed Issue,30
+80,9000,$222.68 ,Gerber Life Insurance Company,Guaranteed Issue,30
+80,10000,$247.32 ,Gerber Life Insurance Company,Guaranteed Issue,30
+80,11000,$271.96 ,Gerber Life Insurance Company,Guaranteed Issue,30
+80,12000,$296.60 ,Gerber Life Insurance Company,Guaranteed Issue,30
+80,13000,$321.24 ,Gerber Life Insurance Company,Guaranteed Issue,30
+80,14000,$345.88 ,Gerber Life Insurance Company,Guaranteed Issue,30
+80,15000,$370.52 ,Gerber Life Insurance Company,Guaranteed Issue,30
+80,16000,$395.16 ,Gerber Life Insurance Company,Guaranteed Issue,30
+80,17000,$419.80 ,Gerber Life Insurance Company,Guaranteed Issue,30
+80,18000,$444.44 ,Gerber Life Insurance Company,Guaranteed Issue,30
+80,19000,$469.08 ,Gerber Life Insurance Company,Guaranteed Issue,30
+80,20000,$493.72 ,Gerber Life Insurance Company,Guaranteed Issue,30
+80,21000,$518.36 ,Gerber Life Insurance Company,Guaranteed Issue,30
+80,22000,$543.00 ,Gerber Life Insurance Company,Guaranteed Issue,30
+80,23000,$567.64 ,Gerber Life Insurance Company,Guaranteed Issue,30
+80,24000,$592.28 ,Gerber Life Insurance Company,Guaranteed Issue,30
+80,25000,$616.92 ,Gerber Life Insurance Company,Guaranteed Issue,30
+50,5000,$28.99 ,AIG,Guaranteed Issue,30
+50,6000,$34.39 ,AIG,Guaranteed Issue,30
+50,7000,$39.79 ,AIG,Guaranteed Issue,30
+50,8000,$45.19 ,AIG,Guaranteed Issue,30
+50,9000,$50.59 ,AIG,Guaranteed Issue,30
+50,10000,$55.99 ,AIG,Guaranteed Issue,30
+50,11000,$61.38 ,AIG,Guaranteed Issue,30
+50,12000,$66.78 ,AIG,Guaranteed Issue,30
+50,13000,$72.18 ,AIG,Guaranteed Issue,30
+50,14000,$77.58 ,AIG,Guaranteed Issue,30
+50,15000,$82.98 ,AIG,Guaranteed Issue,30
+50,16000,$88.38 ,AIG,Guaranteed Issue,30
+50,17000,$93.78 ,AIG,Guaranteed Issue,30
+50,18000,$99.17 ,AIG,Guaranteed Issue,30
+50,19000,$104.57 ,AIG,Guaranteed Issue,30
+50,20000,$109.97 ,AIG,Guaranteed Issue,30
+50,21000,$115.37 ,AIG,Guaranteed Issue,30
+50,22000,$120.77 ,AIG,Guaranteed Issue,30
+50,23000,$126.17 ,AIG,Guaranteed Issue,30
+50,24000,$131.57 ,AIG,Guaranteed Issue,30
+50,25000,$136.96 ,AIG,Guaranteed Issue,30
+51,5000,$29.43 ,AIG,Guaranteed Issue,30
+51,6000,$34.91 ,AIG,Guaranteed Issue,30
+51,7000,$40.40 ,AIG,Guaranteed Issue,30
+51,8000,$45.88 ,AIG,Guaranteed Issue,30
+51,9000,$51.37 ,AIG,Guaranteed Issue,30
+51,10000,$56.85 ,AIG,Guaranteed Issue,30
+51,11000,$62.34 ,AIG,Guaranteed Issue,30
+51,12000,$67.82 ,AIG,Guaranteed Issue,30
+51,13000,$73.31 ,AIG,Guaranteed Issue,30
+51,14000,$78.79 ,AIG,Guaranteed Issue,30
+51,15000,$84.28 ,AIG,Guaranteed Issue,30
+51,16000,$89.77 ,AIG,Guaranteed Issue,30
+51,17000,$95.25 ,AIG,Guaranteed Issue,30
+51,18000,$100.74 ,AIG,Guaranteed Issue,30
+51,19000,$106.22 ,AIG,Guaranteed Issue,30
+51,20000,$111.71 ,AIG,Guaranteed Issue,30
+51,21000,$117.19 ,AIG,Guaranteed Issue,30
+51,22000,$122.68 ,AIG,Guaranteed Issue,30
+51,23000,$128.16 ,AIG,Guaranteed Issue,30
+51,24000,$133.65 ,AIG,Guaranteed Issue,30
+51,25000,$139.13 ,AIG,Guaranteed Issue,30
+52,5000,$29.92 ,AIG,Guaranteed Issue,30
+52,6000,$35.50 ,AIG,Guaranteed Issue,30
+52,7000,$41.09 ,AIG,Guaranteed Issue,30
+52,8000,$46.67 ,AIG,Guaranteed Issue,30
+52,9000,$52.25 ,AIG,Guaranteed Issue,30
+52,10000,$57.84 ,AIG,Guaranteed Issue,30
+52,11000,$63.42 ,AIG,Guaranteed Issue,30
+52,12000,$69.01 ,AIG,Guaranteed Issue,30
+52,13000,$74.59 ,AIG,Guaranteed Issue,30
+52,14000,$80.17 ,AIG,Guaranteed Issue,30
+52,15000,$85.76 ,AIG,Guaranteed Issue,30
+52,16000,$94.36 ,AIG,Guaranteed Issue,30
+52,17000,$100.13 ,AIG,Guaranteed Issue,30
+52,18000,$105.90 ,AIG,Guaranteed Issue,30
+52,19000,$111.67 ,AIG,Guaranteed Issue,30
+52,20000,$117.44 ,AIG,Guaranteed Issue,30
+52,21000,$123.22 ,AIG,Guaranteed Issue,30
+52,22000,$128.99 ,AIG,Guaranteed Issue,30
+52,23000,$134.76 ,AIG,Guaranteed Issue,30
+52,24000,$140.53 ,AIG,Guaranteed Issue,30
+52,25000,$146.30 ,AIG,Guaranteed Issue,30
+53,5000,$30.35 ,AIG,Guaranteed Issue,30
+53,6000,$36.02 ,AIG,Guaranteed Issue,30
+53,7000,$41.69 ,AIG,Guaranteed Issue,30
+53,8000,$47.36 ,AIG,Guaranteed Issue,30
+53,9000,$53.03 ,AIG,Guaranteed Issue,30
+53,10000,$58.71 ,AIG,Guaranteed Issue,30
+53,11000,$64.38 ,AIG,Guaranteed Issue,30
+53,12000,$70.05 ,AIG,Guaranteed Issue,30
+53,13000,$75.72 ,AIG,Guaranteed Issue,30
+53,14000,$81.39 ,AIG,Guaranteed Issue,30
+53,15000,$87.06 ,AIG,Guaranteed Issue,30
+53,16000,$99.72 ,AIG,Guaranteed Issue,30
+53,17000,$105.83 ,AIG,Guaranteed Issue,30
+53,18000,$111.93 ,AIG,Guaranteed Issue,30
+53,19000,$118.04 ,AIG,Guaranteed Issue,30
+53,20000,$124.15 ,AIG,Guaranteed Issue,30
+53,21000,$130.26 ,AIG,Guaranteed Issue,30
+53,22000,$136.36 ,AIG,Guaranteed Issue,30
+53,23000,$142.47 ,AIG,Guaranteed Issue,30
+53,24000,$148.58 ,AIG,Guaranteed Issue,30
+53,25000,$154.69 ,AIG,Guaranteed Issue,30
+54,5000,$30.85 ,AIG,Guaranteed Issue,30
+54,6000,$36.62 ,AIG,Guaranteed Issue,30
+54,7000,$42.39 ,AIG,Guaranteed Issue,30
+54,8000,$48.17 ,AIG,Guaranteed Issue,30
+54,9000,$53.94 ,AIG,Guaranteed Issue,30
+54,10000,$59.71 ,AIG,Guaranteed Issue,30
+54,11000,$65.48 ,AIG,Guaranteed Issue,30
+54,12000,$71.25 ,AIG,Guaranteed Issue,30
+54,13000,$77.02 ,AIG,Guaranteed Issue,30
+54,14000,$82.79 ,AIG,Guaranteed Issue,30
+54,15000,$88.56 ,AIG,Guaranteed Issue,30
+54,16000,$104.39 ,AIG,Guaranteed Issue,30
+54,17000,$110.79 ,AIG,Guaranteed Issue,30
+54,18000,$117.19 ,AIG,Guaranteed Issue,30
+54,19000,$123.59 ,AIG,Guaranteed Issue,30
+54,20000,$129.99 ,AIG,Guaranteed Issue,30
+54,21000,$136.39 ,AIG,Guaranteed Issue,30
+54,22000,$142.79 ,AIG,Guaranteed Issue,30
+54,23000,$149.19 ,AIG,Guaranteed Issue,30
+54,24000,$155.58 ,AIG,Guaranteed Issue,30
+54,25000,$161.98 ,AIG,Guaranteed Issue,30
+55,5000,$31.69 ,AIG,Guaranteed Issue,30
+55,6000,$37.63 ,AIG,Guaranteed Issue,30
+55,7000,$43.56 ,AIG,Guaranteed Issue,30
+55,8000,$49.50 ,AIG,Guaranteed Issue,30
+55,9000,$55.44 ,AIG,Guaranteed Issue,30
+55,10000,$61.37 ,AIG,Guaranteed Issue,30
+55,11000,$67.31 ,AIG,Guaranteed Issue,30
+55,12000,$73.25 ,AIG,Guaranteed Issue,30
+55,13000,$79.19 ,AIG,Guaranteed Issue,30
+55,14000,$85.12 ,AIG,Guaranteed Issue,30
+55,15000,$91.06 ,AIG,Guaranteed Issue,30
+55,16000,$108.55 ,AIG,Guaranteed Issue,30
+55,17000,$115.21 ,AIG,Guaranteed Issue,30
+55,18000,$121.87 ,AIG,Guaranteed Issue,30
+55,19000,$128.53 ,AIG,Guaranteed Issue,30
+55,20000,$135.19 ,AIG,Guaranteed Issue,30
+55,21000,$141.85 ,AIG,Guaranteed Issue,30
+55,22000,$148.51 ,AIG,Guaranteed Issue,30
+55,23000,$155.17 ,AIG,Guaranteed Issue,30
+55,24000,$161.83 ,AIG,Guaranteed Issue,30
+55,25000,$168.49 ,AIG,Guaranteed Issue,30
+56,5000,$32.58 ,AIG,Guaranteed Issue,30
+56,6000,$38.69 ,AIG,Guaranteed Issue,30
+56,7000,$44.81 ,AIG,Guaranteed Issue,30
+56,8000,$50.92 ,AIG,Guaranteed Issue,30
+56,9000,$57.04 ,AIG,Guaranteed Issue,30
+56,10000,$63.15 ,AIG,Guaranteed Issue,30
+56,11000,$69.27 ,AIG,Guaranteed Issue,30
+56,12000,$75.38 ,AIG,Guaranteed Issue,30
+56,13000,$81.50 ,AIG,Guaranteed Issue,30
+56,14000,$87.61 ,AIG,Guaranteed Issue,30
+56,15000,$93.72 ,AIG,Guaranteed Issue,30
+56,16000,$111.66 ,AIG,Guaranteed Issue,30
+56,17000,$118.52 ,AIG,Guaranteed Issue,30
+56,18000,$125.37 ,AIG,Guaranteed Issue,30
+56,19000,$132.22 ,AIG,Guaranteed Issue,30
+56,20000,$139.08 ,AIG,Guaranteed Issue,30
+56,21000,$145.93 ,AIG,Guaranteed Issue,30
+56,22000,$152.79 ,AIG,Guaranteed Issue,30
+56,23000,$159.64 ,AIG,Guaranteed Issue,30
+56,24000,$166.49 ,AIG,Guaranteed Issue,30
+56,25000,$173.35 ,AIG,Guaranteed Issue,30
+57,5000,$33.36 ,AIG,Guaranteed Issue,30
+57,6000,$39.64 ,AIG,Guaranteed Issue,30
+57,7000,$45.91 ,AIG,Guaranteed Issue,30
+57,8000,$52.18 ,AIG,Guaranteed Issue,30
+57,9000,$58.45 ,AIG,Guaranteed Issue,30
+57,10000,$64.73 ,AIG,Guaranteed Issue,30
+57,11000,$71.00 ,AIG,Guaranteed Issue,30
+57,12000,$77.27 ,AIG,Guaranteed Issue,30
+57,13000,$83.54 ,AIG,Guaranteed Issue,30
+57,14000,$89.82 ,AIG,Guaranteed Issue,30
+57,15000,$96.09 ,AIG,Guaranteed Issue,30
+57,16000,$114.44 ,AIG,Guaranteed Issue,30
+57,17000,$121.47 ,AIG,Guaranteed Issue,30
+57,18000,$128.49 ,AIG,Guaranteed Issue,30
+57,19000,$135.52 ,AIG,Guaranteed Issue,30
+57,20000,$142.55 ,AIG,Guaranteed Issue,30
+57,21000,$149.57 ,AIG,Guaranteed Issue,30
+57,22000,$156.60 ,AIG,Guaranteed Issue,30
+57,23000,$163.63 ,AIG,Guaranteed Issue,30
+57,24000,$170.66 ,AIG,Guaranteed Issue,30
+57,25000,$177.68 ,AIG,Guaranteed Issue,30
+58,5000,$34.07 ,AIG,Guaranteed Issue,30
+58,6000,$40.48 ,AIG,Guaranteed Issue,30
+58,7000,$46.90 ,AIG,Guaranteed Issue,30
+58,8000,$53.31 ,AIG,Guaranteed Issue,30
+58,9000,$59.72 ,AIG,Guaranteed Issue,30
+58,10000,$66.14 ,AIG,Guaranteed Issue,30
+58,11000,$72.55 ,AIG,Guaranteed Issue,30
+58,12000,$78.96 ,AIG,Guaranteed Issue,30
+58,13000,$85.38 ,AIG,Guaranteed Issue,30
+58,14000,$91.79 ,AIG,Guaranteed Issue,30
+58,15000,$98.20 ,AIG,Guaranteed Issue,30
+58,16000,$116.87 ,AIG,Guaranteed Issue,30
+58,17000,$124.05 ,AIG,Guaranteed Issue,30
+58,18000,$131.22 ,AIG,Guaranteed Issue,30
+58,19000,$138.40 ,AIG,Guaranteed Issue,30
+58,20000,$145.58 ,AIG,Guaranteed Issue,30
+58,21000,$152.76 ,AIG,Guaranteed Issue,30
+58,22000,$159.94 ,AIG,Guaranteed Issue,30
+58,23000,$167.12 ,AIG,Guaranteed Issue,30
+58,24000,$174.30 ,AIG,Guaranteed Issue,30
+58,25000,$181.48 ,AIG,Guaranteed Issue,30
+59,5000,$34.55 ,AIG,Guaranteed Issue,30
+59,6000,$41.06 ,AIG,Guaranteed Issue,30
+59,7000,$47.57 ,AIG,Guaranteed Issue,30
+59,8000,$54.08 ,AIG,Guaranteed Issue,30
+59,9000,$60.59 ,AIG,Guaranteed Issue,30
+59,10000,$67.10 ,AIG,Guaranteed Issue,30
+59,11000,$73.61 ,AIG,Guaranteed Issue,30
+59,12000,$80.12 ,AIG,Guaranteed Issue,30
+59,13000,$86.63 ,AIG,Guaranteed Issue,30
+59,14000,$93.14 ,AIG,Guaranteed Issue,30
+59,15000,$99.65 ,AIG,Guaranteed Issue,30
+59,16000,$118.60 ,AIG,Guaranteed Issue,30
+59,17000,$125.89 ,AIG,Guaranteed Issue,30
+59,18000,$133.18 ,AIG,Guaranteed Issue,30
+59,19000,$140.46 ,AIG,Guaranteed Issue,30
+59,20000,$147.75 ,AIG,Guaranteed Issue,30
+59,21000,$155.04 ,AIG,Guaranteed Issue,30
+59,22000,$162.33 ,AIG,Guaranteed Issue,30
+59,23000,$169.61 ,AIG,Guaranteed Issue,30
+59,24000,$176.90 ,AIG,Guaranteed Issue,30
+59,25000,$184.19 ,AIG,Guaranteed Issue,30
+60,5000,$35.07 ,AIG,Guaranteed Issue,30
+60,6000,$41.68 ,AIG,Guaranteed Issue,30
+60,7000,$48.30 ,AIG,Guaranteed Issue,30
+60,8000,$54.91 ,AIG,Guaranteed Issue,30
+60,9000,$61.52 ,AIG,Guaranteed Issue,30
+60,10000,$68.14 ,AIG,Guaranteed Issue,30
+60,11000,$74.75 ,AIG,Guaranteed Issue,30
+60,12000,$81.37 ,AIG,Guaranteed Issue,30
+60,13000,$87.98 ,AIG,Guaranteed Issue,30
+60,14000,$94.59 ,AIG,Guaranteed Issue,30
+60,15000,$101.21 ,AIG,Guaranteed Issue,30
+60,16000,$119.80 ,AIG,Guaranteed Issue,30
+60,17000,$127.16 ,AIG,Guaranteed Issue,30
+60,18000,$134.53 ,AIG,Guaranteed Issue,30
+60,19000,$141.89 ,AIG,Guaranteed Issue,30
+60,20000,$149.25 ,AIG,Guaranteed Issue,30
+60,21000,$156.62 ,AIG,Guaranteed Issue,30
+60,22000,$163.98 ,AIG,Guaranteed Issue,30
+60,23000,$171.34 ,AIG,Guaranteed Issue,30
+60,24000,$178.70 ,AIG,Guaranteed Issue,30
+60,25000,$186.07 ,AIG,Guaranteed Issue,30
+61,5000,$37.43 ,AIG,Guaranteed Issue,30
+61,6000,$44.52 ,AIG,Guaranteed Issue,30
+61,7000,$51.61 ,AIG,Guaranteed Issue,30
+61,8000,$58.69 ,AIG,Guaranteed Issue,30
+61,9000,$65.78 ,AIG,Guaranteed Issue,30
+61,10000,$72.87 ,AIG,Guaranteed Issue,30
+61,11000,$79.95 ,AIG,Guaranteed Issue,30
+61,12000,$87.04 ,AIG,Guaranteed Issue,30
+61,13000,$94.13 ,AIG,Guaranteed Issue,30
+61,14000,$101.21 ,AIG,Guaranteed Issue,30
+61,15000,$108.30 ,AIG,Guaranteed Issue,30
+61,16000,$128.64 ,AIG,Guaranteed Issue,30
+61,17000,$136.55 ,AIG,Guaranteed Issue,30
+61,18000,$144.47 ,AIG,Guaranteed Issue,30
+61,19000,$152.38 ,AIG,Guaranteed Issue,30
+61,20000,$160.29 ,AIG,Guaranteed Issue,30
+61,21000,$168.21 ,AIG,Guaranteed Issue,30
+61,22000,$176.12 ,AIG,Guaranteed Issue,30
+61,23000,$184.04 ,AIG,Guaranteed Issue,30
+61,24000,$191.95 ,AIG,Guaranteed Issue,30
+61,25000,$199.87 ,AIG,Guaranteed Issue,30
+62,5000,$39.82 ,AIG,Guaranteed Issue,30
+62,6000,$47.38 ,AIG,Guaranteed Issue,30
+62,7000,$54.95 ,AIG,Guaranteed Issue,30
+62,8000,$62.51 ,AIG,Guaranteed Issue,30
+62,9000,$70.07 ,AIG,Guaranteed Issue,30
+62,10000,$77.64 ,AIG,Guaranteed Issue,30
+62,11000,$85.20 ,AIG,Guaranteed Issue,30
+62,12000,$92.76 ,AIG,Guaranteed Issue,30
+62,13000,$100.33 ,AIG,Guaranteed Issue,30
+62,14000,$107.89 ,AIG,Guaranteed Issue,30
+62,15000,$115.45 ,AIG,Guaranteed Issue,30
+62,16000,$136.95 ,AIG,Guaranteed Issue,30
+62,17000,$145.38 ,AIG,Guaranteed Issue,30
+62,18000,$153.82 ,AIG,Guaranteed Issue,30
+62,19000,$162.25 ,AIG,Guaranteed Issue,30
+62,20000,$170.69 ,AIG,Guaranteed Issue,30
+62,21000,$179.12 ,AIG,Guaranteed Issue,30
+62,22000,$187.55 ,AIG,Guaranteed Issue,30
+62,23000,$195.99 ,AIG,Guaranteed Issue,30
+62,24000,$204.42 ,AIG,Guaranteed Issue,30
+62,25000,$212.86 ,AIG,Guaranteed Issue,30
+63,5000,$42.10 ,AIG,Guaranteed Issue,30
+63,6000,$50.12 ,AIG,Guaranteed Issue,30
+63,7000,$58.13 ,AIG,Guaranteed Issue,30
+63,8000,$66.15 ,AIG,Guaranteed Issue,30
+63,9000,$74.17 ,AIG,Guaranteed Issue,30
+63,10000,$82.19 ,AIG,Guaranteed Issue,30
+63,11000,$90.21 ,AIG,Guaranteed Issue,30
+63,12000,$98.23 ,AIG,Guaranteed Issue,30
+63,13000,$106.25 ,AIG,Guaranteed Issue,30
+63,14000,$114.27 ,AIG,Guaranteed Issue,30
+63,15000,$122.29 ,AIG,Guaranteed Issue,30
+63,16000,$144.92 ,AIG,Guaranteed Issue,30
+63,17000,$153.85 ,AIG,Guaranteed Issue,30
+63,18000,$162.78 ,AIG,Guaranteed Issue,30
+63,19000,$171.71 ,AIG,Guaranteed Issue,30
+63,20000,$180.64 ,AIG,Guaranteed Issue,30
+63,21000,$189.58 ,AIG,Guaranteed Issue,30
+63,22000,$198.51 ,AIG,Guaranteed Issue,30
+63,23000,$207.44 ,AIG,Guaranteed Issue,30
+63,24000,$216.37 ,AIG,Guaranteed Issue,30
+63,25000,$225.31 ,AIG,Guaranteed Issue,30
+64,5000,$44.29 ,AIG,Guaranteed Issue,30
+64,6000,$52.74 ,AIG,Guaranteed Issue,30
+64,7000,$61.20 ,AIG,Guaranteed Issue,30
+64,8000,$69.66 ,AIG,Guaranteed Issue,30
+64,9000,$78.11 ,AIG,Guaranteed Issue,30
+64,10000,$86.57 ,AIG,Guaranteed Issue,30
+64,11000,$95.03 ,AIG,Guaranteed Issue,30
+64,12000,$103.48 ,AIG,Guaranteed Issue,30
+64,13000,$111.94 ,AIG,Guaranteed Issue,30
+64,14000,$120.40 ,AIG,Guaranteed Issue,30
+64,15000,$128.85 ,AIG,Guaranteed Issue,30
+64,16000,$152.54 ,AIG,Guaranteed Issue,30
+64,17000,$161.94 ,AIG,Guaranteed Issue,30
+64,18000,$171.35 ,AIG,Guaranteed Issue,30
+64,19000,$180.76 ,AIG,Guaranteed Issue,30
+64,20000,$190.17 ,AIG,Guaranteed Issue,30
+64,21000,$199.58 ,AIG,Guaranteed Issue,30
+64,22000,$208.99 ,AIG,Guaranteed Issue,30
+64,23000,$218.39 ,AIG,Guaranteed Issue,30
+64,24000,$227.80 ,AIG,Guaranteed Issue,30
+64,25000,$237.21 ,AIG,Guaranteed Issue,30
+66,13000,$122.38 ,AIG,Guaranteed Issue,30
+66,14000,$131.64 ,AIG,Guaranteed Issue,30
+66,15000,$140.90 ,AIG,Guaranteed Issue,30
+66,16000,$166.56 ,AIG,Guaranteed Issue,30
+66,17000,$176.84 ,AIG,Guaranteed Issue,30
+66,18000,$187.13 ,AIG,Guaranteed Issue,30
+66,19000,$197.41 ,AIG,Guaranteed Issue,30
+66,20000,$207.70 ,AIG,Guaranteed Issue,30
+66,21000,$217.98 ,AIG,Guaranteed Issue,30
+66,22000,$228.27 ,AIG,Guaranteed Issue,30
+66,23000,$238.55 ,AIG,Guaranteed Issue,30
+66,24000,$248.84 ,AIG,Guaranteed Issue,30
+66,25000,$259.12 ,AIG,Guaranteed Issue,30
+67,5000,$49.94 ,AIG,Guaranteed Issue,30
+67,6000,$59.52 ,AIG,Guaranteed Issue,30
+67,7000,$69.11 ,AIG,Guaranteed Issue,30
+67,8000,$78.70 ,AIG,Guaranteed Issue,30
+67,9000,$88.28 ,AIG,Guaranteed Issue,30
+67,10000,$97.87 ,AIG,Guaranteed Issue,30
+67,11000,$107.46 ,AIG,Guaranteed Issue,30
+67,12000,$117.04 ,AIG,Guaranteed Issue,30
+67,13000,$126.63 ,AIG,Guaranteed Issue,30
+67,14000,$136.22 ,AIG,Guaranteed Issue,30
+67,15000,$145.80 ,AIG,Guaranteed Issue,30
+67,16000,$172.27 ,AIG,Guaranteed Issue,30
+67,17000,$182.91 ,AIG,Guaranteed Issue,30
+67,18000,$193.55 ,AIG,Guaranteed Issue,30
+67,19000,$204.20 ,AIG,Guaranteed Issue,30
+67,20000,$214.84 ,AIG,Guaranteed Issue,30
+67,21000,$225.48 ,AIG,Guaranteed Issue,30
+67,22000,$236.12 ,AIG,Guaranteed Issue,30
+67,23000,$246.76 ,AIG,Guaranteed Issue,30
+67,24000,$257.41 ,AIG,Guaranteed Issue,30
+67,25000,$268.05 ,AIG,Guaranteed Issue,30
+68,5000,$51.47 ,AIG,Guaranteed Issue,30
+68,6000,$61.36 ,AIG,Guaranteed Issue,30
+68,7000,$71.25 ,AIG,Guaranteed Issue,30
+68,8000,$81.14 ,AIG,Guaranteed Issue,30
+68,9000,$91.04 ,AIG,Guaranteed Issue,30
+68,10000,$100.93 ,AIG,Guaranteed Issue,30
+68,11000,$110.82 ,AIG,Guaranteed Issue,30
+68,12000,$120.72 ,AIG,Guaranteed Issue,30
+68,13000,$130.61 ,AIG,Guaranteed Issue,30
+68,14000,$140.50 ,AIG,Guaranteed Issue,30
+68,15000,$150.40 ,AIG,Guaranteed Issue,30
+68,16000,$177.64 ,AIG,Guaranteed Issue,30
+68,17000,$188.61 ,AIG,Guaranteed Issue,30
+68,18000,$199.59 ,AIG,Guaranteed Issue,30
+68,19000,$210.57 ,AIG,Guaranteed Issue,30
+68,20000,$221.54 ,AIG,Guaranteed Issue,30
+68,21000,$232.52 ,AIG,Guaranteed Issue,30
+68,22000,$243.50 ,AIG,Guaranteed Issue,30
+68,23000,$254.48 ,AIG,Guaranteed Issue,30
+68,24000,$265.45 ,AIG,Guaranteed Issue,30
+68,25000,$276.43 ,AIG,Guaranteed Issue,30
+69,5000,$52.81 ,AIG,Guaranteed Issue,30
+69,6000,$62.98 ,AIG,Guaranteed Issue,30
+69,7000,$73.14 ,AIG,Guaranteed Issue,30
+69,8000,$83.30 ,AIG,Guaranteed Issue,30
+69,9000,$93.46 ,AIG,Guaranteed Issue,30
+69,10000,$103.62 ,AIG,Guaranteed Issue,30
+69,11000,$113.79 ,AIG,Guaranteed Issue,30
+69,12000,$123.95 ,AIG,Guaranteed Issue,30
+69,13000,$134.11 ,AIG,Guaranteed Issue,30
+69,14000,$144.27 ,AIG,Guaranteed Issue,30
+69,15000,$154.44 ,AIG,Guaranteed Issue,30
+69,16000,$182.31 ,AIG,Guaranteed Issue,30
+69,17000,$193.57 ,AIG,Guaranteed Issue,30
+69,18000,$204.84 ,AIG,Guaranteed Issue,30
+69,19000,$216.11 ,AIG,Guaranteed Issue,30
+69,20000,$227.38 ,AIG,Guaranteed Issue,30
+69,21000,$238.65 ,AIG,Guaranteed Issue,30
+69,22000,$249.92 ,AIG,Guaranteed Issue,30
+69,23000,$261.19 ,AIG,Guaranteed Issue,30
+69,24000,$272.46 ,AIG,Guaranteed Issue,30
+69,25000,$283.73 ,AIG,Guaranteed Issue,30
+70,5000,$54.00 ,AIG,Guaranteed Issue,30
+70,6000,$64.40 ,AIG,Guaranteed Issue,30
+70,7000,$74.80 ,AIG,Guaranteed Issue,30
+70,8000,$85.20 ,AIG,Guaranteed Issue,30
+70,9000,$95.60 ,AIG,Guaranteed Issue,30
+70,10000,$106.00 ,AIG,Guaranteed Issue,30
+70,11000,$116.40 ,AIG,Guaranteed Issue,30
+70,12000,$126.80 ,AIG,Guaranteed Issue,30
+70,13000,$137.20 ,AIG,Guaranteed Issue,30
+70,14000,$147.60 ,AIG,Guaranteed Issue,30
+70,15000,$158.00 ,AIG,Guaranteed Issue,30
+70,16000,$186.48 ,AIG,Guaranteed Issue,30
+70,17000,$198.01 ,AIG,Guaranteed Issue,30
+70,18000,$209.54 ,AIG,Guaranteed Issue,30
+70,19000,$221.07 ,AIG,Guaranteed Issue,30
+70,20000,$232.60 ,AIG,Guaranteed Issue,30
+70,21000,$244.13 ,AIG,Guaranteed Issue,30
+70,22000,$255.66 ,AIG,Guaranteed Issue,30
+70,23000,$267.19 ,AIG,Guaranteed Issue,30
+70,24000,$278.72 ,AIG,Guaranteed Issue,30
+70,25000,$290.25 ,AIG,Guaranteed Issue,30
+71,5000,$58.86 ,AIG,Guaranteed Issue,30
+71,6000,$70.24 ,AIG,Guaranteed Issue,30
+71,7000,$81.61 ,AIG,Guaranteed Issue,30
+71,8000,$92.98 ,AIG,Guaranteed Issue,30
+71,9000,$104.35 ,AIG,Guaranteed Issue,30
+71,10000,$115.73 ,AIG,Guaranteed Issue,30
+71,11000,$127.10 ,AIG,Guaranteed Issue,30
+71,12000,$138.47 ,AIG,Guaranteed Issue,30
+71,13000,$149.84 ,AIG,Guaranteed Issue,30
+71,14000,$161.22 ,AIG,Guaranteed Issue,30
+71,15000,$172.59 ,AIG,Guaranteed Issue,30
+71,16000,$203.44 ,AIG,Guaranteed Issue,30
+71,17000,$216.03 ,AIG,Guaranteed Issue,30
+71,18000,$228.62 ,AIG,Guaranteed Issue,30
+71,19000,$241.21 ,AIG,Guaranteed Issue,30
+71,20000,$253.80 ,AIG,Guaranteed Issue,30
+71,21000,$266.39 ,AIG,Guaranteed Issue,30
+71,22000,$278.98 ,AIG,Guaranteed Issue,30
+71,23000,$291.57 ,AIG,Guaranteed Issue,30
+71,24000,$304.16 ,AIG,Guaranteed Issue,30
+71,25000,$316.75 ,AIG,Guaranteed Issue,30
+72,5000,$63.63 ,AIG,Guaranteed Issue,30
+72,6000,$75.95 ,AIG,Guaranteed Issue,30
+72,7000,$88.28 ,AIG,Guaranteed Issue,30
+72,8000,$100.60 ,AIG,Guaranteed Issue,30
+72,9000,$112.93 ,AIG,Guaranteed Issue,30
+72,10000,$125.25 ,AIG,Guaranteed Issue,30
+72,11000,$137.57 ,AIG,Guaranteed Issue,30
+72,12000,$149.90 ,AIG,Guaranteed Issue,30
+72,13000,$162.22 ,AIG,Guaranteed Issue,30
+72,14000,$174.55 ,AIG,Guaranteed Issue,30
+72,15000,$186.87 ,AIG,Guaranteed Issue,30
+72,16000,$220.07 ,AIG,Guaranteed Issue,30
+72,17000,$233.70 ,AIG,Guaranteed Issue,30
+72,18000,$247.33 ,AIG,Guaranteed Issue,30
+72,19000,$260.96 ,AIG,Guaranteed Issue,30
+72,20000,$274.59 ,AIG,Guaranteed Issue,30
+72,21000,$288.22 ,AIG,Guaranteed Issue,30
+72,22000,$301.84 ,AIG,Guaranteed Issue,30
+72,23000,$315.47 ,AIG,Guaranteed Issue,30
+72,24000,$329.10 ,AIG,Guaranteed Issue,30
+72,25000,$342.73 ,AIG,Guaranteed Issue,30
+73,5000,$68.09 ,AIG,Guaranteed Issue,30
+73,6000,$81.31 ,AIG,Guaranteed Issue,30
+73,7000,$94.53 ,AIG,Guaranteed Issue,30
+73,8000,$107.75 ,AIG,Guaranteed Issue,30
+73,9000,$120.96 ,AIG,Guaranteed Issue,30
+73,10000,$134.18 ,AIG,Guaranteed Issue,30
+73,11000,$147.40 ,AIG,Guaranteed Issue,30
+73,12000,$160.62 ,AIG,Guaranteed Issue,30
+73,13000,$173.84 ,AIG,Guaranteed Issue,30
+73,14000,$187.05 ,AIG,Guaranteed Issue,30
+73,15000,$200.27 ,AIG,Guaranteed Issue,30
+73,16000,$235.66 ,AIG,Guaranteed Issue,30
+73,17000,$250.26 ,AIG,Guaranteed Issue,30
+73,18000,$264.86 ,AIG,Guaranteed Issue,30
+73,19000,$279.47 ,AIG,Guaranteed Issue,30
+73,20000,$294.07 ,AIG,Guaranteed Issue,30
+73,21000,$308.67 ,AIG,Guaranteed Issue,30
+73,22000,$323.28 ,AIG,Guaranteed Issue,30
+73,23000,$337.88 ,AIG,Guaranteed Issue,30
+73,24000,$352.48 ,AIG,Guaranteed Issue,30
+73,25000,$367.09 ,AIG,Guaranteed Issue,30
+74,5000,$72.26 ,AIG,Guaranteed Issue,30
+74,6000,$86.31 ,AIG,Guaranteed Issue,30
+74,7000,$100.37 ,AIG,Guaranteed Issue,30
+74,8000,$114.42 ,AIG,Guaranteed Issue,30
+74,9000,$128.47 ,AIG,Guaranteed Issue,30
+74,10000,$142.52 ,AIG,Guaranteed Issue,30
+74,11000,$156.57 ,AIG,Guaranteed Issue,30
+74,12000,$170.63 ,AIG,Guaranteed Issue,30
+74,13000,$184.68 ,AIG,Guaranteed Issue,30
+74,14000,$198.73 ,AIG,Guaranteed Issue,30
+74,15000,$212.78 ,AIG,Guaranteed Issue,30
+74,16000,$250.20 ,AIG,Guaranteed Issue,30
+74,17000,$265.71 ,AIG,Guaranteed Issue,30
+74,18000,$281.22 ,AIG,Guaranteed Issue,30
+74,19000,$296.74 ,AIG,Guaranteed Issue,30
+74,20000,$312.25 ,AIG,Guaranteed Issue,30
+74,21000,$327.76 ,AIG,Guaranteed Issue,30
+74,22000,$343.27 ,AIG,Guaranteed Issue,30
+74,23000,$358.79 ,AIG,Guaranteed Issue,30
+74,24000,$374.30 ,AIG,Guaranteed Issue,30
+74,25000,$389.81 ,AIG,Guaranteed Issue,30
+75,5000,$75.83 ,AIG,Guaranteed Issue,30
+75,6000,$90.60 ,AIG,Guaranteed Issue,30
+75,7000,$105.36 ,AIG,Guaranteed Issue,30
+75,8000,$120.13 ,AIG,Guaranteed Issue,30
+75,9000,$134.90 ,AIG,Guaranteed Issue,30
+75,10000,$149.66 ,AIG,Guaranteed Issue,30
+75,11000,$164.43 ,AIG,Guaranteed Issue,30
+75,12000,$179.19 ,AIG,Guaranteed Issue,30
+75,13000,$193.96 ,AIG,Guaranteed Issue,30
+75,14000,$208.73 ,AIG,Guaranteed Issue,30
+75,15000,$223.49 ,AIG,Guaranteed Issue,30
+75,16000,$262.66 ,AIG,Guaranteed Issue,30
+75,17000,$278.95 ,AIG,Guaranteed Issue,30
+75,18000,$295.25 ,AIG,Guaranteed Issue,30
+75,19000,$311.54 ,AIG,Guaranteed Issue,30
+75,20000,$327.83 ,AIG,Guaranteed Issue,30
+75,21000,$344.12 ,AIG,Guaranteed Issue,30
+75,22000,$360.41 ,AIG,Guaranteed Issue,30
+75,23000,$376.70 ,AIG,Guaranteed Issue,30
+75,24000,$392.99 ,AIG,Guaranteed Issue,30
+75,25000,$409.29 ,AIG,Guaranteed Issue,30
+76,5000,$88.47 ,AIG,Guaranteed Issue,30
+76,6000,$105.76 ,AIG,Guaranteed Issue,30
+76,7000,$123.06 ,AIG,Guaranteed Issue,30
+76,8000,$140.35 ,AIG,Guaranteed Issue,30
+76,9000,$157.65 ,AIG,Guaranteed Issue,30
+76,10000,$174.94 ,AIG,Guaranteed Issue,30
+76,11000,$192.23 ,AIG,Guaranteed Issue,30
+76,12000,$209.53 ,AIG,Guaranteed Issue,30
+76,13000,$226.82 ,AIG,Guaranteed Issue,30
+76,14000,$244.12 ,AIG,Guaranteed Issue,30
+76,15000,$261.41 ,AIG,Guaranteed Issue,30
+76,16000,$306.82 ,AIG,Guaranteed Issue,30
+76,17000,$325.87 ,AIG,Guaranteed Issue,30
+76,18000,$344.92 ,AIG,Guaranteed Issue,30
+76,19000,$363.97 ,AIG,Guaranteed Issue,30
+76,20000,$383.02 ,AIG,Guaranteed Issue,30
+76,21000,$402.07 ,AIG,Guaranteed Issue,30
+76,22000,$421.12 ,AIG,Guaranteed Issue,30
+76,23000,$440.18 ,AIG,Guaranteed Issue,30
+76,24000,$459.23 ,AIG,Guaranteed Issue,30
+76,25000,$478.28 ,AIG,Guaranteed Issue,30
+77,5000,$100.63 ,AIG,Guaranteed Issue,30
+77,6000,$120.35 ,AIG,Guaranteed Issue,30
+77,7000,$140.08 ,AIG,Guaranteed Issue,30
+77,8000,$159.80 ,AIG,Guaranteed Issue,30
+77,9000,$179.53 ,AIG,Guaranteed Issue,30
+77,10000,$199.25 ,AIG,Guaranteed Issue,30
+77,11000,$218.98 ,AIG,Guaranteed Issue,30
+77,12000,$238.70 ,AIG,Guaranteed Issue,30
+77,13000,$258.43 ,AIG,Guaranteed Issue,30
+77,14000,$278.15 ,AIG,Guaranteed Issue,30
+77,15000,$297.88 ,AIG,Guaranteed Issue,30
+77,16000,$331.93 ,AIG,Guaranteed Issue,30
+77,17000,$352.55 ,AIG,Guaranteed Issue,30
+77,18000,$373.17 ,AIG,Guaranteed Issue,30
+77,19000,$393.79 ,AIG,Guaranteed Issue,30
+77,20000,$414.41 ,AIG,Guaranteed Issue,30
+77,21000,$435.04 ,AIG,Guaranteed Issue,30
+77,22000,$455.66 ,AIG,Guaranteed Issue,30
+77,23000,$476.28 ,AIG,Guaranteed Issue,30
+77,24000,$496.90 ,AIG,Guaranteed Issue,30
+77,25000,$517.52 ,AIG,Guaranteed Issue,30
+78,5000,$103.75 ,AIG,Guaranteed Issue,30
+78,6000,$124.09 ,AIG,Guaranteed Issue,30
+78,7000,$144.44 ,AIG,Guaranteed Issue,30
+78,8000,$164.79 ,AIG,Guaranteed Issue,30
+78,9000,$185.14 ,AIG,Guaranteed Issue,30
+78,10000,$205.49 ,AIG,Guaranteed Issue,30
+78,11000,$225.84 ,AIG,Guaranteed Issue,30
+78,12000,$246.19 ,AIG,Guaranteed Issue,30
+78,13000,$266.54 ,AIG,Guaranteed Issue,30
+78,14000,$286.88 ,AIG,Guaranteed Issue,30
+78,15000,$307.23 ,AIG,Guaranteed Issue,30
+78,16000,$332.27 ,AIG,Guaranteed Issue,30
+78,17000,$352.91 ,AIG,Guaranteed Issue,30
+78,18000,$373.55 ,AIG,Guaranteed Issue,30
+78,19000,$394.19 ,AIG,Guaranteed Issue,30
+78,20000,$414.83 ,AIG,Guaranteed Issue,30
+78,21000,$435.47 ,AIG,Guaranteed Issue,30
+78,22000,$456.11 ,AIG,Guaranteed Issue,30
+78,23000,$476.76 ,AIG,Guaranteed Issue,30
+78,24000,$497.40 ,AIG,Guaranteed Issue,30
+78,25000,$518.04 ,AIG,Guaranteed Issue,30
+79,5000,$103.95 ,AIG,Guaranteed Issue,30
+79,6000,$124.34 ,AIG,Guaranteed Issue,30
+79,7000,$144.73 ,AIG,Guaranteed Issue,30
+79,8000,$165.13 ,AIG,Guaranteed Issue,30
+79,9000,$185.52 ,AIG,Guaranteed Issue,30
+79,10000,$205.91 ,AIG,Guaranteed Issue,30
+79,11000,$226.30 ,AIG,Guaranteed Issue,30
+79,12000,$246.69 ,AIG,Guaranteed Issue,30
+79,13000,$267.08 ,AIG,Guaranteed Issue,30
+79,14000,$287.47 ,AIG,Guaranteed Issue,30
+79,15000,$307.86 ,AIG,Guaranteed Issue,30
+79,16000,$332.60 ,AIG,Guaranteed Issue,30
+79,17000,$353.26 ,AIG,Guaranteed Issue,30
+79,18000,$373.92 ,AIG,Guaranteed Issue,30
+79,19000,$394.59 ,AIG,Guaranteed Issue,30
+79,20000,$415.25 ,AIG,Guaranteed Issue,30
+79,21000,$435.91 ,AIG,Guaranteed Issue,30
+79,22000,$456.57 ,AIG,Guaranteed Issue,30
+79,23000,$477.24 ,AIG,Guaranteed Issue,30
+79,24000,$497.90 ,AIG,Guaranteed Issue,30
+79,25000,$518.56 ,AIG,Guaranteed Issue,30
+80,5000,$104.16 ,AIG,Guaranteed Issue,30
+80,6000,$124.59 ,AIG,Guaranteed Issue,30
+80,7000,$145.03 ,AIG,Guaranteed Issue,30
+80,8000,$165.46 ,AIG,Guaranteed Issue,30
+80,9000,$185.89 ,AIG,Guaranteed Issue,30
+80,10000,$206.32 ,AIG,Guaranteed Issue,30
+80,11000,$226.76 ,AIG,Guaranteed Issue,30
+80,12000,$247.19 ,AIG,Guaranteed Issue,30
+80,13000,$267.62 ,AIG,Guaranteed Issue,30
+80,14000,$288.05 ,AIG,Guaranteed Issue,30
+80,15000,$308.48 ,AIG,Guaranteed Issue,30
+80,16000,$332.93 ,AIG,Guaranteed Issue,30
+80,17000,$353.62 ,AIG,Guaranteed Issue,30
+80,18000,$374.30 ,AIG,Guaranteed Issue,30
+80,19000,$394.98 ,AIG,Guaranteed Issue,30
+80,20000,$415.67 ,AIG,Guaranteed Issue,30
+80,21000,$436.35 ,AIG,Guaranteed Issue,30
+80,22000,$457.03 ,AIG,Guaranteed Issue,30
+80,23000,$477.72 ,AIG,Guaranteed Issue,30
+80,24000,$498.40 ,AIG,Guaranteed Issue,30
+80,25000,$519.08 ,AIG,Guaranteed Issue,30
+50,2000,$14.25 ,Great Western,Assurance Guaranteed,31
+50,3000,$19.92 ,Great Western,Assurance Guaranteed,31
+50,4000,$25.58 ,Great Western,Assurance Guaranteed,31
+50,5000,$31.25 ,Great Western,Assurance Guaranteed,31
+50,6000,$36.92 ,Great Western,Assurance Guaranteed,31
+50,7000,$42.58 ,Great Western,Assurance Guaranteed,31
+50,8000,$48.25 ,Great Western,Assurance Guaranteed,31
+50,9000,$53.92 ,Great Western,Assurance Guaranteed,31
+50,10000,$59.58 ,Great Western,Assurance Guaranteed,31
+50,11000,$65.25 ,Great Western,Assurance Guaranteed,31
+50,12000,$70.92 ,Great Western,Assurance Guaranteed,31
+50,13000,$76.58 ,Great Western,Assurance Guaranteed,31
+50,14000,$82.25 ,Great Western,Assurance Guaranteed,31
+50,15000,$87.92 ,Great Western,Assurance Guaranteed,31
+50,16000,$93.58 ,Great Western,Assurance Guaranteed,31
+50,17000,$99.25 ,Great Western,Assurance Guaranteed,31
+50,18000,$104.92 ,Great Western,Assurance Guaranteed,31
+50,19000,$110.58 ,Great Western,Assurance Guaranteed,31
+50,20000,$116.25 ,Great Western,Assurance Guaranteed,31
+50,21000,$121.92 ,Great Western,Assurance Guaranteed,31
+50,22000,$127.58 ,Great Western,Assurance Guaranteed,31
+50,23000,$133.25 ,Great Western,Assurance Guaranteed,31
+50,24000,$138.92 ,Great Western,Assurance Guaranteed,31
+50,25000,$144.58 ,Great Western,Assurance Guaranteed,31
+50,26000,$150.25 ,Great Western,Assurance Guaranteed,31
+50,27000,$155.92 ,Great Western,Assurance Guaranteed,31
+50,28000,$161.58 ,Great Western,Assurance Guaranteed,31
+50,29000,$167.25 ,Great Western,Assurance Guaranteed,31
+50,30000,$172.92 ,Great Western,Assurance Guaranteed,31
+50,31000,$178.58 ,Great Western,Assurance Guaranteed,31
+50,32000,$184.25 ,Great Western,Assurance Guaranteed,31
+50,33000,$189.92 ,Great Western,Assurance Guaranteed,31
+50,34000,$195.58 ,Great Western,Assurance Guaranteed,31
+50,35000,$201.25 ,Great Western,Assurance Guaranteed,31
+50,36000,$206.92 ,Great Western,Assurance Guaranteed,31
+50,37000,$212.58 ,Great Western,Assurance Guaranteed,31
+50,38000,$218.25 ,Great Western,Assurance Guaranteed,31
+50,39000,$223.92 ,Great Western,Assurance Guaranteed,31
+50,40000,$229.58 ,Great Western,Assurance Guaranteed,31
+51,2000,$14.42 ,Great Western,Assurance Guaranteed,31
+51,3000,$20.17 ,Great Western,Assurance Guaranteed,31
+51,4000,$25.92 ,Great Western,Assurance Guaranteed,31
+51,5000,$31.67 ,Great Western,Assurance Guaranteed,31
+51,6000,$37.42 ,Great Western,Assurance Guaranteed,31
+51,7000,$43.17 ,Great Western,Assurance Guaranteed,31
+51,8000,$48.92 ,Great Western,Assurance Guaranteed,31
+51,9000,$54.67 ,Great Western,Assurance Guaranteed,31
+51,10000,$60.42 ,Great Western,Assurance Guaranteed,31
+51,11000,$66.17 ,Great Western,Assurance Guaranteed,31
+51,12000,$71.92 ,Great Western,Assurance Guaranteed,31
+51,13000,$77.67 ,Great Western,Assurance Guaranteed,31
+51,14000,$83.42 ,Great Western,Assurance Guaranteed,31
+51,15000,$89.17 ,Great Western,Assurance Guaranteed,31
+51,16000,$94.92 ,Great Western,Assurance Guaranteed,31
+51,17000,$100.67 ,Great Western,Assurance Guaranteed,31
+51,18000,$106.42 ,Great Western,Assurance Guaranteed,31
+51,19000,$112.17 ,Great Western,Assurance Guaranteed,31
+51,20000,$117.92 ,Great Western,Assurance Guaranteed,31
+51,21000,$123.67 ,Great Western,Assurance Guaranteed,31
+51,22000,$129.42 ,Great Western,Assurance Guaranteed,31
+51,23000,$135.17 ,Great Western,Assurance Guaranteed,31
+51,24000,$140.92 ,Great Western,Assurance Guaranteed,31
+51,25000,$146.67 ,Great Western,Assurance Guaranteed,31
+51,26000,$152.42 ,Great Western,Assurance Guaranteed,31
+51,27000,$158.17 ,Great Western,Assurance Guaranteed,31
+51,28000,$163.92 ,Great Western,Assurance Guaranteed,31
+51,29000,$169.67 ,Great Western,Assurance Guaranteed,31
+51,30000,$175.42 ,Great Western,Assurance Guaranteed,31
+51,31000,$181.17 ,Great Western,Assurance Guaranteed,31
+51,32000,$186.92 ,Great Western,Assurance Guaranteed,31
+51,33000,$192.67 ,Great Western,Assurance Guaranteed,31
+51,34000,$198.42 ,Great Western,Assurance Guaranteed,31
+51,35000,$204.17 ,Great Western,Assurance Guaranteed,31
+51,36000,$209.92 ,Great Western,Assurance Guaranteed,31
+51,37000,$215.67 ,Great Western,Assurance Guaranteed,31
+51,38000,$221.42 ,Great Western,Assurance Guaranteed,31
+51,39000,$227.17 ,Great Western,Assurance Guaranteed,31
+51,40000,$232.92 ,Great Western,Assurance Guaranteed,31
+52,2000,$14.42 ,Great Western,Assurance Guaranteed,31
+52,3000,$20.17 ,Great Western,Assurance Guaranteed,31
+52,4000,$25.92 ,Great Western,Assurance Guaranteed,31
+52,5000,$31.67 ,Great Western,Assurance Guaranteed,31
+52,6000,$37.42 ,Great Western,Assurance Guaranteed,31
+52,7000,$43.17 ,Great Western,Assurance Guaranteed,31
+52,8000,$48.92 ,Great Western,Assurance Guaranteed,31
+52,9000,$54.67 ,Great Western,Assurance Guaranteed,31
+52,10000,$60.42 ,Great Western,Assurance Guaranteed,31
+52,11000,$66.17 ,Great Western,Assurance Guaranteed,31
+52,12000,$71.92 ,Great Western,Assurance Guaranteed,31
+52,13000,$77.67 ,Great Western,Assurance Guaranteed,31
+52,14000,$83.42 ,Great Western,Assurance Guaranteed,31
+52,15000,$89.17 ,Great Western,Assurance Guaranteed,31
+52,16000,$94.92 ,Great Western,Assurance Guaranteed,31
+52,17000,$100.67 ,Great Western,Assurance Guaranteed,31
+52,18000,$106.42 ,Great Western,Assurance Guaranteed,31
+52,19000,$112.17 ,Great Western,Assurance Guaranteed,31
+52,20000,$117.92 ,Great Western,Assurance Guaranteed,31
+52,21000,$123.67 ,Great Western,Assurance Guaranteed,31
+52,22000,$129.42 ,Great Western,Assurance Guaranteed,31
+52,23000,$135.17 ,Great Western,Assurance Guaranteed,31
+52,24000,$140.92 ,Great Western,Assurance Guaranteed,31
+52,25000,$146.67 ,Great Western,Assurance Guaranteed,31
+52,26000,$152.42 ,Great Western,Assurance Guaranteed,31
+52,27000,$158.17 ,Great Western,Assurance Guaranteed,31
+52,28000,$163.92 ,Great Western,Assurance Guaranteed,31
+52,29000,$169.67 ,Great Western,Assurance Guaranteed,31
+52,30000,$175.42 ,Great Western,Assurance Guaranteed,31
+52,31000,$181.17 ,Great Western,Assurance Guaranteed,31
+52,32000,$186.92 ,Great Western,Assurance Guaranteed,31
+52,33000,$192.67 ,Great Western,Assurance Guaranteed,31
+52,34000,$198.42 ,Great Western,Assurance Guaranteed,31
+52,35000,$204.17 ,Great Western,Assurance Guaranteed,31
+52,36000,$209.92 ,Great Western,Assurance Guaranteed,31
+52,37000,$215.67 ,Great Western,Assurance Guaranteed,31
+52,38000,$221.42 ,Great Western,Assurance Guaranteed,31
+52,39000,$227.17 ,Great Western,Assurance Guaranteed,31
+52,40000,$232.92 ,Great Western,Assurance Guaranteed,31
+53,2000,$14.58 ,Great Western,Assurance Guaranteed,31
+53,3000,$20.42 ,Great Western,Assurance Guaranteed,31
+53,4000,$26.25 ,Great Western,Assurance Guaranteed,31
+53,5000,$32.08 ,Great Western,Assurance Guaranteed,31
+53,6000,$37.92 ,Great Western,Assurance Guaranteed,31
+53,7000,$43.75 ,Great Western,Assurance Guaranteed,31
+53,8000,$49.58 ,Great Western,Assurance Guaranteed,31
+53,9000,$55.42 ,Great Western,Assurance Guaranteed,31
+53,10000,$61.25 ,Great Western,Assurance Guaranteed,31
+53,11000,$67.08 ,Great Western,Assurance Guaranteed,31
+53,12000,$72.92 ,Great Western,Assurance Guaranteed,31
+53,13000,$78.75 ,Great Western,Assurance Guaranteed,31
+53,14000,$84.58 ,Great Western,Assurance Guaranteed,31
+53,15000,$90.42 ,Great Western,Assurance Guaranteed,31
+53,16000,$96.25 ,Great Western,Assurance Guaranteed,31
+53,17000,$102.08 ,Great Western,Assurance Guaranteed,31
+53,18000,$107.92 ,Great Western,Assurance Guaranteed,31
+53,19000,$113.75 ,Great Western,Assurance Guaranteed,31
+53,20000,$119.58 ,Great Western,Assurance Guaranteed,31
+53,21000,$125.42 ,Great Western,Assurance Guaranteed,31
+53,22000,$131.25 ,Great Western,Assurance Guaranteed,31
+53,23000,$137.08 ,Great Western,Assurance Guaranteed,31
+53,24000,$142.92 ,Great Western,Assurance Guaranteed,31
+53,25000,$148.75 ,Great Western,Assurance Guaranteed,31
+53,26000,$154.58 ,Great Western,Assurance Guaranteed,31
+53,27000,$160.42 ,Great Western,Assurance Guaranteed,31
+53,28000,$166.25 ,Great Western,Assurance Guaranteed,31
+53,29000,$172.08 ,Great Western,Assurance Guaranteed,31
+53,30000,$177.92 ,Great Western,Assurance Guaranteed,31
+53,31000,$183.75 ,Great Western,Assurance Guaranteed,31
+53,32000,$189.58 ,Great Western,Assurance Guaranteed,31
+53,33000,$195.42 ,Great Western,Assurance Guaranteed,31
+53,34000,$201.25 ,Great Western,Assurance Guaranteed,31
+53,35000,$207.08 ,Great Western,Assurance Guaranteed,31
+53,36000,$212.92 ,Great Western,Assurance Guaranteed,31
+53,37000,$218.75 ,Great Western,Assurance Guaranteed,31
+53,38000,$224.58 ,Great Western,Assurance Guaranteed,31
+53,39000,$230.42 ,Great Western,Assurance Guaranteed,31
+53,40000,$236.25 ,Great Western,Assurance Guaranteed,31
+54,2000,$14.92 ,Great Western,Assurance Guaranteed,31
+54,3000,$20.92 ,Great Western,Assurance Guaranteed,31
+54,4000,$26.92 ,Great Western,Assurance Guaranteed,31
+54,5000,$32.92 ,Great Western,Assurance Guaranteed,31
+54,6000,$38.92 ,Great Western,Assurance Guaranteed,31
+54,7000,$44.92 ,Great Western,Assurance Guaranteed,31
+54,8000,$50.92 ,Great Western,Assurance Guaranteed,31
+54,9000,$56.92 ,Great Western,Assurance Guaranteed,31
+54,10000,$62.92 ,Great Western,Assurance Guaranteed,31
+54,11000,$68.92 ,Great Western,Assurance Guaranteed,31
+54,12000,$74.92 ,Great Western,Assurance Guaranteed,31
+54,13000,$80.92 ,Great Western,Assurance Guaranteed,31
+54,14000,$86.92 ,Great Western,Assurance Guaranteed,31
+54,15000,$92.92 ,Great Western,Assurance Guaranteed,31
+54,16000,$98.92 ,Great Western,Assurance Guaranteed,31
+54,17000,$104.92 ,Great Western,Assurance Guaranteed,31
+54,18000,$110.92 ,Great Western,Assurance Guaranteed,31
+54,19000,$116.92 ,Great Western,Assurance Guaranteed,31
+54,20000,$122.92 ,Great Western,Assurance Guaranteed,31
+54,21000,$128.92 ,Great Western,Assurance Guaranteed,31
+54,22000,$134.92 ,Great Western,Assurance Guaranteed,31
+54,23000,$140.92 ,Great Western,Assurance Guaranteed,31
+54,24000,$146.92 ,Great Western,Assurance Guaranteed,31
+54,25000,$152.92 ,Great Western,Assurance Guaranteed,31
+54,26000,$158.92 ,Great Western,Assurance Guaranteed,31
+54,27000,$164.92 ,Great Western,Assurance Guaranteed,31
+54,28000,$170.92 ,Great Western,Assurance Guaranteed,31
+54,29000,$176.92 ,Great Western,Assurance Guaranteed,31
+54,30000,$182.92 ,Great Western,Assurance Guaranteed,31
+54,31000,$188.92 ,Great Western,Assurance Guaranteed,31
+54,32000,$194.92 ,Great Western,Assurance Guaranteed,31
+54,33000,$200.92 ,Great Western,Assurance Guaranteed,31
+54,34000,$206.92 ,Great Western,Assurance Guaranteed,31
+54,35000,$212.92 ,Great Western,Assurance Guaranteed,31
+54,36000,$218.92 ,Great Western,Assurance Guaranteed,31
+54,37000,$224.92 ,Great Western,Assurance Guaranteed,31
+54,38000,$230.92 ,Great Western,Assurance Guaranteed,31
+54,39000,$236.92 ,Great Western,Assurance Guaranteed,31
+54,40000,$242.92 ,Great Western,Assurance Guaranteed,31
+55,2000,$15.25 ,Great Western,Assurance Guaranteed,31
+55,3000,$21.42 ,Great Western,Assurance Guaranteed,31
+55,4000,$27.58 ,Great Western,Assurance Guaranteed,31
+55,5000,$33.75 ,Great Western,Assurance Guaranteed,31
+55,6000,$39.92 ,Great Western,Assurance Guaranteed,31
+55,7000,$46.08 ,Great Western,Assurance Guaranteed,31
+55,8000,$52.25 ,Great Western,Assurance Guaranteed,31
+55,9000,$58.42 ,Great Western,Assurance Guaranteed,31
+55,10000,$64.58 ,Great Western,Assurance Guaranteed,31
+55,11000,$70.75 ,Great Western,Assurance Guaranteed,31
+55,12000,$76.92 ,Great Western,Assurance Guaranteed,31
+55,13000,$83.08 ,Great Western,Assurance Guaranteed,31
+55,14000,$89.25 ,Great Western,Assurance Guaranteed,31
+55,15000,$95.42 ,Great Western,Assurance Guaranteed,31
+55,16000,$101.58 ,Great Western,Assurance Guaranteed,31
+55,17000,$107.75 ,Great Western,Assurance Guaranteed,31
+55,18000,$113.92 ,Great Western,Assurance Guaranteed,31
+55,19000,$120.08 ,Great Western,Assurance Guaranteed,31
+55,20000,$126.25 ,Great Western,Assurance Guaranteed,31
+55,21000,$132.42 ,Great Western,Assurance Guaranteed,31
+55,22000,$138.58 ,Great Western,Assurance Guaranteed,31
+55,23000,$144.75 ,Great Western,Assurance Guaranteed,31
+55,24000,$150.92 ,Great Western,Assurance Guaranteed,31
+55,25000,$157.08 ,Great Western,Assurance Guaranteed,31
+55,26000,$163.25 ,Great Western,Assurance Guaranteed,31
+55,27000,$169.42 ,Great Western,Assurance Guaranteed,31
+55,28000,$175.58 ,Great Western,Assurance Guaranteed,31
+55,29000,$181.75 ,Great Western,Assurance Guaranteed,31
+55,30000,$187.92 ,Great Western,Assurance Guaranteed,31
+55,31000,$194.08 ,Great Western,Assurance Guaranteed,31
+55,32000,$200.25 ,Great Western,Assurance Guaranteed,31
+55,33000,$206.42 ,Great Western,Assurance Guaranteed,31
+55,34000,$212.58 ,Great Western,Assurance Guaranteed,31
+55,35000,$218.75 ,Great Western,Assurance Guaranteed,31
+55,36000,$224.92 ,Great Western,Assurance Guaranteed,31
+55,37000,$231.08 ,Great Western,Assurance Guaranteed,31
+55,38000,$237.25 ,Great Western,Assurance Guaranteed,31
+55,39000,$243.42 ,Great Western,Assurance Guaranteed,31
+55,40000,$249.58 ,Great Western,Assurance Guaranteed,31
+56,2000,$15.58 ,Great Western,Assurance Guaranteed,31
+56,3000,$21.92 ,Great Western,Assurance Guaranteed,31
+56,4000,$28.25 ,Great Western,Assurance Guaranteed,31
+56,5000,$34.58 ,Great Western,Assurance Guaranteed,31
+56,6000,$40.92 ,Great Western,Assurance Guaranteed,31
+56,7000,$47.25 ,Great Western,Assurance Guaranteed,31
+56,8000,$53.58 ,Great Western,Assurance Guaranteed,31
+56,9000,$59.92 ,Great Western,Assurance Guaranteed,31
+56,10000,$66.25 ,Great Western,Assurance Guaranteed,31
+56,11000,$72.58 ,Great Western,Assurance Guaranteed,31
+56,12000,$78.92 ,Great Western,Assurance Guaranteed,31
+56,13000,$85.25 ,Great Western,Assurance Guaranteed,31
+56,14000,$91.58 ,Great Western,Assurance Guaranteed,31
+56,15000,$97.92 ,Great Western,Assurance Guaranteed,31
+56,16000,$104.25 ,Great Western,Assurance Guaranteed,31
+56,17000,$110.58 ,Great Western,Assurance Guaranteed,31
+56,18000,$116.92 ,Great Western,Assurance Guaranteed,31
+56,19000,$123.25 ,Great Western,Assurance Guaranteed,31
+56,20000,$129.58 ,Great Western,Assurance Guaranteed,31
+56,21000,$135.92 ,Great Western,Assurance Guaranteed,31
+56,22000,$142.25 ,Great Western,Assurance Guaranteed,31
+56,23000,$148.58 ,Great Western,Assurance Guaranteed,31
+56,24000,$154.92 ,Great Western,Assurance Guaranteed,31
+56,25000,$161.25 ,Great Western,Assurance Guaranteed,31
+56,26000,$167.58 ,Great Western,Assurance Guaranteed,31
+56,27000,$173.92 ,Great Western,Assurance Guaranteed,31
+56,28000,$180.25 ,Great Western,Assurance Guaranteed,31
+56,29000,$186.58 ,Great Western,Assurance Guaranteed,31
+56,30000,$192.92 ,Great Western,Assurance Guaranteed,31
+56,31000,$199.25 ,Great Western,Assurance Guaranteed,31
+56,32000,$205.58 ,Great Western,Assurance Guaranteed,31
+56,33000,$211.92 ,Great Western,Assurance Guaranteed,31
+56,34000,$218.25 ,Great Western,Assurance Guaranteed,31
+56,35000,$224.58 ,Great Western,Assurance Guaranteed,31
+56,36000,$230.92 ,Great Western,Assurance Guaranteed,31
+56,37000,$237.25 ,Great Western,Assurance Guaranteed,31
+56,38000,$243.58 ,Great Western,Assurance Guaranteed,31
+56,39000,$249.92 ,Great Western,Assurance Guaranteed,31
+56,40000,$256.25 ,Great Western,Assurance Guaranteed,31
+57,2000,$16.08 ,Great Western,Assurance Guaranteed,31
+57,3000,$22.67 ,Great Western,Assurance Guaranteed,31
+57,4000,$29.25 ,Great Western,Assurance Guaranteed,31
+57,5000,$35.83 ,Great Western,Assurance Guaranteed,31
+57,6000,$42.42 ,Great Western,Assurance Guaranteed,31
+57,7000,$49.00 ,Great Western,Assurance Guaranteed,31
+57,8000,$55.58 ,Great Western,Assurance Guaranteed,31
+57,9000,$62.17 ,Great Western,Assurance Guaranteed,31
+57,10000,$68.75 ,Great Western,Assurance Guaranteed,31
+57,11000,$75.33 ,Great Western,Assurance Guaranteed,31
+57,12000,$81.92 ,Great Western,Assurance Guaranteed,31
+57,13000,$88.50 ,Great Western,Assurance Guaranteed,31
+57,14000,$95.08 ,Great Western,Assurance Guaranteed,31
+57,15000,$101.67 ,Great Western,Assurance Guaranteed,31
+57,16000,$108.25 ,Great Western,Assurance Guaranteed,31
+57,17000,$114.83 ,Great Western,Assurance Guaranteed,31
+57,18000,$121.42 ,Great Western,Assurance Guaranteed,31
+57,19000,$128.00 ,Great Western,Assurance Guaranteed,31
+57,20000,$134.58 ,Great Western,Assurance Guaranteed,31
+57,21000,$141.17 ,Great Western,Assurance Guaranteed,31
+57,22000,$147.75 ,Great Western,Assurance Guaranteed,31
+57,23000,$154.33 ,Great Western,Assurance Guaranteed,31
+57,24000,$160.92 ,Great Western,Assurance Guaranteed,31
+57,25000,$167.50 ,Great Western,Assurance Guaranteed,31
+57,26000,$174.08 ,Great Western,Assurance Guaranteed,31
+57,27000,$180.67 ,Great Western,Assurance Guaranteed,31
+57,28000,$187.25 ,Great Western,Assurance Guaranteed,31
+57,29000,$193.83 ,Great Western,Assurance Guaranteed,31
+57,30000,$200.42 ,Great Western,Assurance Guaranteed,31
+57,31000,$207.00 ,Great Western,Assurance Guaranteed,31
+57,32000,$213.58 ,Great Western,Assurance Guaranteed,31
+57,33000,$220.17 ,Great Western,Assurance Guaranteed,31
+57,34000,$226.75 ,Great Western,Assurance Guaranteed,31
+57,35000,$233.33 ,Great Western,Assurance Guaranteed,31
+57,36000,$239.92 ,Great Western,Assurance Guaranteed,31
+57,37000,$246.50 ,Great Western,Assurance Guaranteed,31
+57,38000,$253.08 ,Great Western,Assurance Guaranteed,31
+57,39000,$259.67 ,Great Western,Assurance Guaranteed,31
+57,40000,$266.25 ,Great Western,Assurance Guaranteed,31
+58,2000,$16.42 ,Great Western,Assurance Guaranteed,31
+58,3000,$23.17 ,Great Western,Assurance Guaranteed,31
+58,4000,$29.92 ,Great Western,Assurance Guaranteed,31
+58,5000,$36.67 ,Great Western,Assurance Guaranteed,31
+58,6000,$43.42 ,Great Western,Assurance Guaranteed,31
+58,7000,$50.17 ,Great Western,Assurance Guaranteed,31
+58,8000,$56.92 ,Great Western,Assurance Guaranteed,31
+58,9000,$63.67 ,Great Western,Assurance Guaranteed,31
+58,10000,$70.42 ,Great Western,Assurance Guaranteed,31
+58,11000,$77.17 ,Great Western,Assurance Guaranteed,31
+58,12000,$83.92 ,Great Western,Assurance Guaranteed,31
+58,13000,$90.67 ,Great Western,Assurance Guaranteed,31
+58,14000,$97.42 ,Great Western,Assurance Guaranteed,31
+58,15000,$104.17 ,Great Western,Assurance Guaranteed,31
+58,16000,$110.92 ,Great Western,Assurance Guaranteed,31
+58,17000,$117.67 ,Great Western,Assurance Guaranteed,31
+58,18000,$124.42 ,Great Western,Assurance Guaranteed,31
+58,19000,$131.17 ,Great Western,Assurance Guaranteed,31
+58,20000,$137.92 ,Great Western,Assurance Guaranteed,31
+58,21000,$144.67 ,Great Western,Assurance Guaranteed,31
+58,22000,$151.42 ,Great Western,Assurance Guaranteed,31
+58,23000,$158.17 ,Great Western,Assurance Guaranteed,31
+58,24000,$164.92 ,Great Western,Assurance Guaranteed,31
+58,25000,$171.67 ,Great Western,Assurance Guaranteed,31
+58,26000,$178.42 ,Great Western,Assurance Guaranteed,31
+58,27000,$185.17 ,Great Western,Assurance Guaranteed,31
+58,28000,$191.92 ,Great Western,Assurance Guaranteed,31
+58,29000,$198.67 ,Great Western,Assurance Guaranteed,31
+58,30000,$205.42 ,Great Western,Assurance Guaranteed,31
+58,31000,$212.17 ,Great Western,Assurance Guaranteed,31
+58,32000,$218.92 ,Great Western,Assurance Guaranteed,31
+58,33000,$225.67 ,Great Western,Assurance Guaranteed,31
+58,34000,$232.42 ,Great Western,Assurance Guaranteed,31
+58,35000,$239.17 ,Great Western,Assurance Guaranteed,31
+58,36000,$245.92 ,Great Western,Assurance Guaranteed,31
+58,37000,$252.67 ,Great Western,Assurance Guaranteed,31
+58,38000,$259.42 ,Great Western,Assurance Guaranteed,31
+58,39000,$266.17 ,Great Western,Assurance Guaranteed,31
+58,40000,$272.92 ,Great Western,Assurance Guaranteed,31
+59,2000,$16.92 ,Great Western,Assurance Guaranteed,31
+59,3000,$23.92 ,Great Western,Assurance Guaranteed,31
+59,4000,$30.92 ,Great Western,Assurance Guaranteed,31
+59,5000,$37.92 ,Great Western,Assurance Guaranteed,31
+59,6000,$44.92 ,Great Western,Assurance Guaranteed,31
+59,7000,$51.92 ,Great Western,Assurance Guaranteed,31
+59,8000,$58.92 ,Great Western,Assurance Guaranteed,31
+59,9000,$65.92 ,Great Western,Assurance Guaranteed,31
+59,10000,$72.92 ,Great Western,Assurance Guaranteed,31
+59,11000,$79.92 ,Great Western,Assurance Guaranteed,31
+59,12000,$86.92 ,Great Western,Assurance Guaranteed,31
+59,13000,$93.92 ,Great Western,Assurance Guaranteed,31
+59,14000,$100.92 ,Great Western,Assurance Guaranteed,31
+59,15000,$107.92 ,Great Western,Assurance Guaranteed,31
+59,16000,$114.92 ,Great Western,Assurance Guaranteed,31
+59,17000,$121.92 ,Great Western,Assurance Guaranteed,31
+59,18000,$128.92 ,Great Western,Assurance Guaranteed,31
+59,19000,$135.92 ,Great Western,Assurance Guaranteed,31
+59,20000,$142.92 ,Great Western,Assurance Guaranteed,31
+59,21000,$149.92 ,Great Western,Assurance Guaranteed,31
+59,22000,$156.92 ,Great Western,Assurance Guaranteed,31
+59,23000,$163.92 ,Great Western,Assurance Guaranteed,31
+59,24000,$170.92 ,Great Western,Assurance Guaranteed,31
+59,25000,$177.92 ,Great Western,Assurance Guaranteed,31
+59,26000,$184.92 ,Great Western,Assurance Guaranteed,31
+59,27000,$191.92 ,Great Western,Assurance Guaranteed,31
+59,28000,$198.92 ,Great Western,Assurance Guaranteed,31
+59,29000,$205.92 ,Great Western,Assurance Guaranteed,31
+59,30000,$212.92 ,Great Western,Assurance Guaranteed,31
+59,31000,$219.92 ,Great Western,Assurance Guaranteed,31
+59,32000,$226.92 ,Great Western,Assurance Guaranteed,31
+59,33000,$233.92 ,Great Western,Assurance Guaranteed,31
+59,34000,$240.92 ,Great Western,Assurance Guaranteed,31
+59,35000,$247.92 ,Great Western,Assurance Guaranteed,31
+59,36000,$254.92 ,Great Western,Assurance Guaranteed,31
+59,37000,$261.92 ,Great Western,Assurance Guaranteed,31
+59,38000,$268.92 ,Great Western,Assurance Guaranteed,31
+59,39000,$275.92 ,Great Western,Assurance Guaranteed,31
+59,40000,$282.92 ,Great Western,Assurance Guaranteed,31
+60,2000,$17.42 ,Great Western,Assurance Guaranteed,31
+60,3000,$24.67 ,Great Western,Assurance Guaranteed,31
+60,4000,$31.92 ,Great Western,Assurance Guaranteed,31
+60,5000,$39.17 ,Great Western,Assurance Guaranteed,31
+60,6000,$46.42 ,Great Western,Assurance Guaranteed,31
+60,7000,$53.67 ,Great Western,Assurance Guaranteed,31
+60,8000,$60.92 ,Great Western,Assurance Guaranteed,31
+60,9000,$68.17 ,Great Western,Assurance Guaranteed,31
+60,10000,$75.42 ,Great Western,Assurance Guaranteed,31
+60,11000,$82.67 ,Great Western,Assurance Guaranteed,31
+60,12000,$89.92 ,Great Western,Assurance Guaranteed,31
+60,13000,$97.17 ,Great Western,Assurance Guaranteed,31
+60,14000,$104.42 ,Great Western,Assurance Guaranteed,31
+60,15000,$111.67 ,Great Western,Assurance Guaranteed,31
+60,16000,$118.92 ,Great Western,Assurance Guaranteed,31
+60,17000,$126.17 ,Great Western,Assurance Guaranteed,31
+60,18000,$133.42 ,Great Western,Assurance Guaranteed,31
+60,19000,$140.67 ,Great Western,Assurance Guaranteed,31
+60,20000,$147.92 ,Great Western,Assurance Guaranteed,31
+60,21000,$155.17 ,Great Western,Assurance Guaranteed,31
+60,22000,$162.42 ,Great Western,Assurance Guaranteed,31
+60,23000,$169.67 ,Great Western,Assurance Guaranteed,31
+60,24000,$176.92 ,Great Western,Assurance Guaranteed,31
+60,25000,$184.17 ,Great Western,Assurance Guaranteed,31
+60,26000,$191.42 ,Great Western,Assurance Guaranteed,31
+60,27000,$198.67 ,Great Western,Assurance Guaranteed,31
+60,28000,$205.92 ,Great Western,Assurance Guaranteed,31
+60,29000,$213.17 ,Great Western,Assurance Guaranteed,31
+60,30000,$220.42 ,Great Western,Assurance Guaranteed,31
+60,31000,$227.67 ,Great Western,Assurance Guaranteed,31
+60,32000,$234.92 ,Great Western,Assurance Guaranteed,31
+60,33000,$242.17 ,Great Western,Assurance Guaranteed,31
+60,34000,$249.42 ,Great Western,Assurance Guaranteed,31
+60,35000,$256.67 ,Great Western,Assurance Guaranteed,31
+60,36000,$263.92 ,Great Western,Assurance Guaranteed,31
+60,37000,$271.17 ,Great Western,Assurance Guaranteed,31
+60,38000,$278.42 ,Great Western,Assurance Guaranteed,31
+60,39000,$285.67 ,Great Western,Assurance Guaranteed,31
+60,40000,$292.92 ,Great Western,Assurance Guaranteed,31
+61,2000,$18.08 ,Great Western,Assurance Guaranteed,31
+61,3000,$25.67 ,Great Western,Assurance Guaranteed,31
+61,4000,$33.25 ,Great Western,Assurance Guaranteed,31
+61,5000,$40.83 ,Great Western,Assurance Guaranteed,31
+61,6000,$48.42 ,Great Western,Assurance Guaranteed,31
+61,7000,$56.00 ,Great Western,Assurance Guaranteed,31
+61,8000,$63.58 ,Great Western,Assurance Guaranteed,31
+61,9000,$71.17 ,Great Western,Assurance Guaranteed,31
+61,10000,$78.75 ,Great Western,Assurance Guaranteed,31
+61,11000,$86.33 ,Great Western,Assurance Guaranteed,31
+61,12000,$93.92 ,Great Western,Assurance Guaranteed,31
+61,13000,$101.50 ,Great Western,Assurance Guaranteed,31
+61,14000,$109.08 ,Great Western,Assurance Guaranteed,31
+61,15000,$116.67 ,Great Western,Assurance Guaranteed,31
+61,16000,$124.25 ,Great Western,Assurance Guaranteed,31
+61,17000,$131.83 ,Great Western,Assurance Guaranteed,31
+61,18000,$139.42 ,Great Western,Assurance Guaranteed,31
+61,19000,$147.00 ,Great Western,Assurance Guaranteed,31
+61,20000,$154.58 ,Great Western,Assurance Guaranteed,31
+61,21000,$162.17 ,Great Western,Assurance Guaranteed,31
+61,22000,$169.75 ,Great Western,Assurance Guaranteed,31
+61,23000,$177.33 ,Great Western,Assurance Guaranteed,31
+61,24000,$184.92 ,Great Western,Assurance Guaranteed,31
+61,25000,$192.50 ,Great Western,Assurance Guaranteed,31
+61,26000,$200.08 ,Great Western,Assurance Guaranteed,31
+61,27000,$207.67 ,Great Western,Assurance Guaranteed,31
+61,28000,$215.25 ,Great Western,Assurance Guaranteed,31
+61,29000,$222.83 ,Great Western,Assurance Guaranteed,31
+61,30000,$230.42 ,Great Western,Assurance Guaranteed,31
+61,31000,$238.00 ,Great Western,Assurance Guaranteed,31
+61,32000,$245.58 ,Great Western,Assurance Guaranteed,31
+61,33000,$253.17 ,Great Western,Assurance Guaranteed,31
+61,34000,$260.75 ,Great Western,Assurance Guaranteed,31
+61,35000,$268.33 ,Great Western,Assurance Guaranteed,31
+61,36000,$275.92 ,Great Western,Assurance Guaranteed,31
+61,37000,$283.50 ,Great Western,Assurance Guaranteed,31
+61,38000,$291.08 ,Great Western,Assurance Guaranteed,31
+61,39000,$298.67 ,Great Western,Assurance Guaranteed,31
+61,40000,$306.25 ,Great Western,Assurance Guaranteed,31
+62,2000,$18.58 ,Great Western,Assurance Guaranteed,31
+62,3000,$26.42 ,Great Western,Assurance Guaranteed,31
+62,4000,$34.25 ,Great Western,Assurance Guaranteed,31
+62,5000,$42.08 ,Great Western,Assurance Guaranteed,31
+62,6000,$49.92 ,Great Western,Assurance Guaranteed,31
+62,7000,$57.75 ,Great Western,Assurance Guaranteed,31
+62,8000,$65.58 ,Great Western,Assurance Guaranteed,31
+62,9000,$73.42 ,Great Western,Assurance Guaranteed,31
+62,10000,$81.25 ,Great Western,Assurance Guaranteed,31
+62,11000,$89.08 ,Great Western,Assurance Guaranteed,31
+62,12000,$96.92 ,Great Western,Assurance Guaranteed,31
+62,13000,$104.75 ,Great Western,Assurance Guaranteed,31
+62,14000,$112.58 ,Great Western,Assurance Guaranteed,31
+62,15000,$120.42 ,Great Western,Assurance Guaranteed,31
+62,16000,$128.25 ,Great Western,Assurance Guaranteed,31
+62,17000,$136.08 ,Great Western,Assurance Guaranteed,31
+62,18000,$143.92 ,Great Western,Assurance Guaranteed,31
+62,19000,$151.75 ,Great Western,Assurance Guaranteed,31
+62,20000,$159.58 ,Great Western,Assurance Guaranteed,31
+62,21000,$167.42 ,Great Western,Assurance Guaranteed,31
+62,22000,$175.25 ,Great Western,Assurance Guaranteed,31
+62,23000,$183.08 ,Great Western,Assurance Guaranteed,31
+62,24000,$190.92 ,Great Western,Assurance Guaranteed,31
+62,25000,$198.75 ,Great Western,Assurance Guaranteed,31
+62,26000,$206.58 ,Great Western,Assurance Guaranteed,31
+62,27000,$214.42 ,Great Western,Assurance Guaranteed,31
+62,28000,$222.25 ,Great Western,Assurance Guaranteed,31
+62,29000,$230.08 ,Great Western,Assurance Guaranteed,31
+62,30000,$237.92 ,Great Western,Assurance Guaranteed,31
+62,31000,$245.75 ,Great Western,Assurance Guaranteed,31
+62,32000,$253.58 ,Great Western,Assurance Guaranteed,31
+62,33000,$261.42 ,Great Western,Assurance Guaranteed,31
+62,34000,$269.25 ,Great Western,Assurance Guaranteed,31
+62,35000,$277.08 ,Great Western,Assurance Guaranteed,31
+62,36000,$284.92 ,Great Western,Assurance Guaranteed,31
+62,37000,$292.75 ,Great Western,Assurance Guaranteed,31
+62,38000,$300.58 ,Great Western,Assurance Guaranteed,31
+62,39000,$308.42 ,Great Western,Assurance Guaranteed,31
+62,40000,$316.25 ,Great Western,Assurance Guaranteed,31
+63,2000,$19.25 ,Great Western,Assurance Guaranteed,31
+63,3000,$27.42 ,Great Western,Assurance Guaranteed,31
+63,4000,$35.58 ,Great Western,Assurance Guaranteed,31
+63,5000,$43.75 ,Great Western,Assurance Guaranteed,31
+63,6000,$51.92 ,Great Western,Assurance Guaranteed,31
+63,7000,$60.08 ,Great Western,Assurance Guaranteed,31
+63,8000,$68.25 ,Great Western,Assurance Guaranteed,31
+63,9000,$76.42 ,Great Western,Assurance Guaranteed,31
+63,10000,$84.58 ,Great Western,Assurance Guaranteed,31
+63,11000,$92.75 ,Great Western,Assurance Guaranteed,31
+63,12000,$100.92 ,Great Western,Assurance Guaranteed,31
+63,13000,$109.08 ,Great Western,Assurance Guaranteed,31
+63,14000,$117.25 ,Great Western,Assurance Guaranteed,31
+63,15000,$125.42 ,Great Western,Assurance Guaranteed,31
+63,16000,$133.58 ,Great Western,Assurance Guaranteed,31
+63,17000,$141.75 ,Great Western,Assurance Guaranteed,31
+63,18000,$149.92 ,Great Western,Assurance Guaranteed,31
+63,19000,$158.08 ,Great Western,Assurance Guaranteed,31
+63,20000,$166.25 ,Great Western,Assurance Guaranteed,31
+63,21000,$174.42 ,Great Western,Assurance Guaranteed,31
+63,22000,$182.58 ,Great Western,Assurance Guaranteed,31
+63,23000,$190.75 ,Great Western,Assurance Guaranteed,31
+63,24000,$198.92 ,Great Western,Assurance Guaranteed,31
+63,25000,$207.08 ,Great Western,Assurance Guaranteed,31
+63,26000,$215.25 ,Great Western,Assurance Guaranteed,31
+63,27000,$223.42 ,Great Western,Assurance Guaranteed,31
+63,28000,$231.58 ,Great Western,Assurance Guaranteed,31
+63,29000,$239.75 ,Great Western,Assurance Guaranteed,31
+63,30000,$247.92 ,Great Western,Assurance Guaranteed,31
+63,31000,$256.08 ,Great Western,Assurance Guaranteed,31
+63,32000,$264.25 ,Great Western,Assurance Guaranteed,31
+63,33000,$272.42 ,Great Western,Assurance Guaranteed,31
+63,34000,$280.58 ,Great Western,Assurance Guaranteed,31
+63,35000,$288.75 ,Great Western,Assurance Guaranteed,31
+63,36000,$296.92 ,Great Western,Assurance Guaranteed,31
+63,37000,$305.08 ,Great Western,Assurance Guaranteed,31
+63,38000,$313.25 ,Great Western,Assurance Guaranteed,31
+63,39000,$321.42 ,Great Western,Assurance Guaranteed,31
+63,40000,$329.58 ,Great Western,Assurance Guaranteed,31
+64,2000,$19.92 ,Great Western,Assurance Guaranteed,31
+64,3000,$28.42 ,Great Western,Assurance Guaranteed,31
+64,4000,$36.92 ,Great Western,Assurance Guaranteed,31
+64,5000,$45.42 ,Great Western,Assurance Guaranteed,31
+64,6000,$53.92 ,Great Western,Assurance Guaranteed,31
+64,7000,$62.42 ,Great Western,Assurance Guaranteed,31
+64,8000,$70.92 ,Great Western,Assurance Guaranteed,31
+64,9000,$79.42 ,Great Western,Assurance Guaranteed,31
+64,10000,$87.92 ,Great Western,Assurance Guaranteed,31
+64,11000,$96.42 ,Great Western,Assurance Guaranteed,31
+64,12000,$104.92 ,Great Western,Assurance Guaranteed,31
+64,13000,$113.42 ,Great Western,Assurance Guaranteed,31
+64,14000,$121.92 ,Great Western,Assurance Guaranteed,31
+64,15000,$130.42 ,Great Western,Assurance Guaranteed,31
+64,16000,$138.92 ,Great Western,Assurance Guaranteed,31
+64,17000,$147.42 ,Great Western,Assurance Guaranteed,31
+64,18000,$155.92 ,Great Western,Assurance Guaranteed,31
+64,19000,$164.42 ,Great Western,Assurance Guaranteed,31
+64,20000,$172.92 ,Great Western,Assurance Guaranteed,31
+64,21000,$181.42 ,Great Western,Assurance Guaranteed,31
+64,22000,$189.92 ,Great Western,Assurance Guaranteed,31
+64,23000,$198.42 ,Great Western,Assurance Guaranteed,31
+64,24000,$206.92 ,Great Western,Assurance Guaranteed,31
+64,25000,$215.42 ,Great Western,Assurance Guaranteed,31
+64,26000,$223.92 ,Great Western,Assurance Guaranteed,31
+64,27000,$232.42 ,Great Western,Assurance Guaranteed,31
+64,28000,$240.92 ,Great Western,Assurance Guaranteed,31
+64,29000,$249.42 ,Great Western,Assurance Guaranteed,31
+64,30000,$257.92 ,Great Western,Assurance Guaranteed,31
+64,31000,$266.42 ,Great Western,Assurance Guaranteed,31
+64,32000,$274.92 ,Great Western,Assurance Guaranteed,31
+64,33000,$283.42 ,Great Western,Assurance Guaranteed,31
+64,34000,$291.92 ,Great Western,Assurance Guaranteed,31
+64,35000,$300.42 ,Great Western,Assurance Guaranteed,31
+64,36000,$308.92 ,Great Western,Assurance Guaranteed,31
+64,37000,$317.42 ,Great Western,Assurance Guaranteed,31
+64,38000,$325.92 ,Great Western,Assurance Guaranteed,31
+64,39000,$334.42 ,Great Western,Assurance Guaranteed,31
+64,40000,$342.92 ,Great Western,Assurance Guaranteed,31
+66,13000,$125.33 ,Great Western,Assurance Guaranteed,31
+66,14000,$134.75 ,Great Western,Assurance Guaranteed,31
+66,15000,$144.17 ,Great Western,Assurance Guaranteed,31
+66,16000,$153.58 ,Great Western,Assurance Guaranteed,31
+66,17000,$163.00 ,Great Western,Assurance Guaranteed,31
+66,18000,$172.42 ,Great Western,Assurance Guaranteed,31
+66,19000,$181.83 ,Great Western,Assurance Guaranteed,31
+66,20000,$191.25 ,Great Western,Assurance Guaranteed,31
+66,21000,$200.67 ,Great Western,Assurance Guaranteed,31
+66,22000,$210.08 ,Great Western,Assurance Guaranteed,31
+66,23000,$219.50 ,Great Western,Assurance Guaranteed,31
+66,24000,$228.92 ,Great Western,Assurance Guaranteed,31
+66,25000,$238.33 ,Great Western,Assurance Guaranteed,31
+66,26000,$247.75 ,Great Western,Assurance Guaranteed,31
+66,27000,$257.17 ,Great Western,Assurance Guaranteed,31
+66,28000,$266.58 ,Great Western,Assurance Guaranteed,31
+66,29000,$276.00 ,Great Western,Assurance Guaranteed,31
+66,30000,$285.42 ,Great Western,Assurance Guaranteed,31
+66,31000,$294.83 ,Great Western,Assurance Guaranteed,31
+66,32000,$304.25 ,Great Western,Assurance Guaranteed,31
+66,33000,$313.67 ,Great Western,Assurance Guaranteed,31
+66,34000,$323.08 ,Great Western,Assurance Guaranteed,31
+66,35000,$332.50 ,Great Western,Assurance Guaranteed,31
+66,36000,$341.92 ,Great Western,Assurance Guaranteed,31
+66,37000,$351.33 ,Great Western,Assurance Guaranteed,31
+66,38000,$360.75 ,Great Western,Assurance Guaranteed,31
+66,39000,$370.17 ,Great Western,Assurance Guaranteed,31
+66,40000,$379.58 ,Great Western,Assurance Guaranteed,31
+67,2000,$22.75 ,Great Western,Assurance Guaranteed,31
+67,3000,$32.67 ,Great Western,Assurance Guaranteed,31
+67,4000,$42.58 ,Great Western,Assurance Guaranteed,31
+67,5000,$52.50 ,Great Western,Assurance Guaranteed,31
+67,6000,$62.42 ,Great Western,Assurance Guaranteed,31
+67,7000,$72.33 ,Great Western,Assurance Guaranteed,31
+67,8000,$82.25 ,Great Western,Assurance Guaranteed,31
+67,9000,$92.17 ,Great Western,Assurance Guaranteed,31
+67,10000,$102.08 ,Great Western,Assurance Guaranteed,31
+67,11000,$112.00 ,Great Western,Assurance Guaranteed,31
+67,12000,$121.92 ,Great Western,Assurance Guaranteed,31
+67,13000,$131.83 ,Great Western,Assurance Guaranteed,31
+67,14000,$141.75 ,Great Western,Assurance Guaranteed,31
+67,15000,$151.67 ,Great Western,Assurance Guaranteed,31
+67,16000,$161.58 ,Great Western,Assurance Guaranteed,31
+67,17000,$171.50 ,Great Western,Assurance Guaranteed,31
+67,18000,$181.42 ,Great Western,Assurance Guaranteed,31
+67,19000,$191.33 ,Great Western,Assurance Guaranteed,31
+67,20000,$201.25 ,Great Western,Assurance Guaranteed,31
+67,21000,$211.17 ,Great Western,Assurance Guaranteed,31
+67,22000,$221.08 ,Great Western,Assurance Guaranteed,31
+67,23000,$231.00 ,Great Western,Assurance Guaranteed,31
+67,24000,$240.92 ,Great Western,Assurance Guaranteed,31
+67,25000,$250.83 ,Great Western,Assurance Guaranteed,31
+67,26000,$260.75 ,Great Western,Assurance Guaranteed,31
+67,27000,$270.67 ,Great Western,Assurance Guaranteed,31
+67,28000,$280.58 ,Great Western,Assurance Guaranteed,31
+67,29000,$290.50 ,Great Western,Assurance Guaranteed,31
+67,30000,$300.42 ,Great Western,Assurance Guaranteed,31
+67,31000,$310.33 ,Great Western,Assurance Guaranteed,31
+67,32000,$320.25 ,Great Western,Assurance Guaranteed,31
+67,33000,$330.17 ,Great Western,Assurance Guaranteed,31
+67,34000,$340.08 ,Great Western,Assurance Guaranteed,31
+67,35000,$350.00 ,Great Western,Assurance Guaranteed,31
+67,36000,$359.92 ,Great Western,Assurance Guaranteed,31
+67,37000,$369.83 ,Great Western,Assurance Guaranteed,31
+67,38000,$379.75 ,Great Western,Assurance Guaranteed,31
+67,39000,$389.67 ,Great Western,Assurance Guaranteed,31
+67,40000,$399.58 ,Great Western,Assurance Guaranteed,31
+68,2000,$23.75 ,Great Western,Assurance Guaranteed,31
+68,3000,$34.17 ,Great Western,Assurance Guaranteed,31
+68,4000,$44.58 ,Great Western,Assurance Guaranteed,31
+68,5000,$55.00 ,Great Western,Assurance Guaranteed,31
+68,6000,$65.42 ,Great Western,Assurance Guaranteed,31
+68,7000,$75.83 ,Great Western,Assurance Guaranteed,31
+68,8000,$86.25 ,Great Western,Assurance Guaranteed,31
+68,9000,$96.67 ,Great Western,Assurance Guaranteed,31
+68,10000,$107.08 ,Great Western,Assurance Guaranteed,31
+68,11000,$117.50 ,Great Western,Assurance Guaranteed,31
+68,12000,$127.92 ,Great Western,Assurance Guaranteed,31
+68,13000,$138.33 ,Great Western,Assurance Guaranteed,31
+68,14000,$148.75 ,Great Western,Assurance Guaranteed,31
+68,15000,$159.17 ,Great Western,Assurance Guaranteed,31
+68,16000,$169.58 ,Great Western,Assurance Guaranteed,31
+68,17000,$180.00 ,Great Western,Assurance Guaranteed,31
+68,18000,$190.42 ,Great Western,Assurance Guaranteed,31
+68,19000,$200.83 ,Great Western,Assurance Guaranteed,31
+68,20000,$211.25 ,Great Western,Assurance Guaranteed,31
+68,21000,$221.67 ,Great Western,Assurance Guaranteed,31
+68,22000,$232.08 ,Great Western,Assurance Guaranteed,31
+68,23000,$242.50 ,Great Western,Assurance Guaranteed,31
+68,24000,$252.92 ,Great Western,Assurance Guaranteed,31
+68,25000,$263.33 ,Great Western,Assurance Guaranteed,31
+68,26000,$273.75 ,Great Western,Assurance Guaranteed,31
+68,27000,$284.17 ,Great Western,Assurance Guaranteed,31
+68,28000,$294.58 ,Great Western,Assurance Guaranteed,31
+68,29000,$305.00 ,Great Western,Assurance Guaranteed,31
+68,30000,$315.42 ,Great Western,Assurance Guaranteed,31
+68,31000,$325.83 ,Great Western,Assurance Guaranteed,31
+68,32000,$336.25 ,Great Western,Assurance Guaranteed,31
+68,33000,$346.67 ,Great Western,Assurance Guaranteed,31
+68,34000,$357.08 ,Great Western,Assurance Guaranteed,31
+68,35000,$367.50 ,Great Western,Assurance Guaranteed,31
+68,36000,$377.92 ,Great Western,Assurance Guaranteed,31
+68,37000,$388.33 ,Great Western,Assurance Guaranteed,31
+68,38000,$398.75 ,Great Western,Assurance Guaranteed,31
+68,39000,$409.17 ,Great Western,Assurance Guaranteed,31
+68,40000,$419.58 ,Great Western,Assurance Guaranteed,31
+69,2000,$24.92 ,Great Western,Assurance Guaranteed,31
+69,3000,$35.92 ,Great Western,Assurance Guaranteed,31
+69,4000,$46.92 ,Great Western,Assurance Guaranteed,31
+69,5000,$57.92 ,Great Western,Assurance Guaranteed,31
+69,6000,$68.92 ,Great Western,Assurance Guaranteed,31
+69,7000,$79.92 ,Great Western,Assurance Guaranteed,31
+69,8000,$90.92 ,Great Western,Assurance Guaranteed,31
+69,9000,$101.92 ,Great Western,Assurance Guaranteed,31
+69,10000,$112.92 ,Great Western,Assurance Guaranteed,31
+69,11000,$123.92 ,Great Western,Assurance Guaranteed,31
+69,12000,$134.92 ,Great Western,Assurance Guaranteed,31
+69,13000,$145.92 ,Great Western,Assurance Guaranteed,31
+69,14000,$156.92 ,Great Western,Assurance Guaranteed,31
+69,15000,$167.92 ,Great Western,Assurance Guaranteed,31
+69,16000,$178.92 ,Great Western,Assurance Guaranteed,31
+69,17000,$189.92 ,Great Western,Assurance Guaranteed,31
+69,18000,$200.92 ,Great Western,Assurance Guaranteed,31
+69,19000,$211.92 ,Great Western,Assurance Guaranteed,31
+69,20000,$222.92 ,Great Western,Assurance Guaranteed,31
+69,21000,$233.92 ,Great Western,Assurance Guaranteed,31
+69,22000,$244.92 ,Great Western,Assurance Guaranteed,31
+69,23000,$255.92 ,Great Western,Assurance Guaranteed,31
+69,24000,$266.92 ,Great Western,Assurance Guaranteed,31
+69,25000,$277.92 ,Great Western,Assurance Guaranteed,31
+69,26000,$288.92 ,Great Western,Assurance Guaranteed,31
+69,27000,$299.92 ,Great Western,Assurance Guaranteed,31
+69,28000,$310.92 ,Great Western,Assurance Guaranteed,31
+69,29000,$321.92 ,Great Western,Assurance Guaranteed,31
+69,30000,$332.92 ,Great Western,Assurance Guaranteed,31
+69,31000,$343.92 ,Great Western,Assurance Guaranteed,31
+69,32000,$354.92 ,Great Western,Assurance Guaranteed,31
+69,33000,$365.92 ,Great Western,Assurance Guaranteed,31
+69,34000,$376.92 ,Great Western,Assurance Guaranteed,31
+69,35000,$387.92 ,Great Western,Assurance Guaranteed,31
+69,36000,$398.92 ,Great Western,Assurance Guaranteed,31
+69,37000,$409.92 ,Great Western,Assurance Guaranteed,31
+69,38000,$420.92 ,Great Western,Assurance Guaranteed,31
+69,39000,$431.92 ,Great Western,Assurance Guaranteed,31
+69,40000,$442.92 ,Great Western,Assurance Guaranteed,31
+70,2000,$26.25 ,Great Western,Assurance Guaranteed,31
+70,3000,$37.92 ,Great Western,Assurance Guaranteed,31
+70,4000,$49.58 ,Great Western,Assurance Guaranteed,31
+70,5000,$61.25 ,Great Western,Assurance Guaranteed,31
+70,6000,$72.92 ,Great Western,Assurance Guaranteed,31
+70,7000,$84.58 ,Great Western,Assurance Guaranteed,31
+70,8000,$96.25 ,Great Western,Assurance Guaranteed,31
+70,9000,$107.92 ,Great Western,Assurance Guaranteed,31
+70,10000,$119.58 ,Great Western,Assurance Guaranteed,31
+70,11000,$131.25 ,Great Western,Assurance Guaranteed,31
+70,12000,$142.92 ,Great Western,Assurance Guaranteed,31
+70,13000,$154.58 ,Great Western,Assurance Guaranteed,31
+70,14000,$166.25 ,Great Western,Assurance Guaranteed,31
+70,15000,$177.92 ,Great Western,Assurance Guaranteed,31
+70,16000,$189.58 ,Great Western,Assurance Guaranteed,31
+70,17000,$201.25 ,Great Western,Assurance Guaranteed,31
+70,18000,$212.92 ,Great Western,Assurance Guaranteed,31
+70,19000,$224.58 ,Great Western,Assurance Guaranteed,31
+70,20000,$236.25 ,Great Western,Assurance Guaranteed,31
+70,21000,$247.92 ,Great Western,Assurance Guaranteed,31
+70,22000,$259.58 ,Great Western,Assurance Guaranteed,31
+70,23000,$271.25 ,Great Western,Assurance Guaranteed,31
+70,24000,$282.92 ,Great Western,Assurance Guaranteed,31
+70,25000,$294.58 ,Great Western,Assurance Guaranteed,31
+70,26000,$306.25 ,Great Western,Assurance Guaranteed,31
+70,27000,$317.92 ,Great Western,Assurance Guaranteed,31
+70,28000,$329.58 ,Great Western,Assurance Guaranteed,31
+70,29000,$341.25 ,Great Western,Assurance Guaranteed,31
+70,30000,$352.92 ,Great Western,Assurance Guaranteed,31
+70,31000,$364.58 ,Great Western,Assurance Guaranteed,31
+70,32000,$376.25 ,Great Western,Assurance Guaranteed,31
+70,33000,$387.92 ,Great Western,Assurance Guaranteed,31
+70,34000,$399.58 ,Great Western,Assurance Guaranteed,31
+70,35000,$411.25 ,Great Western,Assurance Guaranteed,31
+70,36000,$422.92 ,Great Western,Assurance Guaranteed,31
+70,37000,$434.58 ,Great Western,Assurance Guaranteed,31
+70,38000,$446.25 ,Great Western,Assurance Guaranteed,31
+70,39000,$457.92 ,Great Western,Assurance Guaranteed,31
+70,40000,$469.58 ,Great Western,Assurance Guaranteed,31
+71,2000,$27.75 ,Great Western,Assurance Guaranteed,31
+71,3000,$40.17 ,Great Western,Assurance Guaranteed,31
+71,4000,$52.58 ,Great Western,Assurance Guaranteed,31
+71,5000,$65.00 ,Great Western,Assurance Guaranteed,31
+71,6000,$77.42 ,Great Western,Assurance Guaranteed,31
+71,7000,$89.83 ,Great Western,Assurance Guaranteed,31
+71,8000,$102.25 ,Great Western,Assurance Guaranteed,31
+71,9000,$114.67 ,Great Western,Assurance Guaranteed,31
+71,10000,$127.08 ,Great Western,Assurance Guaranteed,31
+71,11000,$139.50 ,Great Western,Assurance Guaranteed,31
+71,12000,$151.92 ,Great Western,Assurance Guaranteed,31
+71,13000,$164.33 ,Great Western,Assurance Guaranteed,31
+71,14000,$176.75 ,Great Western,Assurance Guaranteed,31
+71,15000,$189.17 ,Great Western,Assurance Guaranteed,31
+71,16000,$201.58 ,Great Western,Assurance Guaranteed,31
+71,17000,$214.00 ,Great Western,Assurance Guaranteed,31
+71,18000,$226.42 ,Great Western,Assurance Guaranteed,31
+71,19000,$238.83 ,Great Western,Assurance Guaranteed,31
+71,20000,$251.25 ,Great Western,Assurance Guaranteed,31
+71,21000,$263.67 ,Great Western,Assurance Guaranteed,31
+71,22000,$276.08 ,Great Western,Assurance Guaranteed,31
+71,23000,$288.50 ,Great Western,Assurance Guaranteed,31
+71,24000,$300.92 ,Great Western,Assurance Guaranteed,31
+71,25000,$313.33 ,Great Western,Assurance Guaranteed,31
+71,26000,$325.75 ,Great Western,Assurance Guaranteed,31
+71,27000,$338.17 ,Great Western,Assurance Guaranteed,31
+71,28000,$350.58 ,Great Western,Assurance Guaranteed,31
+71,29000,$363.00 ,Great Western,Assurance Guaranteed,31
+71,30000,$375.42 ,Great Western,Assurance Guaranteed,31
+71,31000,$387.83 ,Great Western,Assurance Guaranteed,31
+71,32000,$400.25 ,Great Western,Assurance Guaranteed,31
+71,33000,$412.67 ,Great Western,Assurance Guaranteed,31
+71,34000,$425.08 ,Great Western,Assurance Guaranteed,31
+71,35000,$437.50 ,Great Western,Assurance Guaranteed,31
+71,36000,$449.92 ,Great Western,Assurance Guaranteed,31
+71,37000,$462.33 ,Great Western,Assurance Guaranteed,31
+71,38000,$474.75 ,Great Western,Assurance Guaranteed,31
+71,39000,$487.17 ,Great Western,Assurance Guaranteed,31
+71,40000,$499.58 ,Great Western,Assurance Guaranteed,31
+72,2000,$29.42 ,Great Western,Assurance Guaranteed,31
+72,3000,$42.67 ,Great Western,Assurance Guaranteed,31
+72,4000,$55.92 ,Great Western,Assurance Guaranteed,31
+72,5000,$69.17 ,Great Western,Assurance Guaranteed,31
+72,6000,$82.42 ,Great Western,Assurance Guaranteed,31
+72,7000,$95.67 ,Great Western,Assurance Guaranteed,31
+72,8000,$108.92 ,Great Western,Assurance Guaranteed,31
+72,9000,$122.17 ,Great Western,Assurance Guaranteed,31
+72,10000,$135.42 ,Great Western,Assurance Guaranteed,31
+72,11000,$148.67 ,Great Western,Assurance Guaranteed,31
+72,12000,$161.92 ,Great Western,Assurance Guaranteed,31
+72,13000,$175.17 ,Great Western,Assurance Guaranteed,31
+72,14000,$188.42 ,Great Western,Assurance Guaranteed,31
+72,15000,$201.67 ,Great Western,Assurance Guaranteed,31
+72,16000,$214.92 ,Great Western,Assurance Guaranteed,31
+72,17000,$228.17 ,Great Western,Assurance Guaranteed,31
+72,18000,$241.42 ,Great Western,Assurance Guaranteed,31
+72,19000,$254.67 ,Great Western,Assurance Guaranteed,31
+72,20000,$267.92 ,Great Western,Assurance Guaranteed,31
+72,21000,$281.17 ,Great Western,Assurance Guaranteed,31
+72,22000,$294.42 ,Great Western,Assurance Guaranteed,31
+72,23000,$307.67 ,Great Western,Assurance Guaranteed,31
+72,24000,$320.92 ,Great Western,Assurance Guaranteed,31
+72,25000,$334.17 ,Great Western,Assurance Guaranteed,31
+72,26000,$347.42 ,Great Western,Assurance Guaranteed,31
+72,27000,$360.67 ,Great Western,Assurance Guaranteed,31
+72,28000,$373.92 ,Great Western,Assurance Guaranteed,31
+72,29000,$387.17 ,Great Western,Assurance Guaranteed,31
+72,30000,$400.42 ,Great Western,Assurance Guaranteed,31
+72,31000,$413.67 ,Great Western,Assurance Guaranteed,31
+72,32000,$426.92 ,Great Western,Assurance Guaranteed,31
+72,33000,$440.17 ,Great Western,Assurance Guaranteed,31
+72,34000,$453.42 ,Great Western,Assurance Guaranteed,31
+72,35000,$466.67 ,Great Western,Assurance Guaranteed,31
+72,36000,$479.92 ,Great Western,Assurance Guaranteed,31
+72,37000,$493.17 ,Great Western,Assurance Guaranteed,31
+72,38000,$506.42 ,Great Western,Assurance Guaranteed,31
+72,39000,$519.67 ,Great Western,Assurance Guaranteed,31
+72,40000,$532.92 ,Great Western,Assurance Guaranteed,31
+73,2000,$31.25 ,Great Western,Assurance Guaranteed,31
+73,3000,$45.42 ,Great Western,Assurance Guaranteed,31
+73,4000,$59.58 ,Great Western,Assurance Guaranteed,31
+73,5000,$73.75 ,Great Western,Assurance Guaranteed,31
+73,6000,$87.92 ,Great Western,Assurance Guaranteed,31
+73,7000,$102.08 ,Great Western,Assurance Guaranteed,31
+73,8000,$116.25 ,Great Western,Assurance Guaranteed,31
+73,9000,$130.42 ,Great Western,Assurance Guaranteed,31
+73,10000,$144.58 ,Great Western,Assurance Guaranteed,31
+73,11000,$158.75 ,Great Western,Assurance Guaranteed,31
+73,12000,$172.92 ,Great Western,Assurance Guaranteed,31
+73,13000,$187.08 ,Great Western,Assurance Guaranteed,31
+73,14000,$201.25 ,Great Western,Assurance Guaranteed,31
+73,15000,$215.42 ,Great Western,Assurance Guaranteed,31
+73,16000,$229.58 ,Great Western,Assurance Guaranteed,31
+73,17000,$243.75 ,Great Western,Assurance Guaranteed,31
+73,18000,$257.92 ,Great Western,Assurance Guaranteed,31
+73,19000,$272.08 ,Great Western,Assurance Guaranteed,31
+73,20000,$286.25 ,Great Western,Assurance Guaranteed,31
+73,21000,$300.42 ,Great Western,Assurance Guaranteed,31
+73,22000,$314.58 ,Great Western,Assurance Guaranteed,31
+73,23000,$328.75 ,Great Western,Assurance Guaranteed,31
+73,24000,$342.92 ,Great Western,Assurance Guaranteed,31
+73,25000,$357.08 ,Great Western,Assurance Guaranteed,31
+73,26000,$371.25 ,Great Western,Assurance Guaranteed,31
+73,27000,$385.42 ,Great Western,Assurance Guaranteed,31
+73,28000,$399.58 ,Great Western,Assurance Guaranteed,31
+73,29000,$413.75 ,Great Western,Assurance Guaranteed,31
+73,30000,$427.92 ,Great Western,Assurance Guaranteed,31
+73,31000,$442.08 ,Great Western,Assurance Guaranteed,31
+73,32000,$456.25 ,Great Western,Assurance Guaranteed,31
+73,33000,$470.42 ,Great Western,Assurance Guaranteed,31
+73,34000,$484.58 ,Great Western,Assurance Guaranteed,31
+73,35000,$498.75 ,Great Western,Assurance Guaranteed,31
+73,36000,$512.92 ,Great Western,Assurance Guaranteed,31
+73,37000,$527.08 ,Great Western,Assurance Guaranteed,31
+73,38000,$541.25 ,Great Western,Assurance Guaranteed,31
+73,39000,$555.42 ,Great Western,Assurance Guaranteed,31
+73,40000,$569.58 ,Great Western,Assurance Guaranteed,31
+74,2000,$32.58 ,Great Western,Assurance Guaranteed,31
+74,3000,$47.42 ,Great Western,Assurance Guaranteed,31
+74,4000,$62.25 ,Great Western,Assurance Guaranteed,31
+74,5000,$77.08 ,Great Western,Assurance Guaranteed,31
+74,6000,$91.92 ,Great Western,Assurance Guaranteed,31
+74,7000,$106.75 ,Great Western,Assurance Guaranteed,31
+74,8000,$121.58 ,Great Western,Assurance Guaranteed,31
+74,9000,$136.42 ,Great Western,Assurance Guaranteed,31
+74,10000,$151.25 ,Great Western,Assurance Guaranteed,31
+74,11000,$166.08 ,Great Western,Assurance Guaranteed,31
+74,12000,$180.92 ,Great Western,Assurance Guaranteed,31
+74,13000,$195.75 ,Great Western,Assurance Guaranteed,31
+74,14000,$210.58 ,Great Western,Assurance Guaranteed,31
+74,15000,$225.42 ,Great Western,Assurance Guaranteed,31
+74,16000,$240.25 ,Great Western,Assurance Guaranteed,31
+74,17000,$255.08 ,Great Western,Assurance Guaranteed,31
+74,18000,$269.92 ,Great Western,Assurance Guaranteed,31
+74,19000,$284.75 ,Great Western,Assurance Guaranteed,31
+74,20000,$299.58 ,Great Western,Assurance Guaranteed,31
+74,21000,$314.42 ,Great Western,Assurance Guaranteed,31
+74,22000,$329.25 ,Great Western,Assurance Guaranteed,31
+74,23000,$344.08 ,Great Western,Assurance Guaranteed,31
+74,24000,$358.92 ,Great Western,Assurance Guaranteed,31
+74,25000,$373.75 ,Great Western,Assurance Guaranteed,31
+74,26000,$388.58 ,Great Western,Assurance Guaranteed,31
+74,27000,$403.42 ,Great Western,Assurance Guaranteed,31
+74,28000,$418.25 ,Great Western,Assurance Guaranteed,31
+74,29000,$433.08 ,Great Western,Assurance Guaranteed,31
+74,30000,$447.92 ,Great Western,Assurance Guaranteed,31
+74,31000,$462.75 ,Great Western,Assurance Guaranteed,31
+74,32000,$477.58 ,Great Western,Assurance Guaranteed,31
+74,33000,$492.42 ,Great Western,Assurance Guaranteed,31
+74,34000,$507.25 ,Great Western,Assurance Guaranteed,31
+74,35000,$522.08 ,Great Western,Assurance Guaranteed,31
+74,36000,$536.92 ,Great Western,Assurance Guaranteed,31
+74,37000,$551.75 ,Great Western,Assurance Guaranteed,31
+74,38000,$566.58 ,Great Western,Assurance Guaranteed,31
+74,39000,$581.42 ,Great Western,Assurance Guaranteed,31
+74,40000,$596.25 ,Great Western,Assurance Guaranteed,31
+75,2000,$34.08 ,Great Western,Assurance Guaranteed,31
+75,3000,$49.67 ,Great Western,Assurance Guaranteed,31
+75,4000,$65.25 ,Great Western,Assurance Guaranteed,31
+75,5000,$80.83 ,Great Western,Assurance Guaranteed,31
+75,6000,$96.42 ,Great Western,Assurance Guaranteed,31
+75,7000,$112.00 ,Great Western,Assurance Guaranteed,31
+75,8000,$127.58 ,Great Western,Assurance Guaranteed,31
+75,9000,$143.17 ,Great Western,Assurance Guaranteed,31
+75,10000,$158.75 ,Great Western,Assurance Guaranteed,31
+75,11000,$174.33 ,Great Western,Assurance Guaranteed,31
+75,12000,$189.92 ,Great Western,Assurance Guaranteed,31
+75,13000,$205.50 ,Great Western,Assurance Guaranteed,31
+75,14000,$221.08 ,Great Western,Assurance Guaranteed,31
+75,15000,$236.67 ,Great Western,Assurance Guaranteed,31
+75,16000,$252.25 ,Great Western,Assurance Guaranteed,31
+75,17000,$267.83 ,Great Western,Assurance Guaranteed,31
+75,18000,$283.42 ,Great Western,Assurance Guaranteed,31
+75,19000,$299.00 ,Great Western,Assurance Guaranteed,31
+75,20000,$314.58 ,Great Western,Assurance Guaranteed,31
+75,21000,$330.17 ,Great Western,Assurance Guaranteed,31
+75,22000,$345.75 ,Great Western,Assurance Guaranteed,31
+75,23000,$361.33 ,Great Western,Assurance Guaranteed,31
+75,24000,$376.92 ,Great Western,Assurance Guaranteed,31
+75,25000,$392.50 ,Great Western,Assurance Guaranteed,31
+75,26000,$408.08 ,Great Western,Assurance Guaranteed,31
+75,27000,$423.67 ,Great Western,Assurance Guaranteed,31
+75,28000,$439.25 ,Great Western,Assurance Guaranteed,31
+75,29000,$454.83 ,Great Western,Assurance Guaranteed,31
+75,30000,$470.42 ,Great Western,Assurance Guaranteed,31
+75,31000,$486.00 ,Great Western,Assurance Guaranteed,31
+75,32000,$501.58 ,Great Western,Assurance Guaranteed,31
+75,33000,$517.17 ,Great Western,Assurance Guaranteed,31
+75,34000,$532.75 ,Great Western,Assurance Guaranteed,31
+75,35000,$548.33 ,Great Western,Assurance Guaranteed,31
+75,36000,$563.92 ,Great Western,Assurance Guaranteed,31
+75,37000,$579.50 ,Great Western,Assurance Guaranteed,31
+75,38000,$595.08 ,Great Western,Assurance Guaranteed,31
+75,39000,$610.67 ,Great Western,Assurance Guaranteed,31
+75,40000,$626.25 ,Great Western,Assurance Guaranteed,31
+76,2000,$35.75 ,Great Western,Assurance Guaranteed,31
+76,3000,$52.17 ,Great Western,Assurance Guaranteed,31
+76,4000,$68.58 ,Great Western,Assurance Guaranteed,31
+76,5000,$85.00 ,Great Western,Assurance Guaranteed,31
+76,6000,$101.42 ,Great Western,Assurance Guaranteed,31
+76,7000,$117.83 ,Great Western,Assurance Guaranteed,31
+76,8000,$134.25 ,Great Western,Assurance Guaranteed,31
+76,9000,$150.67 ,Great Western,Assurance Guaranteed,31
+76,10000,$167.08 ,Great Western,Assurance Guaranteed,31
+76,11000,$183.50 ,Great Western,Assurance Guaranteed,31
+76,12000,$199.92 ,Great Western,Assurance Guaranteed,31
+76,13000,$216.33 ,Great Western,Assurance Guaranteed,31
+76,14000,$232.75 ,Great Western,Assurance Guaranteed,31
+76,15000,$249.17 ,Great Western,Assurance Guaranteed,31
+76,16000,$265.58 ,Great Western,Assurance Guaranteed,31
+76,17000,$282.00 ,Great Western,Assurance Guaranteed,31
+76,18000,$298.42 ,Great Western,Assurance Guaranteed,31
+76,19000,$314.83 ,Great Western,Assurance Guaranteed,31
+76,20000,$331.25 ,Great Western,Assurance Guaranteed,31
+76,21000,$347.67 ,Great Western,Assurance Guaranteed,31
+76,22000,$364.08 ,Great Western,Assurance Guaranteed,31
+76,23000,$380.50 ,Great Western,Assurance Guaranteed,31
+76,24000,$396.92 ,Great Western,Assurance Guaranteed,31
+76,25000,$413.33 ,Great Western,Assurance Guaranteed,31
+76,26000,$429.75 ,Great Western,Assurance Guaranteed,31
+76,27000,$446.17 ,Great Western,Assurance Guaranteed,31
+76,28000,$462.58 ,Great Western,Assurance Guaranteed,31
+76,29000,$479.00 ,Great Western,Assurance Guaranteed,31
+76,30000,$495.42 ,Great Western,Assurance Guaranteed,31
+76,31000,$511.83 ,Great Western,Assurance Guaranteed,31
+76,32000,$528.25 ,Great Western,Assurance Guaranteed,31
+76,33000,$544.67 ,Great Western,Assurance Guaranteed,31
+76,34000,$561.08 ,Great Western,Assurance Guaranteed,31
+76,35000,$577.50 ,Great Western,Assurance Guaranteed,31
+76,36000,$593.92 ,Great Western,Assurance Guaranteed,31
+76,37000,$610.33 ,Great Western,Assurance Guaranteed,31
+76,38000,$626.75 ,Great Western,Assurance Guaranteed,31
+76,39000,$643.17 ,Great Western,Assurance Guaranteed,31
+76,40000,$659.58 ,Great Western,Assurance Guaranteed,31
+77,2000,$37.58 ,Great Western,Assurance Guaranteed,31
+77,3000,$54.92 ,Great Western,Assurance Guaranteed,31
+77,4000,$72.25 ,Great Western,Assurance Guaranteed,31
+77,5000,$89.58 ,Great Western,Assurance Guaranteed,31
+77,6000,$106.92 ,Great Western,Assurance Guaranteed,31
+77,7000,$124.25 ,Great Western,Assurance Guaranteed,31
+77,8000,$141.58 ,Great Western,Assurance Guaranteed,31
+77,9000,$158.92 ,Great Western,Assurance Guaranteed,31
+77,10000,$176.25 ,Great Western,Assurance Guaranteed,31
+77,11000,$193.58 ,Great Western,Assurance Guaranteed,31
+77,12000,$210.92 ,Great Western,Assurance Guaranteed,31
+77,13000,$228.25 ,Great Western,Assurance Guaranteed,31
+77,14000,$245.58 ,Great Western,Assurance Guaranteed,31
+77,15000,$262.92 ,Great Western,Assurance Guaranteed,31
+77,16000,$280.25 ,Great Western,Assurance Guaranteed,31
+77,17000,$297.58 ,Great Western,Assurance Guaranteed,31
+77,18000,$314.92 ,Great Western,Assurance Guaranteed,31
+77,19000,$332.25 ,Great Western,Assurance Guaranteed,31
+77,20000,$349.58 ,Great Western,Assurance Guaranteed,31
+77,21000,$366.92 ,Great Western,Assurance Guaranteed,31
+77,22000,$384.25 ,Great Western,Assurance Guaranteed,31
+77,23000,$401.58 ,Great Western,Assurance Guaranteed,31
+77,24000,$418.92 ,Great Western,Assurance Guaranteed,31
+77,25000,$436.25 ,Great Western,Assurance Guaranteed,31
+77,26000,$453.58 ,Great Western,Assurance Guaranteed,31
+77,27000,$470.92 ,Great Western,Assurance Guaranteed,31
+77,28000,$488.25 ,Great Western,Assurance Guaranteed,31
+77,29000,$505.58 ,Great Western,Assurance Guaranteed,31
+77,30000,$522.92 ,Great Western,Assurance Guaranteed,31
+77,31000,$540.25 ,Great Western,Assurance Guaranteed,31
+77,32000,$557.58 ,Great Western,Assurance Guaranteed,31
+77,33000,$574.92 ,Great Western,Assurance Guaranteed,31
+77,34000,$592.25 ,Great Western,Assurance Guaranteed,31
+77,35000,$609.58 ,Great Western,Assurance Guaranteed,31
+77,36000,$626.92 ,Great Western,Assurance Guaranteed,31
+77,37000,$644.25 ,Great Western,Assurance Guaranteed,31
+77,38000,$661.58 ,Great Western,Assurance Guaranteed,31
+77,39000,$678.92 ,Great Western,Assurance Guaranteed,31
+77,40000,$696.25 ,Great Western,Assurance Guaranteed,31
+78,2000,$39.58 ,Great Western,Assurance Guaranteed,31
+78,3000,$57.92 ,Great Western,Assurance Guaranteed,31
+78,4000,$76.25 ,Great Western,Assurance Guaranteed,31
+78,5000,$94.58 ,Great Western,Assurance Guaranteed,31
+78,6000,$112.92 ,Great Western,Assurance Guaranteed,31
+78,7000,$131.25 ,Great Western,Assurance Guaranteed,31
+78,8000,$149.58 ,Great Western,Assurance Guaranteed,31
+78,9000,$167.92 ,Great Western,Assurance Guaranteed,31
+78,10000,$186.25 ,Great Western,Assurance Guaranteed,31
+78,11000,$204.58 ,Great Western,Assurance Guaranteed,31
+78,12000,$222.92 ,Great Western,Assurance Guaranteed,31
+78,13000,$241.25 ,Great Western,Assurance Guaranteed,31
+78,14000,$259.58 ,Great Western,Assurance Guaranteed,31
+78,15000,$277.92 ,Great Western,Assurance Guaranteed,31
+78,16000,$296.25 ,Great Western,Assurance Guaranteed,31
+78,17000,$314.58 ,Great Western,Assurance Guaranteed,31
+78,18000,$332.92 ,Great Western,Assurance Guaranteed,31
+78,19000,$351.25 ,Great Western,Assurance Guaranteed,31
+78,20000,$369.58 ,Great Western,Assurance Guaranteed,31
+78,21000,$387.92 ,Great Western,Assurance Guaranteed,31
+78,22000,$406.25 ,Great Western,Assurance Guaranteed,31
+78,23000,$424.58 ,Great Western,Assurance Guaranteed,31
+78,24000,$442.92 ,Great Western,Assurance Guaranteed,31
+78,25000,$461.25 ,Great Western,Assurance Guaranteed,31
+78,26000,$479.58 ,Great Western,Assurance Guaranteed,31
+78,27000,$497.92 ,Great Western,Assurance Guaranteed,31
+78,28000,$516.25 ,Great Western,Assurance Guaranteed,31
+78,29000,$534.58 ,Great Western,Assurance Guaranteed,31
+78,30000,$552.92 ,Great Western,Assurance Guaranteed,31
+78,31000,$571.25 ,Great Western,Assurance Guaranteed,31
+78,32000,$589.58 ,Great Western,Assurance Guaranteed,31
+78,33000,$607.92 ,Great Western,Assurance Guaranteed,31
+78,34000,$626.25 ,Great Western,Assurance Guaranteed,31
+78,35000,$644.58 ,Great Western,Assurance Guaranteed,31
+78,36000,$662.92 ,Great Western,Assurance Guaranteed,31
+78,37000,$681.25 ,Great Western,Assurance Guaranteed,31
+78,38000,$699.58 ,Great Western,Assurance Guaranteed,31
+78,39000,$717.92 ,Great Western,Assurance Guaranteed,31
+78,40000,$736.25 ,Great Western,Assurance Guaranteed,31
+79,2000,$43.25 ,Great Western,Assurance Guaranteed,31
+79,3000,$63.42 ,Great Western,Assurance Guaranteed,31
+79,4000,$83.58 ,Great Western,Assurance Guaranteed,31
+79,5000,$103.75 ,Great Western,Assurance Guaranteed,31
+79,6000,$123.92 ,Great Western,Assurance Guaranteed,31
+79,7000,$144.08 ,Great Western,Assurance Guaranteed,31
+79,8000,$164.25 ,Great Western,Assurance Guaranteed,31
+79,9000,$184.42 ,Great Western,Assurance Guaranteed,31
+79,10000,$204.58 ,Great Western,Assurance Guaranteed,31
+79,11000,$224.75 ,Great Western,Assurance Guaranteed,31
+79,12000,$244.92 ,Great Western,Assurance Guaranteed,31
+79,13000,$265.08 ,Great Western,Assurance Guaranteed,31
+79,14000,$285.25 ,Great Western,Assurance Guaranteed,31
+79,15000,$305.42 ,Great Western,Assurance Guaranteed,31
+79,16000,$325.58 ,Great Western,Assurance Guaranteed,31
+79,17000,$345.75 ,Great Western,Assurance Guaranteed,31
+79,18000,$365.92 ,Great Western,Assurance Guaranteed,31
+79,19000,$386.08 ,Great Western,Assurance Guaranteed,31
+79,20000,$406.25 ,Great Western,Assurance Guaranteed,31
+79,21000,$426.42 ,Great Western,Assurance Guaranteed,31
+79,22000,$446.58 ,Great Western,Assurance Guaranteed,31
+79,23000,$466.75 ,Great Western,Assurance Guaranteed,31
+79,24000,$486.92 ,Great Western,Assurance Guaranteed,31
+79,25000,$507.08 ,Great Western,Assurance Guaranteed,31
+79,26000,$527.25 ,Great Western,Assurance Guaranteed,31
+79,27000,$547.42 ,Great Western,Assurance Guaranteed,31
+79,28000,$567.58 ,Great Western,Assurance Guaranteed,31
+79,29000,$587.75 ,Great Western,Assurance Guaranteed,31
+79,30000,$607.92 ,Great Western,Assurance Guaranteed,31
+79,31000,$628.08 ,Great Western,Assurance Guaranteed,31
+79,32000,$648.25 ,Great Western,Assurance Guaranteed,31
+79,33000,$668.42 ,Great Western,Assurance Guaranteed,31
+79,34000,$688.58 ,Great Western,Assurance Guaranteed,31
+79,35000,$708.75 ,Great Western,Assurance Guaranteed,31
+79,36000,$728.92 ,Great Western,Assurance Guaranteed,31
+79,37000,$749.08 ,Great Western,Assurance Guaranteed,31
+79,38000,$769.25 ,Great Western,Assurance Guaranteed,31
+79,39000,$789.42 ,Great Western,Assurance Guaranteed,31
+79,40000,$809.58 ,Great Western,Assurance Guaranteed,31
+80,2000,$47.92 ,Great Western,Assurance Guaranteed,31
+80,3000,$70.42 ,Great Western,Assurance Guaranteed,31
+80,4000,$92.92 ,Great Western,Assurance Guaranteed,31
+80,5000,$115.42 ,Great Western,Assurance Guaranteed,31
+80,6000,$137.92 ,Great Western,Assurance Guaranteed,31
+80,7000,$160.42 ,Great Western,Assurance Guaranteed,31
+80,8000,$182.92 ,Great Western,Assurance Guaranteed,31
+80,9000,$205.42 ,Great Western,Assurance Guaranteed,31
+80,10000,$227.92 ,Great Western,Assurance Guaranteed,31
+80,11000,$250.42 ,Great Western,Assurance Guaranteed,31
+80,12000,$272.92 ,Great Western,Assurance Guaranteed,31
+80,13000,$295.42 ,Great Western,Assurance Guaranteed,31
+80,14000,$317.92 ,Great Western,Assurance Guaranteed,31
+80,15000,$340.42 ,Great Western,Assurance Guaranteed,31
+80,16000,$362.92 ,Great Western,Assurance Guaranteed,31
+80,17000,$385.42 ,Great Western,Assurance Guaranteed,31
+80,18000,$407.92 ,Great Western,Assurance Guaranteed,31
+80,19000,$430.42 ,Great Western,Assurance Guaranteed,31
+80,20000,$452.92 ,Great Western,Assurance Guaranteed,31
+80,21000,$475.42 ,Great Western,Assurance Guaranteed,31
+80,22000,$497.92 ,Great Western,Assurance Guaranteed,31
+80,23000,$520.42 ,Great Western,Assurance Guaranteed,31
+80,24000,$542.92 ,Great Western,Assurance Guaranteed,31
+80,25000,$565.42 ,Great Western,Assurance Guaranteed,31
+80,27000,$610.42 ,Great Western,Assurance Guaranteed,31
+80,28000,$632.92 ,Great Western,Assurance Guaranteed,31
+80,26000,$587.92 ,Great Western,Assurance Guaranteed,31
+80,29000,$655.42 ,Great Western,Assurance Guaranteed,31
+80,30000,$677.92 ,Great Western,Assurance Guaranteed,31
+80,31000,$700.42 ,Great Western,Assurance Guaranteed,31
+80,32000,$722.92 ,Great Western,Assurance Guaranteed,31
+80,33000,$745.42 ,Great Western,Assurance Guaranteed,31
+80,34000,$767.92 ,Great Western,Assurance Guaranteed,31
+80,35000,$790.42 ,Great Western,Assurance Guaranteed,31
+80,36000,$812.92 ,Great Western,Assurance Guaranteed,31
+80,37000,$835.42 ,Great Western,Assurance Guaranteed,31
+80,38000,$857.92 ,Great Western,Assurance Guaranteed,31
+80,39000,$880.42 ,Great Western,Assurance Guaranteed,31
+80,40000,$902.92 ,Great Western,Assurance Guaranteed,31
+50,5000,$47.79 ,UHL(United Home Life),Guaranteed Issue,30
+50,6000,$56.48 ,UHL(United Home Life),Guaranteed Issue,30
+50,7000,$65.16 ,UHL(United Home Life),Guaranteed Issue,30
+50,8000,$73.85 ,UHL(United Home Life),Guaranteed Issue,30
+50,9000,$82.54 ,UHL(United Home Life),Guaranteed Issue,30
+50,10000,$91.23 ,UHL(United Home Life),Guaranteed Issue,30
+50,11000,$99.92 ,UHL(United Home Life),Guaranteed Issue,30
+50,12000,$108.60 ,UHL(United Home Life),Guaranteed Issue,30
+50,13000,$117.29 ,UHL(United Home Life),Guaranteed Issue,30
+50,14000,$125.98 ,UHL(United Home Life),Guaranteed Issue,30
+50,15000,$134.67 ,UHL(United Home Life),Guaranteed Issue,30
+50,16000,$143.36 ,UHL(United Home Life),Guaranteed Issue,30
+50,17000,$152.04 ,UHL(United Home Life),Guaranteed Issue,30
+50,18000,$160.73 ,UHL(United Home Life),Guaranteed Issue,30
+50,19000,$169.42 ,UHL(United Home Life),Guaranteed Issue,30
+50,20000,$178.11 ,UHL(United Home Life),Guaranteed Issue,30
+50,21000,$186.79 ,UHL(United Home Life),Guaranteed Issue,30
+50,22000,$195.48 ,UHL(United Home Life),Guaranteed Issue,30
+50,23000,$204.17 ,UHL(United Home Life),Guaranteed Issue,30
+50,24000,$212.86 ,UHL(United Home Life),Guaranteed Issue,30
+50,25000,$221.55 ,UHL(United Home Life),Guaranteed Issue,30
+51,5000,$50.61 ,UHL(United Home Life),Guaranteed Issue,30
+51,6000,$59.86 ,UHL(United Home Life),Guaranteed Issue,30
+51,7000,$69.12 ,UHL(United Home Life),Guaranteed Issue,30
+51,8000,$78.37 ,UHL(United Home Life),Guaranteed Issue,30
+51,9000,$87.62 ,UHL(United Home Life),Guaranteed Issue,30
+51,10000,$96.87 ,UHL(United Home Life),Guaranteed Issue,30
+51,11000,$106.13 ,UHL(United Home Life),Guaranteed Issue,30
+51,12000,$115.38 ,UHL(United Home Life),Guaranteed Issue,30
+51,13000,$124.63 ,UHL(United Home Life),Guaranteed Issue,30
+51,14000,$133.88 ,UHL(United Home Life),Guaranteed Issue,30
+51,15000,$143.14 ,UHL(United Home Life),Guaranteed Issue,30
+51,16000,$152.39 ,UHL(United Home Life),Guaranteed Issue,30
+51,17000,$161.64 ,UHL(United Home Life),Guaranteed Issue,30
+51,18000,$170.89 ,UHL(United Home Life),Guaranteed Issue,30
+51,19000,$180.15 ,UHL(United Home Life),Guaranteed Issue,30
+51,20000,$189.40 ,UHL(United Home Life),Guaranteed Issue,30
+51,21000,$198.65 ,UHL(United Home Life),Guaranteed Issue,30
+51,22000,$207.90 ,UHL(United Home Life),Guaranteed Issue,30
+51,23000,$217.16 ,UHL(United Home Life),Guaranteed Issue,30
+51,24000,$226.41 ,UHL(United Home Life),Guaranteed Issue,30
+51,25000,$235.66 ,UHL(United Home Life),Guaranteed Issue,30
+52,5000,$51.50 ,UHL(United Home Life),Guaranteed Issue,30
+52,6000,$60.93 ,UHL(United Home Life),Guaranteed Issue,30
+52,7000,$70.37 ,UHL(United Home Life),Guaranteed Issue,30
+52,8000,$79.80 ,UHL(United Home Life),Guaranteed Issue,30
+52,9000,$89.23 ,UHL(United Home Life),Guaranteed Issue,30
+52,10000,$98.66 ,UHL(United Home Life),Guaranteed Issue,30
+52,11000,$108.09 ,UHL(United Home Life),Guaranteed Issue,30
+52,12000,$117.52 ,UHL(United Home Life),Guaranteed Issue,30
+52,13000,$126.95 ,UHL(United Home Life),Guaranteed Issue,30
+52,14000,$136.38 ,UHL(United Home Life),Guaranteed Issue,30
+52,15000,$145.81 ,UHL(United Home Life),Guaranteed Issue,30
+52,16000,$155.24 ,UHL(United Home Life),Guaranteed Issue,30
+52,17000,$164.67 ,UHL(United Home Life),Guaranteed Issue,30
+52,18000,$174.10 ,UHL(United Home Life),Guaranteed Issue,30
+52,19000,$183.54 ,UHL(United Home Life),Guaranteed Issue,30
+52,20000,$192.97 ,UHL(United Home Life),Guaranteed Issue,30
+52,21000,$202.40 ,UHL(United Home Life),Guaranteed Issue,30
+52,22000,$211.83 ,UHL(United Home Life),Guaranteed Issue,30
+52,23000,$221.26 ,UHL(United Home Life),Guaranteed Issue,30
+52,24000,$230.69 ,UHL(United Home Life),Guaranteed Issue,30
+52,25000,$240.12 ,UHL(United Home Life),Guaranteed Issue,30
+53,5000,$52.17 ,UHL(United Home Life),Guaranteed Issue,30
+53,6000,$61.74 ,UHL(United Home Life),Guaranteed Issue,30
+53,7000,$71.30 ,UHL(United Home Life),Guaranteed Issue,30
+53,8000,$80.87 ,UHL(United Home Life),Guaranteed Issue,30
+53,9000,$90.43 ,UHL(United Home Life),Guaranteed Issue,30
+53,10000,$100.00 ,UHL(United Home Life),Guaranteed Issue,30
+53,11000,$109.56 ,UHL(United Home Life),Guaranteed Issue,30
+53,12000,$119.13 ,UHL(United Home Life),Guaranteed Issue,30
+53,13000,$128.69 ,UHL(United Home Life),Guaranteed Issue,30
+53,14000,$138.26 ,UHL(United Home Life),Guaranteed Issue,30
+53,15000,$147.82 ,UHL(United Home Life),Guaranteed Issue,30
+53,16000,$157.39 ,UHL(United Home Life),Guaranteed Issue,30
+53,17000,$166.95 ,UHL(United Home Life),Guaranteed Issue,30
+53,18000,$176.52 ,UHL(United Home Life),Guaranteed Issue,30
+53,19000,$186.08 ,UHL(United Home Life),Guaranteed Issue,30
+53,20000,$195.65 ,UHL(United Home Life),Guaranteed Issue,30
+53,21000,$205.21 ,UHL(United Home Life),Guaranteed Issue,30
+53,22000,$214.78 ,UHL(United Home Life),Guaranteed Issue,30
+53,23000,$224.34 ,UHL(United Home Life),Guaranteed Issue,30
+53,24000,$233.90 ,UHL(United Home Life),Guaranteed Issue,30
+53,25000,$243.47 ,UHL(United Home Life),Guaranteed Issue,30
+54,5000,$52.91 ,UHL(United Home Life),Guaranteed Issue,30
+54,6000,$62.63 ,UHL(United Home Life),Guaranteed Issue,30
+54,7000,$72.34 ,UHL(United Home Life),Guaranteed Issue,30
+54,8000,$82.05 ,UHL(United Home Life),Guaranteed Issue,30
+54,9000,$91.76 ,UHL(United Home Life),Guaranteed Issue,30
+54,10000,$101.48 ,UHL(United Home Life),Guaranteed Issue,30
+54,11000,$111.19 ,UHL(United Home Life),Guaranteed Issue,30
+54,12000,$120.90 ,UHL(United Home Life),Guaranteed Issue,30
+54,13000,$130.61 ,UHL(United Home Life),Guaranteed Issue,30
+54,14000,$140.33 ,UHL(United Home Life),Guaranteed Issue,30
+54,15000,$150.04 ,UHL(United Home Life),Guaranteed Issue,30
+54,16000,$159.75 ,UHL(United Home Life),Guaranteed Issue,30
+54,17000,$169.47 ,UHL(United Home Life),Guaranteed Issue,30
+54,18000,$179.18 ,UHL(United Home Life),Guaranteed Issue,30
+54,19000,$188.89 ,UHL(United Home Life),Guaranteed Issue,30
+54,20000,$198.60 ,UHL(United Home Life),Guaranteed Issue,30
+54,21000,$208.32 ,UHL(United Home Life),Guaranteed Issue,30
+54,22000,$218.03 ,UHL(United Home Life),Guaranteed Issue,30
+54,23000,$227.74 ,UHL(United Home Life),Guaranteed Issue,30
+54,24000,$237.45 ,UHL(United Home Life),Guaranteed Issue,30
+54,25000,$247.17 ,UHL(United Home Life),Guaranteed Issue,30
+55,5000,$53.73 ,UHL(United Home Life),Guaranteed Issue,30
+55,6000,$63.61 ,UHL(United Home Life),Guaranteed Issue,30
+55,7000,$73.48 ,UHL(United Home Life),Guaranteed Issue,30
+55,8000,$83.36 ,UHL(United Home Life),Guaranteed Issue,30
+55,9000,$93.24 ,UHL(United Home Life),Guaranteed Issue,30
+55,10000,$103.11 ,UHL(United Home Life),Guaranteed Issue,30
+55,11000,$112.99 ,UHL(United Home Life),Guaranteed Issue,30
+55,12000,$122.86 ,UHL(United Home Life),Guaranteed Issue,30
+55,13000,$132.74 ,UHL(United Home Life),Guaranteed Issue,30
+55,14000,$142.62 ,UHL(United Home Life),Guaranteed Issue,30
+55,15000,$152.49 ,UHL(United Home Life),Guaranteed Issue,30
+55,16000,$162.37 ,UHL(United Home Life),Guaranteed Issue,30
+55,17000,$172.25 ,UHL(United Home Life),Guaranteed Issue,30
+55,18000,$182.12 ,UHL(United Home Life),Guaranteed Issue,30
+55,19000,$192.00 ,UHL(United Home Life),Guaranteed Issue,30
+55,20000,$201.87 ,UHL(United Home Life),Guaranteed Issue,30
+55,21000,$211.75 ,UHL(United Home Life),Guaranteed Issue,30
+55,22000,$221.63 ,UHL(United Home Life),Guaranteed Issue,30
+55,23000,$231.50 ,UHL(United Home Life),Guaranteed Issue,30
+55,24000,$241.38 ,UHL(United Home Life),Guaranteed Issue,30
+55,25000,$251.26 ,UHL(United Home Life),Guaranteed Issue,30
+56,5000,$54.63 ,UHL(United Home Life),Guaranteed Issue,30
+56,6000,$64.69 ,UHL(United Home Life),Guaranteed Issue,30
+56,7000,$74.74 ,UHL(United Home Life),Guaranteed Issue,30
+56,8000,$84.80 ,UHL(United Home Life),Guaranteed Issue,30
+56,9000,$94.86 ,UHL(United Home Life),Guaranteed Issue,30
+56,10000,$104.91 ,UHL(United Home Life),Guaranteed Issue,30
+56,11000,$114.97 ,UHL(United Home Life),Guaranteed Issue,30
+56,12000,$125.03 ,UHL(United Home Life),Guaranteed Issue,30
+56,13000,$135.08 ,UHL(United Home Life),Guaranteed Issue,30
+56,14000,$145.14 ,UHL(United Home Life),Guaranteed Issue,30
+56,15000,$155.19 ,UHL(United Home Life),Guaranteed Issue,30
+56,16000,$165.25 ,UHL(United Home Life),Guaranteed Issue,30
+56,17000,$175.31 ,UHL(United Home Life),Guaranteed Issue,30
+56,18000,$185.36 ,UHL(United Home Life),Guaranteed Issue,30
+56,19000,$195.42 ,UHL(United Home Life),Guaranteed Issue,30
+56,20000,$205.48 ,UHL(United Home Life),Guaranteed Issue,30
+56,21000,$215.53 ,UHL(United Home Life),Guaranteed Issue,30
+56,22000,$225.59 ,UHL(United Home Life),Guaranteed Issue,30
+56,23000,$235.65 ,UHL(United Home Life),Guaranteed Issue,30
+56,24000,$245.70 ,UHL(United Home Life),Guaranteed Issue,30
+56,25000,$255.76 ,UHL(United Home Life),Guaranteed Issue,30
+57,5000,$55.62 ,UHL(United Home Life),Guaranteed Issue,30
+57,6000,$65.88 ,UHL(United Home Life),Guaranteed Issue,30
+57,7000,$76.13 ,UHL(United Home Life),Guaranteed Issue,30
+57,8000,$86.39 ,UHL(United Home Life),Guaranteed Issue,30
+57,9000,$96.64 ,UHL(United Home Life),Guaranteed Issue,30
+57,10000,$106.90 ,UHL(United Home Life),Guaranteed Issue,30
+57,11000,$117.15 ,UHL(United Home Life),Guaranteed Issue,30
+57,12000,$127.41 ,UHL(United Home Life),Guaranteed Issue,30
+57,13000,$137.66 ,UHL(United Home Life),Guaranteed Issue,30
+57,14000,$147.92 ,UHL(United Home Life),Guaranteed Issue,30
+57,15000,$158.17 ,UHL(United Home Life),Guaranteed Issue,30
+57,16000,$168.43 ,UHL(United Home Life),Guaranteed Issue,30
+57,17000,$178.68 ,UHL(United Home Life),Guaranteed Issue,30
+57,18000,$188.93 ,UHL(United Home Life),Guaranteed Issue,30
+57,19000,$199.19 ,UHL(United Home Life),Guaranteed Issue,30
+57,20000,$209.44 ,UHL(United Home Life),Guaranteed Issue,30
+57,21000,$219.70 ,UHL(United Home Life),Guaranteed Issue,30
+57,22000,$229.95 ,UHL(United Home Life),Guaranteed Issue,30
+57,23000,$240.21 ,UHL(United Home Life),Guaranteed Issue,30
+57,24000,$250.46 ,UHL(United Home Life),Guaranteed Issue,30
+57,25000,$260.72 ,UHL(United Home Life),Guaranteed Issue,30
+58,5000,$56.82 ,UHL(United Home Life),Guaranteed Issue,30
+58,6000,$67.32 ,UHL(United Home Life),Guaranteed Issue,30
+58,7000,$77.81 ,UHL(United Home Life),Guaranteed Issue,30
+58,8000,$88.31 ,UHL(United Home Life),Guaranteed Issue,30
+58,9000,$98.80 ,UHL(United Home Life),Guaranteed Issue,30
+58,10000,$109.30 ,UHL(United Home Life),Guaranteed Issue,30
+58,11000,$119.79 ,UHL(United Home Life),Guaranteed Issue,30
+58,12000,$130.29 ,UHL(United Home Life),Guaranteed Issue,30
+58,13000,$140.78 ,UHL(United Home Life),Guaranteed Issue,30
+58,14000,$151.28 ,UHL(United Home Life),Guaranteed Issue,30
+58,15000,$161.77 ,UHL(United Home Life),Guaranteed Issue,30
+58,16000,$172.27 ,UHL(United Home Life),Guaranteed Issue,30
+58,17000,$182.76 ,UHL(United Home Life),Guaranteed Issue,30
+58,18000,$193.26 ,UHL(United Home Life),Guaranteed Issue,30
+58,19000,$203.75 ,UHL(United Home Life),Guaranteed Issue,30
+58,20000,$214.25 ,UHL(United Home Life),Guaranteed Issue,30
+58,21000,$224.74 ,UHL(United Home Life),Guaranteed Issue,30
+58,22000,$235.24 ,UHL(United Home Life),Guaranteed Issue,30
+58,23000,$245.73 ,UHL(United Home Life),Guaranteed Issue,30
+58,24000,$256.23 ,UHL(United Home Life),Guaranteed Issue,30
+58,25000,$266.72 ,UHL(United Home Life),Guaranteed Issue,30
+59,5000,$58.12 ,UHL(United Home Life),Guaranteed Issue,30
+59,6000,$68.87 ,UHL(United Home Life),Guaranteed Issue,30
+59,7000,$79.62 ,UHL(United Home Life),Guaranteed Issue,30
+59,8000,$90.38 ,UHL(United Home Life),Guaranteed Issue,30
+59,9000,$101.13 ,UHL(United Home Life),Guaranteed Issue,30
+59,10000,$111.88 ,UHL(United Home Life),Guaranteed Issue,30
+59,11000,$122.64 ,UHL(United Home Life),Guaranteed Issue,30
+59,12000,$133.39 ,UHL(United Home Life),Guaranteed Issue,30
+59,13000,$144.14 ,UHL(United Home Life),Guaranteed Issue,30
+59,14000,$154.89 ,UHL(United Home Life),Guaranteed Issue,30
+59,15000,$165.65 ,UHL(United Home Life),Guaranteed Issue,30
+59,16000,$176.40 ,UHL(United Home Life),Guaranteed Issue,30
+59,17000,$187.15 ,UHL(United Home Life),Guaranteed Issue,30
+59,18000,$197.91 ,UHL(United Home Life),Guaranteed Issue,30
+59,19000,$208.66 ,UHL(United Home Life),Guaranteed Issue,30
+59,20000,$219.41 ,UHL(United Home Life),Guaranteed Issue,30
+59,21000,$230.17 ,UHL(United Home Life),Guaranteed Issue,30
+59,22000,$240.92 ,UHL(United Home Life),Guaranteed Issue,30
+59,23000,$251.67 ,UHL(United Home Life),Guaranteed Issue,30
+59,24000,$262.43 ,UHL(United Home Life),Guaranteed Issue,30
+59,25000,$273.18 ,UHL(United Home Life),Guaranteed Issue,30
+60,5000,$59.50 ,UHL(United Home Life),Guaranteed Issue,30
+60,6000,$70.53 ,UHL(United Home Life),Guaranteed Issue,30
+60,7000,$81.57 ,UHL(United Home Life),Guaranteed Issue,30
+60,8000,$92.60 ,UHL(United Home Life),Guaranteed Issue,30
+60,9000,$103.63 ,UHL(United Home Life),Guaranteed Issue,30
+60,10000,$114.66 ,UHL(United Home Life),Guaranteed Issue,30
+60,11000,$125.69 ,UHL(United Home Life),Guaranteed Issue,30
+60,12000,$136.72 ,UHL(United Home Life),Guaranteed Issue,30
+60,13000,$147.75 ,UHL(United Home Life),Guaranteed Issue,30
+60,14000,$158.78 ,UHL(United Home Life),Guaranteed Issue,30
+60,15000,$169.81 ,UHL(United Home Life),Guaranteed Issue,30
+60,16000,$180.84 ,UHL(United Home Life),Guaranteed Issue,30
+60,17000,$191.87 ,UHL(United Home Life),Guaranteed Issue,30
+60,18000,$202.90 ,UHL(United Home Life),Guaranteed Issue,30
+60,19000,$213.93 ,UHL(United Home Life),Guaranteed Issue,30
+60,20000,$224.96 ,UHL(United Home Life),Guaranteed Issue,30
+60,21000,$236.00 ,UHL(United Home Life),Guaranteed Issue,30
+60,22000,$247.03 ,UHL(United Home Life),Guaranteed Issue,30
+60,23000,$258.06 ,UHL(United Home Life),Guaranteed Issue,30
+60,24000,$269.09 ,UHL(United Home Life),Guaranteed Issue,30
+60,25000,$280.12 ,UHL(United Home Life),Guaranteed Issue,30
+61,5000,$60.99 ,UHL(United Home Life),Guaranteed Issue,30
+61,6000,$72.32 ,UHL(United Home Life),Guaranteed Issue,30
+61,7000,$83.65 ,UHL(United Home Life),Guaranteed Issue,30
+61,8000,$94.98 ,UHL(United Home Life),Guaranteed Issue,30
+61,9000,$106.30 ,UHL(United Home Life),Guaranteed Issue,30
+61,10000,$117.63 ,UHL(United Home Life),Guaranteed Issue,30
+61,11000,$128.96 ,UHL(United Home Life),Guaranteed Issue,30
+61,12000,$140.29 ,UHL(United Home Life),Guaranteed Issue,30
+61,13000,$151.62 ,UHL(United Home Life),Guaranteed Issue,30
+61,14000,$162.95 ,UHL(United Home Life),Guaranteed Issue,30
+61,15000,$174.27 ,UHL(United Home Life),Guaranteed Issue,30
+61,16000,$185.60 ,UHL(United Home Life),Guaranteed Issue,30
+61,17000,$196.93 ,UHL(United Home Life),Guaranteed Issue,30
+61,18000,$208.26 ,UHL(United Home Life),Guaranteed Issue,30
+61,19000,$219.59 ,UHL(United Home Life),Guaranteed Issue,30
+61,20000,$230.92 ,UHL(United Home Life),Guaranteed Issue,30
+61,21000,$242.24 ,UHL(United Home Life),Guaranteed Issue,30
+61,22000,$253.57 ,UHL(United Home Life),Guaranteed Issue,30
+61,23000,$264.90 ,UHL(United Home Life),Guaranteed Issue,30
+61,24000,$276.23 ,UHL(United Home Life),Guaranteed Issue,30
+61,25000,$287.56 ,UHL(United Home Life),Guaranteed Issue,30
+62,5000,$62.60 ,UHL(United Home Life),Guaranteed Issue,30
+62,6000,$74.25 ,UHL(United Home Life),Guaranteed Issue,30
+62,7000,$85.90 ,UHL(United Home Life),Guaranteed Issue,30
+62,8000,$97.54 ,UHL(United Home Life),Guaranteed Issue,30
+62,9000,$109.19 ,UHL(United Home Life),Guaranteed Issue,30
+62,10000,$120.84 ,UHL(United Home Life),Guaranteed Issue,30
+62,11000,$132.49 ,UHL(United Home Life),Guaranteed Issue,30
+62,12000,$144.14 ,UHL(United Home Life),Guaranteed Issue,30
+62,13000,$155.79 ,UHL(United Home Life),Guaranteed Issue,30
+62,14000,$167.44 ,UHL(United Home Life),Guaranteed Issue,30
+62,15000,$179.09 ,UHL(United Home Life),Guaranteed Issue,30
+62,16000,$190.74 ,UHL(United Home Life),Guaranteed Issue,30
+62,17000,$202.39 ,UHL(United Home Life),Guaranteed Issue,30
+62,18000,$214.04 ,UHL(United Home Life),Guaranteed Issue,30
+62,19000,$225.69 ,UHL(United Home Life),Guaranteed Issue,30
+62,20000,$237.34 ,UHL(United Home Life),Guaranteed Issue,30
+62,21000,$248.99 ,UHL(United Home Life),Guaranteed Issue,30
+62,22000,$260.63 ,UHL(United Home Life),Guaranteed Issue,30
+62,23000,$272.28 ,UHL(United Home Life),Guaranteed Issue,30
+62,24000,$283.93 ,UHL(United Home Life),Guaranteed Issue,30
+62,25000,$295.58 ,UHL(United Home Life),Guaranteed Issue,30
+63,5000,$63.95 ,UHL(United Home Life),Guaranteed Issue,30
+63,6000,$75.87 ,UHL(United Home Life),Guaranteed Issue,30
+63,7000,$87.80 ,UHL(United Home Life),Guaranteed Issue,30
+63,8000,$99.72 ,UHL(United Home Life),Guaranteed Issue,30
+63,9000,$111.64 ,UHL(United Home Life),Guaranteed Issue,30
+63,10000,$123.56 ,UHL(United Home Life),Guaranteed Issue,30
+63,11000,$135.48 ,UHL(United Home Life),Guaranteed Issue,30
+63,12000,$147.40 ,UHL(United Home Life),Guaranteed Issue,30
+63,13000,$159.32 ,UHL(United Home Life),Guaranteed Issue,30
+63,14000,$171.24 ,UHL(United Home Life),Guaranteed Issue,30
+63,15000,$183.16 ,UHL(United Home Life),Guaranteed Issue,30
+63,16000,$195.08 ,UHL(United Home Life),Guaranteed Issue,30
+63,17000,$207.00 ,UHL(United Home Life),Guaranteed Issue,30
+63,18000,$218.92 ,UHL(United Home Life),Guaranteed Issue,30
+63,19000,$230.84 ,UHL(United Home Life),Guaranteed Issue,30
+63,20000,$242.76 ,UHL(United Home Life),Guaranteed Issue,30
+63,21000,$254.69 ,UHL(United Home Life),Guaranteed Issue,30
+63,22000,$266.61 ,UHL(United Home Life),Guaranteed Issue,30
+63,23000,$278.53 ,UHL(United Home Life),Guaranteed Issue,30
+63,24000,$290.45 ,UHL(United Home Life),Guaranteed Issue,30
+63,25000,$302.37 ,UHL(United Home Life),Guaranteed Issue,30
+64,5000,$65.46 ,UHL(United Home Life),Guaranteed Issue,30
+64,6000,$77.68 ,UHL(United Home Life),Guaranteed Issue,30
+64,7000,$89.90 ,UHL(United Home Life),Guaranteed Issue,30
+64,8000,$102.12 ,UHL(United Home Life),Guaranteed Issue,30
+64,9000,$114.35 ,UHL(United Home Life),Guaranteed Issue,30
+64,10000,$126.57 ,UHL(United Home Life),Guaranteed Issue,30
+64,11000,$138.79 ,UHL(United Home Life),Guaranteed Issue,30
+64,12000,$151.01 ,UHL(United Home Life),Guaranteed Issue,30
+64,13000,$163.23 ,UHL(United Home Life),Guaranteed Issue,30
+64,14000,$175.45 ,UHL(United Home Life),Guaranteed Issue,30
+64,15000,$187.68 ,UHL(United Home Life),Guaranteed Issue,30
+64,16000,$199.90 ,UHL(United Home Life),Guaranteed Issue,30
+64,17000,$212.12 ,UHL(United Home Life),Guaranteed Issue,30
+64,18000,$224.34 ,UHL(United Home Life),Guaranteed Issue,30
+64,19000,$236.56 ,UHL(United Home Life),Guaranteed Issue,30
+64,20000,$248.79 ,UHL(United Home Life),Guaranteed Issue,30
+64,21000,$261.01 ,UHL(United Home Life),Guaranteed Issue,30
+64,22000,$273.23 ,UHL(United Home Life),Guaranteed Issue,30
+64,23000,$285.45 ,UHL(United Home Life),Guaranteed Issue,30
+64,24000,$297.67 ,UHL(United Home Life),Guaranteed Issue,30
+64,25000,$309.89 ,UHL(United Home Life),Guaranteed Issue,30
+66,13000,$172.37 ,UHL(United Home Life),Guaranteed Issue,30
+66,14000,$185.30 ,UHL(United Home Life),Guaranteed Issue,30
+66,15000,$198.22 ,UHL(United Home Life),Guaranteed Issue,30
+66,16000,$211.15 ,UHL(United Home Life),Guaranteed Issue,30
+66,17000,$224.07 ,UHL(United Home Life),Guaranteed Issue,30
+66,18000,$236.99 ,UHL(United Home Life),Guaranteed Issue,30
+66,19000,$249.92 ,UHL(United Home Life),Guaranteed Issue,30
+66,20000,$262.84 ,UHL(United Home Life),Guaranteed Issue,30
+66,21000,$275.77 ,UHL(United Home Life),Guaranteed Issue,30
+66,22000,$288.69 ,UHL(United Home Life),Guaranteed Issue,30
+66,23000,$301.62 ,UHL(United Home Life),Guaranteed Issue,30
+66,24000,$314.54 ,UHL(United Home Life),Guaranteed Issue,30
+66,25000,$327.47 ,UHL(United Home Life),Guaranteed Issue,30
+67,5000,$71.01 ,UHL(United Home Life),Guaranteed Issue,30
+67,6000,$84.34 ,UHL(United Home Life),Guaranteed Issue,30
+67,7000,$97.67 ,UHL(United Home Life),Guaranteed Issue,30
+67,8000,$111.00 ,UHL(United Home Life),Guaranteed Issue,30
+67,9000,$124.33 ,UHL(United Home Life),Guaranteed Issue,30
+67,10000,$137.66 ,UHL(United Home Life),Guaranteed Issue,30
+67,11000,$150.99 ,UHL(United Home Life),Guaranteed Issue,30
+67,12000,$164.32 ,UHL(United Home Life),Guaranteed Issue,30
+67,13000,$177.65 ,UHL(United Home Life),Guaranteed Issue,30
+67,14000,$190.98 ,UHL(United Home Life),Guaranteed Issue,30
+67,15000,$204.32 ,UHL(United Home Life),Guaranteed Issue,30
+67,16000,$217.65 ,UHL(United Home Life),Guaranteed Issue,30
+67,17000,$230.98 ,UHL(United Home Life),Guaranteed Issue,30
+67,18000,$244.31 ,UHL(United Home Life),Guaranteed Issue,30
+67,19000,$257.64 ,UHL(United Home Life),Guaranteed Issue,30
+67,20000,$270.97 ,UHL(United Home Life),Guaranteed Issue,30
+67,21000,$284.30 ,UHL(United Home Life),Guaranteed Issue,30
+67,22000,$297.63 ,UHL(United Home Life),Guaranteed Issue,30
+67,23000,$310.96 ,UHL(United Home Life),Guaranteed Issue,30
+67,24000,$324.29 ,UHL(United Home Life),Guaranteed Issue,30
+67,25000,$337.63 ,UHL(United Home Life),Guaranteed Issue,30
+68,5000,$73.11 ,UHL(United Home Life),Guaranteed Issue,30
+68,6000,$86.86 ,UHL(United Home Life),Guaranteed Issue,30
+68,7000,$100.61 ,UHL(United Home Life),Guaranteed Issue,30
+68,8000,$114.37 ,UHL(United Home Life),Guaranteed Issue,30
+68,9000,$128.12 ,UHL(United Home Life),Guaranteed Issue,30
+68,10000,$141.87 ,UHL(United Home Life),Guaranteed Issue,30
+68,11000,$155.62 ,UHL(United Home Life),Guaranteed Issue,30
+68,12000,$169.38 ,UHL(United Home Life),Guaranteed Issue,30
+68,13000,$183.13 ,UHL(United Home Life),Guaranteed Issue,30
+68,14000,$196.88 ,UHL(United Home Life),Guaranteed Issue,30
+68,15000,$210.63 ,UHL(United Home Life),Guaranteed Issue,30
+68,16000,$224.38 ,UHL(United Home Life),Guaranteed Issue,30
+68,17000,$238.14 ,UHL(United Home Life),Guaranteed Issue,30
+68,18000,$251.89 ,UHL(United Home Life),Guaranteed Issue,30
+68,19000,$265.64 ,UHL(United Home Life),Guaranteed Issue,30
+68,20000,$279.39 ,UHL(United Home Life),Guaranteed Issue,30
+68,21000,$293.14 ,UHL(United Home Life),Guaranteed Issue,30
+68,22000,$306.90 ,UHL(United Home Life),Guaranteed Issue,30
+68,23000,$320.65 ,UHL(United Home Life),Guaranteed Issue,30
+68,24000,$334.40 ,UHL(United Home Life),Guaranteed Issue,30
+68,25000,$348.15 ,UHL(United Home Life),Guaranteed Issue,30
+69,5000,$75.38 ,UHL(United Home Life),Guaranteed Issue,30
+69,6000,$89.59 ,UHL(United Home Life),Guaranteed Issue,30
+69,7000,$103.79 ,UHL(United Home Life),Guaranteed Issue,30
+69,8000,$118.00 ,UHL(United Home Life),Guaranteed Issue,30
+69,9000,$132.21 ,UHL(United Home Life),Guaranteed Issue,30
+69,10000,$146.41 ,UHL(United Home Life),Guaranteed Issue,30
+69,11000,$160.62 ,UHL(United Home Life),Guaranteed Issue,30
+69,12000,$174.82 ,UHL(United Home Life),Guaranteed Issue,30
+69,13000,$189.03 ,UHL(United Home Life),Guaranteed Issue,30
+69,14000,$203.24 ,UHL(United Home Life),Guaranteed Issue,30
+69,15000,$217.44 ,UHL(United Home Life),Guaranteed Issue,30
+69,16000,$231.65 ,UHL(United Home Life),Guaranteed Issue,30
+69,17000,$245.86 ,UHL(United Home Life),Guaranteed Issue,30
+69,18000,$260.06 ,UHL(United Home Life),Guaranteed Issue,30
+69,19000,$274.27 ,UHL(United Home Life),Guaranteed Issue,30
+69,20000,$288.47 ,UHL(United Home Life),Guaranteed Issue,30
+69,21000,$302.68 ,UHL(United Home Life),Guaranteed Issue,30
+69,22000,$316.89 ,UHL(United Home Life),Guaranteed Issue,30
+69,23000,$331.09 ,UHL(United Home Life),Guaranteed Issue,30
+69,24000,$345.30 ,UHL(United Home Life),Guaranteed Issue,30
+69,25000,$359.51 ,UHL(United Home Life),Guaranteed Issue,30
+70,5000,$80.43 ,UHL(United Home Life),Guaranteed Issue,30
+70,6000,$95.64 ,UHL(United Home Life),Guaranteed Issue,30
+70,7000,$110.86 ,UHL(United Home Life),Guaranteed Issue,30
+70,8000,$126.07 ,UHL(United Home Life),Guaranteed Issue,30
+70,9000,$141.29 ,UHL(United Home Life),Guaranteed Issue,30
+70,10000,$156.50 ,UHL(United Home Life),Guaranteed Issue,30
+70,11000,$171.72 ,UHL(United Home Life),Guaranteed Issue,30
+70,12000,$186.94 ,UHL(United Home Life),Guaranteed Issue,30
+70,13000,$202.15 ,UHL(United Home Life),Guaranteed Issue,30
+70,14000,$217.37 ,UHL(United Home Life),Guaranteed Issue,30
+70,15000,$232.58 ,UHL(United Home Life),Guaranteed Issue,30
+70,16000,$247.80 ,UHL(United Home Life),Guaranteed Issue,30
+70,17000,$263.01 ,UHL(United Home Life),Guaranteed Issue,30
+70,18000,$278.23 ,UHL(United Home Life),Guaranteed Issue,30
+70,19000,$293.44 ,UHL(United Home Life),Guaranteed Issue,30
+70,20000,$308.66 ,UHL(United Home Life),Guaranteed Issue,30
+70,21000,$323.87 ,UHL(United Home Life),Guaranteed Issue,30
+70,22000,$339.09 ,UHL(United Home Life),Guaranteed Issue,30
+70,23000,$354.30 ,UHL(United Home Life),Guaranteed Issue,30
+70,24000,$369.52 ,UHL(United Home Life),Guaranteed Issue,30
+70,25000,$384.74 ,UHL(United Home Life),Guaranteed Issue,30
+71,5000,$83.03 ,UHL(United Home Life),Guaranteed Issue,30
+71,6000,$98.77 ,UHL(United Home Life),Guaranteed Issue,30
+71,7000,$114.51 ,UHL(United Home Life),Guaranteed Issue,30
+71,8000,$130.24 ,UHL(United Home Life),Guaranteed Issue,30
+71,9000,$145.98 ,UHL(United Home Life),Guaranteed Issue,30
+71,10000,$161.72 ,UHL(United Home Life),Guaranteed Issue,30
+71,11000,$177.45 ,UHL(United Home Life),Guaranteed Issue,30
+71,12000,$193.19 ,UHL(United Home Life),Guaranteed Issue,30
+71,13000,$208.93 ,UHL(United Home Life),Guaranteed Issue,30
+71,14000,$224.66 ,UHL(United Home Life),Guaranteed Issue,30
+71,15000,$240.40 ,UHL(United Home Life),Guaranteed Issue,30
+71,16000,$256.13 ,UHL(United Home Life),Guaranteed Issue,30
+71,17000,$271.87 ,UHL(United Home Life),Guaranteed Issue,30
+71,18000,$287.61 ,UHL(United Home Life),Guaranteed Issue,30
+71,19000,$303.34 ,UHL(United Home Life),Guaranteed Issue,30
+71,20000,$319.08 ,UHL(United Home Life),Guaranteed Issue,30
+71,21000,$334.82 ,UHL(United Home Life),Guaranteed Issue,30
+71,22000,$350.55 ,UHL(United Home Life),Guaranteed Issue,30
+71,23000,$366.29 ,UHL(United Home Life),Guaranteed Issue,30
+71,24000,$382.03 ,UHL(United Home Life),Guaranteed Issue,30
+71,25000,$397.76 ,UHL(United Home Life),Guaranteed Issue,30
+72,5000,$85.89 ,UHL(United Home Life),Guaranteed Issue,30
+72,6000,$102.20 ,UHL(United Home Life),Guaranteed Issue,30
+72,7000,$118.51 ,UHL(United Home Life),Guaranteed Issue,30
+72,8000,$134.82 ,UHL(United Home Life),Guaranteed Issue,30
+72,9000,$151.12 ,UHL(United Home Life),Guaranteed Issue,30
+72,10000,$167.43 ,UHL(United Home Life),Guaranteed Issue,30
+72,11000,$183.74 ,UHL(United Home Life),Guaranteed Issue,30
+72,12000,$200.05 ,UHL(United Home Life),Guaranteed Issue,30
+72,13000,$216.36 ,UHL(United Home Life),Guaranteed Issue,30
+72,14000,$232.66 ,UHL(United Home Life),Guaranteed Issue,30
+72,15000,$248.97 ,UHL(United Home Life),Guaranteed Issue,30
+72,16000,$265.28 ,UHL(United Home Life),Guaranteed Issue,30
+72,17000,$281.59 ,UHL(United Home Life),Guaranteed Issue,30
+72,18000,$297.90 ,UHL(United Home Life),Guaranteed Issue,30
+72,19000,$314.20 ,UHL(United Home Life),Guaranteed Issue,30
+72,20000,$330.51 ,UHL(United Home Life),Guaranteed Issue,30
+72,21000,$346.82 ,UHL(United Home Life),Guaranteed Issue,30
+72,22000,$363.13 ,UHL(United Home Life),Guaranteed Issue,30
+72,23000,$379.44 ,UHL(United Home Life),Guaranteed Issue,30
+72,24000,$395.75 ,UHL(United Home Life),Guaranteed Issue,30
+72,25000,$412.05 ,UHL(United Home Life),Guaranteed Issue,30
+73,5000,$89.39 ,UHL(United Home Life),Guaranteed Issue,30
+73,6000,$106.40 ,UHL(United Home Life),Guaranteed Issue,30
+73,7000,$123.40 ,UHL(United Home Life),Guaranteed Issue,30
+73,8000,$140.41 ,UHL(United Home Life),Guaranteed Issue,30
+73,9000,$157.42 ,UHL(United Home Life),Guaranteed Issue,30
+73,10000,$174.43 ,UHL(United Home Life),Guaranteed Issue,30
+73,11000,$191.43 ,UHL(United Home Life),Guaranteed Issue,30
+73,12000,$208.44 ,UHL(United Home Life),Guaranteed Issue,30
+73,13000,$225.45 ,UHL(United Home Life),Guaranteed Issue,30
+73,14000,$242.46 ,UHL(United Home Life),Guaranteed Issue,30
+73,15000,$259.46 ,UHL(United Home Life),Guaranteed Issue,30
+73,16000,$276.47 ,UHL(United Home Life),Guaranteed Issue,30
+73,17000,$293.48 ,UHL(United Home Life),Guaranteed Issue,30
+73,18000,$310.49 ,UHL(United Home Life),Guaranteed Issue,30
+73,19000,$327.49 ,UHL(United Home Life),Guaranteed Issue,30
+73,20000,$344.50 ,UHL(United Home Life),Guaranteed Issue,30
+73,21000,$361.51 ,UHL(United Home Life),Guaranteed Issue,30
+73,22000,$378.52 ,UHL(United Home Life),Guaranteed Issue,30
+73,23000,$395.53 ,UHL(United Home Life),Guaranteed Issue,30
+73,24000,$412.53 ,UHL(United Home Life),Guaranteed Issue,30
+73,25000,$429.54 ,UHL(United Home Life),Guaranteed Issue,30
+74,5000,$93.16 ,UHL(United Home Life),Guaranteed Issue,30
+74,6000,$110.93 ,UHL(United Home Life),Guaranteed Issue,30
+74,7000,$128.69 ,UHL(United Home Life),Guaranteed Issue,30
+74,8000,$146.45 ,UHL(United Home Life),Guaranteed Issue,30
+74,9000,$164.22 ,UHL(United Home Life),Guaranteed Issue,30
+74,10000,$181.98 ,UHL(United Home Life),Guaranteed Issue,30
+74,11000,$199.74 ,UHL(United Home Life),Guaranteed Issue,30
+74,12000,$217.50 ,UHL(United Home Life),Guaranteed Issue,30
+74,13000,$235.27 ,UHL(United Home Life),Guaranteed Issue,30
+74,14000,$253.03 ,UHL(United Home Life),Guaranteed Issue,30
+74,15000,$270.79 ,UHL(United Home Life),Guaranteed Issue,30
+74,16000,$288.55 ,UHL(United Home Life),Guaranteed Issue,30
+74,17000,$306.32 ,UHL(United Home Life),Guaranteed Issue,30
+74,18000,$324.08 ,UHL(United Home Life),Guaranteed Issue,30
+74,19000,$341.84 ,UHL(United Home Life),Guaranteed Issue,30
+74,20000,$359.61 ,UHL(United Home Life),Guaranteed Issue,30
+74,21000,$377.37 ,UHL(United Home Life),Guaranteed Issue,30
+74,22000,$395.13 ,UHL(United Home Life),Guaranteed Issue,30
+74,23000,$412.89 ,UHL(United Home Life),Guaranteed Issue,30
+74,24000,$430.66 ,UHL(United Home Life),Guaranteed Issue,30
+74,25000,$448.42 ,UHL(United Home Life),Guaranteed Issue,30
+75,5000,$97.20 ,UHL(United Home Life),Guaranteed Issue,30
+75,6000,$115.77 ,UHL(United Home Life),Guaranteed Issue,30
+75,7000,$134.34 ,UHL(United Home Life),Guaranteed Issue,30
+75,8000,$152.91 ,UHL(United Home Life),Guaranteed Issue,30
+75,9000,$171.48 ,UHL(United Home Life),Guaranteed Issue,30
+75,10000,$190.05 ,UHL(United Home Life),Guaranteed Issue,30
+75,11000,$208.62 ,UHL(United Home Life),Guaranteed Issue,30
+75,12000,$227.19 ,UHL(United Home Life),Guaranteed Issue,30
+75,13000,$245.76 ,UHL(United Home Life),Guaranteed Issue,30
+75,14000,$264.33 ,UHL(United Home Life),Guaranteed Issue,30
+75,15000,$282.90 ,UHL(United Home Life),Guaranteed Issue,30
+75,16000,$301.47 ,UHL(United Home Life),Guaranteed Issue,30
+75,17000,$320.04 ,UHL(United Home Life),Guaranteed Issue,30
+75,18000,$338.61 ,UHL(United Home Life),Guaranteed Issue,30
+75,19000,$357.18 ,UHL(United Home Life),Guaranteed Issue,30
+75,20000,$375.75 ,UHL(United Home Life),Guaranteed Issue,30
+75,21000,$394.32 ,UHL(United Home Life),Guaranteed Issue,30
+75,22000,$412.89 ,UHL(United Home Life),Guaranteed Issue,30
+75,23000,$431.46 ,UHL(United Home Life),Guaranteed Issue,30
+75,24000,$450.03 ,UHL(United Home Life),Guaranteed Issue,30
+75,25000,$468.60 ,UHL(United Home Life),Guaranteed Issue,30

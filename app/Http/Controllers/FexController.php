@@ -24,6 +24,7 @@ $companies=companies::all();
 foreach ($companies as $com)
     {
         $rec=\DB::table($table)->where('Age',$request->age)->where('Amount',$request->face_amount)->where('company_id',$com->id)->first();
+
         if($rec)
         {
             $data[]=array(
@@ -39,6 +40,8 @@ foreach ($companies as $com)
         }
 
     }
+
+
 
 
 

@@ -5,7 +5,20 @@ namespace App\Http\Controllers;
 use App\Models\companies;
 use App\Models\condition;
 use App\Models\Coupan;
+use App\Models\femaleNonSmokerModified;
+use App\Models\femaleNotSmokerGuaranteed;
+use App\Models\femaleNotSmokerModified;
+use App\Models\femaleSmokerGuaranteed;
+use App\Models\femaleSmokerLevel;
+use App\Models\femaleSmokerModified;
 use App\Models\maleNonSmoker_level;
+use App\Models\maleNotSmoker_level;
+use App\Models\maleNotSmokerGuaranteed;
+use App\Models\maleNotSmokerLevel;
+use App\Models\maleNotSmokerModified;
+use App\Models\maleSmokerGuaranteed;
+use App\Models\maleSmokerLevel;
+use App\Models\maleSmokerModified;
 use App\Models\Setting;
 use App\Models\Subsription;
 use App\Models\User;
@@ -68,7 +81,7 @@ class UserController extends Controller
 
                     $importData_arr = array();
                     $i = 0;
-                    $key_word=condition::truncate();
+                    $key_word=companies::truncate();
                     $i=0;
                     while (($filedata = fgetcsv($file, 1000, ",")) !== FALSE) {
                         $num = count($filedata);
@@ -93,31 +106,11 @@ class UserController extends Controller
 
                     foreach($importData_arr as $importData){
 
-                        $keyword=new condition();
-                        $keyword->condition_e=utf8_decode($importData[0]);
-                        $keyword->condition_s=utf8_decode($importData[1]);
-                        $keyword->company=utf8_decode($importData[2]);
-                        $keyword->tagline=utf8_decode($importData[3]);
-                        $keyword->allowed=utf8_decode($importData[4]);
-                        $keyword->decline=utf8_decode($importData[5]);
+                        $keyword=new companies();
+                        $keyword->name=utf8_decode($importData[0]);
+                        $keyword->tagline=utf8_decode($importData[1]);
 
-                        $keyword->treatment_allowed_from=utf8_decode($importData[6]);
-                        $keyword->treatment_allowed_to=utf8_decode($importData[7]);
-                        $keyword->diagnose_allowed_from=utf8_decode($importData[8]);
-                        $keyword->diagnose_allowed_to=utf8_decode($importData[9]);
-                        $keyword->treatment_decline_from=utf8_decode($importData[10]);
-                        $keyword->treatment_decline_to=utf8_decode($importData[11]);
-                        $keyword->diagnose_decline_from=utf8_decode($importData[12]);
-                        $keyword->diagnose_decline_to=utf8_decode($importData[13]);
 
-                        $keyword->category=utf8_decode($importData[14]);
-                        $keyword->reason_e=utf8_decode($importData[15]);
-                        $keyword->reason_s=utf8_decode($importData[16]);
-                        $keyword->plan_info_e=utf8_decode($importData[17]);
-                        $keyword->plan_info_s=utf8_decode($importData[18]);
-                        $keyword->agent_compensation_e=utf8_decode($importData[19]);
-                        $keyword->agent_compensation_s=utf8_decode($importData[20]);
-                        $keyword->coverage_type=utf8_decode($importData[21]);
                         $keyword->save();
                     }
 
@@ -131,9 +124,6 @@ class UserController extends Controller
 
     public function home()
     {
-
-
-      //  \App::setLocale('sp');
 
         return view('home');
     }

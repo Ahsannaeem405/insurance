@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateMaleNonSmokerLevelsTable extends Migration
+class CreateMaleSmokerModifiedsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateMaleNonSmokerLevelsTable extends Migration
      */
     public function up()
     {
-        Schema::create('male_non_smoker_levels', function (Blueprint $table) {
+        Schema::create('male_smoker_modifieds', function (Blueprint $table) {
             $table->id();
             $table->text('Age')->nullable();
             $table->text('Amount')->nullable();
@@ -32,6 +32,6 @@ class CreateMaleNonSmokerLevelsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('male_non_smoker_levels');
+        Schema::dropIfExists('male_smoker_modifieds');
     }
 }

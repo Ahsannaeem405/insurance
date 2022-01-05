@@ -228,8 +228,8 @@
                                         <select name="type" class="form-control">
                                             <option selected value="levels">Level</option>
                                             <option value="modifieds">Graded/Modified</option>
-                                            <option value="Guaranteeds">Guaranteed</option>
-                                            <option value="Limiteds">Limited Pay</option>
+                                            <option value="guaranteeds">Guaranteed</option>
+                                            <option value="limiteds">Limited Pay</option>
                                         </select>
                                     </div>
                                 </div>
@@ -309,7 +309,7 @@
                                         <label for="cars">{{__('profile.Nicotine Use:')}}</label>
 
                                         <select name="cigrate" class="form-control">
-                                            <option selected value="non_smoker">None</option>
+                                            <option selected value="not_smoker">None</option>
                                             <option value="smoker">Smoking + Nicotine</option>
 
                                         </select>
