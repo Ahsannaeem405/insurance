@@ -35,8 +35,8 @@
     <h1 class="text-center mt-5">PAY NOW</h1>
 
     <div class="row">
-        <div class="col-md-6 my-5" style="margin: auto">
-            <div class="panel panel-default credit-card-box">
+        <div class="col-md-6 my-5 p-5" style="margin: auto;border: 1px solid #d0cdcd;border-radius: 20px;box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;">
+            <div class="panel panel-default credit-card-box"  style="">
                 <div class="panel-heading display-table my-2" >
                     <div class="row display-tr" >
                         <h3 class="panel-title display-td" >Payment Details</h3>

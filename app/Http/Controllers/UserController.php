@@ -166,6 +166,7 @@ return back();
     public function buy_now()
     {
         $price=Setting::first();
+
    return view('Logged_pages.stripe',compact('price'));
     }
     public function buy_now_pay(Request $request)
@@ -183,7 +184,7 @@ return back();
         $user=User::find(\Auth::user()->id);
 
         $user->register=$user->register+intval($pricing->p_days);
-        $user->save();
+        $user->update();
         $subsription=new Subsription();
         $subsription->user_id=$user->id;
         $subsription->price=$pricing->p_cost;
