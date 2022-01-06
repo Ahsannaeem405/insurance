@@ -62,7 +62,10 @@ return view('Logged_pages.response.fex.quoter',compact('data','datanot'));
 
  public function condition_qa(Request $request)
  {
-     $rec=condition::find($request->id);
+     $rec=condition::with('conditionQuestions')->find($request->id);
+
+
+
      return view('Logged_pages.response.fex.condition_qa',compact('rec'));
 
 

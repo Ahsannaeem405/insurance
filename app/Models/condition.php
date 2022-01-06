@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class condition extends Model
 {
     use HasFactory;
+
+    public function conditionQuestions()
+    {
+    return $this->hasMany('App\Models\conditionQuestion','condition_id','id');
+    }
 }

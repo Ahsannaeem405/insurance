@@ -15,10 +15,11 @@ class CreateConditionsTable extends Migration
     {
         Schema::create('conditions', function (Blueprint $table) {
             $table->id();
-            $table->text('condition_id')->nullable();
-            $table->integer('company_id')->nullable();
+
+
 
             $table->text('condition_e')->nullable();
+            $table->integer('condition_id')->nullable();
             $table->text('condition_s')->nullable();
             $table->text('company')->nullable();
             $table->text('tagline')->nullable();

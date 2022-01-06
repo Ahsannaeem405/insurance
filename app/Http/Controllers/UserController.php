@@ -4,9 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Models\companies;
 use App\Models\condition;
+use App\Models\conditionQuestion;
 use App\Models\Coupan;
 use App\Models\femaleNonSmokerModified;
 use App\Models\femaleNotSmokerGuaranteed;
+use App\Models\femaleNotSmokerLevel;
 use App\Models\femaleNotSmokerModified;
 use App\Models\femaleSmokerGuaranteed;
 use App\Models\femaleSmokerLevel;
@@ -81,7 +83,7 @@ class UserController extends Controller
 
                     $importData_arr = array();
                     $i = 0;
-                    $key_word=companies::truncate();
+                    $key_word=conditionQuestion::truncate();
                     $i=0;
                     while (($filedata = fgetcsv($file, 1000, ",")) !== FALSE) {
                         $num = count($filedata);
@@ -106,11 +108,14 @@ class UserController extends Controller
 
                     foreach($importData_arr as $importData){
 
-                        $keyword=new companies();
-                        $keyword->name=utf8_decode($importData[0]);
-                        $keyword->tagline=utf8_decode($importData[1]);
-
-
+                        $keyword=new conditionQuestion();
+                        $keyword->condition_id=intval(utf8_decode($importData[0]));
+                        $keyword->condition=utf8_decode($importData[1]);
+                        $keyword->question=utf8_decode($importData[2]);
+                        $keyword->question_id=intval(utf8_decode($importData[3]));
+                        $keyword->type_id=intval(utf8_decode($importData[4]));
+                        $keyword->if_yes=intval(utf8_decode($importData[5]));
+                        $keyword->if_no=intval(utf8_decode($importData[6]));
                         $keyword->save();
                     }
 
