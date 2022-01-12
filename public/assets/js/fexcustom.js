@@ -127,19 +127,53 @@ $(document).ready(function () {
         var total=$(this).attr('total');
         var current=parseInt($(this).attr('current'));
         var rand=$(this).attr('rand');
-
+var nextindex=1;
         if(current!=total)
         {
 
         $('.all_ques').hide();
-        $('.current_ques_'+(current+1)).show();
-        $(this).attr('current',current+1);
-        $('.back_ques'+rand).attr('current',current+1);
-        $('.start_status'+rand).empty().append(current+1);
+            if($('.current_ques_'+(current)).hasClass('parent'))
+            {
+
+                if($('.current_ques_'+(current)).attr('ifyes')!=0 && $('.current_ques_'+(current)).attr('answer')=='yes')
+                {
+                    nextindex=1;
+                }
+                else if($('.current_ques_'+(current)).attr('ifno')!=0 && $('.current_ques_'+(current)).attr('answer')=='no' && $('.current_ques_'+(current)).attr('ifyes')!=0)
+                {
+                    nextindex=2;
+                }
+                else{
+                    nextindex=1;
+                }
+
+
+            }
+            else {
+                if($('.current_ques_'+(current+1)).hasClass('child'))
+                {
+                    nextindex=2;
+                }
+                else {
+                    nextindex=1;
+
+
+                }
+
+            }
+
+
+
+
+            $('.current_ques_'+(current+nextindex)).show();
+            $('.current_ques_'+(current+nextindex)).attr('jump',nextindex);
+        $(this).attr('current',current+nextindex);
+        $('.back_ques'+rand).attr('current',current+nextindex);
+        $('.start_status'+rand).empty().append(current+nextindex);
 
 
             $(this).attr('value','NEXT');
-        if(current+1==total){
+        if(current+nextindex==total){
             $(this).attr('value','FINISHED')
         }
 
@@ -157,16 +191,23 @@ $(document).ready(function () {
         var total=$(this).attr('total');
         var current=parseInt($(this).attr('current'));
         var rand=$(this).attr('rand');
-
+        var nextindex= $('.current_ques_'+(current)).attr('jump');
         if(current!=1)
         {
 
             $('.all_ques').hide();
-            $('.current_ques_'+(current-1)).show();
-            $(this).attr('current',current-1);
-            $('.next_ques'+rand).attr('current',current-1);
-            $('.start_status'+rand).empty().append(current-1);
 
+
+
+
+
+
+
+
+            $('.current_ques_'+(current-nextindex)).show();
+            $(this).attr('current',current-nextindex);
+            $('.next_ques'+rand).attr('current',current-nextindex);
+            $('.start_status'+rand).empty().append(current-nextindex);
             $('.next_ques'+rand).attr('value','NEXT');
 
 
@@ -188,6 +229,7 @@ $(document).ready(function () {
 
         var id=$(this).attr('id_data');
         var status=$(this).attr('status');
+
         if(status=='show')
         {
             $('#con_div_'+id).children('div:nth-child(2)').hide();
@@ -197,6 +239,26 @@ $(document).ready(function () {
             $('#con_div_'+id).children('div:nth-child(2)').show();
             $(this).attr('status','show');
         }
+
+    });
+
+    $(document).on('click','.selection',function () {
+        var next_ques=$(this).attr('next_ques');
+
+
+        $(this).css('background-color', '#2A2C7F');
+        $(this).css('color', 'white');
+        var id=$(this).attr('data_id');
+        var data=$(this).attr('data');
+        var index=$(this).attr('i');
+
+        $('.selection'+id).not(this).css('color', '#2A2C7F');
+        $('.selection'+id).not(this).css('background-color', 'white');
+
+
+            $('.current_ques_'+index).attr('answer',data);
+
+
 
     });
 

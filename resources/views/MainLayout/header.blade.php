@@ -113,7 +113,7 @@
           content: none;
       }
       .dropdown-menu{
-     left: -130px
+     /*left: -130px*/
       }
   </style>
   <body>
@@ -122,53 +122,50 @@
     @section('header')
 
         @if(!Auth::check())
-    <nav class="navbar navbar-expand-lg navbar-light bg-white">
-        <a class="navbar-brand" href="{{url('/')}}"><img src="{{asset('images/images2.png')}}" alt="" class="logo"></a>
-        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse " id="navbarNavDropdown">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
+            <nav class="navbar navbar-expand-lg navbar-light bg-white">
+                <a class="navbar-brand" href="{{url('/')}}"><img src="{{asset('images/images2.png')}}" alt="" class="logo"></a>
+                <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse " id="navbarNavDropdown">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
 
-              <a class="nav-link "  id="fex" href="{{url('/fex')}}">{{__('profile.FEX')}} </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" id="term" href="{{url('/term')}}">{{__('profile.TERM')}}</a>
-            </li>
+                            <a class="nav-link "  id="fex" href="{{url('/fex')}}">{{__('profile.FEX')}} </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="term" href="{{url('/term')}}">{{__('profile.TERM')}}</a>
+                        </li>
 
-            <li class="nav-item">
-                <a class="nav-link"  id="pricing" href="{{url('/pricing')}}">{{__('profile.PRICING')}}</a>
-              </li>
-              <li class="nav-item ">
-                <a class="nav-link"  id="login" href="{{url('/login')}}">{{__('profile.LOGIN')}}</a>
-              </li>
-              <li class="nav-item sign_tag">
-                <a class="nav-link sign" href="{{url('/register')}}">{{__('profile.SIGN UP')}}</a>
-              </li>
-
-
-              <li class="nav-item sign_tag">
+                        <li class="nav-item">
+                            <a class="nav-link"  id="pricing" href="{{url('/pricing')}}">{{__('profile.PRICING')}}</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link"  id="login" href="{{url('/login')}}">{{__('profile.LOGIN')}}</a>
+                        </li>
+                        <li class="nav-item sign_tag">
+                            <a class="nav-link sign" href="{{url('/register')}}">{{__('profile.SIGN UP')}}</a>
+                        </li>
+                        <li class="nav-item sign_tag">
 
 
 
-                  <div class="dropdown">
+                            <div class="dropdown">
 
 
-                          <i style="font-size: 25px" class="fas fa-globe-americas dropdown-toggle mt-2" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+                                <i style="font-size: 25px" class="fas fa-globe-americas dropdown-toggle mt-2" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
 
-                      <div style="" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                          <a class="dropdown-item" href="{{url('lang/en')}}">English</a>
-                          <a class="dropdown-item" href="{{url('lang/sp')}}">Spanish</a>
+                                <div style="margin-left: -130px" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="{{url('lang/en')}}">English</a>
+                                    <a class="dropdown-item" href="{{url('lang/sp')}}">Spanish</a>
 
-                      </div>
-                  </div>
-              </li>
-{{--              @dd(App::getLocale())--}}
+                                </div>
+                            </div>
+                        </li>
 
-          </ul>
-        </div>
-      </nav>
+                    </ul>
+                </div>
+            </nav>
 
 
         @else

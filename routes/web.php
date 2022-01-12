@@ -48,6 +48,7 @@ Route::view('/overview', 'Logged_pages.overview');
 Route::post('/get_quote_fex', [\App\Http\Controllers\FexController::class,'quoter']);
 Route::get('/get_condition_fex', [\App\Http\Controllers\FexController::class,'condition']);
 Route::get('/get_condition_qa_fex', [\App\Http\Controllers\FexController::class,'condition_qa']);
+Route::get('/get_condition_qa_fex_next', [\App\Http\Controllers\FexController::class,'condition_qa_next']);
 
 
 

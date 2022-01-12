@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\companies;
 use App\Models\condition;
+use App\Models\conditionQuestion;
 use Illuminate\Http\Request;
 
 class FexController extends Controller
@@ -41,11 +42,6 @@ foreach ($companies as $com)
 
     }
 
-
-
-
-
-
 return view('Logged_pages.response.fex.quoter',compact('data','datanot'));
  }
 
@@ -70,5 +66,14 @@ return view('Logged_pages.response.fex.quoter',compact('data','datanot'));
 
 
 
+ }
+
+ public function condition_qa_next(Request $request)
+ {
+
+
+     $rec=conditionQuestion::where('question_id',$request->id)->first();
+
+     return response($rec);
  }
 }

@@ -11,6 +11,6 @@ class condition extends Model
 
     public function conditionQuestions()
     {
-    return $this->hasMany('App\Models\conditionQuestion','condition_id','id');
+    return $this->hasMany('App\Models\conditionQuestion','condition_id','condition_id');
     }
 }
