@@ -1,32 +1,12 @@
-@if(count($rec->conditionQuestions)!=0)
-@php
-    $rand = random_int(100000, 999999);
-@endphp
 
 
-<div id="con_div_{{$rand}}" class="mt-3">
 
-    <div
-        style="border-left: 15px solid var(--orange)!important; ;padding: 0.5em 0.8em !important;border-top: 1px solid #ded8d8; border-right: 1px solid #ded8d8; border-bottom: 1px solid #ded8d8;"
-        class="dropdown">
-        {{$rec->condition_e}}
-
-        <i style="float: right;color: red;cursor: pointer" id_data="{{$rand}}"
-           class="fa fa-trash p-1 con_remove"> </i>
-        <i style="float: right;color: purple;cursor: pointer" id_data="{{$rand}}" status="show"
-           class="fa fa-edit p-1 con_edit"> </i>
-
-    </div>
-    <div class="dropdown-container mb-5"
-         style="background-color: white;   box-shadow: 0 3px 15px 0 rgb(0 0 0 / 20%);height: 225px ">
-        @if($rec->conditionQuestions!=null)
-            <div>
                 @php $i=1; @endphp
-                @foreach($rec->conditionQuestions as $question)
+
 
                     @if($question->type_id==1)
 
-                        <div class="current_ques_{{$rand}}_{{$i}} all_ques_{{$rand}}" rand={{$rand}} jump="1" i="{{$i}}" @if($i>=2) style="display: none" @endif>
+                        <div class="current_ques_{{$rand}}_{{$i}} all_ques_{{$rand}} childques{{$rand}}"  rand="{{$rand}}" jump="1" i="{{$i}}" parentanswer="{{$answer}}" @if($i>=2) style="display: none" @endif>
                             <h3 class="text-center mt-2">{{$question->question}}</h3>
                             <div class="container">
                                 <div class="row m-0 mt-3 ">
@@ -205,7 +185,7 @@
 
 
                     @elseif($question->type_id==2)
-                        <div class="current_ques_{{$rand}}_{{$i}} all_ques_{{$rand}} yesnoques" rand={{$rand}} jump="1" answer="yes" ifyes="{{$question->if_yes}}" i="{{$i}}" ifno="{{$question->if_no}}" @if($i>=2) style="display: none" @endif>
+                        <div class="current_ques_{{$rand}}_{{$i}} all_ques_{{$rand}} yesnoques childques{{$rand}}" rand="{{$rand}}" jump="1" answer="yes" parentanswer="{{$answer}}" ifyes="{{$question->if_yes}}" i="{{$i}}" ifno="{{$question->if_no}}" @if($i>=2) style="display: none" @endif>
                             <h3 class="text-center mt-2">{{$question->question}}</h3>
                             <div class="container">
                                 <div class="row m-0 mt-3">
@@ -232,28 +212,11 @@
 
                     @endif
 
-                    @php ++$i @endphp
-
-                @endforeach
-                <div class="row mt-5 text-center">
-                    <div class="m-auto">
-
-                        <input type="button" id="back_ques" class="btn btn-secondary back_ques{{$rand}}"
-                               current="1" rand="{{$rand}}" total="{{$i-1}}"
-                               value="BACK">
-                        <span class="start_status{{$rand}}">1</span> / <span
-                            class="end_status{{$rand}}">{{$i-1}}</span>
-                        <input type="button" value="NEXT" class="next_ques{{$rand}} btn btn-primary"
-                               id="next_ques" current="1" rand="{{$rand}}"
-                               total="{{$i-1}}"
-                               style="background-color: #8b8be1;border: #8282cb">
-                    </div>
-                </div>
-
-            </div>
-        @endif
 
 
-    </div>
-</div>
-@endif
+
+
+
+
+
+

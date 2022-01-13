@@ -58,12 +58,15 @@ return view('Logged_pages.response.fex.quoter',compact('data','datanot'));
 
  public function condition_qa(Request $request)
  {
-     $rec=condition::with('conditionQuestions')->find($request->id);
+     $rec=condition::with(['conditionQuestions' => function ($q){
+         $q->with('ifyes');
+         $q->with('ifno');
+     }])->find($request->id);
 
 
+    // dd($rec->conditionQuestions[1]);
 
      return view('Logged_pages.response.fex.condition_qa',compact('rec'));
-
 
 
  }
@@ -72,8 +75,11 @@ return view('Logged_pages.response.fex.quoter',compact('data','datanot'));
  {
 
 
-     $rec=conditionQuestion::where('question_id',$request->id)->first();
+     $question=conditionQuestion::where('question_id',$request->id)->first();
+     $answer=$request->answer;
+     $rand=$request->rand;
+     return view('Logged_pages.response.fex.condition_qa_next',compact('question','answer','rand'));
 
-     return response($rec);
+
  }
 }
