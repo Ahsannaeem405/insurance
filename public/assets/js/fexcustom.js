@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-
+//age calculation
     $(document).on('keyup', '#year', function () {
 
 
@@ -14,6 +14,7 @@ $(document).ready(function () {
 
     });
 
+    //hide or show reult detail
     $(document).on('click', '.fa-chevron-down', function () {
 
         var id = $(this).attr('id');
@@ -21,7 +22,7 @@ $(document).ready(function () {
         $(".div_show" + id).toggleClass('show');
     });
 
-
+//gender selection
     $(".gender").click(function () {
 
         $(this).css('background-color', '#2A2C7F');
@@ -33,7 +34,7 @@ $(document).ready(function () {
         $('#gender').val($(this).attr('data'));
     });
 
-
+//get result of fex
     $("#get_quote_fex").click(function () {
 
 
@@ -54,7 +55,6 @@ $(document).ready(function () {
 
                 delay: 3000
             });
-
             $('.toast').toast('show');
         }
 
@@ -81,6 +81,7 @@ $(document).ready(function () {
 
     });
 
+    //get condition
     $(".condition").keyup(function () {
 
         var condition = $(this).val();
@@ -99,6 +100,7 @@ $(document).ready(function () {
 
     });
 
+    //append conditions
     $(document).on('click', '.con_data', function () {
 
         var id = $(this).attr('id');
@@ -122,6 +124,7 @@ $(document).ready(function () {
 
     });
 
+    //next question
     $(document).on('click', '#next_ques', function () {
 
         var total = $(this).attr('total');
@@ -129,26 +132,42 @@ $(document).ready(function () {
         var rand = $(this).attr('rand');
         var i = 1;
         var nextindex = 1;
+        var conditionmain = false;
         var condition = true;
-        if (current != total) {
+
+       var nextPosition='.current_ques_'+rand+'_' + (current + 1);
+       var currentPosition='.current_ques_'+rand+'_' + (current);
+
+
+        if ($(currentPosition).hasClass('yesnoques')) {
+
+            if ($(currentPosition).attr('ifyes') != 0 || $(currentPosition).attr('ifno') !=0) {
+
+conditionmain=true;
+
+            }
+        }
+
+
+        if (current != total || conditionmain==true) {
 
             $('.all_ques_'+rand).hide();
 
-            if ($('.current_ques_'+rand+'_' + (current + 1)).hasClass('childques'+rand+'')) {
-                if ($('.current_ques_'+rand+'_' + (current + 1)).attr('parentanswer') == $('.current_ques_'+rand+'_' + (current)).attr('answer')) {
+            if ($(nextPosition).hasClass('childques'+rand+'')) {
+                if ($(nextPosition).attr('parentanswer') == $(currentPosition).attr('answer')) {
                     condition = false;
-                    alert(condition);
+
                 } else {
                     $('.childques'+rand).remove();
                     questionIndexing(rand);
                 }
             }
             if (condition == true) {
-                if ($('.current_ques_'+rand+'_' + (current)).hasClass('yesnoques')) {
+                if ($(currentPosition).hasClass('yesnoques')) {
 
-                    if ($('.current_ques_'+rand+'_' + (current)).attr('ifyes') != 0 && $('.current_ques_'+rand+'_' + (current)).attr('answer') == 'yes') {
+                    if ($(currentPosition).attr('ifyes') != 0 && $(currentPosition).attr('answer') == 'yes') {
 
-                        var id = $('.current_ques_'+rand+'_' + (current)).attr('ifyes');
+                        var id = $(currentPosition).attr('ifyes');
                         $.ajax({
                             type: 'get',
                             url: "/user/get_condition_qa_fex_next",
@@ -157,14 +176,14 @@ $(document).ready(function () {
 
                             success: function (response) {
                                 //$(response).insertAfter('.current_ques_'+(current));
-                                $('.current_ques_'+rand+'_' + (current)).after(response);
+                                $(currentPosition).after(response);
                                 questionIndexing(rand);
                                 //  $().next_in().append(response);
                             }
                         });
 
-                    } else if ($('.current_ques_'+rand+'_' + (current)).attr('ifno') != 0 && $('.current_ques_'+rand+'_' + (current)).attr('answer') == 'no') {
-                        var id = $('.current_ques_'+rand+'_' + (current)).attr('ifno');
+                    } else if ($(currentPosition).attr('ifno') != 0 && $(currentPosition).attr('answer') == 'no') {
+                        var id = $(currentPosition).attr('ifno');
                         $.ajax({
                             type: 'get',
                             url: "/user/get_condition_qa_fex_next",
@@ -174,7 +193,7 @@ $(document).ready(function () {
 
                             success: function (response) {
                                 //$(response).insertAfter('.current_ques_'+(current));
-                             $('.current_ques_'+rand+'_' + (current)).after(response);
+                             $(currentPosition).after(response);
 
                              questionIndexing(rand);
                                 //  $().next_in().append(response);
@@ -189,8 +208,8 @@ $(document).ready(function () {
             }
 
 
-            $('.current_ques_'+rand+'_' + (current + nextindex)).show();
-            $('.current_ques_'+rand+'_' + (current + nextindex)).attr('jump', nextindex);
+            $(nextPosition).show();
+            $(nextPosition).attr('jump', nextindex);
             $(this).attr('current', current + nextindex);
             $('.back_ques' + rand).attr('current', current + nextindex);
             $('.start_status' + rand).empty().append(current + nextindex);
@@ -198,15 +217,21 @@ $(document).ready(function () {
 
             $(this).attr('value', 'NEXT');
             if(current + nextindex == total) {
-                $(this).attr('value', 'FINISHED')
+                $(this).attr('value', 'FINISHED');
             }
 
 
+        }
+        else {
+            $(this).attr('value', 'FINISHED');
+            $('#con_div_' + rand).children('div:nth-child(2)').hide();
+            $('#con_div_' + rand).find('i.fa-edit').attr('status','hide');
         }
 
 
     });
 
+    //indexing question
     function questionIndexing(rand) {
 var rand=rand;
 var i=0;
@@ -229,9 +254,16 @@ var i=0;
         $('.end_status' + rand).empty().append(i);
 
 
+
+
+        $('.next_ques_med'+rand).attr('total', i);
+        $('.back_ques_med' + rand).attr('total', i);
+        $('.end_status_med' + rand).empty().append(i);
+
+
     }
 
-
+//back question
     $(document).on('click', '#back_ques', function () {
 
         var total = $(this).attr('total');
@@ -254,6 +286,7 @@ var i=0;
 
     });
 
+    //remove question
     $(document).on('click', '.con_remove', function () {
 
         var id = $(this).attr('id_data');
@@ -262,6 +295,7 @@ var i=0;
     });
 
 
+    //edit question
     $(document).on('click', '.con_edit', function () {
 
         var id = $(this).attr('id_data');
@@ -277,6 +311,7 @@ var i=0;
 
     });
 
+    //yes or no selection
     $(document).on('click', '.selection', function () {
         var next_ques = $(this).attr('next_ques');
 
@@ -293,6 +328,269 @@ var i=0;
 
         $('.current_ques_'+rand+'_' + index).attr('answer', data);
 
+
+    });
+
+    //get medication
+
+    $(".medication").keyup(function () {
+
+        var medication = $(this).val();
+
+        $.ajax({
+            type: 'get',
+            url: "/user/get_medication_fex",
+            data: {'medication': medication},
+
+
+            success: function (response) {
+                $('.medication_result').empty().append(response);
+            }
+        });
+
+
+    });
+
+
+    //append medication
+
+    $(document).on('click', '.med_data', function () {
+
+        var name = $(this).attr('con');
+
+
+        $('.medication_result').empty();
+        $('.medication').val('');
+
+
+        $.ajax({
+            type: 'get',
+            url: "/user/get_medication_condition_fex",
+            data: {'name': name},
+
+
+            success: function (response) {
+                $('.medication_qa_result').append(response);
+            }
+        });
+
+
+    });
+
+
+
+    //next question meditation
+    $(document).on('click', '#next_ques_med', function () {
+
+        var total = $(this).attr('total');
+        var current = parseInt($(this).attr('current'));
+        var rand = $(this).attr('rand');
+        var i = 1;
+        var nextindex = 1;
+        var condition = true;
+        var length=0;
+        var conditionmain=false;
+        var selection=$("input[name='selec_condition"+rand+"']:checked").val();
+
+
+        var nextPosition='.current_ques_'+rand+'_' + (current + 1);
+        var currentPosition='.current_ques_'+rand+'_' + (current);
+
+        if($(currentPosition).hasClass('medication_Con'))
+        {
+
+    if (selection){
+
+        var id = $(this).attr('id');
+
+        $.ajax({
+            type: 'get',
+            url: "/user/get_condition_qa_med_length_fex",
+            data: {'id': selection,'rand':rand},
+            async: false,
+
+            success: function (response) {
+
+                length=response;
+            }
+        });
+
+if(length>=1)
+{
+    $.ajax({
+        type: 'get',
+        url: "/user/get_condition_qa_med_fex",
+        data: {'id': selection,'rand':rand},
+        async:false,
+
+        success: function (response) {
+            $('.all_ques_'+rand).hide();
+            $(currentPosition).nextAll().remove();
+            $(currentPosition).after(response);
+
+            questionIndexing(rand);
+            $(nextPosition).show();
+            $(nextPosition).attr('jump', nextindex);
+            $('.next_ques_med' + rand).attr('current',2);
+            $('.back_ques_med' + rand).attr('current', current + 1);
+            $('.start_status_med' + rand).empty().append(2);
+
+
+
+            $('.next_ques_med' + rand).attr('value', 'NEXT');
+
+
+            if(current + 1 == 1 + length) {
+                $('.next_ques_med' + rand).attr('value', 'FINISHED')
+            }
+
+        }
+    });
+}
+else {
+    var message = 'no question found'
+
+
+    $('.toast-body').empty();
+    $('.toast-body').text(message);
+
+    $('.toast').toast({
+
+        delay: 3000
+    });
+    $('.toast').toast('show');
+}
+
+
+
+    }
+    else {
+        var message = 'please select condition.'
+
+        $('.toast-body').empty();
+        $('.toast-body').text(message);
+
+        $('.toast').toast({
+
+            delay: 3000
+        });
+        $('.toast').toast('show');
+        }
+        }
+        else {
+
+
+            if ($(currentPosition).hasClass('yesnoques')) {
+
+                if ($(currentPosition).attr('ifyes') != 0 || $(currentPosition).attr('ifno') !=0) {
+
+                    conditionmain=true;
+
+                }
+            }
+
+            if (current != total || conditionmain==true) {
+
+                $('.all_ques_'+rand).hide();
+
+                if ($(nextPosition).hasClass('childques'+rand+'')) {
+                    if ($(nextPosition).attr('parentanswer') == $(currentPosition).attr('answer')) {
+                        condition = false;
+                        alert(condition);
+                    } else {
+                        $('.childques'+rand).remove();
+                        questionIndexing(rand);
+                    }
+                }
+                if (condition == true) {
+                    if ($(currentPosition).hasClass('yesnoques')) {
+
+                        if ($(currentPosition).attr('ifyes') != 0 && $(currentPosition).attr('answer') == 'yes') {
+
+                            var id = $(currentPosition).attr('ifyes');
+                            $.ajax({
+                                type: 'get',
+                                url: "/user/get_condition_qa_fex_next",
+                                data: {'id': id, 'answer': 'yes','rand':rand},
+                                async: false,
+
+                                success: function (response) {
+                                    //$(response).insertAfter('.current_ques_'+(current));
+                                    $(currentPosition).after(response);
+                                    questionIndexing(rand);
+                                    //  $().next_in().append(response);
+                                }
+                            });
+
+                        } else if ($(currentPosition).attr('ifno') != 0 && $(currentPosition).attr('answer') == 'no') {
+                            var id = $(currentPosition).attr('ifno');
+                            $.ajax({
+                                type: 'get',
+                                url: "/user/get_condition_qa_fex_next",
+                                data: {'id': id, 'answer': 'no','rand':rand},
+                                async: false,
+
+
+                                success: function (response) {
+                                    //$(response).insertAfter('.current_ques_'+(current));
+                                    $(currentPosition).after(response);
+
+                                    questionIndexing(rand);
+                                    //  $().next_in().append(response);
+                                }
+                            });
+                        } else {
+                            nextindex = 1;
+                        }
+
+                    }
+
+                }
+
+
+                $(nextPosition).show();
+                $(nextPosition).attr('jump', nextindex);
+                $(this).attr('current', current + nextindex);
+                $('.back_ques_med' + rand).attr('current', current + nextindex);
+                $('.start_status_med' + rand).empty().append(current + nextindex);
+
+
+                $(this).attr('value', 'NEXT');
+                if(current + nextindex == total) {
+                    $(this).attr('value', 'FINISHED')
+                }
+
+
+            }
+            else {
+                $(this).attr('value', 'FINISHED');
+                $('#con_div_' + rand).children('div:nth-child(2)').hide();
+                $('#con_div_' + rand).find('i.fa-edit').attr('status','hide');
+            }
+        }
+
+    });
+
+
+    $(document).on('click', '#back_ques_med', function () {
+
+        var total = $(this).attr('total');
+        var current = parseInt($(this).attr('current'));
+        var rand = $(this).attr('rand');
+        var nextindex = 1;
+        if (current != 1) {
+
+            $('.all_ques_'+rand).hide();
+
+
+            $('.current_ques_'+rand+'_' + (current - nextindex)).show();
+            $(this).attr('current', current - nextindex);
+            $('.next_ques_med' + rand).attr('current', current - nextindex);
+            $('.start_status_med' + rand).empty().append(current - nextindex);
+            $('.next_ques_med' + rand).attr('value', 'NEXT');
+
+
+        }
 
     });
 

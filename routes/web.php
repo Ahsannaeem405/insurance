@@ -45,13 +45,23 @@ Route::post('/pay',[\App\Http\Controllers\UserController::class,'buy_now_pay']);
 Route::view('/invoice', 'Logged_pages.invoice');
 Route::view('/creditcard', 'Logged_pages.creditcard');
 Route::view('/overview', 'Logged_pages.overview');
+
+
+
 Route::post('/get_quote_fex', [\App\Http\Controllers\FexController::class,'quoter']);
+
+//condition
 Route::get('/get_condition_fex', [\App\Http\Controllers\FexController::class,'condition']);
 Route::get('/get_condition_qa_fex', [\App\Http\Controllers\FexController::class,'condition_qa']);
 Route::get('/get_condition_qa_fex_next', [\App\Http\Controllers\FexController::class,'condition_qa_next']);
 
+//medication
 
+Route::get('/get_medication_fex', [\App\Http\Controllers\FexController::class,'medications']);
+Route::get('/get_medication_condition_fex', [\App\Http\Controllers\FexController::class,'medication_condition']);
 
+    Route::get('/get_condition_qa_med_fex', [\App\Http\Controllers\FexController::class,'condition_qa_med']);
+    Route::get('/get_condition_qa_med_length_fex', [\App\Http\Controllers\FexController::class,'condition_qa_med_len']);
 
 
 });
@@ -75,10 +85,6 @@ Route::prefix('admin')->middleware(['auth','admin'])->group(function () {
 
 
     });
-
-
-
-
 
 
 

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\companies;
 use App\Models\condition;
 use App\Models\conditionQuestion;
+use App\Models\Medication;
 use Illuminate\Http\Request;
 
 class FexController extends Controller
@@ -82,4 +83,55 @@ return view('Logged_pages.response.fex.quoter',compact('data','datanot'));
 
 
  }
+
+ public function medications(Request $request)
+ {
+     $medication=$request->medication;
+     $rec=Medication::where('medication_e','like',"%$medication%")->limit(5)->get()->unique('medication_e');
+
+     return view('Logged_pages.response.fex.medication.medication',compact('rec'));
+ }
+
+
+    public function medication_condition(Request $request)
+    {
+        $rec=Medication::where('medication_e',$request->name)->get();
+
+
+        // dd($rec->conditionQuestions[1]);
+
+       return view('Logged_pages.response.fex.medication.medication_condition',compact('rec'));
+
+
+    }
+
+
+    public function condition_qa_med(Request $request)
+    {
+        $rec=condition::with(['conditionQuestions' => function ($q){
+            $q->with('ifyes');
+            $q->with('ifno');
+        }])->find($request->id);
+        $rand=$request->rand;
+
+
+
+        // dd($rec->conditionQuestions[1]);
+
+        return view('Logged_pages.response.fex.medication.medication_condition_qa',compact('rec','rand'));
+
+
+    }
+
+    public function condition_qa_med_len(Request $request)
+    {
+        $rec=condition::with(['conditionQuestions' => function ($q){
+            $q->with('ifyes');
+            $q->with('ifno');
+        }])->find($request->id);
+
+        $length=Count($rec->conditionQuestions);
+
+        return response()->json($length);
+    }
 }

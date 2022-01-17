@@ -1,17 +1,19 @@
+@if(count($rec->conditionQuestions)!=0)
 
+        @if($rec->conditionQuestions!=null)
 
-
-                @php $i=1; @endphp
-
+                @php $i=2; @endphp
+                @foreach($rec->conditionQuestions as $question)
 
                     @if($question->type_id==1)
 
-                        <div class="current_ques_{{$rand}}_{{$i}} all_ques_{{$rand}} childques{{$rand}}"  rand="{{$rand}}" jump="1" i="{{$i}}" parentanswer="{{$answer}}" @if($i>=2) style="display: none" @endif>
+                        <div class="current_ques_{{$rand}}_{{$i}} all_ques_{{$rand}}" rand={{$rand}} jump="1" i="{{$i}}"  style="display: none" >
                             <h3 class="text-center mt-2">{{$question->question}}</h3>
                             <div class="container">
                                 <div class="row m-0 mt-3 ">
                                     <div class="col-lg-8 d-flex m-auto">
                                         <div class="col-4">
+
                                             <select class="form-control">
                                                 <option value="1">Jan</option>
                                                 <option value="02">Feb</option>
@@ -29,6 +31,7 @@
                                             </select>
                                         </div>
                                         <div class="col-4">
+
                                             <select class="form-control">
                                                 <option value="1">1</option>
                                                 <option value="2">2</option>
@@ -182,8 +185,9 @@
 
 
 
+
                     @elseif($question->type_id==2)
-                        <div class="current_ques_{{$rand}}_{{$i}} all_ques_{{$rand}} yesnoques childques{{$rand}}" rand="{{$rand}}" jump="1" answer="yes" parentanswer="{{$answer}}" ifyes="{{$question->if_yes}}" i="{{$i}}" ifno="{{$question->if_no}}" @if($i>=2) style="display: none" @endif>
+                        <div class="current_ques_{{$rand}}_{{$i}} all_ques_{{$rand}} yesnoques" rand={{$rand}} jump="1" answer="yes" ifyes="{{$question->if_yes}}" i="{{$i}}" ifno="{{$question->if_no}}"  style="display: none" >
                             <h3 class="text-center mt-2">{{$question->question}}</h3>
                             <div class="container">
                                 <div class="row m-0 mt-3">
@@ -210,11 +214,32 @@
 
                     @endif
 
+                    @php ++$i @endphp
+
+                @endforeach
+
+
+
+        @endif
 
 
 
 
+    @else
 
 
+    <script>
+    var    message = 'No condition Question found.'
 
 
+            $('.toast-body').empty();
+            $('.toast-body').text(message);
+
+            $('.toast').toast({
+
+                delay: 3000
+            });
+            $('.toast').toast('show');
+    </script>
+
+@endif

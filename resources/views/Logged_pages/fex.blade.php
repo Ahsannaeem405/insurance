@@ -198,13 +198,22 @@
 
                                 </div>
                                 <br>
-                                <input type="text" style="border-left: 15px solid var(--indigo);" class="form-control"
+                                <input type="text" style="border-left: 15px solid var(--indigo);" class="form-control medication"
                                        placeholder="Enter Medication">
+
+                                <div class="dropdown-container medication_result" style="">
+
+
+
+                                </div>
 
 
                                 <br>
 
                                 <div class="condition_qa_result">
+                                </div>
+
+                                <div class="medication_qa_result">
                                 </div>
 
 

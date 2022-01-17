@@ -18,7 +18,7 @@
 
     </div>
     <div class="dropdown-container mb-5"
-         style="background-color: white;   box-shadow: 0 3px 15px 0 rgb(0 0 0 / 20%);height: 225px ">
+         style="background-color: white;   box-shadow: 0 3px 15px 0 rgb(0 0 0 / 20%);padding:1rem;  ">
         @if($rec->conditionQuestions!=null)
             <div>
                 @php $i=1; @endphp
@@ -204,6 +204,7 @@
 
 
 
+
                     @elseif($question->type_id==2)
                         <div class="current_ques_{{$rand}}_{{$i}} all_ques_{{$rand}} yesnoques" rand={{$rand}} jump="1" answer="yes" ifyes="{{$question->if_yes}}" i="{{$i}}" ifno="{{$question->if_no}}" @if($i>=2) style="display: none" @endif>
                             <h3 class="text-center mt-2">{{$question->question}}</h3>
@@ -256,4 +257,22 @@
 
     </div>
 </div>
+
+    @else
+
+
+    <script>
+    var    message = 'No condition Question found.'
+
+
+            $('.toast-body').empty();
+            $('.toast-body').text(message);
+
+            $('.toast').toast({
+
+                delay: 3000
+            });
+            $('.toast').toast('show');
+    </script>
+
 @endif

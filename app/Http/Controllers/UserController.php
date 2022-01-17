@@ -21,6 +21,7 @@ use App\Models\maleNotSmokerModified;
 use App\Models\maleSmokerGuaranteed;
 use App\Models\maleSmokerLevel;
 use App\Models\maleSmokerModified;
+use App\Models\Medication;
 use App\Models\Setting;
 use App\Models\Subsription;
 use App\Models\User;
@@ -83,7 +84,7 @@ class UserController extends Controller
 
                     $importData_arr = array();
                     $i = 0;
-                    $key_word=conditionQuestion::truncate();
+                    $key_word=Medication::truncate();
                     $i=0;
                     while (($filedata = fgetcsv($file, 1000, ",")) !== FALSE) {
                         $num = count($filedata);
@@ -106,17 +107,19 @@ class UserController extends Controller
                     }
                     fclose($file);
 
+
                     foreach($importData_arr as $importData){
 
-                        $keyword=new conditionQuestion();
-                        $keyword->condition_id=intval(utf8_decode($importData[0]));
-                        $keyword->condition=utf8_decode($importData[1]);
-                        $keyword->question=utf8_decode($importData[2]);
-                        $keyword->question_id=intval(utf8_decode($importData[3]));
-                        $keyword->type_id=intval(utf8_decode($importData[4]));
-                        $keyword->if_yes=intval(utf8_decode($importData[5]));
-                        $keyword->if_no=intval(utf8_decode($importData[6]));
-                        $keyword->save();
+                        if($importData[0]!="") {
+                            $keyword = new Medication();
+                            $keyword->medication_e = utf8_decode(utf8_decode($importData[0]));
+                            $keyword->condition_e = utf8_decode($importData[1]);
+                            $keyword->condition_id = intval(utf8_decode($importData[2]));
+                            $keyword->medication_s = utf8_decode(utf8_decode($importData[3]));
+                            $keyword->condition_s = utf8_decode(utf8_decode($importData[4]));
+                            $keyword->save();
+
+                        }
                     }
 
 
