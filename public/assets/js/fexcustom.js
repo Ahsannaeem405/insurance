@@ -1,5 +1,5 @@
 $(document).ready(function () {
-
+var baseurl='/public';
 //age calculation
     $(document).on('keyup', '#year', function () {
 
@@ -66,7 +66,7 @@ $(document).ready(function () {
 
             $.ajax({
                 type: 'POST',
-                url: "/user/get_quote_fex",
+                url: ""+baseurl+"/user/get_quote_fex",
                 data: formData,
                 cache: false,
                 contentType: false,
@@ -88,7 +88,7 @@ $(document).ready(function () {
 
         $.ajax({
             type: 'get',
-            url: "/user/get_condition_fex",
+            url: ""+baseurl+"/user/get_condition_fex",
             data: {'condition': condition},
 
 
@@ -112,7 +112,7 @@ $(document).ready(function () {
 
         $.ajax({
             type: 'get',
-            url: "/user/get_condition_qa_fex",
+            url: ""+baseurl+"/user/get_condition_qa_fex",
             data: {'id': id},
 
 
@@ -169,7 +169,7 @@ conditionmain=true;
                         var id = $(currentPosition).attr('ifyes');
                         $.ajax({
                             type: 'get',
-                            url: "/user/get_condition_qa_fex_next",
+                            url: ""+baseurl+"/user/get_condition_qa_fex_next",
                             data: {'id': id, 'answer': 'yes','rand':rand},
                             async: false,
 
@@ -185,7 +185,7 @@ conditionmain=true;
                         var id = $(currentPosition).attr('ifno');
                         $.ajax({
                             type: 'get',
-                            url: "/user/get_condition_qa_fex_next",
+                            url: ""+baseurl+"/user/get_condition_qa_fex_next",
                             data: {'id': id, 'answer': 'no','rand':rand},
                             async: false,
 
@@ -338,7 +338,7 @@ var i=0;
 
         $.ajax({
             type: 'get',
-            url: "/user/get_medication_fex",
+            url: ""+baseurl+"/user/get_medication_fex",
             data: {'medication': medication},
 
 
@@ -364,7 +364,7 @@ var i=0;
 
         $.ajax({
             type: 'get',
-            url: "/user/get_medication_condition_fex",
+            url: ""+baseurl+"/user/get_medication_condition_fex",
             data: {'name': name},
 
 
@@ -404,7 +404,7 @@ var i=0;
 
         $.ajax({
             type: 'get',
-            url: "/user/get_condition_qa_med_length_fex",
+            url: ""+baseurl+"/user/get_condition_qa_med_length_fex",
             data: {'id': selection,'rand':rand},
             async: false,
 
@@ -418,7 +418,7 @@ if(length>=1)
 {
     $.ajax({
         type: 'get',
-        url: "/user/get_condition_qa_med_fex",
+        url: ""+baseurl+"/user/get_condition_qa_med_fex",
         data: {'id': selection,'rand':rand},
         async:false,
 
@@ -509,7 +509,7 @@ else {
                             var id = $(currentPosition).attr('ifyes');
                             $.ajax({
                                 type: 'get',
-                                url: "/user/get_condition_qa_fex_next",
+                                url: ""+baseurl+"/user/get_condition_qa_fex_next",
                                 data: {'id': id, 'answer': 'yes','rand':rand},
                                 async: false,
 
@@ -525,7 +525,7 @@ else {
                             var id = $(currentPosition).attr('ifno');
                             $.ajax({
                                 type: 'get',
-                                url: "/user/get_condition_qa_fex_next",
+                                url: ""+baseurl+"/user/get_condition_qa_fex_next",
                                 data: {'id': id, 'answer': 'no','rand':rand},
                                 async: false,
 
