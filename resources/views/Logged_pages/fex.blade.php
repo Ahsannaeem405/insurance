@@ -238,7 +238,7 @@
                                             <option selected value="levels">Level</option>
                                             <option value="modifieds">Graded/Modified</option>
                                             <option value="guaranteeds">Guaranteed</option>
-                                            <option value="limiteds">Limited Pay</option>
+{{--                                            <option value="limiteds">Limited Pay</option>--}}
                                         </select>
                                     </div>
                                 </div>
