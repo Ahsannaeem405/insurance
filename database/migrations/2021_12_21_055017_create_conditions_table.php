@@ -26,17 +26,17 @@ class CreateConditionsTable extends Migration
             $table->text('allowed')->nullable();
             $table->text('decline')->nullable();
 
-            $table->text('treatment_allowed_from')->nullable();
-            $table->text('treatment_allowed_to')->nullable();
+            $table->integer('treatment_allowed_from')->nullable();
+            $table->integer('treatment_allowed_to')->nullable();
 
-            $table->text('diagnose_allowed_from')->nullable();
-            $table->text('diagnose_allowed_to')->nullable();
+            $table->integer('diagnose_allowed_from')->nullable();
+            $table->integer('diagnose_allowed_to')->nullable();
 
-            $table->text('treatment_decline_from')->nullable();
-            $table->text('treatment_decline_to')->nullable();
+            $table->integer('treatment_decline_from')->nullable();
+            $table->integer('treatment_decline_to')->nullable();
 
-            $table->text('diagnose_decline_from')->nullable();
-            $table->text('diagnose_decline_to')->nullable();
+            $table->integer('diagnose_decline_from')->nullable();
+            $table->integer('diagnose_decline_to')->nullable();
 
 
             $table->text('category')->nullable();
@@ -47,6 +47,7 @@ class CreateConditionsTable extends Migration
             $table->text('agent_compensation_e')->nullable();
             $table->text('agent_compensation_s')->nullable();
             $table->text('coverage_type')->nullable();
+            $table->text('message')->nullable();
             $table->timestamps();
         });
     }

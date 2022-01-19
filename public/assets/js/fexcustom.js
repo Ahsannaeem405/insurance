@@ -60,7 +60,7 @@ $(document).ready(function () {
 
 
         if (check == true) {
-            $('#get_quote_fex').prop('disabled', true);
+       //     $('#get_quote_fex').prop('disabled', true);
             var formData = new FormData((document.getElementById('form1')));
 
 
@@ -134,7 +134,6 @@ $(document).ready(function () {
         var nextindex = 1;
         var conditionmain = false;
         var condition = true;
-
        var nextPosition='.current_ques_'+rand+'_' + (current + 1);
        var currentPosition='.current_ques_'+rand+'_' + (current);
 
