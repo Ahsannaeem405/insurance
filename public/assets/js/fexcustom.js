@@ -1,6 +1,6 @@
 $(document).ready(function () {
-var baseurl='';
-// var baseurl='/public';
+//var baseurl='';
+ var baseurl='/public';
 
 
 //age calculation
