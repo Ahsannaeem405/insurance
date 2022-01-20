@@ -22,24 +22,20 @@ class FexController extends Controller
         if ($type == 'levels') {
 
             $userselection = 1;
-        }
-        elseif ($type == 'modifieds') {
+        } elseif ($type == 'modifieds') {
             $userselection = 2;
 
-        }
-        elseif ($type == 'guaranteeds') {
+        } elseif ($type == 'guaranteeds') {
             $userselection = 3;
 
-        }
-        elseif ($type == 'limiteds') {
+        } elseif ($type == 'limiteds') {
             $userselection = 4;
 
         }
 
 
-
         $year = intval(date("Y"));
-        $testing_array=array();
+        $testing_array = array();
 
         $table = $gender . '_' . $cigrate . '_' . $type;
 
@@ -69,11 +65,11 @@ class FexController extends Controller
 //dd($treatment);
 
 
-                    if (!isset($treatment)){
-                        $treatment=0;
+                    if (!isset($treatment)) {
+                        $treatment = 0;
                     }
-                    if (!isset($diagnose)){
-                        $diagnose=0;
+                    if (!isset($diagnose)) {
+                        $diagnose = 0;
                     }
 
 
@@ -147,40 +143,35 @@ class FexController extends Controller
                             if ($cond->category == 'Level') {
                                 $cat = 'levels';
                                 $cat2 = 1;
-                            }
-                            elseif ($cond->category == 'Graded') {
+                            } elseif ($cond->category == 'Graded') {
                                 $cat = 'modifieds';
                                 $cat2 = 2;
-                            }
-                            elseif ($cond->category == 'Guaranteed') {
+                            } elseif ($cond->category == 'Guaranteed') {
                                 $cat = 'guaranteeds';
                                 $cat2 = 3;
-                            }
-                            elseif ($cond->category == 'Limited') {
+                            } elseif ($cond->category == 'Limited') {
                                 $cat = 'limiteds';
                                 $cat2 = 4;
-                            }
-                            else{
-                                $cat=$type;
-                                $cat2=$userselection;
+                            } else {
+                                $cat = $type;
+                                $cat2 = $userselection;
                             }
 
                             $table2 = $gender . '_' . $cigrate . '_' . $cat;
                             $rec = \DB::table($table2)->where('Age', $request->age)->where('Amount', $request->face_amount)->where('company_id', $com->id)->first();
-
+                            //if rec yes
                             if ($rec) {
-                                //yes
-                                if (isset($testing_array['company_status' . $com->id . '']) ) {
-                                    if ( $testing_array['company_status' . $com->id . '']==1) {
-                                        if ($testing_array['company_cat' . $com->id . ''] < $cat2)
-                                        {
 
-                                        $testing_array['condition_record' . $com->id . ''] = $cond;
-                                        $testing_array['company_record' . $com->id . ''] = $rec;
-                                        $testing_array['company_status' . $com->id . ''] = 1;
-                                        $testing_array['company_cat' . $com->id . ''] = $cat2;
+                                if (isset($testing_array['company_status' . $com->id . ''])) {
+                                    if ($testing_array['company_status' . $com->id . ''] == 1) {
+                                        if ($testing_array['company_cat' . $com->id . ''] < $cat2) {
 
-                                    }
+                                            $testing_array['condition_record' . $com->id . ''] = $cond;
+                                            $testing_array['company_record' . $com->id . ''] = $rec;
+                                            $testing_array['company_status' . $com->id . ''] = 1;
+                                            $testing_array['company_cat' . $com->id . ''] = $cat2;
+
+                                        }
                                     }
                                 } else {
                                     $testing_array['condition_record' . $com->id . ''] = $cond;
@@ -191,159 +182,201 @@ class FexController extends Controller
 
 
                             }
-
+                            //if no rec
                             else {
 
                                 if (!isset($testing_array['company_status' . $com->id . ''])) {
                                     $testing_array['company_record' . $com->id . ''] = $com;
                                     $testing_array['company_status' . $com->id . ''] = 0;
-                                }
-                                else{
-                                    unset($testing_array['condition_record' . $com->id . '']);
-                                    unset($testing_array['company_cat' . $com->id . '']);
+                                    $testing_array['condition_record' . $com->id . ''] = $cond;
+                                    $testing_array['company_cat' . $com->id . ''] = $cat2;
+
+
+                                } else {
+
+
                                     $testing_array['company_status' . $com->id . ''] = 0;
+                                    $testing_array['condition_record' . $com->id . ''] = $cond;
+                                    $testing_array['company_cat' . $com->id . ''] = $cat2;
+
+
 
                                 }
                             }
 
                         }
+                        //wrong cond
                         else {
 
 
                             if (!isset($testing_array['company_status' . $com->id . ''])) {
+
                                 $testing_array['company_record' . $com->id . ''] = $com;
                                 $testing_array['company_status' . $com->id . ''] = 0;
-                            }
-                            else{
-                                unset($testing_array['condition_record' . $com->id . '']);
-                                unset($testing_array['company_cat' . $com->id . '']);
+                                $testing_array['company_cat' . $com->id . ''] = $userselection;
+
+                                if ($cond2) {
+                                    $testing_array['condition_record' . $com->id . ''] = $cond2;
+
+                                } elseif ($cond) {
+                                    $testing_array['condition_record' . $com->id . ''] = $cond;
+
+                                }
+
+                            } else {
+
                                 $testing_array['company_status' . $com->id . ''] = 0;
+                                $testing_array['company_cat' . $com->id . ''] = $userselection;
+
+                                if ($cond2) {
+                                    $testing_array['condition_record' . $com->id . ''] = $cond2;
+
+                                } elseif ($cond) {
+                                    $testing_array['condition_record' . $com->id . ''] = $cond;
+
+                                }
+
 
                             }
 
                         }
-unset($treatment);
-unset($diagnose);
+                        unset($treatment);
+                        unset($diagnose);
                     }
                 }
             }
 
-
+//dd($testing_array);
 
             foreach ($companies as $com) {
 
-                if (isset($testing_array['company_status'.$com->id.'']))
-                {
-                if($testing_array['company_status'.$com->id.'']==1){
-                    $data[]=array(
-                        'data'=>$testing_array['company_record'.$com->id.'']
-                    );
-                }
-                else{
-                    $datanot[]=array(
-                        'data'=>$com
-                    );
-                }
-                }
-                else{
-                    $datanot[]=array(
-                        'data'=>$com
+                if (isset($testing_array['company_status' . $com->id . ''])) {
+                    if ($testing_array['company_status' . $com->id . ''] == 1) {
+                        $data[] = array(
+                            'data' => $testing_array['company_record' . $com->id . ''],
+                            'conditiondata' => $testing_array['condition_record' . $com->id . ''],
+                            'level'=>$testing_array['company_cat'. $com->id . ''],
+                        );
+                    } else {
+                        $datanot[] = array(
+                            'data' => $com,
+                            'conditiondata' => isset($testing_array['condition_record' . $com->id . '']) ? $testing_array['condition_record' . $com->id . ''] : null,
+                            'level'=>$testing_array['company_cat'. $com->id . ''],
+
+                            );
+                    }
+                } else {
+                    $datanot[] = array(
+                        'data' => $com,
+                        'conditiondata' => isset($testing_array['condition_record' . $com->id . '']) ? $testing_array['condition_record' . $com->id . ''] : null,
+                        'level'=>$testing_array['company_cat'. $com->id . ''],
                     );
                 }
             }
 
 
-            return view('Logged_pages.response.fex.quoter',compact('data','datanot'));
+
+            $datanot = collect($datanot);
+            $datanot = $datanot->sortByDesc('level');
+            $datanot->values()->all();
 
 
+            $data = collect($data);
+            $data = $data->sortByDesc('level');
+            $data->values()->all();
+
+
+
+            return view('Logged_pages.response.fex.quoter', compact('data', 'datanot'));
+
+
+        } else {
+
+
+            foreach ($companies as $com) {
+                $rec = \DB::table($table)->where('Age', $request->age)->where('Amount', $request->face_amount)->where('company_id', $com->id)->first();
+
+                if ($rec) {
+                    $data[] = array(
+
+                        'data' => $rec
+                    );
+                } else {
+                    $datanot[] = array(
+
+                        'data' => $com
+                    );
+                }
+
+            }
+
+            return view('Logged_pages.response.fex.quoter', compact('data', 'datanot'));
         }
 
-
-
-
-else{
-
-
-    foreach ($companies as $com)
-    {
-        $rec=\DB::table($table)->where('Age',$request->age)->where('Amount',$request->face_amount)->where('company_id',$com->id)->first();
-
-        if($rec)
-        {
-            $data[]=array(
-
-                'data'=>$rec
-            );
-        }
-        else{
-            $datanot[]=array(
-
-                'data'=>$com
-            );
-        }
 
     }
 
-    return view('Logged_pages.response.fex.quoter',compact('data','datanot'));
-}
+    public function sort($a, $b)
+    {
+        if($a->level == $b->level) {
+            return 0 ;
+        }
+        return ($a->level < $b->level) ? -1 : 1;
+    }
 
 
- }
+    public function condition(Request $request)
+    {
+
+        $condition = $request->condition;
+        $rec = condition::where('condition_e', 'like', "%$condition%")->limit(5)->get()->unique('condition_e');
+
+        return view('Logged_pages.response.fex.condition', compact('rec'));
+
+    }
+
+    public function condition_qa(Request $request)
+    {
+        $rec = condition::with(['conditionQuestions' => function ($q) {
+            $q->with('ifyes');
+            $q->with('ifno');
+        }])->find($request->id);
 
 
- public function condition(Request $request)
- {
-
-     $condition=$request->condition;
-     $rec=condition::where('condition_e','like',"%$condition%")->limit(5)->get()->unique('condition_e');
-
-     return view('Logged_pages.response.fex.condition',compact('rec'));
-
- }
-
- public function condition_qa(Request $request)
- {
-     $rec=condition::with(['conditionQuestions' => function ($q){
-         $q->with('ifyes');
-         $q->with('ifno');
-     }])->find($request->id);
+        return view('Logged_pages.response.fex.condition_qa', compact('rec'));
 
 
+    }
 
-     return view('Logged_pages.response.fex.condition_qa',compact('rec'));
-
-
- }
-
- public function condition_qa_next(Request $request)
- {
+    public function condition_qa_next(Request $request)
+    {
 
 
-     $question=conditionQuestion::where('question_id',$request->id)->first();
-     $answer=$request->answer;
-     $rand=$request->rand;
-     return view('Logged_pages.response.fex.condition_qa_next',compact('question','answer','rand'));
+        $question = conditionQuestion::where('question_id', $request->id)->first();
+        $answer = $request->answer;
+        $rand = $request->rand;
+        return view('Logged_pages.response.fex.condition_qa_next', compact('question', 'answer', 'rand'));
 
 
- }
+    }
 
- public function medications(Request $request)
- {
-     $medication=$request->medication;
-     $rec=Medication::where('medication_e','like',"%$medication%")->limit(5)->get()->unique('medication_e');
+    public function medications(Request $request)
+    {
+        $medication = $request->medication;
+        $rec = Medication::where('medication_e', 'like', "%$medication%")->limit(5)->get()->unique('medication_e');
 
-     return view('Logged_pages.response.fex.medication.medication',compact('rec'));
- }
+        return view('Logged_pages.response.fex.medication.medication', compact('rec'));
+    }
 
 
     public function medication_condition(Request $request)
     {
-        $rec=Medication::where('medication_e',$request->name)->get();
+        $rec = Medication::where('medication_e', $request->name)->get();
 
 
         // dd($rec->conditionQuestions[1]);
 
-       return view('Logged_pages.response.fex.medication.medication_condition',compact('rec'));
+        return view('Logged_pages.response.fex.medication.medication_condition', compact('rec'));
 
 
     }
@@ -351,29 +384,28 @@ else{
 
     public function condition_qa_med(Request $request)
     {
-        $rec=condition::with(['conditionQuestions' => function ($q){
+        $rec = condition::with(['conditionQuestions' => function ($q) {
             $q->with('ifyes');
             $q->with('ifno');
         }])->find($request->id);
-        $rand=$request->rand;
-
+        $rand = $request->rand;
 
 
         // dd($rec->conditionQuestions[1]);
 
-        return view('Logged_pages.response.fex.medication.medication_condition_qa',compact('rec','rand'));
+        return view('Logged_pages.response.fex.medication.medication_condition_qa', compact('rec', 'rand'));
 
 
     }
 
     public function condition_qa_med_len(Request $request)
     {
-        $rec=condition::with(['conditionQuestions' => function ($q){
+        $rec = condition::with(['conditionQuestions' => function ($q) {
             $q->with('ifyes');
             $q->with('ifno');
         }])->find($request->id);
 
-        $length=Count($rec->conditionQuestions);
+        $length = Count($rec->conditionQuestions);
 
         return response()->json($length);
     }

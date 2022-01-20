@@ -1,33 +1,104 @@
+<style>
+   .popup{
+       z-index: 1000;
+       display: none;
+       width: 200px;
+       margin-left: -75px;
+       background-color: white;
+       box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+       padding: 10px;
+   }
 
+</style>
 
 @foreach($data as $record)
 
     <div class="row w-100 data mr-0 ml-0">
         <div class="col-lg-3  col-12 center">
             <p>{{$record['data']->Company}}</p>
-{{--            <img src="{{asset('images/transam.png')}}" style="width: 220px;" alt="">--}}
+            {{--            <img src="{{asset('images/transam.png')}}" style="width: 220px;" alt="">--}}
         </div>
         <div class="col-lg-3  col-12 center v_class" style="">
             <p>{{$record['data']->price}}</p>
         </div>
-        <div class="col-lg-3  col-12 center v_class" >
+        <div class="col-lg-3  col-12 center v_class">
             <p>{{$record['data']->Tagline}}</p>
         </div>
-        <div class="col-lg-3  col-12 center v_class" >
-           &nbsp;<i class="fas fa-chevron-down" id="{{$record['data']->id}}"></i>
+        <div class="col-lg-3  col-12 center v_class d-flex">
+
+@if(isset($record['conditiondata']))
+
+                @if($record['conditiondata']->agent_compensation_e!="")
+                    <div class="position-relative p-2">
+
+                        <span class="infoplan"  alt="" style="cursor: pointer;font-size: 27px;color: green">$</span>
+
+                        <div class="text-center position-absolute popup">
+                            <div class="">
+                                <div class="font-1p2 semi-bold black font-weight-bold ">Why?</div>
+                                <div class="mt-1"><p>{{$record['conditiondata']->agent_compensation_e}} </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                @endif
+
+    @if($record['conditiondata']->plan_info_e!="")
+            <div class="position-relative p-2">
+
+                <img class="infoplan" src="{{asset('images/info.png')}}" alt="" style="cursor: pointer">
+
+                <div class="text-center position-absolute popup"
+                     style="">
+                    <div class="">
+                        <div class="font-1p2 semi-bold black font-weight-bold">Plan Info</div>
+                        <div class="mt-1"><p>{{$record['conditiondata']->plan_info_e}} </p>
+                           </div>
+                    </div>
+                </div>
+            </div>
+            @endif
+
+        @if($record['conditiondata']->reason_e!="")
+            <div class="position-relative p-2">
+
+                <img class="infoplan" src="{{asset('images/question-mark.png')}}" alt="" style="cursor: pointer;width: 30px">
+
+                <div class="text-center position-absolute popup"
+                     style="">
+                    <div class="">
+                        <div class="font-1p2 semi-bold black font-weight-bold ">Why?</div>
+                        <div class="mt-1"><p>{{$record['conditiondata']->reason_e}} </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        @endif
+
+
+
+
+            @endif
+
+{{--            &nbsp;<i class="fas fa-chevron-down p-2" id="{{$record['data']->id}}"></i>--}}
+            <button class="btn btn-warning m-auto" style="color: white">compare</button>
+
+
+
+
         </div>
 
-       <div class="row div_show{{$record['data']->id}} div_hide  w-100" style="display:none;" >
-        <div class="col-lg-12 text-center" style="padding:10px">
-            <p>Annual Rate: $168.20</p>
-            <p>+Accidental Death Monthly Rate: $16.12</p>
-            <p>+Accidental Death Annual Rate: $183.20</p>
-        </div>
+        <div class="row div_show{{$record['data']->id}} div_hide  w-100" style="display:none;">
+{{--            <div class="col-lg-12 text-center" style="padding:10px">--}}
+{{--                <p>Annual Rate: $168.20</p>--}}
+{{--                <p>+Accidental Death Monthly Rate: $16.12</p>--}}
+{{--                <p>+Accidental Death Annual Rate: $183.20</p>--}}
+{{--            </div>--}}
 
-       </div>
+        </div>
     </div>
 
-    @endforeach
+@endforeach
 
 
 
@@ -35,11 +106,30 @@
 @foreach($datanot as $record)
 
     <div class="row w-100 data mr-0 ml-0">
-        <div class="col-lg-3  col-12 center">
-            <p>{{$record['data']->name}}</p>
-            {{--            <img src="{{asset('images/transam.png')}}" style="width: 220px;" alt="">--}}
+        <div class="col-lg-12  col-12 ">
+            <p style="color:lightgray;">{{$record['data']->name}}</p>
+
+            @if(isset($record['conditiondata']))
+
+                @if($record['conditiondata']->reason_e!="")
+                    <div class="position-relative p-2">
+                        <img class="" src="{{asset('images/question-mark.png')}}" alt="" style="width: 22px">
+
+<span style="color:lightgray;">{{$record['conditiondata']->reason_e}} {{', Decline'}}</span>
+
+                    </div>
+                @endif
+
+
+
+
+
+
+            @endif
         </div>
 
     </div>
 
 @endforeach
+
+
