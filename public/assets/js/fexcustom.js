@@ -1,5 +1,8 @@
 $(document).ready(function () {
-var baseurl='/public';
+var baseurl='';
+// var baseurl='/public';
+
+
 //age calculation
     $(document).on('keyup', '#year', function () {
 

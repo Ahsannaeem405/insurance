@@ -67,12 +67,15 @@ class FexController extends Controller
                         }
                     }
 //dd($treatment);
+
+
                     if (!isset($treatment)){
                         $treatment=0;
                     }
                     if (!isset($diagnose)){
                         $diagnose=0;
                     }
+
 
                     if (isset($treatment) && isset($diagnose)) {
 

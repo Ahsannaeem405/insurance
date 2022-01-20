@@ -45,6 +45,11 @@
             </li>
 
 
+            <li class="@yield('upload')"><a href="{{url('/admin/upload')}}"><i class="fas fa-cog"></i></i><span class="menu-title" data-i18n="profile">Upload Data</span></a>
+
+
+            </li>
+
 
 
 

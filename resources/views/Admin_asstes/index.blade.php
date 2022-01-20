@@ -14,7 +14,7 @@
                             <i class="feather icon-users text-primary font-medium-5"></i>
                         </div>
                     </div>
-                    <h2 class="text-bold-700 mt-1">{{\App\Models\User::count()}}</h2>
+                    <h2 class="text-bold-700 mt-1">{{$user_all}}</h2>
                     <p class="mb-0">Users</p>
                 </div>
                 <div class="card-content">
@@ -31,7 +31,7 @@
                             <i class="feather icon-shopping-cart text-danger font-medium-5"></i>
                         </div>
                     </div>
-                    <h2 class="text-bold-700 mt-1">{{\App\Models\Subsription::whereMonth('created_at', date('m'))->count()}}</h2>
+                    <h2 class="text-bold-700 mt-1">{{$monthy_sub}}</h2>
                     <p class="mb-0">Monthly Subscribers</p>
                 </div>
                 <div class="card-content">
@@ -48,7 +48,7 @@
                         </div>
                     </div>
 
-                    <h2 class="text-bold-700 mt-1">$ {{\App\Models\Subsription::whereMonth('created_at', date('m'))->sum('price')}}</h2>
+                    <h2 class="text-bold-700 mt-1">$ {{$revenu_total}}</h2>
                     <p class="mb-0">{{date('M')}} revenue</p>
                 </div>
                 <div class="card-content">
@@ -66,7 +66,7 @@
                             <i class="feather icon-shopping-cart text-danger font-medium-5"></i>
                         </div>
                     </div>
-                    <h2 class="text-bold-700 mt-1">{{\App\Models\User::where('role','user')->where('status',1)->count()}}/{{\App\Models\User::where('role','user')->count()}}</h2>
+                    <h2 class="text-bold-700 mt-1">{{$sub_total}}/{{$user_all}}</h2>
                     <p class="mb-0"> Subscribers</p>
                 </div>
                 <div class="card-content">

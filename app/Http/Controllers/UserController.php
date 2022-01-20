@@ -49,8 +49,9 @@ class UserController extends Controller
 
     public function import_data(Request $request)
     {
-        if ($request->hasFile('file')) {
-            $file = $request->file('file');
+
+        if ($request->hasFile('conditions')) {
+            $file = $request->file('conditions');
 
             // File Details
             $filename = $file->getClientOriginalName() . time();
@@ -110,7 +111,7 @@ class UserController extends Controller
                     foreach ($importData_arr as $importData) {
 
                         if ($importData[0] != "") {
-                            $keyword = new condition();
+                            $keyword = new conditions();
                             $keyword->condition_e = utf8_decode($importData[0]);
                             $keyword->condition_id = intval($importData[1]);
                             $keyword->condition_s = utf8_decode(($importData[2]));
@@ -259,7 +260,6 @@ class UserController extends Controller
     public function buy_now()
     {
         $price = Setting::first();
-
         return view('Logged_pages.stripe', compact('price'));
     }
 

@@ -82,6 +82,8 @@ Route::prefix('admin')->middleware(['auth','admin'])->group(function () {
     Route::post('/coupan/edit/{id}', [\App\Http\Controllers\AdminController::class,'coupon_edit']);
     Route::post('/update/setting', [\App\Http\Controllers\AdminController::class,'update_setting']);
     Route::get('/profile', [\App\Http\Controllers\AdminController::class,'profile']);
+    Route::get('/upload', [\App\Http\Controllers\AdminController::class,'admin_upload']);
+    Route::post('upload/data', [\App\Http\Controllers\AdminController::class,'upload_data']);
 
 
     });

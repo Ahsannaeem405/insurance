@@ -106,7 +106,6 @@ $user->role='user';
     }
     else{
         $user->register = 14;
-
     }
 $user->save();
 
