@@ -11,13 +11,67 @@ use Illuminate\Http\Request;
 
 class FexController extends Controller
 {
+    public function compare(Request $request)
+    {
+        $companies=companies::all();
+if($request->gender)
+{
+    $gender=$request->gender;
+}
+else{
+    $gender='male';
+}
+
+        if($request->age)
+        {
+            $age=$request->age;
+        }
+        else{
+            $age=22;
+        }
+
+        if($request->year)
+        {
+            $year=$request->year;
+        }
+        else{
+            $year=1999;
+        }
+
+
+        return view('Logged_pages.fex.compare',compact('companies','request','age','gender','year'));
+    }
+
+    public function compare_fex(Request $request)
+    {
+
+        $gender = $request->gender;
+        $cigrate = $request->cigrate;
+        $type = $request->type;
+        $company_id=intval($request->company);
+
+
+
+        $table = $gender . '_' . $cigrate . '_' . $type;
+
+        $rec1 = \DB::table($table)->where('Age', $request->age)->where('Amount', $request->face_amount1)->where('company_id', $company_id)->first();
+        $rec2 = \DB::table($table)->where('Age', $request->age)->where('Amount', $request->face_amount2)->where('company_id', $company_id)->first();
+        $rec3 = \DB::table($table)->where('Age', $request->age)->where('Amount', $request->face_amount3)->where('company_id', $company_id)->first();
+
+        return view('Logged_pages.response.fex.compare.compare',compact('rec1','rec2','rec3'));
+    }
     public function quoter(Request $request)
     {
 
 //dd($request->input());
         $gender = $request->gender;
+        $age=$request->age;
         $cigrate = $request->cigrate;
         $type = $request->type;
+        $face_amount = $request->face_amount;
+        $year_data=$request->year;
+
+
 
         if ($type == 'levels') {
 
@@ -287,7 +341,7 @@ class FexController extends Controller
 
 
 
-            return view('Logged_pages.response.fex.quoter', compact('data', 'datanot'));
+            return view('Logged_pages.response.fex.quoter', compact('data', 'datanot','age','gender','face_amount','type','cigrate','year_data'));
 
 
         } else {
@@ -310,19 +364,13 @@ class FexController extends Controller
 
             }
 
-            return view('Logged_pages.response.fex.quoter', compact('data', 'datanot'));
+            return view('Logged_pages.response.fex.quoter', compact('data', 'datanot','age','gender','face_amount','type','cigrate','year_data'));
         }
 
 
     }
 
-    public function sort($a, $b)
-    {
-        if($a->level == $b->level) {
-            return 0 ;
-        }
-        return ($a->level < $b->level) ? -1 : 1;
-    }
+
 
 
     public function condition(Request $request)

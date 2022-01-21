@@ -1,6 +1,6 @@
 @extends('MainLayout.header')
 @section('title')
-    <title>Fex</title>
+    <title>Fex Compare</title>
 @endsection
 <style>
     .table {
@@ -156,19 +156,7 @@
 
 
     <div class="container-fluid" style="min-height: 500px;padding-bottom:100px;">
-        <ul class="nav nav-tabs" role="tablist">
-            <li class="nav-item">
-                <a class="nav-link active" href="#Quoter" role="tab" data-toggle="tab">Quoter</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#Quotecompare" role="tab" data-toggle="tab">Quote Compare</a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link" href="#setting" role="tab" data-toggle="tab">Settings</a>
-            </li>
-
-        </ul>
+    @include('Logged_pages.fex.layout.layout')
 
         <!-- Tab panes -->
         <div class="tab-content">
@@ -179,73 +167,76 @@
 
 
                         <center>
-                            <h3 style="color: rgb(52, 8, 86)">{{__('profile.Get a Final Expense Quote')}}</h3>
+                            <h3 style="color: rgb(52, 8, 86)">{{__('profile.Compare Final Expense Quotes')}}</h3>
                         </center>
                         <div class="row" style="margin-top: 40px;">
 
                             <div class="col-lg-6 col-12">
                                 <h4>{{__('profile.Drug and Health Information')}}</h4><br>
-                                <input type="text"  style="border-left: 15px solid var(--orange);"
-                                       class="form-control condition"
-                                       placeholder="Enter Health Condition">
 
 
-                                <div class="dropdown-container condition_result" style="">
-
-
-
-
-
-                                </div>
-                                <br>
-                                <input type="text" style="border-left: 15px solid var(--indigo);" class="form-control medication"
-                                       placeholder="Enter Medication">
-
-                                <div class="dropdown-container medication_result" style="">
-
-
-
-                                </div>
-
-
-                                <br>
-
-                                <div class="condition_qa_result">
-                                </div>
-
-                                <div class="medication_qa_result">
-                                </div>
-
-
-
-
-
-                            </div>
-                            <div class="col-lg-6 col-12" >
-                                <h5>{{__('Coverage Options.TERM')}}</h5>
                                 <div class="row" style="margin-top: 40px;">
-                                    <div class="col-lg-5">
-                                        <p>{{'Face Amount'}}</p>
-                                        <input type="number" class="form-control" id="face_amount1" name="face_amount"
+
+
+                                    <div class="col-lg-3 ml-lg-5">
+
+                                        <input type="number" class="form-control" value="{{$request->face}}" id="face_amount1" name="face_amount1"
+                                               placeholder="Face Amount">
+
+                                    </div>
+                                    <span class="text-center">or</span>
+                                    <div class="col-lg-3">
+
+                                        <input type="number" class="form-control" id="face_amount2" name="face_amount2"
                                                placeholder="Face Amount">
                                     </div>
-                                    <div class="col-lg-5"></div>
+                                    <span>or</span>
+                                    <div class="col-lg-3">
 
-                                    <div class="col-lg-5" style="margin-top: 20px;">
+                                        <input type="number" class="form-control" id="face_amount3" name="face_amount3"
+                                               placeholder="Face Amount">
+                                    </div>
+
+                                    <br>
+                                    <br>
+                                    <br>
+
+
+                                    <div class="col-lg-5" style="margin-top: 20px;display: block">
                                         <label for="">{{__('profile.Coverage Type:')}}</label>
 
                                         <select name="type" class="form-control">
-                                            <option selected value="levels">Level</option>
-                                            <option value="modifieds">Graded/Modified</option>
-                                            <option value="guaranteeds">Guaranteed</option>
-{{--                                            <option value="limiteds">Limited Pay</option>--}}
+                                            <option @if($request->type=="levels") selected @endif value="levels">Level</option>
+                                            <option @if($request->type=="modifieds") selected @endif value="modifieds">Graded/Modified</option>
+                                            <option @if($request->type=="guaranteeds") selected @endif value="guaranteeds">Guaranteed</option>
+                                            {{--                                            <option value="limiteds">Limited Pay</option>--}}
+                                        </select>
+                                    </div>
+
+
+                                    <div class="col-lg-5" style="margin-top: 20px;">
+                                        <label for="">{{__('profile.Company:')}}</label>
+
+                                        <select name="company" class="form-control">
+                                            @foreach($companies as $company)
+
+
+                                            <option @if($request->company==$company->id) selected @endif  value="{{$company->id}}">{{$company->name}}</option>
+                                            @endforeach
+                                            {{--                                            <option value="limiteds">Limited Pay</option>--}}
                                         </select>
                                     </div>
                                 </div>
                                 <br>
 
 
-                                <input type="hidden" id="gender" name="gender" value="male">
+                            </div>
+                            <div class="col-lg-6 col-12" >
+                                <h5>{{__('profile.About the client')}}</h5>
+
+
+
+                                <input type="hidden" id="gender" name="gender" value="{{$gender}}">
                                 <div class="row my-5">
                                     <div class="col-lg-1 col-2">
 
@@ -255,7 +246,7 @@
                                     <div class="col-5 text-center ">
                                         <div class="col-sm-12 p-0" style="margin: auto;cursor: pointer">
                                             <p class="p-2 gender" data="male"
-                                               style="border: 1px solid #22339e;border-radius: 10px;color: white;background-color:#22339e  ">
+                                               style="@if($gender=='male') border: 1px solid #22339e;border-radius: 10px;color: white;background-color:#22339e @else  border: 1px solid #22339e;border-radius: 10px  @endif ">
                                                 Male</p>
                                         </div>
                                     </div>
@@ -263,7 +254,7 @@
                                     <div class="col-5 text-center">
                                         <div class="col-sm-12 p-0" style="margin: auto;cursor: pointer">
                                             <p class="p-2 gender" data="female"
-                                               style=" border: 1px solid #22339e;border-radius: 10px  ">
+                                               style="  @if($gender=='female') border: 1px solid #22339e;border-radius: 10px;color: white;background-color:#22339e @else  border: 1px solid #22339e;border-radius: 10px  @endif ">
                                                 Female
                                             </p>
                                         </div>
@@ -289,37 +280,26 @@
                                         <input type="number" value="12" class="form-control" placeholder="mm">
                                     </div>
                                     <div class="col-lg-2 col-3 p-1" style="margin-top: 20px;">
-                                        <input type="number" style="text-align: center" id="year" value="1999"
+                                        <input type="number" style="text-align: center" id="year" value="{{$year}}"
                                                class="form-control" placeholder="yy">
                                     </div>
 
                                     <div class="col-lg-2 col-3 p-1" style="margin-top: 20px;">
-                                        <p class="mt-2" id="age_text" style="color: grey">age(22)</p>
+                                        <p class="mt-2" id="age_text" style="color: grey">age({{$age}})</p>
                                     </div>
 
-                                    <input type="hidden" name="age" id="age" value="22">
+                                    <input type="hidden" name="age" id="age" value="{{$age}}">
 
                                 </div>
 
-                                <div class="row" style="margin-top: 40px;">
-                                    <div class="col-lg-4 pt-1" style="margin-top: 20px;">
-                                        <p>{{__('profile.Height/Weight (optional):')}}</p>
-                                    </div>
-                                    <div class="col-lg-1 col-4 p-1" style="margin-top: 20px;">
-                                        <input type="text" class="form-control" placeholder="ft">
-                                    </div>
-                                    <div class="col-lg-1 col-4 p-1" style="margin-top: 20px;">
-                                        <input type="text" class="form-control" placeholder="in">
-                                    </div>
-                                    <div class="col-lg-1 col-4 p-1" style="margin-top: 20px;">
-                                        <input type="text" class="form-control" placeholder="lbs">
-                                    </div>
-                                    <div class="col-lg-7" style="margin-top: 40px;">
+                                <div class="row" style="margin-top: 10px;">
+
+                                    <div class="col-lg-7" style="margin-top: 10px;">
                                         <label for="cars">{{__('profile.Nicotine Use:')}}</label>
 
                                         <select name="cigrate" class="form-control">
-                                            <option selected value="not_smoker">None</option>
-                                            <option value="smoker">Smoking + Nicotine</option>
+                                            <option @if($request->company=='not_smoker') selected @endif value="not_smoker">None</option>
+                                            <option @if($request->company=="smoker") selected @endif value="smoker">Smoking + Nicotine</option>
 
                                         </select>
                                     </div>
@@ -340,7 +320,7 @@
                             </div>
 
                             <div class="col-lg-12 col-12" style="text-align: center;margin-top:50px;">
-                                <button id="get_quote_fex" type="button" style="background-color: #340856;padding: 20px"
+                                <button id="get_quote_compare_fex" type="button" style="background-color: #340856;padding: 20px"
                                         class="btn btn-dark">{{__('profile.Get Quote')}}</button>
                                 <br><br>
 
@@ -350,21 +330,7 @@
                     </form>
                 </div>
             </div>
-            <div role="tabpanel" class="tab-pane fade" id="Quotecompare">
-                <div class="container-fluid" style="padding-top: 50px;">
-                    <center>
-                        <h3 style="color: rgb(52, 8, 86)">{{__('profile.Compare Final Expense Quotes')}}</h3>
-                    </center>
 
-                </div>
-            </div>
-            <div role="tabpanel" class="tab-pane fade" id="setting">
-                <div class="container p-3">
-                    <h3 style="color: #340856;" class="text-center">{{__('profile.Insurance Toolkit')}}</h3>
-
-
-                </div>
-            </div>
 
 
         </div>
@@ -378,18 +344,10 @@
 
     <div class="container mb-5">
         <div class="row header">
-            <div class="col-lg-3">
-                <b>{{__('profile.Company Name')}}</b>
+            <div class="col-lg-12">
+                <b>{{__('Options')}}</b>
             </div>
-            <div class="col-lg-3">
-                <b>{{__('profile.Monthly')}}</b>
-            </div>
-            <div class="col-lg-3">
-                <b>{{__('profile.Coverage Type')}}</b>
-            </div>
-            <div class="col-lg-3">
-                <b>{{__('profile.Actions')}}</b>
-            </div>
+
         </div>
         <div class=" result ">
 

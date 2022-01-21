@@ -40,6 +40,9 @@ var baseurl='/public';
     });
 
 //get result of fex
+
+
+
     $("#get_quote_fex").click(function () {
 
 
@@ -594,6 +597,57 @@ var baseurl='/public';
     $(document).on('mouseout', '.infoplan', function () {
 
         $(this).next().hide();
+
+    });
+
+
+
+
+
+    $("#get_quote_compare_fex").click(function () {
+
+
+        var check = true;
+        var message = '';
+
+
+        if ($('#face_amount1').val() == '' && $('#face_amount2').val() == '' &&  $('#face_amount2').val() == '' ) {
+
+
+            check = false;
+            message = 'Please Enter Face Amount'
+        }
+        if (check == false) {
+            $('.toast-body').empty();
+            $('.toast-body').text(message);
+
+            $('.toast').toast({
+
+                delay: 3000
+            });
+            $('.toast').toast('show');
+        }
+
+
+        if (check == true) {
+            //     $('#get_quote_fex').prop('disabled', true);
+            var formData = new FormData((document.getElementById('form1')));
+
+
+            $.ajax({
+                type: 'POST',
+                url: "" + baseurl + "/user/get_quote_compare_fex",
+                data: formData,
+                cache: false,
+                contentType: false,
+                processData: false,
+
+                success: function (response) {
+                    $('#get_quote_fex').prop('disabled', false);
+                    $('.result').empty().append(response);
+                }
+            });
+        }
 
     });
 

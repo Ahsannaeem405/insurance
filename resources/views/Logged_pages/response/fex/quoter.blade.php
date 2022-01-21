@@ -80,10 +80,11 @@
 
             @endif
 
+
 {{--            &nbsp;<i class="fas fa-chevron-down p-2" id="{{$record['data']->id}}"></i>--}}
-            <button class="btn btn-warning m-auto" style="color: white">compare</button>
+    <a target="_blank" href="{{url('user/fex/quote/compare?company='.$record['data']->company_id.'&age='.$age.'&gender='.$gender.'&face='.$face_amount.'&cigrate='.$cigrate.'&type='.$type.'&year='.$year_data.'')}}">    <button class="btn btn-warning m-auto" style="color: white">compare</button>
 
-
+    </a>
 
 
         </div>

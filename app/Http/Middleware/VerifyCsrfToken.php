@@ -12,6 +12,7 @@ class VerifyCsrfToken extends Middleware
      * @var array
      */
     protected $except = [
-       'user/get_quote_fex'
+       'user/get_quote_fex',
+        'user/get_quote_compare_fex'
     ];
 }
