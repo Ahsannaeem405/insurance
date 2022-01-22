@@ -2,14 +2,14 @@
 @php
     $rand = random_int(100000, 999999);
 @endphp
-
+@php $condition='condition_'.$language.'' @endphp
 
 <div id="con_div_{{$rand}}" class="mt-3">
 
     <div
         style="border-left: 15px solid var(--orange)!important; ;padding: 0.5em 0.8em !important;border-top: 1px solid #ded8d8; border-right: 1px solid #ded8d8; border-bottom: 1px solid #ded8d8;"
         class="dropdown">
-        {{$rec->condition_e}}
+        {{$rec->$condition}}
 
         <i style="float: right;color: red;cursor: pointer" id_data="{{$rand}}"
            class="fa fa-trash p-1 con_remove"> </i>

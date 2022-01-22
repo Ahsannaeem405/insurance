@@ -33,9 +33,12 @@ Route::view('/term', 'term')->middleware('lang');
 Route::get('/lang/{lang}', [\App\Http\Controllers\UserController::class,'lang'])->middleware('lang');
 
 Route::prefix('user')->middleware(['auth','user','lang'])->group(function () {
-Route::view('/fex','Logged_pages.fex.fex');
+Route::get('/fex',[\App\Http\Controllers\FexController::class,'index']);
 Route::get('/fex/quote/compare',[\App\Http\Controllers\FexController::class,'compare']);
 Route::post('get_quote_compare_fex',[\App\Http\Controllers\FexController::class,'compare_fex']);
+Route::get('fex/setting',[\App\Http\Controllers\FexController::class,'setting']);
+Route::post('fex/setting/update',[\App\Http\Controllers\CompanyDisableController::class,'setting_update']);
+
 Route::view('/quoter','Logged_pages.medd');
 Route::view('/term','Logged_pages.term');
 Route::view('/legeal/checket','Logged_pages.legeal');

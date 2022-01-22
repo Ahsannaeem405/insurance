@@ -3,14 +3,15 @@
         $rand = random_int(100000, 999999);
         $i = 1;
     @endphp
-
+    @php $medication='medication_'.$language.'' @endphp
+    @php $condition='condition_'.$language.'' @endphp
 
     <div id="con_div_{{$rand}}" class="mt-3">
 
         <div
             style="border-left: 15px solid var(--indigo) ;padding: 0.5em 0.8em !important;border-top: 1px solid #ded8d8; border-right: 1px solid #ded8d8; border-bottom: 1px solid #ded8d8;"
             class="dropdown">
-            {{$rec[0]->medication_e}}
+            {{$rec[0]->$medication}}
 
             <i style="float: right;color: red;cursor: pointer" id_data="{{$rand}}"
                class="fa fa-trash p-1 con_remove"> </i>
@@ -26,7 +27,7 @@
 
                     @foreach($rec as $data)
 
-                        <p><input value="{{$data->condition_id}}" name="selec_condition{{$rand}}" type="radio"> {{$data->condition_e}}</p>
+                        <p><input value="{{$data->condition_id}}" name="selec_condition{{$rand}}" type="radio"> {{$data->$condition}}</p>
 
                     @endforeach
                 </div>

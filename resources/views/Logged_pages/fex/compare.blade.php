@@ -158,7 +158,7 @@
     <div class="container-fluid" style="min-height: 500px;padding-bottom:100px;">
     @include('Logged_pages.fex.layout.layout')
 
-        <!-- Tab panes -->
+    <!-- Tab panes -->
         <div class="tab-content">
             <div role="tabpanel" class="tab-pane  active" id="Quoter">
                 <div class="container-fluid" style="padding-top: 50px;">
@@ -180,7 +180,8 @@
 
                                     <div class="col-lg-3 ml-lg-5">
 
-                                        <input type="number" class="form-control" value="{{$request->face}}" id="face_amount1" name="face_amount1"
+                                        <input type="number" class="form-control" value="{{$request->face}}"
+                                               id="face_amount1" name="face_amount1"
                                                placeholder="Face Amount">
 
                                     </div>
@@ -206,9 +207,14 @@
                                         <label for="">{{__('profile.Coverage Type:')}}</label>
 
                                         <select name="type" class="form-control">
-                                            <option @if($request->type=="levels") selected @endif value="levels">Level</option>
-                                            <option @if($request->type=="modifieds") selected @endif value="modifieds">Graded/Modified</option>
-                                            <option @if($request->type=="guaranteeds") selected @endif value="guaranteeds">Guaranteed</option>
+                                            <option @if($request->type=="levels") selected @endif value="levels">Level
+                                            </option>
+                                            <option @if($request->type=="modifieds") selected @endif value="modifieds">
+                                                Graded/Modified
+                                            </option>
+                                            <option @if($request->type=="guaranteeds") selected
+                                                    @endif value="guaranteeds">Guaranteed
+                                            </option>
                                             {{--                                            <option value="limiteds">Limited Pay</option>--}}
                                         </select>
                                     </div>
@@ -220,8 +226,11 @@
                                         <select name="company" class="form-control">
                                             @foreach($companies as $company)
 
+                                                @if(!$company->disable)
+                                                    <option @if($request->company==$company->id) selected
+                                                            @endif  value="{{$company->id}}">{{$company->name}}</option>
 
-                                            <option @if($request->company==$company->id) selected @endif  value="{{$company->id}}">{{$company->name}}</option>
+                                                @endif
                                             @endforeach
                                             {{--                                            <option value="limiteds">Limited Pay</option>--}}
                                         </select>
@@ -231,9 +240,8 @@
 
 
                             </div>
-                            <div class="col-lg-6 col-12" >
+                            <div class="col-lg-6 col-12">
                                 <h5>{{__('profile.About the client')}}</h5>
-
 
 
                                 <input type="hidden" id="gender" name="gender" value="{{$gender}}">
@@ -298,8 +306,12 @@
                                         <label for="cars">{{__('profile.Nicotine Use:')}}</label>
 
                                         <select name="cigrate" class="form-control">
-                                            <option @if($request->company=='not_smoker') selected @endif value="not_smoker">None</option>
-                                            <option @if($request->company=="smoker") selected @endif value="smoker">Smoking + Nicotine</option>
+                                            <option @if($request->company=='not_smoker') selected
+                                                    @endif value="not_smoker">None
+                                            </option>
+                                            <option @if($request->company=="smoker") selected @endif value="smoker">
+                                                Smoking + Nicotine
+                                            </option>
 
                                         </select>
                                     </div>
@@ -320,7 +332,8 @@
                             </div>
 
                             <div class="col-lg-12 col-12" style="text-align: center;margin-top:50px;">
-                                <button id="get_quote_compare_fex" type="button" style="background-color: #340856;padding: 20px"
+                                <button id="get_quote_compare_fex" type="button"
+                                        style="background-color: #340856;padding: 20px"
                                         class="btn btn-dark">{{__('profile.Get Quote')}}</button>
                                 <br><br>
 
@@ -330,7 +343,6 @@
                     </form>
                 </div>
             </div>
-
 
 
         </div>

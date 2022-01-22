@@ -11,8 +11,11 @@
 
 </style>
 
-@foreach($data as $record)
 
+
+
+@foreach($data as $record)
+@if(!$record['disable'])
     <div class="row w-100 data mr-0 ml-0">
         <div class="col-lg-3  col-12 center">
             <p>{{$record['data']->Company}}</p>
@@ -28,7 +31,7 @@
 
 @if(isset($record['conditiondata']))
 
-                @if($record['conditiondata']->agent_compensation_e!="")
+                @if($record['conditiondata']->$agent!="")
                     <div class="position-relative p-2">
 
                         <span class="infoplan"  alt="" style="cursor: pointer;font-size: 27px;color: green">$</span>
@@ -36,14 +39,14 @@
                         <div class="text-center position-absolute popup">
                             <div class="">
                                 <div class="font-1p2 semi-bold black font-weight-bold ">Why?</div>
-                                <div class="mt-1"><p>{{$record['conditiondata']->agent_compensation_e}} </p>
+                                <div class="mt-1"><p>{{$record['conditiondata']->$agent}} </p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 @endif
 
-    @if($record['conditiondata']->plan_info_e!="")
+    @if($record['conditiondata']->$plan!="")
             <div class="position-relative p-2">
 
                 <img class="infoplan" src="{{asset('images/info.png')}}" alt="" style="cursor: pointer">
@@ -52,14 +55,14 @@
                      style="">
                     <div class="">
                         <div class="font-1p2 semi-bold black font-weight-bold">Plan Info</div>
-                        <div class="mt-1"><p>{{$record['conditiondata']->plan_info_e}} </p>
+                        <div class="mt-1"><p>{{$record['conditiondata']->$plan}} </p>
                            </div>
                     </div>
                 </div>
             </div>
             @endif
 
-        @if($record['conditiondata']->reason_e!="")
+        @if($record['conditiondata']->$reason!="")
             <div class="position-relative p-2">
 
                 <img class="infoplan" src="{{asset('images/question-mark.png')}}" alt="" style="cursor: pointer;width: 30px">
@@ -68,7 +71,7 @@
                      style="">
                     <div class="">
                         <div class="font-1p2 semi-bold black font-weight-bold ">Why?</div>
-                        <div class="mt-1"><p>{{$record['conditiondata']->reason_e}} </p>
+                        <div class="mt-1"><p>{{$record['conditiondata']->$reason}} </p>
                         </div>
                     </div>
                 </div>
@@ -98,25 +101,25 @@
 
         </div>
     </div>
-
+@endif
 @endforeach
 
 
 
 
 @foreach($datanot as $record)
-
+    @if(!$record['disable'])
     <div class="row w-100 data mr-0 ml-0">
         <div class="col-lg-12  col-12 ">
             <p style="color:lightgray;">{{$record['data']->name}}</p>
 
             @if(isset($record['conditiondata']))
 
-                @if($record['conditiondata']->reason_e!="")
+                @if($record['conditiondata']->$reason!="")
                     <div class="position-relative p-2">
                         <img class="" src="{{asset('images/question-mark.png')}}" alt="" style="width: 22px">
 
-<span style="color:lightgray;">{{$record['conditiondata']->reason_e}} {{', Decline'}}</span>
+<span style="color:lightgray;">{{$record['conditiondata']->$reason}} {{', Decline'}}</span>
 
                     </div>
                 @endif
@@ -130,7 +133,7 @@
         </div>
 
     </div>
-
+@endif
 @endforeach
 
 

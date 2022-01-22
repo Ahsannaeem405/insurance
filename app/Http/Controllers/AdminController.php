@@ -274,6 +274,7 @@ class AdminController extends Controller
                             $keyword = new companies();
                             $keyword->name = utf8_decode($importData[0]);
                             $keyword->tagline = utf8_decode($importData[1]);
+                            $keyword->id = intval(utf8_decode($importData[2]));
                             $keyword->save();
 
                         }

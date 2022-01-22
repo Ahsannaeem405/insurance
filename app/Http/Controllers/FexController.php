@@ -6,40 +6,75 @@ use App\Models\companies;
 use App\Models\condition;
 use App\Models\conditionQuestion;
 use App\Models\Medication;
+use App\Models\Subsription;
+use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class FexController extends Controller
 {
+public $lang;
+
+    public function  __construct()
+    {
+
+       $this->middleware(function ($request, $next){
+        $language=  \Session::get('lang');
+        if($language=='sp')
+        {
+            $language='s';
+            $this->lang='s';
+            $reason='reason_'.$language.'';
+            $plan='plan_info_'.$language.'';
+            $agent='agent_compensation_'.$language.'';
+
+        }
+        else{
+            $language='e';
+            $this->lang='e';
+
+            $reason='reason_'.$language.'';
+            $plan='plan_info_'.$language.'';
+            $agent='agent_compensation_'.$language.'';
+            }
+           \View::share(compact('language','reason','plan','agent'));
+           return $next($request);
+       });
+
+
+
+    }
+
+    public function index()
+    {
+
+    return view('Logged_pages.fex.fex');
+    }
+
     public function compare(Request $request)
     {
-        $companies=companies::all();
-if($request->gender)
-{
-    $gender=$request->gender;
-}
-else{
-    $gender='male';
-}
+        $companies = companies::with('disable')->get();
 
-        if($request->age)
-        {
-            $age=$request->age;
-        }
-        else{
-            $age=22;
+        if ($request->gender) {
+            $gender = $request->gender;
+        } else {
+            $gender = 'male';
         }
 
-        if($request->year)
-        {
-            $year=$request->year;
+        if ($request->age) {
+            $age = $request->age;
+        } else {
+            $age = 22;
         }
-        else{
-            $year=1999;
+
+        if ($request->year) {
+            $year = $request->year;
+        } else {
+            $year = 1999;
         }
 
 
-        return view('Logged_pages.fex.compare',compact('companies','request','age','gender','year'));
+        return view('Logged_pages.fex.compare', compact('companies', 'request', 'age', 'gender', 'year'));
     }
 
     public function compare_fex(Request $request)
@@ -48,8 +83,7 @@ else{
         $gender = $request->gender;
         $cigrate = $request->cigrate;
         $type = $request->type;
-        $company_id=intval($request->company);
-
+        $company_id = intval($request->company);
 
 
         $table = $gender . '_' . $cigrate . '_' . $type;
@@ -58,19 +92,25 @@ else{
         $rec2 = \DB::table($table)->where('Age', $request->age)->where('Amount', $request->face_amount2)->where('company_id', $company_id)->first();
         $rec3 = \DB::table($table)->where('Age', $request->age)->where('Amount', $request->face_amount3)->where('company_id', $company_id)->first();
 
-        return view('Logged_pages.response.fex.compare.compare',compact('rec1','rec2','rec3'));
+        return view('Logged_pages.response.fex.compare.compare', compact('rec1', 'rec2', 'rec3'));
     }
+
+    public function setting()
+    {
+        $companies=companies::with('disable')->get();
+        return view('Logged_pages.fex.setting',compact('companies'));
+    }
+
     public function quoter(Request $request)
     {
 
 //dd($request->input());
         $gender = $request->gender;
-        $age=$request->age;
+        $age = $request->age;
         $cigrate = $request->cigrate;
         $type = $request->type;
         $face_amount = $request->face_amount;
-        $year_data=$request->year;
-
+        $year_data = $request->year;
 
 
         if ($type == 'levels') {
@@ -95,7 +135,7 @@ else{
 
         $data = array();
         $datanot = array();
-        $companies = companies::all();
+        $companies = companies::with('disable')->get();
 //dd($request->input());
         if ($request->condition_ids) {
 
@@ -132,6 +172,7 @@ else{
                         //query part 1
                         $cond = condition::where('company', $com->name)->
                         where('condition_id', $conditions)
+                        ->where('tagline', $com->tagline)
                             ->where('decline', '!=', 'Yes')
                             ->where(function ($query) use ($treatment, $diagnose) {
 
@@ -161,6 +202,7 @@ else{
                         //main
                         $cond2 = condition::where('company', $com->name)
                             ->where('condition_id', $conditions)
+                            ->where('tagline', $com->tagline)
                             ->where('decline', '!=', 'Yes')
                             ->where(function ($query) use ($treatment, $diagnose) {
 
@@ -235,8 +277,7 @@ else{
                                 }
 
 
-                            }
-                            //if no rec
+                            } //if no rec
                             else {
 
                                 if (!isset($testing_array['company_status' . $com->id . ''])) {
@@ -254,12 +295,10 @@ else{
                                     $testing_array['company_cat' . $com->id . ''] = $cat2;
 
 
-
                                 }
                             }
 
-                        }
-                        //wrong cond
+                        } //wrong cond
                         else {
 
 
@@ -309,25 +348,27 @@ else{
                         $data[] = array(
                             'data' => $testing_array['company_record' . $com->id . ''],
                             'conditiondata' => $testing_array['condition_record' . $com->id . ''],
-                            'level'=>$testing_array['company_cat'. $com->id . ''],
+                            'level' => $testing_array['company_cat' . $com->id . ''],
+                            'disable'=>$com->disable
                         );
                     } else {
                         $datanot[] = array(
                             'data' => $com,
                             'conditiondata' => isset($testing_array['condition_record' . $com->id . '']) ? $testing_array['condition_record' . $com->id . ''] : null,
-                            'level'=>$testing_array['company_cat'. $com->id . ''],
+                            'level' => $testing_array['company_cat' . $com->id . ''],
+                            'disable'=>$com->disable
 
-                            );
+                        );
                     }
                 } else {
                     $datanot[] = array(
                         'data' => $com,
                         'conditiondata' => isset($testing_array['condition_record' . $com->id . '']) ? $testing_array['condition_record' . $com->id . ''] : null,
-                        'level'=>$testing_array['company_cat'. $com->id . ''],
+                        'level' => $testing_array['company_cat' . $com->id . ''],
+                        'disable'=>$com->disable
                     );
                 }
             }
-
 
 
             $datanot = collect($datanot);
@@ -340,11 +381,11 @@ else{
             $data->values()->all();
 
 
+            return view('Logged_pages.response.fex.quoter', compact('data', 'datanot', 'age', 'gender', 'face_amount', 'type', 'cigrate', 'year_data'));
 
-            return view('Logged_pages.response.fex.quoter', compact('data', 'datanot','age','gender','face_amount','type','cigrate','year_data'));
 
-
-        } else {
+        }
+        else {
 
 
             foreach ($companies as $com) {
@@ -353,31 +394,32 @@ else{
                 if ($rec) {
                     $data[] = array(
 
-                        'data' => $rec
+                        'data' => $rec,
+                        'disable'=>$com->disable
                     );
                 } else {
                     $datanot[] = array(
 
-                        'data' => $com
+                        'data' => $com,
+                        'disable'=>$com->disable
+
                     );
                 }
 
             }
 
-            return view('Logged_pages.response.fex.quoter', compact('data', 'datanot','age','gender','face_amount','type','cigrate','year_data'));
+            return view('Logged_pages.response.fex.quoter', compact('data', 'datanot', 'age', 'gender', 'face_amount', 'type', 'cigrate', 'year_data'));
         }
 
 
     }
 
 
-
-
     public function condition(Request $request)
     {
 
         $condition = $request->condition;
-        $rec = condition::where('condition_e', 'like', "%$condition%")->limit(5)->get()->unique('condition_e');
+        $rec = condition::where('condition_'.$this->lang.'', 'like', "%$condition%")->limit(5)->get()->unique('condition_'.$this->lang.'');
 
         return view('Logged_pages.response.fex.condition', compact('rec'));
 
@@ -411,7 +453,7 @@ else{
     public function medications(Request $request)
     {
         $medication = $request->medication;
-        $rec = Medication::where('medication_e', 'like', "%$medication%")->limit(5)->get()->unique('medication_e');
+        $rec = Medication::where('medication_'.$this->lang.'', 'like', "%$medication%")->limit(5)->get()->unique('medication_'.$this->lang.'');
 
         return view('Logged_pages.response.fex.medication.medication', compact('rec'));
     }
@@ -419,7 +461,7 @@ else{
 
     public function medication_condition(Request $request)
     {
-        $rec = Medication::where('medication_e', $request->name)->get();
+        $rec = Medication::where('medication_'.$this->lang.'', $request->name)->get();
 
 
         // dd($rec->conditionQuestions[1]);

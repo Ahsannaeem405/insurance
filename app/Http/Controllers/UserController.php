@@ -229,6 +229,7 @@ class UserController extends Controller
     {
 
         \Session::put('lang', $lang);
+
         \App::setLocale($lang);
         return back();
 
