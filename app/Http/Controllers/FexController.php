@@ -172,7 +172,7 @@ public $lang;
                         //query part 1
                         $cond = condition::where('company', $com->name)->
                         where('condition_id', $conditions)
-                        ->where('tagline', $com->tagline)
+                        //->where('tagline', $com->tagline)
                             ->where('decline', '!=', 'Yes')
                             ->where(function ($query) use ($treatment, $diagnose) {
 
@@ -202,7 +202,7 @@ public $lang;
                         //main
                         $cond2 = condition::where('company', $com->name)
                             ->where('condition_id', $conditions)
-                            ->where('tagline', $com->tagline)
+                         //   ->where('tagline', $com->tagline)
                             ->where('decline', '!=', 'Yes')
                             ->where(function ($query) use ($treatment, $diagnose) {
 
