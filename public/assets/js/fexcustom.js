@@ -30,11 +30,12 @@ $(document).ready(function () {
 //gender selection
     $(".gender").click(function () {
 
-        $(this).css('background-color', '#2A2C7F');
-        $(this).css('color', 'white');
+        $(this).addClass('blue-color');
+        $(this).removeClass('pink-color');
 
-        $('.gender').not(this).css('color', '#2A2C7F');
-        $('.gender').not(this).css('background-color', 'white');
+        $('.gender').not(this).addClass('pink-color');
+        $('.gender').not(this).removeClass('blue-color');
+
 
         $('#gender').val($(this).attr('data'));
     });

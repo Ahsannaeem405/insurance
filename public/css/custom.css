@@ -1,0 +1,32 @@
+.red-color
+{
+    color: red;
+}
+.input-background{
+    background-color:  #ECECEC !important;
+}
+
+.blue-color
+{
+    background-color: #41E5DB !important;
+    color: white !important;
+}
+.pink-color{
+    background-color: #FF3366 !important;
+    color: white !important;
+}
+.dark-blue{
+    background-color:  #6B5EFF !important;
+}
+.pink-colorr
+{
+    color: #FF3366 !important;
+}
+.quote{
+    background-color: #6B5EFF !important;
+    /* padding: 20px; */
+    height: 39px;
+    border: none !important;
+    width: 160px;
+    /* margin-top: 20px; */
+}

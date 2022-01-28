@@ -9,7 +9,7 @@
     <div id="con_div_{{$rand}}" class="mt-3">
 
         <div
-            style="border-left: 15px solid var(--indigo) ;padding: 0.5em 0.8em !important;border-top: 1px solid #ded8d8; border-right: 1px solid #ded8d8; border-bottom: 1px solid #ded8d8;"
+            style="border:none;"
             class="dropdown">
             {{$rec[0]->$medication}}
 
@@ -23,7 +23,7 @@
              style="background-color: white;   box-shadow: 0 3px 15px 0 rgb(0 0 0 / 20%);padding:1rem;  ">
             <div>
                 <div class="current_ques_{{$rand}}_{{$i}} all_ques_{{$rand}} medication_Con" conidtion_id="{{$rec[0]->id}}" rand={{$rand}} jump="1" i="{{$i}}">
-                    <h3 class="text-center mt-2">Please select condition</h3>
+                    <h3 class="text-center mt-2" style="color: #6B5EFF;">Please select condition</h3>
 
                     @foreach($rec as $data)
 
@@ -38,12 +38,12 @@
             <div class="row mt-5 text-center">
                 <div class="m-auto">
 
-                    <input type="button" id="back_ques_med" class="btn btn-secondary back_ques_med{{$rand}}"
+                    <input type="button" id="back_ques_med" class="btn btn-secondary back_ques_med{{$rand}}" style="border-radius:22px"
                            current="1" rand="{{$rand}}" total="{{1}}"
                            value="BACK">
                     <span class="start_status_med{{$rand}}">1</span> / <span
                         class="end_status_med{{$rand}}">{{1}}</span>
-                    <input type="button" value="NEXT" class="next_ques_med{{$rand}} btn btn-primary"
+                    <input type="button" value="NEXT" class="next_ques_med{{$rand}} btn btn-primary" style="border-radius:22px"
                            id="next_ques_med" current="1" rand="{{$rand}}"
                            total="{{1}}"
                            style="background-color: #8b8be1;border: #8282cb">

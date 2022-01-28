@@ -24,7 +24,7 @@
                                     <div class="col-lg-8 d-flex m-auto">
                                         <div class="col-4">
 
-                                            <select name="month_{{$rec->condition_id}}[]" class="form-control">
+                                            <select name="month_{{$rec->condition_id}}[]" class="form-control" style="width: 85px;">
                                                 <option value="1" selected>Jan</option>
                                                 <option value="02">Feb</option>
                                                 <option value="03">Mar</option>
@@ -42,7 +42,7 @@
                                         </div>
                                         <div class="col-4">
 
-                                            <select name="day_{{$rec->condition_id}}[]" class="form-control">
+                                            <select name="day_{{$rec->condition_id}}[]" class="form-control" style="width: 85px;">
 
                                                 <option value="1" selected>1</option>
                                                 <option value="2">2</option>
@@ -80,7 +80,7 @@
                                         </div>
                                         <div class="col-4">
 
-                                            <select name="year_{{$rec->condition_id}}[]" class="form-control">
+                                            <select name="year_{{$rec->condition_id}}[]" class="form-control" style="width: 85px;">
                                                 <option value="2022" selected>2022</option>
                                                 <option value="2021" >2021</option>
                                                 <option value="2020">2020</option>
@@ -126,14 +126,14 @@
                                     <div class="col-6 " style="margin: auto;cursor: pointer">
                                         <p class="p-2 selection selection_{{$rand}}_{{$question->id}}"
                                            next_ques="{{$question->if_yes}}" rand="{{$rand}}" data_id="{{$question->id}}" i="{{$i}}" data="yes"
-                                           style="border: 1px solid #22339e;border-radius: 10px;color: white;background-color:#22339e ; text-align: center">
+                                           style="border-radius: 10px;color: white;background-color:#41E5DB ; text-align: center">
                                             Yes</p>
                                     </div>
 
                                     <div class="col-6 " style="margin: auto;cursor: pointer">
                                         <p class="p-2 selection selection_{{$rand}}_{{$question->id}}" data="no" i="{{$i}}"
                                            next_ques="{{$question->if_no}}" rand="{{$rand}}" data_id="{{$question->id}}"
-                                           style="border: 1px solid #22339e;border-radius: 10px;color: black;text-align:center">
+                                           style="border-radius: 10px;color: white;text-align:center;background-color:#FF3366">
                                             No</p>
                                     </div>
 
