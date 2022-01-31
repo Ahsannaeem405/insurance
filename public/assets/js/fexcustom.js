@@ -1,11 +1,11 @@
 $(document).ready(function () {
 
 
- var baseurl = '';
- // var baseurl='/public';
+    var baseurl = '';
+    // var baseurl='/public';
 
 
-//age calculation
+    //age calculation
     $(document).on('keyup', '#year', function () {
 
 
@@ -27,7 +27,7 @@ $(document).ready(function () {
         $(".div_show" + id).toggleClass('show');
     });
 
-//gender selection
+    //gender selection
     $(".gender").click(function () {
 
         $(this).addClass('blue-color');
@@ -40,7 +40,7 @@ $(document).ready(function () {
         $('#gender').val($(this).attr('data'));
     });
 
-//get result of fex
+    //get result of fex
 
 
 
@@ -98,7 +98,7 @@ $(document).ready(function () {
         $.ajax({
             type: 'get',
             url: "" + baseurl + "/user/get_condition_fex",
-            data: {'condition': condition},
+            data: { 'condition': condition },
 
 
             success: function (response) {
@@ -122,7 +122,7 @@ $(document).ready(function () {
         $.ajax({
             type: 'get',
             url: "" + baseurl + "/user/get_condition_qa_fex",
-            data: {'id': id},
+            data: { 'id': id },
 
 
             success: function (response) {
@@ -179,7 +179,7 @@ $(document).ready(function () {
                         $.ajax({
                             type: 'get',
                             url: "" + baseurl + "/user/get_condition_qa_fex_next",
-                            data: {'id': id, 'answer': 'yes', 'rand': rand},
+                            data: { 'id': id, 'answer': 'yes', 'rand': rand },
                             async: false,
 
                             success: function (response) {
@@ -195,7 +195,7 @@ $(document).ready(function () {
                         $.ajax({
                             type: 'get',
                             url: "" + baseurl + "/user/get_condition_qa_fex_next",
-                            data: {'id': id, 'answer': 'no', 'rand': rand},
+                            data: { 'id': id, 'answer': 'no', 'rand': rand },
                             async: false,
 
 
@@ -267,7 +267,7 @@ $(document).ready(function () {
 
     }
 
-//back question
+    //back question
     $(document).on('click', '#back_ques', function () {
 
         var total = $(this).attr('total');
@@ -306,10 +306,10 @@ $(document).ready(function () {
         var status = $(this).attr('status');
 
         if (status == 'show') {
-            $('#con_div_' + id).children('div:nth-child(2)').hide();
+            $('#con_div_' + id).children('div:nth-child(1)').children('div:nth-child(2)').hide();
             $(this).attr('status', 'hide');
         } else {
-            $('#con_div_' + id).children('div:nth-child(2)').show();
+            $('#con_div_' + id).children('div:nth-child(1)').children('div:nth-child(2)').show();
             $(this).attr('status', 'show');
         }
 
@@ -320,15 +320,24 @@ $(document).ready(function () {
         var next_ques = $(this).attr('next_ques');
 
 
-        $(this).css('background-color', '#2A2C7F');
-        $(this).css('color', 'white');
+        // $(this).css('background-color', '#2A2C7F');
+        // $(this).css('color', 'white');
+
+        $(this).addClass('blue-color');
+        $(this).removeClass('pink-color');
+
+        // $('.selection').not(this).addClass('pink-color');
+        // $('.selection').not(this).removeClass('blue-color');
+
+
+
         var id = $(this).attr('data_id');
         var data = $(this).attr('data');
         var index = $(this).attr('i');
         var rand = $(this).attr('rand');
 
-        $('.selection_' + rand + '_' + id).not(this).css('color', '#2A2C7F');
-        $('.selection_' + rand + '_' + id).not(this).css('background-color', 'white');
+        $('.selection_' + rand + '_' + id).not(this).addClass('pink-color');
+        $('.selection_' + rand + '_' + id).not(this).removeClass('blue-color');
 
         $('.current_ques_' + rand + '_' + index).attr('answer', data);
 
@@ -344,7 +353,7 @@ $(document).ready(function () {
         $.ajax({
             type: 'get',
             url: "" + baseurl + "/user/get_medication_fex",
-            data: {'medication': medication},
+            data: { 'medication': medication },
 
 
             success: function (response) {
@@ -370,7 +379,7 @@ $(document).ready(function () {
         $.ajax({
             type: 'get',
             url: "" + baseurl + "/user/get_medication_condition_fex",
-            data: {'name': name},
+            data: { 'name': name },
 
 
             success: function (response) {
@@ -408,7 +417,7 @@ $(document).ready(function () {
                 $.ajax({
                     type: 'get',
                     url: "" + baseurl + "/user/get_condition_qa_med_length_fex",
-                    data: {'id': selection, 'rand': rand},
+                    data: { 'id': selection, 'rand': rand },
                     async: false,
 
                     success: function (response) {
@@ -421,7 +430,7 @@ $(document).ready(function () {
                     $.ajax({
                         type: 'get',
                         url: "" + baseurl + "/user/get_condition_qa_med_fex",
-                        data: {'id': selection, 'rand': rand},
+                        data: { 'id': selection, 'rand': rand },
                         async: false,
 
                         success: function (response) {
@@ -442,6 +451,7 @@ $(document).ready(function () {
 
                             if (current + 1 == 1 + length) {
                                 $('.next_ques_med' + rand).attr('value', 'FINISHED')
+                                
                             }
 
                         }
@@ -507,7 +517,7 @@ $(document).ready(function () {
                             $.ajax({
                                 type: 'get',
                                 url: "" + baseurl + "/user/get_condition_qa_fex_next",
-                                data: {'id': id, 'answer': 'yes', 'rand': rand},
+                                data: { 'id': id, 'answer': 'yes', 'rand': rand },
                                 async: false,
 
                                 success: function (response) {
@@ -523,7 +533,7 @@ $(document).ready(function () {
                             $.ajax({
                                 type: 'get',
                                 url: "" + baseurl + "/user/get_condition_qa_fex_next",
-                                data: {'id': id, 'answer': 'no', 'rand': rand},
+                                data: { 'id': id, 'answer': 'no', 'rand': rand },
                                 async: false,
 
 
@@ -612,7 +622,7 @@ $(document).ready(function () {
         var message = '';
 
 
-        if ($('#face_amount1').val() == '' && $('#face_amount2').val() == '' &&  $('#face_amount2').val() == '' ) {
+        if ($('#face_amount1').val() == '' && $('#face_amount2').val() == '' && $('#face_amount2').val() == '') {
 
 
             check = false;

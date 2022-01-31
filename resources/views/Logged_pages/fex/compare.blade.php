@@ -1,6 +1,6 @@
 @extends('MainLayout.header')
 @section('title')
-    <title>Fex Compare</title>
+<title>Fex Compare</title>
 @endsection
 <style>
     .table {
@@ -83,15 +83,15 @@
         transition: .4s;
     }
 
-    input:checked + .slider {
+    input:checked+.slider {
         background-color: #2196F3;
     }
 
-    input:focus + .slider {
+    input:focus+.slider {
         box-shadow: 0 0 1px #2196F3;
     }
 
-    input:checked + .slider:before {
+    input:checked+.slider:before {
         -webkit-transform: translateX(26px);
         -ms-transform: translateX(26px);
         transform: translateX(26px);
@@ -135,8 +135,6 @@
         border-radius: 0 0 3px 3px;
         overflow: hidden;
     }
-
-
 </style>
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -145,230 +143,336 @@
 @section('content')
 
 
-    <div class="toast mt-3" style="position: fixed;width: 100%;right: 0;background-color: #e57b7b;top: 0;z-index: 999">
+<div class="toast mt-3" style="position: fixed;width: 100%;right: 0;background-color: #e57b7b;top: 0;z-index: 999">
 
-        <div class="toast-body" style="color: white">
+    <div class="toast-body" style="color: white">
 
 
-        </div>
     </div>
+</div>
 
 
 
-    <div class="container-fluid" style="min-height: 500px;padding-bottom:100px;">
+<div class="container-fluid" style="min-height: 500px;padding-bottom:100px;">
     @include('Logged_pages.fex.layout.layout')
 
     <!-- Tab panes -->
-        <div class="tab-content">
-            <div role="tabpanel" class="tab-pane  active" id="Quoter">
-                <div class="container-fluid" style="padding-top: 50px;">
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane  active" id="Quoter">
+            <div class="container-fluid" style="padding-top: 50px;">
 
-                    <form id="form1">
-
-
-                        <center>
-                            <h3 style="color: rgb(52, 8, 86)">{{__('profile.Compare Final Expense Quotes')}}</h3>
-                        </center>
-                        <div class="row" style="margin-top: 40px;">
-
-                            <div class="col-lg-6 col-12">
-                                <h4>{{__('profile.Drug and Health Information')}}</h4><br>
+                <form id="form1">
 
 
-                                <div class="row" style="margin-top: 40px;">
-
-
-                                    <div class="col-lg-3 ml-lg-5">
-
-                                        <input type="number" class="form-control" value="{{$request->face}}"
-                                               id="face_amount1" name="face_amount1"
-                                               placeholder="Face Amount">
-
-                                    </div>
-                                    <span class="text-center">or</span>
-                                    <div class="col-lg-3">
-
-                                        <input type="number" class="form-control" id="face_amount2" name="face_amount2"
-                                               placeholder="Face Amount">
-                                    </div>
-                                    <span>or</span>
-                                    <div class="col-lg-3">
-
-                                        <input type="number" class="form-control" id="face_amount3" name="face_amount3"
-                                               placeholder="Face Amount">
-                                    </div>
-
-                                    <br>
-                                    <br>
-                                    <br>
-
-
-                                    <div class="col-lg-5" style="margin-top: 20px;display: block">
-                                        <label for="">{{__('profile.Coverage Type:')}}</label>
-
-                                        <select name="type" class="form-control">
-                                            <option @if($request->type=="levels") selected @endif value="levels">Level
-                                            </option>
-                                            <option @if($request->type=="modifieds") selected @endif value="modifieds">
-                                                Graded/Modified
-                                            </option>
-                                            <option @if($request->type=="guaranteeds") selected
-                                                    @endif value="guaranteeds">Guaranteed
-                                            </option>
-                                            {{--                                            <option value="limiteds">Limited Pay</option>--}}
-                                        </select>
-                                    </div>
-
-
-                                    <div class="col-lg-5" style="margin-top: 20px;">
-                                        <label for="">{{__('profile.Company:')}}</label>
-
-                                        <select name="company" class="form-control">
-                                            @foreach($companies as $company)
-
-                                                @if(!$company->disable)
-                                                    <option @if($request->company==$company->id) selected
-                                                            @endif  value="{{$company->id}}">{{$company->name}}</option>
-
-                                                @endif
-                                            @endforeach
-                                            {{--                                            <option value="limiteds">Limited Pay</option>--}}
-                                        </select>
-                                    </div>
+                    <center>
+                        <h3 style="color: rgb(52, 8, 86)">{{__('profile.Compare Final Expense Quotes')}}</h3>
+                    </center>
+                    <div class="row" style="margin-top: 40px;">
+                        <div class="col-lg-6 col-12 border-right">
+                            <h4 style="color: #6B5EFF;" class="ml-5">{{__('profile.Drug and Health Information')}}</h4><br>
+                            <div class="row" style="margin-top: 40px;">
+                                <div class="col-lg-3 ml-lg-5">
+                                    <input type="number" class="form-control input-background" value="{{$request->face}}" id="face_amount1" name="face_amount1" placeholder="Face Amount">
+                                </div>
+                                <span class="text-center">or</span>
+                                <div class="col-lg-3">
+                                    <input type="number" class="form-control input-background" id="face_amount2" name="face_amount2" placeholder="Face Amount">
+                                </div>
+                                <span>or</span>
+                                <div class="col-lg-3">
+                                    <input type="number" class="form-control input-background" id="face_amount3" name="face_amount3" placeholder="Face Amount">
                                 </div>
                                 <br>
-
-
+                                <br>
+                                <br>
+                                <div class="col-lg-5 ml-lg-5" style="margin-top: 20px;display: block">
+                                    <label for="">{{__('profile.Coverage Type:')}}</label>
+                                    <select name="type" class="form-control input-background">
+                                        <option @if($request->type=="levels") selected @endif value="levels">Level
+                                        </option>
+                                        <option @if($request->type=="modifieds") selected @endif value="modifieds">
+                                            Graded/Modified
+                                        </option>
+                                        <option @if($request->type=="guaranteeds") selected
+                                            @endif value="guaranteeds">Guaranteed
+                                        </option>
+                                        {{-- <option value="limiteds">Limited Pay</option>--}}
+                                    </select>
+                                </div>
+                                <div class="col-lg-5" style="margin-top: 20px;">
+                                    <label for="">{{__('profile.Company:')}}</label>
+                                    <select name="company" class="form-control input-background">
+                                        @foreach($companies as $company)
+                                        @if(!$company->disable)
+                                        <option @if($request->company==$company->id) selected
+                                            @endif value="{{$company->id}}">{{$company->name}}</option>
+                                        @endif
+                                        @endforeach
+                                        {{-- <option value="limiteds">Limited Pay</option>--}}
+                                    </select>
+                                </div>
                             </div>
-                            <div class="col-lg-6 col-12">
-                                <h5>{{__('profile.About the client')}}</h5>
-
-
+                            <br>
+                        </div>
+                        <div class="col-lg-6 col-12">
+                            <!-- <h4>{{__('profile.Drug and Health Information')}}</h4><br> -->
+                            <div class="row" style="margin-top: 98px;">
+                                <div class="col-lg-3 ml-lg-5">
+                                    <input type="number" class="form-control input-background" value="{{$request->face}}" id="face_amount1" name="face_amount11" placeholder="Face Amount">
+                                </div>
+                                <span class="text-center">or</span>
+                                <div class="col-lg-3">
+                                    <input type="number" class="form-control input-background" id="face_amount2" name="face_amount22" placeholder="Face Amount">
+                                </div>
+                                <span>or</span>
+                                <div class="col-lg-3">
+                                    <input type="number" class="form-control input-background" id="face_amount3" name="face_amount33" placeholder="Face Amount">
+                                </div>
+                                <br>
+                                <br>
+                                <br>
+                                <div class="col-lg-5 ml-lg-5" style="margin-top: 20px;display: block">
+                                    <label for="">{{__('profile.Coverage Type:')}}</label>
+                                    <select name="type1" class="form-control input-background">
+                                        <option @if($request->type=="levels") selected @endif value="levels">Level
+                                        </option>
+                                        <option @if($request->type=="modifieds") selected @endif value="modifieds">
+                                            Graded/Modified
+                                        </option>
+                                        <option @if($request->type=="guaranteeds") selected
+                                            @endif value="guaranteeds">Guaranteed
+                                        </option>
+                                        {{-- <option value="limiteds">Limited Pay</option>--}}
+                                    </select>
+                                </div>
+                                <div class="col-lg-5 " style="margin-top: 20px;">
+                                    <label for="">{{__('profile.Company:')}}</label>
+                                    <select name="company2 " class="form-control input-background">
+                                        @foreach($companies as $company)
+                                        @if(!$company->disable)
+                                        <option @if($request->company==$company->id) selected
+                                            @endif value="{{$company->id}}">{{$company->name}}</option>
+                                        @endif
+                                        @endforeach
+                                        {{-- <option value="limiteds">Limited Pay</option>--}}
+                                    </select>
+                                </div>
+                            </div>
+                            <br>
+                        </div>
+                    </div>
+                    <div class="container-fluid mt-4">
+                        <div class="row ml-3">
+                            <div class="col-lg-4 col-12">
+                                <h5 style="color: #6B5EFF;">{{__('profile.About the client')}}</h5>
                                 <input type="hidden" id="gender" name="gender" value="{{$gender}}">
-                                <div class="row my-5">
-                                    <div class="col-lg-1 col-2">
-
-                                        <p>{{__('profile.Sex:')}}</p>
-                                    </div>
-
-                                    <div class="col-5 text-center ">
+                                <label for="">{{__('profile.Sex:')}}</label>
+                                <div class="row ">
+                                    <div class="col-lg-6 text-center ">
                                         <div class="col-sm-12 p-0" style="margin: auto;cursor: pointer">
-                                            <p class="p-2 gender" data="male"
-                                               style="@if($gender=='male') border: 1px solid #22339e;border-radius: 10px;color: white;background-color:#22339e @else  border: 1px solid #22339e;border-radius: 10px  @endif ">
+                                            <!-- <p class="p-2 gender" data="male" style="@if($gender=='male') border: 1px solid #22339e;border-radius: 10px;color: white;background-color:#22339e @else  border: 1px solid #22339e;border-radius: 10px  @endif ">
+                                            Male</p> -->
+                                            <p class="p-2 gender blue-color" data="male" style="border-radius:10px">
                                                 Male</p>
                                         </div>
                                     </div>
-
-                                    <div class="col-5 text-center">
-                                        <div class="col-sm-12 p-0" style="margin: auto;cursor: pointer">
-                                            <p class="p-2 gender" data="female"
-                                               style="  @if($gender=='female') border: 1px solid #22339e;border-radius: 10px;color: white;background-color:#22339e @else  border: 1px solid #22339e;border-radius: 10px  @endif ">
+                                    <div class="col-lg-6 text-center">
+                                        <div class="col-sm-12 p-0" style="margin: auto;cursor: pointer;">
+                                            <p class="p-2 gender pink-color" data="female" style="border-radius:10px">
                                                 Female
                                             </p>
                                         </div>
                                     </div>
                                 </div>
-
-
+                            </div>
+                            <div class="col-lg-4 " style="margin-top: 35px;padding:0px">
                                 <label for="cars">{{__('profile.State:')}}</label>
-
-                                <select name="state" class="form-control">
-                                    <option value="Graded/Modified">UnitedKingdom</option>
-                                    <option value="Guaranteed">UnitedKingdom</option>
-                                    <option value="Limited Pay">UnitedKingdom</option>
-                                </select>
-                                <div class="row" style="margin-top: 40px;">
-                                    <div class="col-lg-2 pt-1" style="margin-top: 20px;">
-                                        <p>{{__('profile.Birthday:')}}</p>
+                                <div class="col-lg-12">
+                                    <select name="state" class="form-control input-background">
+                                        <option value="Graded/Modified">UnitedKingdom</option>
+                                        <option value="Guaranteed">UnitedKingdom</option>
+                                        <option value="Limited Pay">UnitedKingdom</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-4" style="margin-top: 30px;">
+                                <label>{{__('profile.Birthday:')}}</label>
+                                <div class="row">
+                                    <div class="col-lg-3 col-3  p-1 c" style="">
+                                        <input type="number" value="07" class="form-control input-background" placeholder="dd">
                                     </div>
-                                    <div class="col-lg-1 col-3  p-1 c" style="margin-top: 20px;">
-                                        <input type="number" value="07" class="form-control" placeholder="dd">
+                                    <div class="col-lg-3 col-3 p-1" style="">
+                                        <input type="number" value="12" class="form-control input-background" placeholder="mm">
                                     </div>
-                                    <div class="col-lg-1 col-3 p-1" style="margin-top: 20px;">
-                                        <input type="number" value="12" class="form-control" placeholder="mm">
+                                    <div class="col-lg-3 col-3 p-1" style="">
+                                        <input type="number" style="text-align: center" id="year" value="{{$year}}" class="form-control input-background" placeholder="yy">
                                     </div>
-                                    <div class="col-lg-2 col-3 p-1" style="margin-top: 20px;">
-                                        <input type="number" style="text-align: center" id="year" value="{{$year}}"
-                                               class="form-control" placeholder="yy">
+                                    <!-- <div class="col-lg-3 col-3 p-1" style="">
+                                    <p class="mt-2" id="age_text" style="color: grey">age({{$age}})</p>
+                                </div> -->
+                                    <div class="col-lg-3 col-3 p-1" style="">
+                                        <p class="mt-2" id="age_text" style="color: grey;font-size:11px"><span class="blue-colorr">Age</span><br>22</p>
                                     </div>
-
-                                    <div class="col-lg-2 col-3 p-1" style="margin-top: 20px;">
-                                        <p class="mt-2" id="age_text" style="color: grey">age({{$age}})</p>
-                                    </div>
-
                                     <input type="hidden" name="age" id="age" value="{{$age}}">
-
                                 </div>
-
-                                <div class="row" style="margin-top: 10px;">
-
-                                    <div class="col-lg-7" style="margin-top: 10px;">
-                                        <label for="cars">{{__('profile.Nicotine Use:')}}</label>
-
-                                        <select name="cigrate" class="form-control">
-                                            <option @if($request->company=='not_smoker') selected
-                                                    @endif value="not_smoker">None
-                                            </option>
-                                            <option @if($request->company=="smoker") selected @endif value="smoker">
-                                                Smoking + Nicotine
-                                            </option>
-
-                                        </select>
-                                    </div>
-                                    <div class="col-lg-7" style="margin-top: 40px;">
-                                        <label for="cars">{{__('profile.Payment Type:')}}</label>
-
-                                        <select name="payment" class="form-control">
-                                            <option selected value="Bank">Bank</option>
-                                            <option value="Direct">Direct</option>
-                                            <option value="Credit Card">Credit Card</option>
-                                        </select>
-                                    </div>
-
-
-                                </div>
-
-
                             </div>
-
-                            <div class="col-lg-12 col-12" style="text-align: center;margin-top:50px;">
-                                <button id="get_quote_compare_fex" type="button"
-                                        style="background-color: #340856;padding: 20px"
-                                        class="btn btn-dark">{{__('profile.Get Quote')}}</button>
-                                <br><br>
-
-                            </div>
-
                         </div>
-                    </form>
+                    </div>
+                    <div class="container-fluid">
+
+                        <div class="container-fluid">
+                            <div class="row ml-1">
+                                <div class="col-lg-4" style="">
+                                    <label for="cars">{{__('profile.Nicotine Use:')}}</label>
+                                    <select name="cigrate" class="form-control input-background">
+                                        <option @if($request->company=='not_smoker') selected
+                                            @endif value="not_smoker">None
+                                        </option>
+                                        <option @if($request->company=="smoker") selected @endif value="smoker">
+                                            Smoking + Nicotine
+                                        </option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-4" style="padding-right:0px">
+                                    <label for="cars">{{__('profile.Payment Type:')}}</label>
+                                    <select name="payment" class="form-control input-background">
+                                        <option selected value="Bank">Bank</option>
+                                        <option value="Direct">Direct</option>
+                                        <option value="Credit Card">Credit Card</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-4 col-12 " style="text-align: center;">
+                                    <button id="get_quote_compare_fex" type="button" style="background-color:#6B5EFF;margin-top: 32px;width: 182px; margin-left: 140px;border:none" class="btn btn-dark">{{__('profile.Get Quote')}}</button>
+                                    <br><br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <!-- </div> -->
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+<div class="container mb-5">
+    <div class="row text-center">
+        <div class="col-lg-12 mb-4">
+            <b style="color: #6B5EFF;font-size:20px">{{__('Options')}}</b>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-3 d-flex justify-content-center align-items-center">
+            <h4 style="color:#6B5EFF">Company 1 </h4>
+        </div>
+        <div class="col-lg-3 mb-4">
+            <div class="promise-level text-center p-1">
+                <p style="padding-top:15px">Living Promise Level</p>
+                <div class="package-price text-center">
+                    <p style="padding-top: 8px;">$21.0/mo</p>
+                    <div class="face-amount">
+                        <p style="color: #6B5EFF;padding-top:10px" class="text-center">
+                            Face Amount
+                        </p>
+                        <p style="padding:0px;padding-bottom:12px"class="text-center">
+                            $5000
+                        </p>
+                    </div>
                 </div>
             </div>
-
-
         </div>
-    </div>
-
-
-
-
-
-    </div>
-
-    <div class="container mb-5">
-        <div class="row header">
-            <div class="col-lg-12">
-                <b>{{__('Options')}}</b>
+        <div class="col-lg-3 mb-4">
+            <div class="promise-level text-center p-1">
+                <p style="padding-top:15px">Living Promise Level</p>
+                <div class="package-price text-center">
+                    <p style="padding-top: 8px;">$21.0/mo</p>
+                    <div class="face-amount">
+                        <p style="color: #6B5EFF;padding-top:10px" class="text-center">
+                            Face Amount
+                        </p>
+                        <p style="padding:0px;padding-bottom:12px"class="text-center">
+                            $5000
+                        </p>
+                    </div>
+                </div>
             </div>
-
         </div>
-        <div class=" result ">
-
+        <div class="col-lg-3 mb-4">
+            <div class="promise-level text-center mb-4 p-1">
+                <p style="padding-top:15px">Living Promise Level</p>
+                <div class="package-price text-center">
+                    <p style="padding-top: 8px;">$21.0/mo</p>
+                    <div class="face-amount">
+                        <p style="color: #6B5EFF;padding-top:10px" class="text-center">
+                            Face Amount
+                        </p>
+                        <p style="padding:0px;padding-bottom:12px"class="text-center">
+                            $5000
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
-
-
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="{{asset('assets/js/fexcustom.js')}}"></script>
+    <div class="row mt-5">
+        <div class="col-lg-3 d-flex justify-content-center align-items-center">
+            <h4 style="color:#6B5EFF">Company 2 </h4>
+        </div>
+        <div class="col-lg-3 mb-4">
+            <div class="promise-level text-center p-1">
+                <p style="padding-top:15px">Living Promise Level</p>
+                <div class="package-price text-center">
+                    <p style="padding-top: 8px;">$21.0/mo</p>
+                    <div class="face-amount">
+                        <p style="color: #6B5EFF;padding-top:10px" class="text-center">
+                            Face Amount
+                        </p>
+                        <p style="padding:0px;padding-bottom:12px"class="text-center">
+                            $5000
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 mb-4">
+            <div class="promise-level text-center p-1">
+                <p style="padding-top:15px">Living Promise Level</p>
+                <div class="package-price text-center">
+                    <p style="padding-top: 8px;">$21.0/mo</p>
+                    <div class="face-amount">
+                        <p style="color: #6B5EFF;padding-top:10px" class="text-center">
+                            Face Amount
+                        </p>
+                        <p style="padding:0px;padding-bottom:12px"class="text-center">
+                            $5000
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 mb-4">
+            <div class="promise-level text-center p-1">
+                <p style="padding-top:15px">Living Promise Level</p>
+                <div class="package-price text-center">
+                    <p style="padding-top: 8px;">$21.0/mo</p>
+                    <div class="face-amount">
+                        <p style="color: #6B5EFF;padding-top:10px" class="text-center">
+                            Face Amount
+                        </p>
+                        <p style="padding:0px;padding-bottom:12px"class="text-center">
+                            $5000
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class=" result ">
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="{{asset('assets/js/fexcustom.js')}}"></script>
 
 @endsection

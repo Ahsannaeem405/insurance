@@ -159,7 +159,6 @@
                         <div class="row" style="margin-top: 40px;">
                             <div class="col-lg-12 col-12">
                                 <!-- <h4>{{__('profile.Drug and Health Information')}}</h4><br> -->
-
                                 <div class="row" style="justify-content: space-between;">
                                     <div class="col-lg-6">
                                         <label for="">Health Condition</label>
@@ -200,15 +199,11 @@
                                             {{-- <option value="limiteds">Limited Pay</option>--}}
                                         </select>
                                     </div>
-
-
                                     <!-- <br> -->
                                     <input type="hidden" id="gender" name="gender" value="male">
                                     <!-- <div class="row my-5"> -->
                                     <!-- <div class="col-lg-2 col-2">
-                                  
                                 </div> -->
-
                                     <div class="col-lg-2  text-center">
                                         <div class="col-sm-12 p-0" style="margin: auto;cursor: pointer;">
                                             <p class="m-0">{{__('profile.Sex:')}}</p>
@@ -316,7 +311,7 @@
                                             <option value="Credit Card">Credit Card</option>
                                         </select>
                                     </div>
-                                    <div class="col-lg-4 col-12" style="text-align: center;margin-top:68px;">
+                                    <div class="col-lg-4 col-12" style="text-align: center;margin-top:72px">
                                         <button id="get_quote_fex" type="button" style="" class="btn btn-dark quote">{{__('profile.Get Quote')}}</button>
                                         <br><br>
                                     </div>

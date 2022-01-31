@@ -5,16 +5,13 @@ $rand = random_int(100000, 999999);
 @php $condition='condition_'.$language.'' @endphp
 
 <div id="con_div_{{$rand}}" class="mt-3">
-
-    <div style="padding: 0.5em 0.8em !important;border:none" class="dropdown">
-        {{$rec->$condition}}
-
-        <i style="float: right;color: red;cursor: pointer" id_data="{{$rand}}" class="fa fa-trash p-1 con_remove"> </i>
-        <i style="float: right;color: purple;cursor: pointer" id_data="{{$rand}}" status="show" class="fa fa-edit p-1 con_edit"> </i>
-        <input type="hidden" value="{{$rec->condition_id}}" name="condition_ids[]">
-    </div>
-
-    <div class="dropdown-container mb-5" style="background-color: white;   box-shadow: 0 3px 15px 0 rgb(0 0 0 / 20%);padding:1rem;  ">
+    <div class="dropdown-container-fluid mb-5  treatment-div">
+        <div style="padding: 0.5em 0.8em !important;border:none" class="dropdown">
+            {{$rec->$condition}}
+            <i style="float: right;color: red;cursor: pointer" id_data="{{$rand}}" class="fa fa-trash p-1 con_remove"> </i>
+            <i style="float: right;color: purple;cursor: pointer" id_data="{{$rand}}" status="show" class="fa fa-edit p-1 con_edit"> </i>
+            <input type="hidden" value="{{$rec->condition_id}}" name="condition_ids[]">
+        </div>
         @if($rec->conditionQuestions!=null)
         <div>
             @php $i=1; @endphp
@@ -128,11 +125,11 @@ $rand = random_int(100000, 999999);
                 <div class="container">
                     <div class="row m-0 mt-3">
                         <div class="col-6 " style="margin: auto;cursor: pointer">
-                            <p class="p-2 selection selection_{{$rand}}_{{$question->id}}" next_ques="{{$question->if_yes}}" rand="{{$rand}}" data_id="{{$question->id}}" i="{{$i}}" data="yes" style="border-radius: 10px;color: white;background-color:#41E5DB ; text-align: center">
+                            <p class="p-2 selection selection_{{$rand}}_{{$question->id}} blue-color" next_ques="{{$question->if_yes}}" rand="{{$rand}}" data_id="{{$question->id}}" i="{{$i}}" data="yes" style="border-radius: 10px; text-align: center">
                                 Yes</p>
                         </div>
                         <div class="col-6 " style="margin: auto;cursor: pointer">
-                            <p class="p-2 selection selection_{{$rand}}_{{$question->id}}" data="no" i="{{$i}}" next_ques="{{$question->if_no}}" rand="{{$rand}}" data_id="{{$question->id}}" style="border-radius: 10px;color: white;text-align:center;background-color:#FF3366">
+                            <p class="p-2 selection selection_{{$rand}}_{{$question->id}} pink-color" data="no" i="{{$i}}" next_ques="{{$question->if_no}}" rand="{{$rand}}" data_id="{{$question->id}}" style="border-radius: 10px;color: white;text-align:center;">
                                 No</p>
                         </div>
                     </div>
@@ -143,17 +140,14 @@ $rand = random_int(100000, 999999);
             @endforeach
             <div class="row mt-5 text-center">
                 <div class="m-auto">
-
-                    <input type="button" id="back_ques" class="btn btn-secondary back_ques{{$rand}}" current="1" rand="{{$rand}}" total="{{$i-1}}" value="BACK" style="border-radius: 22px;">
+                    <input type="button" id="back_ques" class="btn btn-secondary back_ques{{$rand}} btn-style" current="1" rand="{{$rand}}" total="{{$i-1}}" value="BACK" style="border-radius: 22px;">
                     <span class="start_status{{$rand}}">1</span> / <span class="end_status{{$rand}}">{{$i-1}}</span>
-                    <input type="button" value="NEXT" class="next_ques{{$rand}} btn btn-primary" id="next_ques" current="1" rand="{{$rand}}" total="{{$i-1}}" style="background-color: #8b8be1;border: #8282cb;border-radius: 22px">
+                    
+                    <input type="button" value="NEXT" class="next_ques{{$rand}} btn btn-primary btn-style" id="next_ques" current="1" rand="{{$rand}}" total="{{$i-1}}" style="background-color: #8b8be1;border: #8282cb;border-radius: 22px">
                 </div>
             </div>
-
         </div>
         @endif
-
-
     </div>
 </div>
 

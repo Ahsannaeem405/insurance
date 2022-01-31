@@ -21,6 +21,10 @@
 .pink-colorr
 {
     color: #FF3366 !important;
+    -webkit-border-radius: 10px !important;
+    -moz-border-radius: 10px !important;
+    -ms-border-radius: 10px !important;
+    -o-border-radius: 10px !important;
 }
 .quote{
     background-color: #6B5EFF !important;
@@ -29,4 +33,40 @@
     border: none !important;
     width: 160px;
     /* margin-top: 20px; */
+}
+.btn-style{
+    height: 28px;
+    font-size: 10px !important;
+    width: 75px;
+}
+.treatment-div{
+    border-radius: 14px;
+    -webkit-border-radius: 14px;
+    -moz-border-radius: 14px;
+    -ms-border-radius: 14px;
+    -o-border-radius: 14px;
+    background-color: white; 
+      box-shadow: 0 3px 15px 0 rgb(0 0 0 / 20%);
+      padding:1rem;  
+}
+.promise-level{
+   
+    border-radius:15px;
+    color: white;
+    background-color: #6B5EFF;
+}
+.package-price{
+    margin:5px;
+ 
+    border-radius: 13px;
+    background-color:white;
+    color:black;
+}
+.face-amount{
+    border-radius: 10px;
+    background-color:rgba(107, 94, 255, 0.2);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
 }
