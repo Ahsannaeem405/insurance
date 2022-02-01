@@ -1,8 +1,8 @@
 $(document).ready(function () {
 
 
-    var baseurl = '';
-    // var baseurl='/public';
+   // var baseurl = '';
+     var baseurl='/public';
 
 
     //age calculation
@@ -15,7 +15,7 @@ $(document).ready(function () {
         $('#age').val(date - year);
 
         var fina = date - year;
-        $('#age_text').empty().append("age(" + fina + ")");
+        $('#age_text').empty().append("<span class=\"pink-colorr\">Age</span> (" + fina + ")");
 
     });
 
@@ -190,7 +190,9 @@ $(document).ready(function () {
                             }
                         });
 
-                    } else if ($(currentPosition).attr('ifno') != 0 && $(currentPosition).attr('answer') == 'no') {
+                    }
+
+                    else if ($(currentPosition).attr('ifno') != 0 && $(currentPosition).attr('answer') == 'no') {
                         var id = $(currentPosition).attr('ifno');
                         $.ajax({
                             type: 'get',

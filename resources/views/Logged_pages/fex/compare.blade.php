@@ -311,7 +311,7 @@
                                     <p class="mt-2" id="age_text" style="color: grey">age({{$age}})</p>
                                 </div> -->
                                     <div class="col-lg-3 col-3 p-1" style="">
-                                        <p class="mt-2" id="age_text" style="color: grey;font-size:11px"><span class="blue-colorr">Age</span><br>22</p>
+                                        <p class="mt-2" id="age_text" style="color: grey;font-size:11px"><span class="pink-colorr">Age</span> (22)</p>
                                     </div>
                                     <input type="hidden" name="age" id="age" value="{{$age}}">
                                 </div>

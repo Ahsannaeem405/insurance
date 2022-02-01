@@ -254,7 +254,7 @@
                                     </div>
                                     <div class="col-lg-4">
                                         <!-- <div class="col-lg-2 pt-1" style="margin-top: 20px;">
-                                       
+
                                         </div> -->
                                         <label style="margin:0">{{__('profile.Birthday:')}}</label>
                                         <div class="row">
@@ -269,7 +269,7 @@
                                                 <input type="number" style="text-align: center" id="year" name="year" value="1999" class="form-control input-background" placeholder="yy">
                                             </div>
                                             <div class="col-lg-3 col-3 p-1" style="">
-                                                <p class="mt-2" id="age_text" style="color: grey;font-size:11px"><span class="pink-colorr">Age</span><br>22</p>
+                                                <p class="mt-2" id="age_text" style="color: grey;font-size:11px"><span class="pink-colorr">Age</span> (22)</p>
                                             </div>
                                             <input type="hidden" name="age" id="age" value="22">
                                         </div>
@@ -279,7 +279,7 @@
                                         <label class="m-0">{{__('profile.Height/Weight (optional):')}}</label>
                                         <div class="row">
                                             <!-- <div class="col-lg-4 pt-1" style="margin-top: 20px;">
-                                            
+
                                         </div> -->
 
                                             <div class="col-lg-4 col-4 p-1" style="">
