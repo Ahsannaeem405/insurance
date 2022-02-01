@@ -218,22 +218,22 @@
                             <!-- <h4>{{__('profile.Drug and Health Information')}}</h4><br> -->
                             <div class="row" style="margin-top: 98px;">
                                 <div class="col-lg-3 ml-lg-5">
-                                    <input type="number" class="form-control input-background" value="{{$request->face}}" id="face_amount1" name="face_amount11" placeholder="Face Amount">
+                                    <input type="number" class="form-control input-background" value="{{$request->face}}" id="face_amount11" name="face_amount11" placeholder="Face Amount">
                                 </div>
                                 <span class="text-center">or</span>
                                 <div class="col-lg-3">
-                                    <input type="number" class="form-control input-background" id="face_amount2" name="face_amount22" placeholder="Face Amount">
+                                    <input type="number" class="form-control input-background" id="face_amount22" name="face_amount22" placeholder="Face Amount">
                                 </div>
                                 <span>or</span>
                                 <div class="col-lg-3">
-                                    <input type="number" class="form-control input-background" id="face_amount3" name="face_amount33" placeholder="Face Amount">
+                                    <input type="number" class="form-control input-background" id="face_amount33" name="face_amount33" placeholder="Face Amount">
                                 </div>
                                 <br>
                                 <br>
                                 <br>
                                 <div class="col-lg-5 ml-lg-5" style="margin-top: 20px;display: block">
                                     <label for="">{{__('profile.Coverage Type:')}}</label>
-                                    <select name="type1" class="form-control input-background">
+                                    <select name="type2" class="form-control input-background">
                                         <option @if($request->type=="levels") selected @endif value="levels">Level
                                         </option>
                                         <option @if($request->type=="modifieds") selected @endif value="modifieds">
@@ -247,7 +247,7 @@
                                 </div>
                                 <div class="col-lg-5 " style="margin-top: 20px;">
                                     <label for="">{{__('profile.Company:')}}</label>
-                                    <select name="company2 " class="form-control input-background">
+                                    <select name="company2" class="form-control input-background">
                                         @foreach($companies as $company)
                                         @if(!$company->disable)
                                         <option @if($request->company==$company->id) selected
@@ -362,112 +362,7 @@
             <b style="color: #6B5EFF;font-size:20px">{{__('Options')}}</b>
         </div>
     </div>
-    <div class="row">
-        <div class="col-lg-3 d-flex justify-content-center align-items-center">
-            <h4 style="color:#6B5EFF">Company 1 </h4>
-        </div>
-        <div class="col-lg-3 mb-4">
-            <div class="promise-level text-center p-1">
-                <p style="padding-top:15px">Living Promise Level</p>
-                <div class="package-price text-center">
-                    <p style="padding-top: 8px;">$21.0/mo</p>
-                    <div class="face-amount">
-                        <p style="color: #6B5EFF;padding-top:10px" class="text-center">
-                            Face Amount
-                        </p>
-                        <p style="padding:0px;padding-bottom:12px"class="text-center">
-                            $5000
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 mb-4">
-            <div class="promise-level text-center p-1">
-                <p style="padding-top:15px">Living Promise Level</p>
-                <div class="package-price text-center">
-                    <p style="padding-top: 8px;">$21.0/mo</p>
-                    <div class="face-amount">
-                        <p style="color: #6B5EFF;padding-top:10px" class="text-center">
-                            Face Amount
-                        </p>
-                        <p style="padding:0px;padding-bottom:12px"class="text-center">
-                            $5000
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 mb-4">
-            <div class="promise-level text-center mb-4 p-1">
-                <p style="padding-top:15px">Living Promise Level</p>
-                <div class="package-price text-center">
-                    <p style="padding-top: 8px;">$21.0/mo</p>
-                    <div class="face-amount">
-                        <p style="color: #6B5EFF;padding-top:10px" class="text-center">
-                            Face Amount
-                        </p>
-                        <p style="padding:0px;padding-bottom:12px"class="text-center">
-                            $5000
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row mt-5">
-        <div class="col-lg-3 d-flex justify-content-center align-items-center">
-            <h4 style="color:#6B5EFF">Company 2 </h4>
-        </div>
-        <div class="col-lg-3 mb-4">
-            <div class="promise-level text-center p-1">
-                <p style="padding-top:15px">Living Promise Level</p>
-                <div class="package-price text-center">
-                    <p style="padding-top: 8px;">$21.0/mo</p>
-                    <div class="face-amount">
-                        <p style="color: #6B5EFF;padding-top:10px" class="text-center">
-                            Face Amount
-                        </p>
-                        <p style="padding:0px;padding-bottom:12px"class="text-center">
-                            $5000
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 mb-4">
-            <div class="promise-level text-center p-1">
-                <p style="padding-top:15px">Living Promise Level</p>
-                <div class="package-price text-center">
-                    <p style="padding-top: 8px;">$21.0/mo</p>
-                    <div class="face-amount">
-                        <p style="color: #6B5EFF;padding-top:10px" class="text-center">
-                            Face Amount
-                        </p>
-                        <p style="padding:0px;padding-bottom:12px"class="text-center">
-                            $5000
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 mb-4">
-            <div class="promise-level text-center p-1">
-                <p style="padding-top:15px">Living Promise Level</p>
-                <div class="package-price text-center">
-                    <p style="padding-top: 8px;">$21.0/mo</p>
-                    <div class="face-amount">
-                        <p style="color: #6B5EFF;padding-top:10px" class="text-center">
-                            Face Amount
-                        </p>
-                        <p style="padding:0px;padding-bottom:12px"class="text-center">
-                            $5000
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
     <div class=" result ">
     </div>
 </div>

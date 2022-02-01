@@ -7,22 +7,25 @@
     @php $condition='condition_'.$language.'' @endphp
 
     <div id="con_div_{{$rand}}" class="mt-3">
-        <div class="dropdown-container-fluid treatment-div mb-5"
-             style="background-color: white;   box-shadow: 0 3px 15px 0 rgb(0 0 0 / 20%);padding:1rem;  ">
-            <div>
-            <div style="border:none;"class="dropdown">
+        <div class="dropdown-container-fluid treatment-div mb-5" style="background-color: white;   box-shadow: 0 3px 15px 0 rgb(0 0 0 / 20%);padding:1rem;  ">
+
+            <div style="border:none;" class="dropdown">
             {{$rec[0]->$medication}}
             <i style="float: right;color: red;cursor: pointer" id_data="{{$rand}}"
                class="fa fa-trash p-1 con_remove"> </i>
             <i style="float: right;color: purple;cursor: pointer" id_data="{{$rand}}" status="show"
                class="fa fa-edit p-1 con_edit"> </i>
             </div>
+            <div>
                 <div class="current_ques_{{$rand}}_{{$i}} all_ques_{{$rand}} medication_Con" conidtion_id="{{$rec[0]->id}}" rand={{$rand}} jump="1" i="{{$i}}">
                     <h3 class="text-center mt-2" style="color: #6B5EFF;">Please select condition</h3>
                     @foreach($rec as $data)
                         <p><input value="{{$data->condition_id}}" name="selec_condition{{$rand}}" type="radio"> {{$data->$condition}}</p>
                     @endforeach
                 </div>
+
+
+
             </div>
             <div class="row mt-5 text-center">
                 <div class="m-auto">
@@ -37,6 +40,7 @@
                            style="background-color: #8b8be1;border: #8282cb">
                 </div>
             </div>
+
         </div>
     </div>
 

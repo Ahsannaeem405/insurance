@@ -1,77 +1,130 @@
+
 <div class="row">
-
+    <div class="col-lg-3 d-flex justify-content-center align-items-center">
+        <h4 style="color:#6B5EFF">{{$company1->name}} </h4>
+    </div>
     @if($rec1)
-    <div class="col-lg-4">
-
-
-        <div class="quote-result auto-center mx-1 mt-3 col p-1 py-2 relative" style="box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;">
-{{--            <div class="absolute top-0 left-2 pxw-30">--}}
-
-{{--                    <div class="relative cursor"><img src="{{asset('images/info.png')}}" class="pxw-30 pxmt-5"> <!----></div>--}}
-
-{{--            </div>--}}
-
-            <div class="text-center pb-1 font-0p9">{{$rec1->Tagline}}</div>
-            <div class="text-center font-weight-bold" style="font-size: 28px">{{$rec1->price}}<span class="font-0p9">/mo</span></div>
-            <div class="text-center pt-2 pb-1 font-1p2">Face Amount</div>
-            <div class="text-center font-weight-bold" style="font-size: 28px">${{$rec1->Amount}}</div> <!---->
-            <div class="col w-100 auto-center mt-5 pb-3">
-
+    <div class="col-lg-3 mb-4">
+        <div class="promise-level text-center p-1">
+            <p style="padding-top:15px">{{$rec1->Tagline}}</p>
+            <div class="package-price text-center">
+                <p style="padding-top: 8px;">{{$rec1->price}}/mo</p>
+                <div class="face-amount">
+                    <p style="color: #6B5EFF;padding-top:10px" class="text-center">
+                        Face Amount
+                    </p>
+                    <p style="padding:0px;padding-bottom:12px"class="text-center">
+                        ${{$rec1->Amount}}
+                    </p>
+                </div>
             </div>
         </div>
-
     </div>
-
         @endif
 
-        @if($rec2)
-            <div class="col-lg-4">
 
-
-                <div class="quote-result auto-center mx-1 mt-3 col p-1 py-2 relative" style="box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;">
-                    {{--            <div class="absolute top-0 left-2 pxw-30">--}}
-
-                    {{--                    <div class="relative cursor"><img src="{{asset('images/info.png')}}" class="pxw-30 pxmt-5"> <!----></div>--}}
-
-                    {{--            </div>--}}
-
-                    <div class="text-center pb-1 font-0p9">{{$rec2->Tagline}}</div>
-                    <div class="text-center font-weight-bold" style="font-size: 28px">{{$rec2->price}}<span class="font-0p9">/mo</span></div>
-                    <div class="text-center pt-2 pb-1 font-1p2">Face Amount</div>
-                    <div class="text-center font-weight-bold" style="font-size: 28px">${{$rec2->Amount}}</div> <!---->
-                    <div class="col w-100 auto-center mt-5 pb-3">
-
+    @if($rec2)
+        <div class="col-lg-3 mb-4">
+            <div class="promise-level text-center p-1">
+                <p style="padding-top:15px">{{$rec2->Tagline}}</p>
+                <div class="package-price text-center">
+                    <p style="padding-top: 8px;">{{$rec2->price}}/mo</p>
+                    <div class="face-amount">
+                        <p style="color: #6B5EFF;padding-top:10px" class="text-center">
+                            Face Amount
+                        </p>
+                        <p style="padding:0px;padding-bottom:12px"class="text-center">
+                            ${{$rec2->Amount}}
+                        </p>
                     </div>
                 </div>
-
             </div>
-
-        @endif
-
-
-        @if($rec3)
-            <div class="col-lg-4">
+        </div>
+    @endif
 
 
-                <div class="quote-result auto-center mx-1 mt-3 col p-1 py-2 relative" style="box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;">
-                    {{--            <div class="absolute top-0 left-2 pxw-30">--}}
-
-                    {{--                    <div class="relative cursor"><img src="{{asset('images/info.png')}}" class="pxw-30 pxmt-5"> <!----></div>--}}
-
-                    {{--            </div>--}}
-
-                    <div class="text-center pb-1 font-0p9">{{$rec3->Tagline}}</div>
-                    <div class="text-center font-weight-bold" style="font-size: 28px">{{$rec3->price}}<span class="font-0p9">/mo</span></div>
-                    <div class="text-center pt-2 pb-1 font-1p2">Face Amount</div>
-                    <div class="text-center font-weight-bold" style="font-size: 28px">${{$rec3->Amount}}</div> <!---->
-                    <div class="col w-100 auto-center mt-5 pb-3">
-
+    @if($rec3)
+        <div class="col-lg-3 mb-4">
+            <div class="promise-level text-center p-1">
+                <p style="padding-top:15px">{{$rec3->Tagline}}</p>
+                <div class="package-price text-center">
+                    <p style="padding-top: 8px;">{{$rec3->price}}/mo</p>
+                    <div class="face-amount">
+                        <p style="color: #6B5EFF;padding-top:10px" class="text-center">
+                            Face Amount
+                        </p>
+                        <p style="padding:0px;padding-bottom:12px"class="text-center">
+                            ${{$rec3->Amount}}
+                        </p>
                     </div>
                 </div>
-
             </div>
-
-        @endif
-
+        </div>
+    @endif
 
 </div>
+<div class="row">
+    <div class="col-lg-3 d-flex justify-content-center align-items-center">
+        <h4 style="color:#6B5EFF">{{$company2->name}} </h4>
+    </div>
+    @if($rec4)
+        <div class="col-lg-3 mb-4">
+            <div class="promise-level text-center p-1">
+                <p style="padding-top:15px">{{$rec4->Tagline}}</p>
+                <div class="package-price text-center">
+                    <p style="padding-top: 8px;">{{$rec4->price}}/mo</p>
+                    <div class="face-amount">
+                        <p style="color: #6B5EFF;padding-top:10px" class="text-center">
+                            Face Amount
+                        </p>
+                        <p style="padding:0px;padding-bottom:12px"class="text-center">
+                            ${{$rec4->Amount}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    @endif
+
+
+    @if($rec5)
+        <div class="col-lg-3 mb-4">
+            <div class="promise-level text-center p-1">
+                <p style="padding-top:15px">{{$rec5->Tagline}}</p>
+                <div class="package-price text-center">
+                    <p style="padding-top: 8px;">{{$rec5->price}}/mo</p>
+                    <div class="face-amount">
+                        <p style="color: #6B5EFF;padding-top:10px" class="text-center">
+                            Face Amount
+                        </p>
+                        <p style="padding:0px;padding-bottom:12px"class="text-center">
+                            ${{$rec5->Amount}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    @endif
+
+
+    @if($rec6)
+        <div class="col-lg-3 mb-4">
+            <div class="promise-level text-center p-1">
+                <p style="padding-top:15px">{{$rec6->Tagline}}</p>
+                <div class="package-price text-center">
+                    <p style="padding-top: 8px;">{{$rec6->price}}/mo</p>
+                    <div class="face-amount">
+                        <p style="color: #6B5EFF;padding-top:10px" class="text-center">
+                            Face Amount
+                        </p>
+                        <p style="padding:0px;padding-bottom:12px"class="text-center">
+                            ${{$rec6->Amount}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    @endif
+
+</div>
+

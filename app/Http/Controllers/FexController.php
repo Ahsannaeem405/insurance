@@ -83,16 +83,24 @@ public $lang;
         $gender = $request->gender;
         $cigrate = $request->cigrate;
         $type = $request->type;
+        $type2 = $request->type2;
         $company_id = intval($request->company);
+        $company_id2 = intval($request->company2);
 
-
+$company1=companies::find($company_id);
+$company2=companies::find($company_id2);
         $table = $gender . '_' . $cigrate . '_' . $type;
+        $table2 = $gender . '_' . $cigrate . '_' . $type2;
 
         $rec1 = \DB::table($table)->where('Age', $request->age)->where('Amount', $request->face_amount1)->where('company_id', $company_id)->first();
         $rec2 = \DB::table($table)->where('Age', $request->age)->where('Amount', $request->face_amount2)->where('company_id', $company_id)->first();
         $rec3 = \DB::table($table)->where('Age', $request->age)->where('Amount', $request->face_amount3)->where('company_id', $company_id)->first();
 
-        return view('Logged_pages.response.fex.compare.compare', compact('rec1', 'rec2', 'rec3'));
+        $rec4 = \DB::table($table2)->where('Age', $request->age)->where('Amount', $request->face_amount11)->where('company_id', $company_id2)->first();
+        $rec5 = \DB::table($table2)->where('Age', $request->age)->where('Amount', $request->face_amount22)->where('company_id', $company_id2)->first();
+        $rec6 = \DB::table($table2)->where('Age', $request->age)->where('Amount', $request->face_amount33)->where('company_id', $company_id2)->first();
+
+        return view('Logged_pages.response.fex.compare.compare', compact('rec1', 'rec2', 'rec3','rec4','rec5','rec6','company1','company2'));
     }
 
     public function setting()

@@ -231,7 +231,7 @@ $(document).ready(function () {
 
         } else {
             $(this).attr('value', 'FINISHED');
-            $('#con_div_' + rand).children('div:nth-child(2)').hide();
+            $('#con_div_' + rand).children('div:nth-child(1)').children('div:nth-child(2)').hide();
             $('#con_div_' + rand).find('i.fa-edit').attr('status', 'hide');
         }
 
@@ -307,9 +307,11 @@ $(document).ready(function () {
 
         if (status == 'show') {
             $('#con_div_' + id).children('div:nth-child(1)').children('div:nth-child(2)').hide();
+            $('#con_div_' + id).children('div:nth-child(1)').children('div:nth-child(3)').hide();
             $(this).attr('status', 'hide');
         } else {
             $('#con_div_' + id).children('div:nth-child(1)').children('div:nth-child(2)').show();
+            $('#con_div_' + id).children('div:nth-child(1)').children('div:nth-child(3)').show();
             $(this).attr('status', 'show');
         }
 
@@ -451,7 +453,7 @@ $(document).ready(function () {
 
                             if (current + 1 == 1 + length) {
                                 $('.next_ques_med' + rand).attr('value', 'FINISHED')
-                                
+
                             }
 
                         }
@@ -502,7 +504,7 @@ $(document).ready(function () {
                 if ($(nextPosition).hasClass('childques' + rand + '')) {
                     if ($(nextPosition).attr('parentanswer') == $(currentPosition).attr('answer')) {
                         condition = false;
-                        alert(condition);
+
                     } else {
                         $('.childques' + rand).remove();
                         questionIndexing(rand);
@@ -569,7 +571,8 @@ $(document).ready(function () {
 
             } else {
                 $(this).attr('value', 'FINISHED');
-                $('#con_div_' + rand).children('div:nth-child(2)').hide();
+                $('#con_div_' + rand).children('div:nth-child(1)').children('div:nth-child(2)').hide();
+                $('#con_div_' + rand).children('div:nth-child(1)').children('div:nth-child(3)').hide();
                 $('#con_div_' + rand).find('i.fa-edit').attr('status', 'hide');
             }
         }
@@ -619,16 +622,24 @@ $(document).ready(function () {
 
 
         var check = true;
+        var check2= true;
         var message = '';
 
 
-        if ($('#face_amount1').val() == '' && $('#face_amount2').val() == '' && $('#face_amount2').val() == '') {
+        if ($('#face_amount1').val() == '' && $('#face_amount2').val() == '' && $('#face_amount3').val() == '') {
 
 
             check = false;
             message = 'Please Enter Face Amount'
         }
-        if (check == false) {
+
+       else if ($('#face_amount11').val() == '' && $('#face_amount22').val() == '' && $('#face_amount33').val() == '') {
+
+
+            check2 = false;
+            message = 'Please Enter Face Amount'
+        }
+        if (check == false || check2==false) {
             $('.toast-body').empty();
             $('.toast-body').text(message);
 
