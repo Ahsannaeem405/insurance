@@ -24,6 +24,13 @@
                 <div class="card-content p-3">
                     <form action="{{url("admin/upload/data")}}" method="post" enctype="multipart/form-data">
                         @csrf
+                        <div class="row text-center" >
+
+                            <div class="col-lg-12 mb-2">
+                                <h1 style="color: #8b8be1">FEX</h1>
+                            </div>
+
+                        </div>
 
                     <div class="row">
                         <div class="col-lg-6 mb-3">
@@ -48,6 +55,14 @@
                         <div class="col-lg-6 mb-3">
                             <p class="font-weight-bold">Medications</p>
                             <input type="file" name="medications">
+
+                        </div>
+
+
+
+                        <div class="col-lg-6 mb-3">
+                            <p class="font-weight-bold">Combo Conditions</p>
+                            <input type="file" name="combocondition">
 
                         </div>
 
@@ -143,8 +158,138 @@
                         </div>
 
 
-
                     </div>
+
+
+                        <div class="row text-center" >
+
+                            <div class="col-lg-12 mb-2">
+                                <h1 style="color: #8b8be1">TERM</h1>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-lg-12 mb-2">
+                                <h5 style="text-align: center">Female Smoker</h5>
+                            </div>
+
+                            <div class="col-lg-6 mb-3">
+                                <p class="font-weight-bold">Female Smoker 10 year</p>
+                                <input type="file" name="femalesmoker10">
+                            </div>
+
+                            <div class="col-lg-6 mb-3">
+                                <p class="font-weight-bold">Female Smoker 15 year</p>
+                                <input type="file" name="femalesmoker15">
+                            </div>
+
+                            <div class="col-lg-6 mb-3">
+                                <p class="font-weight-bold">Female Smoker 20 year</p>
+                                <input type="file" name="femalesmoker20">
+                            </div>
+
+                            <div class="col-lg-6 mb-3">
+                                <p class="font-weight-bold">Female Smoker 25 year</p>
+                                <input type="file" name="femalesmoker25">
+                            </div>
+
+                            <div class="col-lg-6 mb-3">
+                                <p class="font-weight-bold">Female Smoker 30 year</p>
+                                <input type="file" name="femalesmoker30">
+                            </div>
+
+
+                            <div class="col-lg-12 mb-2">
+                                <h5 style="text-align: center">Female Not Smoker</h5>
+                            </div>
+                            <div class="col-lg-6 mb-3">
+                                <p class="font-weight-bold">Female Not Smoker 10 year</p>
+                                <input type="file" name="femalenotsmoker10">
+                            </div>
+
+                            <div class="col-lg-6 mb-3">
+                                <p class="font-weight-bold">Female Not Smoker 15 year</p>
+                                <input type="file" name="femalenotsmoker15">
+                            </div>
+
+                            <div class="col-lg-6 mb-3">
+                                <p class="font-weight-bold">Female Not Smoker 20 year</p>
+                                <input type="file" name="femalenotsmoker20">
+                            </div>
+
+                            <div class="col-lg-6 mb-3">
+                                <p class="font-weight-bold">Female Not Smoker 25 year</p>
+                                <input type="file" name="femalenotsmoker25">
+                            </div>
+
+                            <div class="col-lg-6 mb-3">
+                                <p class="font-weight-bold">Female Not Smoker 30 year</p>
+                                <input type="file" name="femalenotsmoker30">
+                            </div>
+
+
+                            <div class="col-lg-12 mb-2">
+                                <h5 style="text-align: center">Male Smoker</h5>
+                            </div>
+
+                            <div class="col-lg-6 mb-3">
+                                <p class="font-weight-bold">Male Smoker 10 year</p>
+                                <input type="file" name="malesmoker10">
+                            </div>
+
+                            <div class="col-lg-6 mb-3">
+                                <p class="font-weight-bold">Male Smoker 15 year</p>
+                                <input type="file" name="malesmoker15">
+                            </div>
+
+                            <div class="col-lg-6 mb-3">
+                                <p class="font-weight-bold">Male Smoker 20 year</p>
+                                <input type="file" name="malesmoker20">
+                            </div>
+
+                            <div class="col-lg-6 mb-3">
+                                <p class="font-weight-bold">Male Smoker 25 year</p>
+                                <input type="file" name="malesmoker25">
+                            </div>
+
+                            <div class="col-lg-6 mb-3">
+                                <p class="font-weight-bold">Male Smoker 30 year</p>
+                                <input type="file" name="malesmoker30">
+                            </div>
+
+                            <div class="col-lg-12 mb-2">
+                                <h5 style="text-align: center">Male Not Smoker</h5>
+                            </div>
+
+                            <div class="col-lg-6 mb-3">
+                                <p class="font-weight-bold">Male Not Smoker 10 year</p>
+                                <input type="file" name="malenotsmoker10">
+                            </div>
+
+                            <div class="col-lg-6 mb-3">
+                                <p class="font-weight-bold">Male Not Smoker 15 year</p>
+                                <input type="file" name="malenotsmoker15">
+                            </div>
+
+                            <div class="col-lg-6 mb-3">
+                                <p class="font-weight-bold">Male Not Smoker 20 year</p>
+                                <input type="file" name="malenotsmoker20">
+                            </div>
+
+                            <div class="col-lg-6 mb-3">
+                                <p class="font-weight-bold">Male Not Smoker 25 year</p>
+                                <input type="file" name="malenotsmoker25">
+                            </div>
+
+                            <div class="col-lg-6 mb-3">
+                                <p class="font-weight-bold">Male Not Smoker 30 year</p>
+                                <input type="file" name="malenotsmoker30">
+                            </div>
+
+
+                        </div>
 
 
                         <div class="row my-4">

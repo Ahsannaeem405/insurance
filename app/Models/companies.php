@@ -16,4 +16,10 @@ class companies extends Model
             ->where('type','fex')
             ->where('user_id',Auth::user()->id);
     }
+    public function disableterm()
+    {
+        return $this->hasOne('App\Models\companyDisable','company_id','id')
+            ->where('type','term')
+            ->where('user_id',Auth::user()->id);
+    }
 }

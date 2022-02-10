@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ComboCondition;
 use App\Models\companies;
 use App\Models\condition;
 use App\Models\conditionQuestion;
@@ -9,6 +10,7 @@ use App\Models\Medication;
 use App\Models\Subsription;
 use App\Models\User;
 use Carbon\Carbon;
+use http\Env\Response;
 use Illuminate\Http\Request;
 
 class FexController extends Controller
@@ -79,7 +81,6 @@ public $lang;
 
     public function compare_fex(Request $request)
     {
-
         $gender = $request->gender;
         $cigrate = $request->cigrate;
         $type = $request->type;
@@ -87,8 +88,9 @@ public $lang;
         $company_id = intval($request->company);
         $company_id2 = intval($request->company2);
 
-$company1=companies::find($company_id);
-$company2=companies::find($company_id2);
+        $company1=companies::find($company_id);
+        $company2=companies::find($company_id2);
+
         $table = $gender . '_' . $cigrate . '_' . $type;
         $table2 = $gender . '_' . $cigrate . '_' . $type2;
 
@@ -100,7 +102,7 @@ $company2=companies::find($company_id2);
         $rec5 = \DB::table($table2)->where('Age', $request->age)->where('Amount', $request->face_amount22)->where('company_id', $company_id2)->first();
         $rec6 = \DB::table($table2)->where('Age', $request->age)->where('Amount', $request->face_amount33)->where('company_id', $company_id2)->first();
 
-        return view('Logged_pages.response.fex.compare.compare', compact('rec1', 'rec2', 'rec3','rec4','rec5','rec6','company1','company2'));
+        return view('Logged_pages.fex.response.fex.compare.compare', compact('rec1', 'rec2', 'rec3','rec4','rec5','rec6','company1','company2'));
     }
 
     public function setting()
@@ -389,7 +391,7 @@ $company2=companies::find($company_id2);
             $data->values()->all();
 
 
-            return view('Logged_pages.response.fex.quoter', compact('data', 'datanot', 'age', 'gender', 'face_amount', 'type', 'cigrate', 'year_data'));
+            return view('Logged_pages.fex.response.fex.quoter', compact('data', 'datanot', 'age', 'gender', 'face_amount', 'type', 'cigrate', 'year_data'));
 
 
         }
@@ -416,7 +418,7 @@ $company2=companies::find($company_id2);
 
             }
 
-            return view('Logged_pages.response.fex.quoter', compact('data', 'datanot', 'age', 'gender', 'face_amount', 'type', 'cigrate', 'year_data'));
+            return view('Logged_pages.fex.response.fex.quoter', compact('data', 'datanot', 'age', 'gender', 'face_amount', 'type', 'cigrate', 'year_data'));
         }
 
 
@@ -427,9 +429,10 @@ $company2=companies::find($company_id2);
     {
 
         $condition = $request->condition;
-        $rec = condition::where('condition_'.$this->lang.'', 'like', "%$condition%")->limit(5)->get()->unique('condition_'.$this->lang.'');
-
-        return view('Logged_pages.response.fex.condition', compact('rec'));
+        $rec = condition::where('condition_'.$this->lang.'', 'like', "%$condition%")->get()->unique('condition_'.$this->lang.'');
+        $rec = collect($rec);
+        $rec=$rec->take(5);
+        return view('Logged_pages.fex.response.fex.condition', compact('rec'));
 
     }
 
@@ -438,10 +441,9 @@ $company2=companies::find($company_id2);
         $rec = condition::with(['conditionQuestions' => function ($q) {
             $q->with('ifyes');
             $q->with('ifno');
-        }])->find($request->id);
+        }])->where('condition_id',$request->id)->first();
 
-
-        return view('Logged_pages.response.fex.condition_qa', compact('rec'));
+        return view('Logged_pages.fex.response.fex.condition_qa', compact('rec'));
 
 
     }
@@ -453,7 +455,7 @@ $company2=companies::find($company_id2);
         $question = conditionQuestion::where('question_id', $request->id)->first();
         $answer = $request->answer;
         $rand = $request->rand;
-        return view('Logged_pages.response.fex.condition_qa_next', compact('question', 'answer', 'rand'));
+        return view('Logged_pages.fex.response.fex.condition_qa_next', compact('question', 'answer', 'rand'));
 
 
     }
@@ -461,20 +463,19 @@ $company2=companies::find($company_id2);
     public function medications(Request $request)
     {
         $medication = $request->medication;
-        $rec = Medication::where('medication_'.$this->lang.'', 'like', "%$medication%")->limit(5)->get()->unique('medication_'.$this->lang.'');
+       $rec = Medication::where('medication_'.$this->lang.'','like', "%$medication%")->get()->unique('medication_'.$this->lang.'');
+       $rec = collect($rec);
+       $rec=$rec->take(5);
 
-        return view('Logged_pages.response.fex.medication.medication', compact('rec'));
+
+        return view('Logged_pages.fex.response.fex.medication.medication', compact('rec'));
     }
 
 
     public function medication_condition(Request $request)
     {
         $rec = Medication::where('medication_'.$this->lang.'', $request->name)->get();
-
-
-        // dd($rec->conditionQuestions[1]);
-
-        return view('Logged_pages.response.fex.medication.medication_condition', compact('rec'));
+        return view('Logged_pages.fex.response.fex.medication.medication_condition', compact('rec'));
 
 
     }
@@ -485,15 +486,10 @@ $company2=companies::find($company_id2);
         $rec = condition::with(['conditionQuestions' => function ($q) {
             $q->with('ifyes');
             $q->with('ifno');
-        }])->find($request->id);
+        }])->where('condition_id',$request->id)->first();
         $rand = $request->rand;
 
-
-        // dd($rec->conditionQuestions[1]);
-
-        return view('Logged_pages.response.fex.medication.medication_condition_qa', compact('rec', 'rand'));
-
-
+        return view('Logged_pages.fex.response.fex.medication.medication_condition_qa', compact('rec', 'rand'));
     }
 
     public function condition_qa_med_len(Request $request)
@@ -501,10 +497,179 @@ $company2=companies::find($company_id2);
         $rec = condition::with(['conditionQuestions' => function ($q) {
             $q->with('ifyes');
             $q->with('ifno');
-        }])->find($request->id);
-
-        $length = Count($rec->conditionQuestions);
-
+        }])->where('condition_id',$request->id)->first();
+        $length=Count($rec->conditionQuestions);
         return response()->json($length);
+    }
+
+    public function get_combo_fex(Request $request)
+    {
+        $medications= $request->medication_ids;
+        $comboCond=ComboCondition::all();
+
+        foreach ($comboCond as $combo)
+        {
+
+            $condition1=$condition2=$condition3=$condition4=$condition5=$condition6=$condition7=$condition8=false;
+
+
+            $grpup1=$combo->group_1;
+            $grpup2=$combo->group_2;
+            $grpup3=$combo->group_3;
+            $grpup4=$combo->group_4;
+            $grpup5=$combo->group_5;
+            $grpup6=$combo->group_6;
+            $grpup7=$combo->group_7;
+            $grpup8=$combo->group_8;
+
+            if($grpup1=='' || $grpup1==null)
+            {
+             $condition1=true;
+            }
+            else{
+                $grpup1=explode(', ',$grpup1);
+                foreach ($medications as $med)
+                {
+                   $res= in_array($med,$grpup1);
+                   if($res==true)
+                   {
+                       $condition1=true;
+                       break;
+                   }
+                }
+
+            }
+            if($grpup2=='' || $grpup2==null)
+            {
+                $condition2=true;
+            }
+            else{
+                $grpup2=explode(', ',$grpup2);
+                foreach ($medications as $med)
+                {
+                    $res= in_array($med,$grpup2);
+                    if($res==true)
+                    {
+                        $condition2=true;
+                        break;
+                    }
+                }
+
+            }
+            if($grpup3=='' || $grpup2==null)
+            {
+                $condition3=true;
+            }
+            else{
+                $grpup3=explode(', ',$grpup3);
+                foreach ($medications as $med)
+                {
+                    $res= in_array($med,$grpup3);
+                    if($res==true)
+                    {
+                        $condition3=true;
+                        break;
+                    }
+                }
+
+            }
+            if($grpup4=='' || $grpup4==null)
+            {
+                $condition4=true;
+            }
+            else{
+                $grpup4=explode(', ',$grpup4);
+                foreach ($medications as $med)
+                {
+                    $res= in_array($med,$grpup4);
+                    if($res==true)
+                    {
+                        $condition4=true;
+                        break;
+                    }
+                }
+
+            }
+            if($grpup5=='' || $grpup5==null)
+            {
+                $condition5=true;
+            }
+            else{
+                $grpup5=explode(', ',$grpup5);
+                foreach ($medications as $med)
+                {
+                    $res= in_array($med,$grpup5);
+                    if($res==true)
+                    {
+                        $condition5=true;
+                        break;
+                    }
+                }
+
+            }
+            if($grpup6=='' || $grpup6==null)
+            {
+                $condition6=true;
+            }
+            else{
+                $grpup6=explode(', ',$grpup6);
+                foreach ($medications as $med)
+                {
+                    $res= in_array($med,$grpup6);
+                    if($res==true)
+                    {
+                        $condition6=true;
+                        break;
+                    }
+                }
+
+            }
+            if($grpup7=='' || $grpup7==null)
+            {
+                $condition7=true;
+            }
+            else{
+                $grpup7=explode(', ',$grpup7);
+                foreach ($medications as $med)
+                {
+                    $res= in_array($med,$grpup7);
+                    if($res==true)
+                    {
+                        $condition7=true;
+                        break;
+                    }
+                }
+
+            }
+            if($grpup8=='' || $grpup8==null)
+            {
+
+                $condition8=true;
+            }
+            else{
+                $grpup8=explode(', ',$grpup8);
+                foreach ($medications as $med)
+                {
+                    $res= in_array($med,$grpup8);
+                    if($res==true)
+                    {
+                        $condition8=true;
+                        break;
+                    }
+                }
+
+            }
+
+
+            if($condition1==true && $condition2==true && $condition3==true && $condition4==true && $condition5==true && $condition6==true && $condition7==true && $condition8==true)
+            {
+                return response()->json(['success'=>true,'condition'=>$combo->condition_id]);
+            }
+
+        }
+        return response()->json(['success'=>false]);
+
+
+
     }
 }

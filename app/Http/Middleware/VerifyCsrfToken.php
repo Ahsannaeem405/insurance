@@ -13,6 +13,9 @@ class VerifyCsrfToken extends Middleware
      */
     protected $except = [
        'user/get_quote_fex',
-        'user/get_quote_compare_fex'
+        'user/get_quote_compare_fex',
+        'user/get_combo_fex',
+        'user/get_quote_term',
+        'user/get_quote_compare_term',
     ];
 }

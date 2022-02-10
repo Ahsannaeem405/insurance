@@ -2,22 +2,43 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ComboCondition;
 use App\Models\companies;
 use App\Models\condition;
 use App\Models\conditionQuestion;
 use App\Models\Coupan;
+use App\Models\femaleNotSmokerFifteen;
 use App\Models\femaleNotSmokerGuaranteed;
 use App\Models\femaleNotSmokerLevel;
 use App\Models\femaleNotSmokerModified;
+use App\Models\femaleNotSmokerTen;
+use App\Models\femaleNotSmokerThirty;
+use App\Models\femaleNotSmokerTwenty;
+use App\Models\femaleNotSmokerTwentyfive;
+use App\Models\femaleSmokerFifteen;
 use App\Models\femaleSmokerGuaranteed;
 use App\Models\femaleSmokerLevel;
 use App\Models\femaleSmokerModified;
+use App\Models\femaleSmokerTen;
+use App\Models\femaleSmokerThirty;
+use App\Models\femaleSmokerTwenty;
+use App\Models\femaleSmokerTwentyfive;
+use App\Models\maleNotSmokerFifteen;
 use App\Models\maleNotSmokerGuaranteed;
 use App\Models\maleNotSmokerLevel;
 use App\Models\maleNotSmokerModified;
+use App\Models\maleNotSmokerTen;
+use App\Models\maleNotSmokerThirty;
+use App\Models\maleNotSmokerTwenty;
+use App\Models\maleNotSmokerTwentyfive;
+use App\Models\maleSmokerFifteen;
 use App\Models\maleSmokerGuaranteed;
 use App\Models\maleSmokerLevel;
 use App\Models\maleSmokerModified;
+use App\Models\maleSmokerTen;
+use App\Models\maleSmokerThirty;
+use App\Models\maleSmokerTwenty;
+use App\Models\maleSmokerTwentyfive;
 use App\Models\Medication;
 use App\Models\Setting;
 use App\Models\Subsription;
@@ -594,11 +615,93 @@ class AdminController extends Controller
 
                         if ($importData[0] != "") {
                             $keyword = new Medication();
-                            $keyword->medication_e = utf8_decode($importData[0]);
-                            $keyword->condition_e = utf8_decode($importData[1]);
-                            $keyword->condition_id = intval(utf8_decode($importData[2]));
-                            $keyword->medication_s = utf8_decode($importData[3]);
-                            $keyword->condition_s = utf8_decode($importData[4]);
+                            $keyword->medication_id = utf8_decode(intval($importData[0]));
+                            $keyword->medication_e = utf8_decode($importData[1]);
+                            $keyword->condition_e = utf8_decode($importData[2]);
+                            $keyword->condition_id = intval(utf8_decode($importData[3]));
+                            $keyword->medication_s = utf8_decode($importData[4]);
+                            $keyword->condition_s = utf8_decode($importData[5]);
+
+                            $keyword->save();
+
+                        }
+                    }
+
+
+                }
+            }
+        }
+
+        //combocondition
+        if ($request->hasFile('combocondition')) {
+            $file = $request->file('combocondition');
+
+            // File Details
+            $filename = $file->getClientOriginalName() . time();
+            $extension = $file->getClientOriginalExtension();
+            $tempPath = $file->getRealPath();
+            $fileSize = $file->getSize();
+            $mimeType = $file->getMimeType();
+
+            // Valid File Extensions
+            $valid_extension = array("csv");
+
+            // 2MB in Bytes
+            $maxFileSize = 2097152555;
+
+            // Check file extension
+            if (in_array(strtolower($extension), $valid_extension)) {
+
+                // Check file size
+                if ($fileSize <= $maxFileSize) {
+
+                    // File upload location
+                    $location = 'uploads/appsetting/';
+
+                    // Upload file
+                    $file->move($location, $filename);
+
+                    // Import CSV to Database
+                    $filepath = ($location . "/" . $filename);
+
+                    // Reading file
+                    $file = fopen($filepath, "r");
+
+                    $importData_arr = array();
+                    $i = 0;
+                    $key_word = ComboCondition::truncate();
+                    $i = 0;
+                    while (($filedata = fgetcsv($file, 1000, ",")) !== FALSE) {
+                        $num = count($filedata);
+
+                        if ($i != 0) {
+
+                            for ($c = 0; $c < $num; $c++) {
+                                $importData_arr[$i][] = $filedata [$c];
+
+                            }
+                        }
+
+                        $i++;
+
+
+                    }
+                    fclose($file);
+
+
+                    foreach ($importData_arr as $importData) {
+
+                        if ($importData[0] != "") {
+                            $keyword = new ComboCondition();
+                            $keyword->condition_id = utf8_decode(intval($importData[0]));
+                            $keyword->group_1 = utf8_decode($importData[1]);
+                            $keyword->group_2 = utf8_decode($importData[2]);
+                            $keyword->group_3 =utf8_decode($importData[3]);
+                            $keyword->group_4 = utf8_decode($importData[4]);
+                            $keyword->group_5 = utf8_decode($importData[5]);
+                            $keyword->group_6 = utf8_decode($importData[6]);
+                            $keyword->group_7 = utf8_decode($importData[7]);
+                            $keyword->group_8 = utf8_decode($importData[8]);
 
                             $keyword->save();
 
@@ -920,8 +1023,6 @@ class AdminController extends Controller
         }
 
 
-
-
         //Male smoker Graded
         if ($request->hasFile('male_smoker_graded')) {
             $file = $request->file('male_smoker_graded');
@@ -1231,9 +1332,6 @@ class AdminController extends Controller
             }
         }
 
-
-
-
         //Male smoker Guaranteed
         if ($request->hasFile('male_smoker_guaranted')) {
             $file = $request->file('male_smoker_guaranted');
@@ -1526,6 +1624,1573 @@ class AdminController extends Controller
 
                         if ($importData[0] != "") {
                             $keyword = new femaleNotSmokerGuaranteed();
+                            $keyword->Age = intval(utf8_decode($importData[0]));
+                            $keyword->Amount = intval( utf8_decode($importData[1]));
+                            $keyword->price = utf8_decode($importData[2]);
+                            $keyword->Company = utf8_decode($importData[3]);
+                            $keyword->Tagline = utf8_decode($importData[4]);
+                            $keyword->company_id = intval(utf8_decode($importData[5]));
+
+                            $keyword->save();
+
+                        }
+                    }
+
+
+                }
+            }
+        }
+
+       //femalesmoker 10
+        if ($request->hasFile('femalesmoker10')) {
+            $file = $request->file('femalesmoker10');
+
+            // File Details
+            $filename = $file->getClientOriginalName() . time();
+            $extension = $file->getClientOriginalExtension();
+            $tempPath = $file->getRealPath();
+            $fileSize = $file->getSize();
+            $mimeType = $file->getMimeType();
+
+            // Valid File Extensions
+            $valid_extension = array("csv");
+
+            // 2MB in Bytes
+            $maxFileSize = 2097152555;
+
+            // Check file extension
+            if (in_array(strtolower($extension), $valid_extension)) {
+
+                // Check file size
+                if ($fileSize <= $maxFileSize) {
+
+                    // File upload location
+                    $location = 'uploads/appsetting/';
+
+                    // Upload file
+                    $file->move($location, $filename);
+
+                    // Import CSV to Database
+                    $filepath = ($location . "/" . $filename);
+
+                    // Reading file
+                    $file = fopen($filepath, "r");
+
+                    $importData_arr = array();
+                    $i = 0;
+                    $key_word = femaleSmokerTen::truncate();
+                    $i = 0;
+                    while (($filedata = fgetcsv($file, 1000, ",")) !== FALSE) {
+                        $num = count($filedata);
+
+                        if ($i != 0) {
+
+                            for ($c = 0; $c < $num; $c++) {
+                                $importData_arr[$i][] = $filedata [$c];
+
+                            }
+                        }
+
+                        $i++;
+
+
+                    }
+                    fclose($file);
+
+
+                    foreach ($importData_arr as $importData) {
+
+                        if ($importData[0] != "") {
+                            $keyword = new femaleSmokerTen();
+                            $keyword->Age = intval(utf8_decode($importData[0]));
+                            $keyword->Amount = intval( utf8_decode($importData[1]));
+                            $keyword->price = utf8_decode($importData[2]);
+                            $keyword->Company = utf8_decode($importData[3]);
+                            $keyword->Tagline = utf8_decode($importData[4]);
+                            $keyword->company_id = intval(utf8_decode($importData[5]));
+
+                            $keyword->save();
+
+                        }
+                    }
+
+
+                }
+            }
+        }
+
+        //femalesmoker 15
+        if ($request->hasFile('femalesmoker15')) {
+            $file = $request->file('femalesmoker15');
+
+            // File Details
+            $filename = $file->getClientOriginalName() . time();
+            $extension = $file->getClientOriginalExtension();
+            $tempPath = $file->getRealPath();
+            $fileSize = $file->getSize();
+            $mimeType = $file->getMimeType();
+
+            // Valid File Extensions
+            $valid_extension = array("csv");
+
+            // 2MB in Bytes
+            $maxFileSize = 2097152555;
+
+            // Check file extension
+            if (in_array(strtolower($extension), $valid_extension)) {
+
+                // Check file size
+                if ($fileSize <= $maxFileSize) {
+
+                    // File upload location
+                    $location = 'uploads/appsetting/';
+
+                    // Upload file
+                    $file->move($location, $filename);
+
+                    // Import CSV to Database
+                    $filepath = ($location . "/" . $filename);
+
+                    // Reading file
+                    $file = fopen($filepath, "r");
+
+                    $importData_arr = array();
+                    $i = 0;
+                    $key_word = femaleSmokerFifteen::truncate();
+                    $i = 0;
+                    while (($filedata = fgetcsv($file, 1000, ",")) !== FALSE) {
+                        $num = count($filedata);
+
+                        if ($i != 0) {
+
+                            for ($c = 0; $c < $num; $c++) {
+                                $importData_arr[$i][] = $filedata [$c];
+
+                            }
+                        }
+
+                        $i++;
+
+
+                    }
+                    fclose($file);
+
+
+                    foreach ($importData_arr as $importData) {
+
+                        if ($importData[0] != "") {
+                            $keyword = new femaleSmokerFifteen();
+                            $keyword->Age = intval(utf8_decode($importData[0]));
+                            $keyword->Amount = intval( utf8_decode($importData[1]));
+                            $keyword->price = utf8_decode($importData[2]);
+                            $keyword->Company = utf8_decode($importData[3]);
+                            $keyword->Tagline = utf8_decode($importData[4]);
+                            $keyword->company_id = intval(utf8_decode($importData[5]));
+
+                            $keyword->save();
+
+                        }
+                    }
+
+
+                }
+            }
+        }
+
+        //femalesmoker 20
+        if ($request->hasFile('femalesmoker20')) {
+            $file = $request->file('femalesmoker20');
+
+            // File Details
+            $filename = $file->getClientOriginalName() . time();
+            $extension = $file->getClientOriginalExtension();
+            $tempPath = $file->getRealPath();
+            $fileSize = $file->getSize();
+            $mimeType = $file->getMimeType();
+
+            // Valid File Extensions
+            $valid_extension = array("csv");
+
+            // 2MB in Bytes
+            $maxFileSize = 2097152555;
+
+            // Check file extension
+            if (in_array(strtolower($extension), $valid_extension)) {
+
+                // Check file size
+                if ($fileSize <= $maxFileSize) {
+
+                    // File upload location
+                    $location = 'uploads/appsetting/';
+
+                    // Upload file
+                    $file->move($location, $filename);
+
+                    // Import CSV to Database
+                    $filepath = ($location . "/" . $filename);
+
+                    // Reading file
+                    $file = fopen($filepath, "r");
+
+                    $importData_arr = array();
+                    $i = 0;
+                    $key_word = femaleSmokerTwenty::truncate();
+                    $i = 0;
+                    while (($filedata = fgetcsv($file, 1000, ",")) !== FALSE) {
+                        $num = count($filedata);
+
+                        if ($i != 0) {
+
+                            for ($c = 0; $c < $num; $c++) {
+                                $importData_arr[$i][] = $filedata [$c];
+
+                            }
+                        }
+
+                        $i++;
+
+
+                    }
+                    fclose($file);
+
+
+                    foreach ($importData_arr as $importData) {
+
+                        if ($importData[0] != "") {
+                            $keyword = new femaleSmokerTwenty();
+                            $keyword->Age = intval(utf8_decode($importData[0]));
+                            $keyword->Amount = intval( utf8_decode($importData[1]));
+                            $keyword->price = utf8_decode($importData[2]);
+                            $keyword->Company = utf8_decode($importData[3]);
+                            $keyword->Tagline = utf8_decode($importData[4]);
+                            $keyword->company_id = intval(utf8_decode($importData[5]));
+
+                            $keyword->save();
+
+                        }
+                    }
+
+
+                }
+            }
+        }
+
+        //femalesmoker 25
+        if ($request->hasFile('femalesmoker25')) {
+            $file = $request->file('femalesmoker25');
+
+            // File Details
+            $filename = $file->getClientOriginalName() . time();
+            $extension = $file->getClientOriginalExtension();
+            $tempPath = $file->getRealPath();
+            $fileSize = $file->getSize();
+            $mimeType = $file->getMimeType();
+
+            // Valid File Extensions
+            $valid_extension = array("csv");
+
+            // 2MB in Bytes
+            $maxFileSize = 2097152555;
+
+            // Check file extension
+            if (in_array(strtolower($extension), $valid_extension)) {
+
+                // Check file size
+                if ($fileSize <= $maxFileSize) {
+
+                    // File upload location
+                    $location = 'uploads/appsetting/';
+
+                    // Upload file
+                    $file->move($location, $filename);
+
+                    // Import CSV to Database
+                    $filepath = ($location . "/" . $filename);
+
+                    // Reading file
+                    $file = fopen($filepath, "r");
+
+                    $importData_arr = array();
+                    $i = 0;
+                    $key_word = femaleSmokerTwentyfive::truncate();
+                    $i = 0;
+                    while (($filedata = fgetcsv($file, 1000, ",")) !== FALSE) {
+                        $num = count($filedata);
+
+                        if ($i != 0) {
+
+                            for ($c = 0; $c < $num; $c++) {
+                                $importData_arr[$i][] = $filedata [$c];
+
+                            }
+                        }
+
+                        $i++;
+
+
+                    }
+                    fclose($file);
+
+
+                    foreach ($importData_arr as $importData) {
+
+                        if ($importData[0] != "") {
+                            $keyword = new femaleSmokerTwentyfive();
+                            $keyword->Age = intval(utf8_decode($importData[0]));
+                            $keyword->Amount = intval( utf8_decode($importData[1]));
+                            $keyword->price = utf8_decode($importData[2]);
+                            $keyword->Company = utf8_decode($importData[3]);
+                            $keyword->Tagline = utf8_decode($importData[4]);
+                            $keyword->company_id = intval(utf8_decode($importData[5]));
+
+                            $keyword->save();
+
+                        }
+                    }
+
+
+                }
+            }
+        }
+
+        //femalesmoker 30
+        if ($request->hasFile('femalesmoker30')) {
+            $file = $request->file('femalesmoker30');
+
+            // File Details
+            $filename = $file->getClientOriginalName() . time();
+            $extension = $file->getClientOriginalExtension();
+            $tempPath = $file->getRealPath();
+            $fileSize = $file->getSize();
+            $mimeType = $file->getMimeType();
+
+            // Valid File Extensions
+            $valid_extension = array("csv");
+
+            // 2MB in Bytes
+            $maxFileSize = 2097152555;
+
+            // Check file extension
+            if (in_array(strtolower($extension), $valid_extension)) {
+
+                // Check file size
+                if ($fileSize <= $maxFileSize) {
+
+                    // File upload location
+                    $location = 'uploads/appsetting/';
+
+                    // Upload file
+                    $file->move($location, $filename);
+
+                    // Import CSV to Database
+                    $filepath = ($location . "/" . $filename);
+
+                    // Reading file
+                    $file = fopen($filepath, "r");
+
+                    $importData_arr = array();
+                    $i = 0;
+                    $key_word = femaleSmokerThirty::truncate();
+                    $i = 0;
+                    while (($filedata = fgetcsv($file, 1000, ",")) !== FALSE) {
+                        $num = count($filedata);
+
+                        if ($i != 0) {
+
+                            for ($c = 0; $c < $num; $c++) {
+                                $importData_arr[$i][] = $filedata [$c];
+
+                            }
+                        }
+
+                        $i++;
+
+
+                    }
+                    fclose($file);
+
+
+                    foreach ($importData_arr as $importData) {
+
+                        if ($importData[0] != "") {
+                            $keyword = new femaleSmokerThirty();
+                            $keyword->Age = intval(utf8_decode($importData[0]));
+                            $keyword->Amount = intval( utf8_decode($importData[1]));
+                            $keyword->price = utf8_decode($importData[2]);
+                            $keyword->Company = utf8_decode($importData[3]);
+                            $keyword->Tagline = utf8_decode($importData[4]);
+                            $keyword->company_id = intval(utf8_decode($importData[5]));
+
+                            $keyword->save();
+
+                        }
+                    }
+
+
+                }
+            }
+        }
+
+
+
+        //femalenotsmoker 10
+        if ($request->hasFile('femalenotsmoker10')) {
+            $file = $request->file('femalenotsmoker10');
+
+            // File Details
+            $filename = $file->getClientOriginalName() . time();
+            $extension = $file->getClientOriginalExtension();
+            $tempPath = $file->getRealPath();
+            $fileSize = $file->getSize();
+            $mimeType = $file->getMimeType();
+
+            // Valid File Extensions
+            $valid_extension = array("csv");
+
+            // 2MB in Bytes
+            $maxFileSize = 2097152555;
+
+            // Check file extension
+            if (in_array(strtolower($extension), $valid_extension)) {
+
+                // Check file size
+                if ($fileSize <= $maxFileSize) {
+
+                    // File upload location
+                    $location = 'uploads/appsetting/';
+
+                    // Upload file
+                    $file->move($location, $filename);
+
+                    // Import CSV to Database
+                    $filepath = ($location . "/" . $filename);
+
+                    // Reading file
+                    $file = fopen($filepath, "r");
+
+                    $importData_arr = array();
+                    $i = 0;
+                    $key_word = femaleNotSmokerTen::truncate();
+                    $i = 0;
+                    while (($filedata = fgetcsv($file, 1000, ",")) !== FALSE) {
+                        $num = count($filedata);
+
+                        if ($i != 0) {
+
+                            for ($c = 0; $c < $num; $c++) {
+                                $importData_arr[$i][] = $filedata [$c];
+
+                            }
+                        }
+
+                        $i++;
+
+
+                    }
+                    fclose($file);
+
+
+                    foreach ($importData_arr as $importData) {
+
+                        if ($importData[0] != "") {
+                            $keyword = new femaleNotSmokerTen();
+                            $keyword->Age = intval(utf8_decode($importData[0]));
+                            $keyword->Amount = intval( utf8_decode($importData[1]));
+                            $keyword->price = utf8_decode($importData[2]);
+                            $keyword->Company = utf8_decode($importData[3]);
+                            $keyword->Tagline = utf8_decode($importData[4]);
+                            $keyword->company_id = intval(utf8_decode($importData[5]));
+
+                            $keyword->save();
+
+                        }
+                    }
+
+
+                }
+            }
+        }
+
+        //femalenotsmoker 15
+        if ($request->hasFile('femalenotsmoker15')) {
+            $file = $request->file('femalenotsmoker15');
+
+            // File Details
+            $filename = $file->getClientOriginalName() . time();
+            $extension = $file->getClientOriginalExtension();
+            $tempPath = $file->getRealPath();
+            $fileSize = $file->getSize();
+            $mimeType = $file->getMimeType();
+
+            // Valid File Extensions
+            $valid_extension = array("csv");
+
+            // 2MB in Bytes
+            $maxFileSize = 2097152555;
+
+            // Check file extension
+            if (in_array(strtolower($extension), $valid_extension)) {
+
+                // Check file size
+                if ($fileSize <= $maxFileSize) {
+
+                    // File upload location
+                    $location = 'uploads/appsetting/';
+
+                    // Upload file
+                    $file->move($location, $filename);
+
+                    // Import CSV to Database
+                    $filepath = ($location . "/" . $filename);
+
+                    // Reading file
+                    $file = fopen($filepath, "r");
+
+                    $importData_arr = array();
+                    $i = 0;
+                    $key_word = femaleNotSmokerFifteen::truncate();
+                    $i = 0;
+                    while (($filedata = fgetcsv($file, 1000, ",")) !== FALSE) {
+                        $num = count($filedata);
+
+                        if ($i != 0) {
+
+                            for ($c = 0; $c < $num; $c++) {
+                                $importData_arr[$i][] = $filedata [$c];
+
+                            }
+                        }
+
+                        $i++;
+
+
+                    }
+                    fclose($file);
+
+
+                    foreach ($importData_arr as $importData) {
+
+                        if ($importData[0] != "") {
+                            $keyword = new femaleNotSmokerFifteen();
+                            $keyword->Age = intval(utf8_decode($importData[0]));
+                            $keyword->Amount = intval( utf8_decode($importData[1]));
+                            $keyword->price = utf8_decode($importData[2]);
+                            $keyword->Company = utf8_decode($importData[3]);
+                            $keyword->Tagline = utf8_decode($importData[4]);
+                            $keyword->company_id = intval(utf8_decode($importData[5]));
+
+                            $keyword->save();
+
+                        }
+                    }
+
+
+                }
+            }
+        }
+
+        //femalenotsmoker 20
+        if ($request->hasFile('femalenotsmoker20')) {
+            $file = $request->file('femalenotsmoker20');
+
+            // File Details
+            $filename = $file->getClientOriginalName() . time();
+            $extension = $file->getClientOriginalExtension();
+            $tempPath = $file->getRealPath();
+            $fileSize = $file->getSize();
+            $mimeType = $file->getMimeType();
+
+            // Valid File Extensions
+            $valid_extension = array("csv");
+
+            // 2MB in Bytes
+            $maxFileSize = 2097152555;
+
+            // Check file extension
+            if (in_array(strtolower($extension), $valid_extension)) {
+
+                // Check file size
+                if ($fileSize <= $maxFileSize) {
+
+                    // File upload location
+                    $location = 'uploads/appsetting/';
+
+                    // Upload file
+                    $file->move($location, $filename);
+
+                    // Import CSV to Database
+                    $filepath = ($location . "/" . $filename);
+
+                    // Reading file
+                    $file = fopen($filepath, "r");
+
+                    $importData_arr = array();
+                    $i = 0;
+                    $key_word = femaleNotSmokerTwenty::truncate();
+                    $i = 0;
+                    while (($filedata = fgetcsv($file, 1000, ",")) !== FALSE) {
+                        $num = count($filedata);
+
+                        if ($i != 0) {
+
+                            for ($c = 0; $c < $num; $c++) {
+                                $importData_arr[$i][] = $filedata [$c];
+
+                            }
+                        }
+
+                        $i++;
+
+
+                    }
+                    fclose($file);
+
+
+                    foreach ($importData_arr as $importData) {
+
+                        if ($importData[0] != "") {
+                            $keyword = new femaleNotSmokerTwenty();
+                            $keyword->Age = intval(utf8_decode($importData[0]));
+                            $keyword->Amount = intval( utf8_decode($importData[1]));
+                            $keyword->price = utf8_decode($importData[2]);
+                            $keyword->Company = utf8_decode($importData[3]);
+                            $keyword->Tagline = utf8_decode($importData[4]);
+                            $keyword->company_id = intval(utf8_decode($importData[5]));
+
+                            $keyword->save();
+
+                        }
+                    }
+
+
+                }
+            }
+        }
+
+        //femalenotsmoker 25
+        if ($request->hasFile('femalenotsmoker25')) {
+            $file = $request->file('femalenotsmoker25');
+
+            // File Details
+            $filename = $file->getClientOriginalName() . time();
+            $extension = $file->getClientOriginalExtension();
+            $tempPath = $file->getRealPath();
+            $fileSize = $file->getSize();
+            $mimeType = $file->getMimeType();
+
+            // Valid File Extensions
+            $valid_extension = array("csv");
+
+            // 2MB in Bytes
+            $maxFileSize = 2097152555;
+
+            // Check file extension
+            if (in_array(strtolower($extension), $valid_extension)) {
+
+                // Check file size
+                if ($fileSize <= $maxFileSize) {
+
+                    // File upload location
+                    $location = 'uploads/appsetting/';
+
+                    // Upload file
+                    $file->move($location, $filename);
+
+                    // Import CSV to Database
+                    $filepath = ($location . "/" . $filename);
+
+                    // Reading file
+                    $file = fopen($filepath, "r");
+
+                    $importData_arr = array();
+                    $i = 0;
+                    $key_word = femaleNotSmokerTwentyfive::truncate();
+                    $i = 0;
+                    while (($filedata = fgetcsv($file, 1000, ",")) !== FALSE) {
+                        $num = count($filedata);
+
+                        if ($i != 0) {
+
+                            for ($c = 0; $c < $num; $c++) {
+                                $importData_arr[$i][] = $filedata [$c];
+
+                            }
+                        }
+
+                        $i++;
+
+
+                    }
+                    fclose($file);
+
+
+                    foreach ($importData_arr as $importData) {
+
+                        if ($importData[0] != "") {
+                            $keyword = new femaleNotSmokerTwentyfive();
+                            $keyword->Age = intval(utf8_decode($importData[0]));
+                            $keyword->Amount = intval( utf8_decode($importData[1]));
+                            $keyword->price = utf8_decode($importData[2]);
+                            $keyword->Company = utf8_decode($importData[3]);
+                            $keyword->Tagline = utf8_decode($importData[4]);
+                            $keyword->company_id = intval(utf8_decode($importData[5]));
+
+                            $keyword->save();
+
+                        }
+                    }
+
+
+                }
+            }
+        }
+
+        //femalenotsmoker 30
+        if ($request->hasFile('femalenotsmoker30')) {
+            $file = $request->file('femalenotsmoker30');
+
+            // File Details
+            $filename = $file->getClientOriginalName() . time();
+            $extension = $file->getClientOriginalExtension();
+            $tempPath = $file->getRealPath();
+            $fileSize = $file->getSize();
+            $mimeType = $file->getMimeType();
+
+            // Valid File Extensions
+            $valid_extension = array("csv");
+
+            // 2MB in Bytes
+            $maxFileSize = 2097152555;
+
+            // Check file extension
+            if (in_array(strtolower($extension), $valid_extension)) {
+
+                // Check file size
+                if ($fileSize <= $maxFileSize) {
+
+                    // File upload location
+                    $location = 'uploads/appsetting/';
+
+                    // Upload file
+                    $file->move($location, $filename);
+
+                    // Import CSV to Database
+                    $filepath = ($location . "/" . $filename);
+
+                    // Reading file
+                    $file = fopen($filepath, "r");
+
+                    $importData_arr = array();
+                    $i = 0;
+                    $key_word = femaleNotSmokerThirty::truncate();
+                    $i = 0;
+                    while (($filedata = fgetcsv($file, 1000, ",")) !== FALSE) {
+                        $num = count($filedata);
+
+                        if ($i != 0) {
+
+                            for ($c = 0; $c < $num; $c++) {
+                                $importData_arr[$i][] = $filedata [$c];
+
+                            }
+                        }
+
+                        $i++;
+
+
+                    }
+                    fclose($file);
+
+
+                    foreach ($importData_arr as $importData) {
+
+                        if ($importData[0] != "") {
+                            $keyword = new femaleNotSmokerThirty();
+                            $keyword->Age = intval(utf8_decode($importData[0]));
+                            $keyword->Amount = intval( utf8_decode($importData[1]));
+                            $keyword->price = utf8_decode($importData[2]);
+                            $keyword->Company = utf8_decode($importData[3]);
+                            $keyword->Tagline = utf8_decode($importData[4]);
+                            $keyword->company_id = intval(utf8_decode($importData[5]));
+
+                            $keyword->save();
+
+                        }
+                    }
+
+
+                }
+            }
+        }
+
+
+
+
+        //malesmoker 10
+        if ($request->hasFile('malesmoker10')) {
+            $file = $request->file('malesmoker10');
+
+            // File Details
+            $filename = $file->getClientOriginalName() . time();
+            $extension = $file->getClientOriginalExtension();
+            $tempPath = $file->getRealPath();
+            $fileSize = $file->getSize();
+            $mimeType = $file->getMimeType();
+
+            // Valid File Extensions
+            $valid_extension = array("csv");
+
+            // 2MB in Bytes
+            $maxFileSize = 2097152555;
+
+            // Check file extension
+            if (in_array(strtolower($extension), $valid_extension)) {
+
+                // Check file size
+                if ($fileSize <= $maxFileSize) {
+
+                    // File upload location
+                    $location = 'uploads/appsetting/';
+
+                    // Upload file
+                    $file->move($location, $filename);
+
+                    // Import CSV to Database
+                    $filepath = ($location . "/" . $filename);
+
+                    // Reading file
+                    $file = fopen($filepath, "r");
+
+                    $importData_arr = array();
+                    $i = 0;
+                    $key_word = maleSmokerTen::truncate();
+                    $i = 0;
+                    while (($filedata = fgetcsv($file, 1000, ",")) !== FALSE) {
+                        $num = count($filedata);
+
+                        if ($i != 0) {
+
+                            for ($c = 0; $c < $num; $c++) {
+                                $importData_arr[$i][] = $filedata [$c];
+
+                            }
+                        }
+
+                        $i++;
+
+
+                    }
+                    fclose($file);
+
+
+                    foreach ($importData_arr as $importData) {
+
+                        if ($importData[0] != "") {
+                            $keyword = new maleSmokerTen();
+                            $keyword->Age = intval(utf8_decode($importData[0]));
+                            $keyword->Amount = intval( utf8_decode($importData[1]));
+                            $keyword->price = utf8_decode($importData[2]);
+                            $keyword->Company = utf8_decode($importData[3]);
+                            $keyword->Tagline = utf8_decode($importData[4]);
+                            $keyword->company_id = intval(utf8_decode($importData[5]));
+
+                            $keyword->save();
+
+                        }
+                    }
+
+
+                }
+            }
+        }
+
+        //malesmoker 15
+        if ($request->hasFile('malesmoker15')) {
+            $file = $request->file('malesmoker15');
+
+            // File Details
+            $filename = $file->getClientOriginalName() . time();
+            $extension = $file->getClientOriginalExtension();
+            $tempPath = $file->getRealPath();
+            $fileSize = $file->getSize();
+            $mimeType = $file->getMimeType();
+
+            // Valid File Extensions
+            $valid_extension = array("csv");
+
+            // 2MB in Bytes
+            $maxFileSize = 2097152555;
+
+            // Check file extension
+            if (in_array(strtolower($extension), $valid_extension)) {
+
+                // Check file size
+                if ($fileSize <= $maxFileSize) {
+
+                    // File upload location
+                    $location = 'uploads/appsetting/';
+
+                    // Upload file
+                    $file->move($location, $filename);
+
+                    // Import CSV to Database
+                    $filepath = ($location . "/" . $filename);
+
+                    // Reading file
+                    $file = fopen($filepath, "r");
+
+                    $importData_arr = array();
+                    $i = 0;
+                    $key_word = maleSmokerFifteen::truncate();
+                    $i = 0;
+                    while (($filedata = fgetcsv($file, 1000, ",")) !== FALSE) {
+                        $num = count($filedata);
+
+                        if ($i != 0) {
+
+                            for ($c = 0; $c < $num; $c++) {
+                                $importData_arr[$i][] = $filedata [$c];
+
+                            }
+                        }
+
+                        $i++;
+
+
+                    }
+                    fclose($file);
+
+
+                    foreach ($importData_arr as $importData) {
+
+                        if ($importData[0] != "") {
+                            $keyword = new maleSmokerFifteen();
+                            $keyword->Age = intval(utf8_decode($importData[0]));
+                            $keyword->Amount = intval( utf8_decode($importData[1]));
+                            $keyword->price = utf8_decode($importData[2]);
+                            $keyword->Company = utf8_decode($importData[3]);
+                            $keyword->Tagline = utf8_decode($importData[4]);
+                            $keyword->company_id = intval(utf8_decode($importData[5]));
+
+                            $keyword->save();
+
+                        }
+                    }
+
+
+                }
+            }
+        }
+
+        //malesmoker 20
+        if ($request->hasFile('malesmoker20')) {
+            $file = $request->file('malesmoker20');
+
+            // File Details
+            $filename = $file->getClientOriginalName() . time();
+            $extension = $file->getClientOriginalExtension();
+            $tempPath = $file->getRealPath();
+            $fileSize = $file->getSize();
+            $mimeType = $file->getMimeType();
+
+            // Valid File Extensions
+            $valid_extension = array("csv");
+
+            // 2MB in Bytes
+            $maxFileSize = 2097152555;
+
+            // Check file extension
+            if (in_array(strtolower($extension), $valid_extension)) {
+
+                // Check file size
+                if ($fileSize <= $maxFileSize) {
+
+                    // File upload location
+                    $location = 'uploads/appsetting/';
+
+                    // Upload file
+                    $file->move($location, $filename);
+
+                    // Import CSV to Database
+                    $filepath = ($location . "/" . $filename);
+
+                    // Reading file
+                    $file = fopen($filepath, "r");
+
+                    $importData_arr = array();
+                    $i = 0;
+                    $key_word = maleSmokerTwenty::truncate();
+                    $i = 0;
+                    while (($filedata = fgetcsv($file, 1000, ",")) !== FALSE) {
+                        $num = count($filedata);
+
+                        if ($i != 0) {
+
+                            for ($c = 0; $c < $num; $c++) {
+                                $importData_arr[$i][] = $filedata [$c];
+
+                            }
+                        }
+
+                        $i++;
+
+
+                    }
+                    fclose($file);
+
+
+                    foreach ($importData_arr as $importData) {
+
+                        if ($importData[0] != "") {
+                            $keyword = new maleSmokerTwenty();
+                            $keyword->Age = intval(utf8_decode($importData[0]));
+                            $keyword->Amount = intval( utf8_decode($importData[1]));
+                            $keyword->price = utf8_decode($importData[2]);
+                            $keyword->Company = utf8_decode($importData[3]);
+                            $keyword->Tagline = utf8_decode($importData[4]);
+                            $keyword->company_id = intval(utf8_decode($importData[5]));
+
+                            $keyword->save();
+
+                        }
+                    }
+
+
+                }
+            }
+        }
+
+        //malesmoker 25
+        if ($request->hasFile('malesmoker25')) {
+            $file = $request->file('malesmoker25');
+
+            // File Details
+            $filename = $file->getClientOriginalName() . time();
+            $extension = $file->getClientOriginalExtension();
+            $tempPath = $file->getRealPath();
+            $fileSize = $file->getSize();
+            $mimeType = $file->getMimeType();
+
+            // Valid File Extensions
+            $valid_extension = array("csv");
+
+            // 2MB in Bytes
+            $maxFileSize = 2097152555;
+
+            // Check file extension
+            if (in_array(strtolower($extension), $valid_extension)) {
+
+                // Check file size
+                if ($fileSize <= $maxFileSize) {
+
+                    // File upload location
+                    $location = 'uploads/appsetting/';
+
+                    // Upload file
+                    $file->move($location, $filename);
+
+                    // Import CSV to Database
+                    $filepath = ($location . "/" . $filename);
+
+                    // Reading file
+                    $file = fopen($filepath, "r");
+
+                    $importData_arr = array();
+                    $i = 0;
+                    $key_word = maleSmokerTwentyfive::truncate();
+                    $i = 0;
+                    while (($filedata = fgetcsv($file, 1000, ",")) !== FALSE) {
+                        $num = count($filedata);
+
+                        if ($i != 0) {
+
+                            for ($c = 0; $c < $num; $c++) {
+                                $importData_arr[$i][] = $filedata [$c];
+
+                            }
+                        }
+
+                        $i++;
+
+
+                    }
+                    fclose($file);
+
+
+                    foreach ($importData_arr as $importData) {
+
+                        if ($importData[0] != "") {
+                            $keyword = new maleSmokerTwentyfive();
+                            $keyword->Age = intval(utf8_decode($importData[0]));
+                            $keyword->Amount = intval( utf8_decode($importData[1]));
+                            $keyword->price = utf8_decode($importData[2]);
+                            $keyword->Company = utf8_decode($importData[3]);
+                            $keyword->Tagline = utf8_decode($importData[4]);
+                            $keyword->company_id = intval(utf8_decode($importData[5]));
+
+                            $keyword->save();
+
+                        }
+                    }
+
+
+                }
+            }
+        }
+
+        //malesmoker 30
+        if ($request->hasFile('malesmoker30')) {
+            $file = $request->file('malesmoker30');
+
+            // File Details
+            $filename = $file->getClientOriginalName() . time();
+            $extension = $file->getClientOriginalExtension();
+            $tempPath = $file->getRealPath();
+            $fileSize = $file->getSize();
+            $mimeType = $file->getMimeType();
+
+            // Valid File Extensions
+            $valid_extension = array("csv");
+
+            // 2MB in Bytes
+            $maxFileSize = 2097152555;
+
+            // Check file extension
+            if (in_array(strtolower($extension), $valid_extension)) {
+
+                // Check file size
+                if ($fileSize <= $maxFileSize) {
+
+                    // File upload location
+                    $location = 'uploads/appsetting/';
+
+                    // Upload file
+                    $file->move($location, $filename);
+
+                    // Import CSV to Database
+                    $filepath = ($location . "/" . $filename);
+
+                    // Reading file
+                    $file = fopen($filepath, "r");
+
+                    $importData_arr = array();
+                    $i = 0;
+                    $key_word = maleSmokerThirty::truncate();
+                    $i = 0;
+                    while (($filedata = fgetcsv($file, 1000, ",")) !== FALSE) {
+                        $num = count($filedata);
+
+                        if ($i != 0) {
+
+                            for ($c = 0; $c < $num; $c++) {
+                                $importData_arr[$i][] = $filedata [$c];
+
+                            }
+                        }
+
+                        $i++;
+
+
+                    }
+                    fclose($file);
+
+
+                    foreach ($importData_arr as $importData) {
+
+                        if ($importData[0] != "") {
+                            $keyword = new maleSmokerThirty();
+                            $keyword->Age = intval(utf8_decode($importData[0]));
+                            $keyword->Amount = intval( utf8_decode($importData[1]));
+                            $keyword->price = utf8_decode($importData[2]);
+                            $keyword->Company = utf8_decode($importData[3]);
+                            $keyword->Tagline = utf8_decode($importData[4]);
+                            $keyword->company_id = intval(utf8_decode($importData[5]));
+
+                            $keyword->save();
+
+                        }
+                    }
+
+
+                }
+            }
+        }
+
+
+
+        //malenotsmoker 10
+        if ($request->hasFile('malenotsmoker10')) {
+            $file = $request->file('malenotsmoker10');
+
+            // File Details
+            $filename = $file->getClientOriginalName() . time();
+            $extension = $file->getClientOriginalExtension();
+            $tempPath = $file->getRealPath();
+            $fileSize = $file->getSize();
+            $mimeType = $file->getMimeType();
+
+            // Valid File Extensions
+            $valid_extension = array("csv");
+
+            // 2MB in Bytes
+            $maxFileSize = 2097152555;
+
+            // Check file extension
+            if (in_array(strtolower($extension), $valid_extension)) {
+
+                // Check file size
+                if ($fileSize <= $maxFileSize) {
+
+                    // File upload location
+                    $location = 'uploads/appsetting/';
+
+                    // Upload file
+                    $file->move($location, $filename);
+
+                    // Import CSV to Database
+                    $filepath = ($location . "/" . $filename);
+
+                    // Reading file
+                    $file = fopen($filepath, "r");
+
+                    $importData_arr = array();
+                    $i = 0;
+                    $key_word = maleNotSmokerTen::truncate();
+                    $i = 0;
+                    while (($filedata = fgetcsv($file, 1000, ",")) !== FALSE) {
+                        $num = count($filedata);
+
+                        if ($i != 0) {
+
+                            for ($c = 0; $c < $num; $c++) {
+                                $importData_arr[$i][] = $filedata [$c];
+
+                            }
+                        }
+
+                        $i++;
+
+
+                    }
+                    fclose($file);
+
+
+                    foreach ($importData_arr as $importData) {
+
+                        if ($importData[0] != "") {
+                            $keyword = new maleNotSmokerTen();
+                            $keyword->Age = intval(utf8_decode($importData[0]));
+                            $keyword->Amount = intval( utf8_decode($importData[1]));
+                            $keyword->price = utf8_decode($importData[2]);
+                            $keyword->Company = utf8_decode($importData[3]);
+                            $keyword->Tagline = utf8_decode($importData[4]);
+                            $keyword->company_id = intval(utf8_decode($importData[5]));
+
+                            $keyword->save();
+
+                        }
+                    }
+
+
+                }
+            }
+        }
+
+        //malenotsmoker 15
+        if ($request->hasFile('malenotsmoker15')) {
+            $file = $request->file('malenotsmoker15');
+
+            // File Details
+            $filename = $file->getClientOriginalName() . time();
+            $extension = $file->getClientOriginalExtension();
+            $tempPath = $file->getRealPath();
+            $fileSize = $file->getSize();
+            $mimeType = $file->getMimeType();
+
+            // Valid File Extensions
+            $valid_extension = array("csv");
+
+            // 2MB in Bytes
+            $maxFileSize = 2097152555;
+
+            // Check file extension
+            if (in_array(strtolower($extension), $valid_extension)) {
+
+                // Check file size
+                if ($fileSize <= $maxFileSize) {
+
+                    // File upload location
+                    $location = 'uploads/appsetting/';
+
+                    // Upload file
+                    $file->move($location, $filename);
+
+                    // Import CSV to Database
+                    $filepath = ($location . "/" . $filename);
+
+                    // Reading file
+                    $file = fopen($filepath, "r");
+
+                    $importData_arr = array();
+                    $i = 0;
+                    $key_word = maleNotSmokerFifteen::truncate();
+                    $i = 0;
+                    while (($filedata = fgetcsv($file, 1000, ",")) !== FALSE) {
+                        $num = count($filedata);
+
+                        if ($i != 0) {
+
+                            for ($c = 0; $c < $num; $c++) {
+                                $importData_arr[$i][] = $filedata [$c];
+
+                            }
+                        }
+
+                        $i++;
+
+
+                    }
+                    fclose($file);
+
+
+                    foreach ($importData_arr as $importData) {
+
+                        if ($importData[0] != "") {
+                            $keyword = new maleNotSmokerFifteen();
+                            $keyword->Age = intval(utf8_decode($importData[0]));
+                            $keyword->Amount = intval( utf8_decode($importData[1]));
+                            $keyword->price = utf8_decode($importData[2]);
+                            $keyword->Company = utf8_decode($importData[3]);
+                            $keyword->Tagline = utf8_decode($importData[4]);
+                            $keyword->company_id = intval(utf8_decode($importData[5]));
+
+                            $keyword->save();
+
+                        }
+                    }
+
+
+                }
+            }
+        }
+
+        //malenotsmoker 20
+        if ($request->hasFile('malenotsmoker20')) {
+            $file = $request->file('malenotsmoker20');
+
+            // File Details
+            $filename = $file->getClientOriginalName() . time();
+            $extension = $file->getClientOriginalExtension();
+            $tempPath = $file->getRealPath();
+            $fileSize = $file->getSize();
+            $mimeType = $file->getMimeType();
+
+            // Valid File Extensions
+            $valid_extension = array("csv");
+
+            // 2MB in Bytes
+            $maxFileSize = 2097152555;
+
+            // Check file extension
+            if (in_array(strtolower($extension), $valid_extension)) {
+
+                // Check file size
+                if ($fileSize <= $maxFileSize) {
+
+                    // File upload location
+                    $location = 'uploads/appsetting/';
+
+                    // Upload file
+                    $file->move($location, $filename);
+
+                    // Import CSV to Database
+                    $filepath = ($location . "/" . $filename);
+
+                    // Reading file
+                    $file = fopen($filepath, "r");
+
+                    $importData_arr = array();
+                    $i = 0;
+                    $key_word = maleNotSmokerTwenty::truncate();
+                    $i = 0;
+                    while (($filedata = fgetcsv($file, 1000, ",")) !== FALSE) {
+                        $num = count($filedata);
+
+                        if ($i != 0) {
+
+                            for ($c = 0; $c < $num; $c++) {
+                                $importData_arr[$i][] = $filedata [$c];
+
+                            }
+                        }
+
+                        $i++;
+
+
+                    }
+                    fclose($file);
+
+
+                    foreach ($importData_arr as $importData) {
+
+                        if ($importData[0] != "") {
+                            $keyword = new maleNotSmokerTwenty();
+                            $keyword->Age = intval(utf8_decode($importData[0]));
+                            $keyword->Amount = intval( utf8_decode($importData[1]));
+                            $keyword->price = utf8_decode($importData[2]);
+                            $keyword->Company = utf8_decode($importData[3]);
+                            $keyword->Tagline = utf8_decode($importData[4]);
+                            $keyword->company_id = intval(utf8_decode($importData[5]));
+
+                            $keyword->save();
+
+                        }
+                    }
+
+
+                }
+            }
+        }
+
+        //malenotsmoker 25
+        if ($request->hasFile('malenotsmoker25')) {
+            $file = $request->file('malenotsmoker25');
+
+            // File Details
+            $filename = $file->getClientOriginalName() . time();
+            $extension = $file->getClientOriginalExtension();
+            $tempPath = $file->getRealPath();
+            $fileSize = $file->getSize();
+            $mimeType = $file->getMimeType();
+
+            // Valid File Extensions
+            $valid_extension = array("csv");
+
+            // 2MB in Bytes
+            $maxFileSize = 2097152555;
+
+            // Check file extension
+            if (in_array(strtolower($extension), $valid_extension)) {
+
+                // Check file size
+                if ($fileSize <= $maxFileSize) {
+
+                    // File upload location
+                    $location = 'uploads/appsetting/';
+
+                    // Upload file
+                    $file->move($location, $filename);
+
+                    // Import CSV to Database
+                    $filepath = ($location . "/" . $filename);
+
+                    // Reading file
+                    $file = fopen($filepath, "r");
+
+                    $importData_arr = array();
+                    $i = 0;
+                    $key_word = maleNotSmokerTwentyfive::truncate();
+                    $i = 0;
+                    while (($filedata = fgetcsv($file, 1000, ",")) !== FALSE) {
+                        $num = count($filedata);
+
+                        if ($i != 0) {
+
+                            for ($c = 0; $c < $num; $c++) {
+                                $importData_arr[$i][] = $filedata [$c];
+
+                            }
+                        }
+
+                        $i++;
+
+
+                    }
+                    fclose($file);
+
+
+                    foreach ($importData_arr as $importData) {
+
+                        if ($importData[0] != "") {
+                            $keyword = new maleNotSmokerTwentyfive();
+                            $keyword->Age = intval(utf8_decode($importData[0]));
+                            $keyword->Amount = intval( utf8_decode($importData[1]));
+                            $keyword->price = utf8_decode($importData[2]);
+                            $keyword->Company = utf8_decode($importData[3]);
+                            $keyword->Tagline = utf8_decode($importData[4]);
+                            $keyword->company_id = intval(utf8_decode($importData[5]));
+
+                            $keyword->save();
+
+                        }
+                    }
+
+
+                }
+            }
+        }
+
+        //malenotsmoker 30
+        if ($request->hasFile('malenotsmoker30')) {
+            $file = $request->file('malenotsmoker30');
+
+            // File Details
+            $filename = $file->getClientOriginalName() . time();
+            $extension = $file->getClientOriginalExtension();
+            $tempPath = $file->getRealPath();
+            $fileSize = $file->getSize();
+            $mimeType = $file->getMimeType();
+
+            // Valid File Extensions
+            $valid_extension = array("csv");
+
+            // 2MB in Bytes
+            $maxFileSize = 2097152555;
+
+            // Check file extension
+            if (in_array(strtolower($extension), $valid_extension)) {
+
+                // Check file size
+                if ($fileSize <= $maxFileSize) {
+
+                    // File upload location
+                    $location = 'uploads/appsetting/';
+
+                    // Upload file
+                    $file->move($location, $filename);
+
+                    // Import CSV to Database
+                    $filepath = ($location . "/" . $filename);
+
+                    // Reading file
+                    $file = fopen($filepath, "r");
+
+                    $importData_arr = array();
+                    $i = 0;
+                    $key_word = maleNotSmokerThirty::truncate();
+                    $i = 0;
+                    while (($filedata = fgetcsv($file, 1000, ",")) !== FALSE) {
+                        $num = count($filedata);
+
+                        if ($i != 0) {
+
+                            for ($c = 0; $c < $num; $c++) {
+                                $importData_arr[$i][] = $filedata [$c];
+
+                            }
+                        }
+
+                        $i++;
+
+
+                    }
+                    fclose($file);
+
+
+                    foreach ($importData_arr as $importData) {
+
+                        if ($importData[0] != "") {
+                            $keyword = new maleNotSmokerThirty();
                             $keyword->Age = intval(utf8_decode($importData[0]));
                             $keyword->Amount = intval( utf8_decode($importData[1]));
                             $keyword->price = utf8_decode($importData[2]);

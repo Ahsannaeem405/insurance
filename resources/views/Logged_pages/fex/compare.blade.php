@@ -325,10 +325,10 @@
                                 <div class="col-lg-4" style="">
                                     <label for="cars">{{__('profile.Nicotine Use:')}}</label>
                                     <select name="cigrate" class="form-control input-background">
-                                        <option @if($request->company=='not_smoker') selected
+                                        <option @if($request->cigrate=='not_smoker') selected
                                             @endif value="not_smoker">None
                                         </option>
-                                        <option @if($request->company=="smoker") selected @endif value="smoker">
+                                        <option @if($request->cigrate=="smoker") selected @endif value="smoker">
                                             Smoking + Nicotine
                                         </option>
                                     </select>

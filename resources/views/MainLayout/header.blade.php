@@ -55,7 +55,9 @@
     background-color: #6B5EFF;
     border-radius: 10px;
     padding-right: 10px;
-
+  }
+  .lsit-style a{
+      color: white !important;
   }
 
   /* .nav-item:hover{
@@ -167,12 +169,7 @@
       background-color: white;
     }
 
-    .lsit-style {
 
-      /* background-color: white; */
-      color: none !important;
-      background-color: white;
-    }
 
   }
 </style>
@@ -235,14 +232,14 @@
     </div> -->
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav ml-auto margin-class" style="">
-        <li class="nav-item lsit-style">
-          <a class="nav-link " style="color: white !important;" id="fex" href="{{url('/user/fex')}}">{{__('profile.FEX')}} </a>
+        <li class="nav-item  {{ ((request()->is('user/fex'))  ||  (request()->is('user/fex/quote/compare')) || (request()->is('user/fex/setting')))  ? 'lsit-style' : '' }}">
+          <a class="nav-link "  id="fex" href="{{url('/user/fex')}}">{{__('profile.FEX')}} </a>
         </li>
-        <li class="nav-item" style="padding-right: 10px;">
-          <a class="nav-link" id="term" href="{{url('/user/term')}}">{{__('profile.TERM')}}</a>
+        <li class="nav-item {{ ((request()->is('user/term'))  ||  (request()->is('user/term/quote/compare')) || (request()->is('user/term/setting')))  ? 'lsit-style' : ''}}" style="padding-right: 10px;">
+          <a class="nav-link " id="term" href="{{url('/user/term')}}">{{__('profile.TERM')}}</a>
         </li>
-        <li class="nav-item" style="padding-right: 10px;">
-          <a class="nav-link" id="term" href="{{url('/user/legeal/checket')}}">{{__('profile.Legeal checker')}}</a>
+        <li class="nav-item {{ (request()->is('user/legeal/checker')) ? 'lsit-style' : '' }}" style="padding-right: 10px;">
+          <a class="nav-link" id="term" href="{{url('/user/legeal/checker')}}">{{__('profile.Legeal checker')}}</a>
         </li>
       </ul>
       <ul class="navbar-nav ml-auto">
@@ -263,12 +260,12 @@
         </li>
       </ul>
     </div>
-  
+
   </nav>
   <!-- <div class="container-fluid">
       <div class="row">
         <div class="col-md-1 d-flex jsutify-content-center">
-       Quoter 
+       Quoter
         </div>
         <div class="col-md-2 d-flex jsutify-content-center">
       Quote Compare

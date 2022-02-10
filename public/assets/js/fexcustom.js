@@ -1,8 +1,8 @@
 $(document).ready(function () {
 
 
-   // var baseurl = '';
-     var baseurl='/public';
+    var baseurl = '';
+   //  var baseurl='/public';
 
 
     //age calculation
@@ -118,17 +118,32 @@ $(document).ready(function () {
         $('.condition_result').empty();
         $('.condition').val('');
 
+var res=conditionCheck(id);
+        if(res==true)
+        {
+            $.ajax({
+                type: 'get',
+                url: "" + baseurl + "/user/get_condition_qa_fex",
+                data: { 'id': id },
 
-        $.ajax({
-            type: 'get',
-            url: "" + baseurl + "/user/get_condition_qa_fex",
-            data: { 'id': id },
 
+                success: function (response) {
+                    $('.condition_qa_result').append(response);
+                }
+            });
+        }
+        else {
+            var message = 'This condition is already selected.'
 
-            success: function (response) {
-                $('.condition_qa_result').append(response);
-            }
-        });
+            $('.toast-body').empty();
+            $('.toast-body').text(message);
+
+            $('.toast').toast({
+                delay: 3000
+            });
+            $('.toast').toast('show');
+        }
+
 
 
     });
@@ -321,19 +336,11 @@ $(document).ready(function () {
 
     //yes or no selection
     $(document).on('click', '.selection', function () {
-        var next_ques = $(this).attr('next_ques');
 
 
-        // $(this).css('background-color', '#2A2C7F');
-        // $(this).css('color', 'white');
 
         $(this).addClass('blue-color');
         $(this).removeClass('pink-color');
-
-        // $('.selection').not(this).addClass('pink-color');
-        // $('.selection').not(this).removeClass('blue-color');
-
-
 
         var id = $(this).attr('data_id');
         var data = $(this).attr('data');
@@ -374,26 +381,122 @@ $(document).ready(function () {
     $(document).on('click', '.med_data', function () {
 
         var name = $(this).attr('con');
-
-
+        var id = $(this).attr('id');
         $('.medication_result').empty();
         $('.medication').val('');
 
+var res=medicationCheck(id);
+if (res==true)
+{
+    $.ajax({
+        type: 'get',
+        url: "" + baseurl + "/user/get_medication_condition_fex",
+        data: { 'name': name },
 
-        $.ajax({
-            type: 'get',
-            url: "" + baseurl + "/user/get_medication_condition_fex",
-            data: { 'name': name },
+
+        success: function (response) {
+            $('.medication_qa_result').append(response);
+            comboCondition();
 
 
-            success: function (response) {
-                $('.medication_qa_result').append(response);
-            }
-        });
+        }
+    });
+
+}
+else {
+    var message = 'This Medication is already selected.'
+
+    $('.toast-body').empty();
+    $('.toast-body').text(message);
+
+    $('.toast').toast({
+        delay: 3000
+    });
+    $('.toast').toast('show');
+}
 
 
     });
 
+    function comboCondition()
+    {
+        var formData = new FormData((document.getElementById('form1')));
+
+
+        $.ajax({
+            type: 'POST',
+            url: "" + baseurl + "/user/get_combo_fex",
+            data: formData,
+            cache: false,
+            contentType: false,
+            processData: false,
+
+            success: function (response) {
+
+
+                if(response['success'])
+                {
+                  var id = response['condition'];
+                  var res=  conditionCheck(id);
+
+                  if(res==true)
+                  {
+
+                    $('.condition_result').empty();
+                    $('.condition').val('');
+
+                    $.ajax({
+                        type: 'get',
+                        url: "" + baseurl + "/user/get_condition_qa_fex",
+                        data: { 'id': id },
+
+                        success: function (response) {
+                            $('.condition_qa_result').append(response);
+                        }
+                    });
+
+
+                }
+                }
+            }
+        });
+    }
+
+    function conditionCheck(id)
+    {
+var response=true;
+        $('input[name^="condition_ids"]').each(function(){
+
+       if(parseInt($(this).val())==parseInt(id))
+       {
+
+           response= false;
+       }
+        });
+
+        return response;
+
+
+
+    }
+
+    function medicationCheck(id)
+    {
+        var response=true;
+        $('input[name^="medication_ids"]').each(function(){
+
+            if(parseInt($(this).val())==parseInt(id))
+            {
+
+                response= false;
+            }
+        });
+
+        return response;
+
+
+
+    }
 
     //next question meditation
     $(document).on('click', '#next_ques_med', function () {
@@ -628,20 +731,15 @@ $(document).ready(function () {
         var message = '';
 
 
-        if ($('#face_amount1').val() == '' && $('#face_amount2').val() == '' && $('#face_amount3').val() == '') {
+        if ($('#face_amount1').val() == '' && $('#face_amount2').val() == '' && $('#face_amount3').val() == '' && $('#face_amount11').val() == '' && $('#face_amount22').val() == '' && $('#face_amount33').val() == '') {
 
 
             check = false;
             message = 'Please Enter Face Amount'
         }
 
-       else if ($('#face_amount11').val() == '' && $('#face_amount22').val() == '' && $('#face_amount33').val() == '') {
 
-
-            check2 = false;
-            message = 'Please Enter Face Amount'
-        }
-        if (check == false || check2==false) {
+        if (check == false) {
             $('.toast-body').empty();
             $('.toast-body').text(message);
 

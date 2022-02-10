@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('import',[\App\Http\Controllers\UserController::class,'import']);
 Route::post('import/data',[\App\Http\Controllers\UserController::class,'import_data']);
 
@@ -33,15 +34,43 @@ Route::view('/term', 'term')->middleware('lang');
 Route::get('/lang/{lang}', [\App\Http\Controllers\UserController::class,'lang'])->middleware('lang');
 
 Route::prefix('user')->middleware(['auth','user','lang'])->group(function () {
+    //fex routes
 Route::get('/fex',[\App\Http\Controllers\FexController::class,'index']);
 Route::get('/fex/quote/compare',[\App\Http\Controllers\FexController::class,'compare']);
 Route::post('get_quote_compare_fex',[\App\Http\Controllers\FexController::class,'compare_fex']);
 Route::get('fex/setting',[\App\Http\Controllers\FexController::class,'setting']);
 Route::post('fex/setting/update',[\App\Http\Controllers\CompanyDisableController::class,'setting_update']);
 
-Route::view('/quoter','Logged_pages.medd');
-Route::view('/term','Logged_pages.term');
-Route::view('/legeal/checket','Logged_pages.legeal');
+    Route::post('/get_quote_fex', [\App\Http\Controllers\FexController::class,'quoter']);
+
+//condition
+    Route::get('/get_condition_fex', [\App\Http\Controllers\FexController::class,'condition']);
+    Route::get('/get_condition_qa_fex', [\App\Http\Controllers\FexController::class,'condition_qa']);
+    Route::get('/get_condition_qa_fex_next', [\App\Http\Controllers\FexController::class,'condition_qa_next']);
+    Route::post('/get_combo_fex', [\App\Http\Controllers\FexController::class,'get_combo_fex']);
+
+//medication
+
+    Route::get('/get_medication_fex', [\App\Http\Controllers\FexController::class,'medications']);
+    Route::get('/get_medication_condition_fex', [\App\Http\Controllers\FexController::class,'medication_condition']);
+
+    Route::get('/get_condition_qa_med_fex', [\App\Http\Controllers\FexController::class,'condition_qa_med']);
+    Route::get('/get_condition_qa_med_length_fex', [\App\Http\Controllers\FexController::class,'condition_qa_med_len']);
+
+//term routes
+
+Route::view('/term','Logged_pages.term.term');
+    Route::post('/get_quote_term', [\App\Http\Controllers\TermController::class,'quoter']);
+    Route::get('term/setting',[\App\Http\Controllers\TermController::class,'setting']);
+    Route::post('term/setting/update',[\App\Http\Controllers\CompanyDisableController::class,'setting_update_term']);
+
+    Route::get('/term/quote/compare',[\App\Http\Controllers\TermController::class,'compare']);
+    Route::post('get_quote_compare_term',[\App\Http\Controllers\TermController::class,'compare_term']);
+
+
+    Route::view('/quoter','Logged_pages.medd');
+
+Route::view('/legeal/checker','Logged_pages.legeal');
 Route::view('/crm','Logged_pages.crm');
 Route::get('/account',[\App\Http\Controllers\UserController::class,'account']);
 Route::post('/update/profile',[\App\Http\Controllers\UserController::class,'profile_update']);
@@ -53,25 +82,10 @@ Route::view('/overview', 'Logged_pages.overview');
 
 
 
-Route::post('/get_quote_fex', [\App\Http\Controllers\FexController::class,'quoter']);
-
-//condition
-Route::get('/get_condition_fex', [\App\Http\Controllers\FexController::class,'condition']);
-Route::get('/get_condition_qa_fex', [\App\Http\Controllers\FexController::class,'condition_qa']);
-Route::get('/get_condition_qa_fex_next', [\App\Http\Controllers\FexController::class,'condition_qa_next']);
-
-//medication
-
-Route::get('/get_medication_fex', [\App\Http\Controllers\FexController::class,'medications']);
-Route::get('/get_medication_condition_fex', [\App\Http\Controllers\FexController::class,'medication_condition']);
-
-    Route::get('/get_condition_qa_med_fex', [\App\Http\Controllers\FexController::class,'condition_qa_med']);
-    Route::get('/get_condition_qa_med_length_fex', [\App\Http\Controllers\FexController::class,'condition_qa_med_len']);
-
 
 });
 
-Route::prefix('admin')->middleware(['auth','admin'])->group(function () {
+    Route::prefix('admin')->middleware(['auth','admin'])->group(function () {
     Route::get('/index',[\App\Http\Controllers\AdminController::class,'dashboard']);
     Route::get('/viewuser', [\App\Http\Controllers\AdminController::class,'user']);
     Route::get('/delete/user/{id}', [\App\Http\Controllers\AdminController::class,'user_del']);
