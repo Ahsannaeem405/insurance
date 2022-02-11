@@ -42,6 +42,11 @@ use App\Models\maleSmokerTwentyfive;
 use App\Models\Medication;
 use App\Models\Setting;
 use App\Models\Subsription;
+use App\Models\termComboCondition;
+use App\Models\termCompany;
+use App\Models\termCondition;
+use App\Models\termConditionQuestion;
+use App\Models\termMedication;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -225,7 +230,7 @@ class AdminController extends Controller
 
     public function admin_upload()
     {
- return view('Admin_asstes.upload.index');
+   return view('Admin_asstes.upload.index');
     }
 
     public function upload_data(Request $request)
@@ -2031,8 +2036,6 @@ class AdminController extends Controller
             }
         }
 
-
-
         //femalenotsmoker 10
         if ($request->hasFile('femalenotsmoker10')) {
             $file = $request->file('femalenotsmoker10');
@@ -3197,6 +3200,490 @@ class AdminController extends Controller
                             $keyword->Company = utf8_decode($importData[3]);
                             $keyword->Tagline = utf8_decode($importData[4]);
                             $keyword->company_id = intval(utf8_decode($importData[5]));
+
+                            $keyword->save();
+
+                        }
+                    }
+
+
+                }
+            }
+        }
+
+
+        //term companies
+        if ($request->hasFile('termcompanies')) {
+            $file = $request->file('termcompanies');
+
+            // File Details
+            $filename = $file->getClientOriginalName() . time();
+            $extension = $file->getClientOriginalExtension();
+            $tempPath = $file->getRealPath();
+            $fileSize = $file->getSize();
+            $mimeType = $file->getMimeType();
+
+            // Valid File Extensions
+            $valid_extension = array("csv");
+
+            // 2MB in Bytes
+            $maxFileSize = 2097152555;
+
+            // Check file extension
+            if (in_array(strtolower($extension), $valid_extension)) {
+
+                // Check file size
+                if ($fileSize <= $maxFileSize) {
+
+                    // File upload location
+                    $location = 'uploads/appsetting/';
+
+                    // Upload file
+                    $file->move($location, $filename);
+
+                    // Import CSV to Database
+                    $filepath = ($location . "/" . $filename);
+
+                    // Reading file
+                    $file = fopen($filepath, "r");
+
+                    $importData_arr = array();
+                    $i = 0;
+                    $key_word = termCompany::truncate();
+                    $i = 0;
+                    while (($filedata = fgetcsv($file, 1000, ",")) !== FALSE) {
+                        $num = count($filedata);
+
+
+                        if ($i != 0) {
+
+                            for ($c = 0; $c < $num; $c++) {
+                                $importData_arr[$i][] = $filedata [$c];
+
+                            }
+                        }
+
+                        $i++;
+
+
+                    }
+                    fclose($file);
+
+
+                    foreach ($importData_arr as $importData) {
+
+                        if ($importData[0] != "") {
+                            $keyword = new termCompany();
+                            $keyword->name = utf8_decode($importData[0]);
+                            $keyword->tagline = utf8_decode($importData[1]);
+                            $keyword->id = intval(utf8_decode($importData[2]));
+                            $keyword->save();
+
+                        }
+                    }
+
+
+                }
+            }
+        }
+
+
+        //term condition
+        if ($request->hasFile('termcondition')) {
+            $file = $request->file('termcondition');
+
+            // File Details
+            $filename = $file->getClientOriginalName() . time();
+            $extension = $file->getClientOriginalExtension();
+            $tempPath = $file->getRealPath();
+            $fileSize = $file->getSize();
+            $mimeType = $file->getMimeType();
+
+            // Valid File Extensions
+            $valid_extension = array("csv");
+
+            // 2MB in Bytes
+            $maxFileSize = 2097152555;
+
+            // Check file extension
+            if (in_array(strtolower($extension), $valid_extension)) {
+
+                // Check file size
+                if ($fileSize <= $maxFileSize) {
+
+                    // File upload location
+                    $location = 'uploads/appsetting/';
+
+                    // Upload file
+                    $file->move($location, $filename);
+
+                    // Import CSV to Database
+                    $filepath = ($location . "/" . $filename);
+
+                    // Reading file
+                    $file = fopen($filepath, "r");
+
+                    $importData_arr = array();
+                    $i = 0;
+                    $key_word = termCondition::truncate();
+                    $i = 0;
+                    while (($filedata = fgetcsv($file, 1000, ",")) !== FALSE) {
+                        $num = count($filedata);
+
+
+                        if ($i != 0) {
+
+
+                            for ($c = 0; $c < $num; $c++) {
+                                $importData_arr[$i][] = $filedata [$c];
+
+                            }
+                        }
+
+                        $i++;
+
+
+                    }
+                    fclose($file);
+
+//dd(($importData_arr[2][10]));
+                    foreach ($importData_arr as $importData) {
+
+                        if ($importData[0] != "") {
+                            $keyword = new termCondition();
+                            $keyword->condition_e = utf8_decode($importData[0]);
+                            $keyword->condition_id = intval($importData[1]);
+                            $keyword->condition_s = utf8_decode(($importData[2]));
+                            $keyword->company = utf8_decode(($importData[3]));
+                            $keyword->tagline = utf8_decode(($importData[4]));
+                            $keyword->allowed = utf8_decode(($importData[5]));
+                            $keyword->decline = utf8_decode(($importData[6]));
+
+
+                            if (utf8_decode($importData[7]) == "") {
+                                $keyword->treatment_allowed_from = 0;
+
+                            } else {
+                                $keyword->treatment_allowed_from = utf8_decode(intval($importData[7]));
+
+                            }
+
+
+                            if (utf8_decode($importData[8]) == "") {
+                                $keyword->treatment_allowed_to = 1000;
+
+                            } else {
+                                $keyword->treatment_allowed_to = utf8_decode(intval($importData[8]));
+
+                            }
+
+                            if (utf8_decode($importData[9]) == "") {
+                                $keyword->diagnose_allowed_from = 0;
+
+                            } else {
+                                $keyword->diagnose_allowed_from = utf8_decode(intval($importData[9]));
+
+                            }
+
+
+                            if (utf8_decode($importData[10]) == "") {
+                                $keyword->diagnose_allowed_to = 1000;
+
+                            } else {
+                                $keyword->diagnose_allowed_to = utf8_decode(intval($importData[10]));
+
+                            }
+
+                            //dec
+
+
+                            if (utf8_decode($importData[11]) == "") {
+                                $keyword->treatment_decline_from = 1500;
+
+                            } else {
+                                $keyword->treatment_decline_from = utf8_decode(intval($importData[11]));
+
+                            }
+
+
+                            if (utf8_decode($importData[12]) == "") {
+                                $keyword->treatment_decline_to = 2000;
+
+                            } else {
+                                $keyword->treatment_decline_to = utf8_decode(intval($importData[12]));
+
+                            }
+
+
+                            if (utf8_decode($importData[13]) == "") {
+                                $keyword->diagnose_decline_from = 1500;
+
+                            } else {
+                                $keyword->diagnose_decline_from = utf8_decode(intval($importData[13]));
+
+                            }
+
+
+
+                            if (utf8_decode($importData[14]) == "") {
+                                $keyword->diagnose_decline_to = 2000;
+
+                            } else {
+                                $keyword->diagnose_decline_to = utf8_decode(intval($importData[14]));
+
+                            }
+
+
+
+
+
+                            $keyword->category = utf8_decode(($importData[15]));
+                            $keyword->reason_e = utf8_decode(($importData[16]));
+                            $keyword->reason_s = utf8_decode(($importData[17]));
+                            $keyword->plan_info_e = utf8_decode(($importData[18]));
+                            $keyword->plan_info_s = utf8_decode(($importData[19]));
+                            $keyword->agent_compensation_e = utf8_decode(($importData[20]));
+                            $keyword->agent_compensation_s = utf8_decode(($importData[21]));
+                            $keyword->coverage_type = utf8_decode(($importData[22]));
+                            $keyword->message = utf8_decode(($importData[23]));
+
+                            $keyword->save();
+
+                        }
+                    }
+
+
+                }
+            }
+        }
+
+        //term condition questions
+        if($request->hasFile('termconditionquestion')) {
+            $file = $request->file('termconditionquestion');
+
+            // File Details
+            $filename = $file->getClientOriginalName() . time();
+            $extension = $file->getClientOriginalExtension();
+            $tempPath = $file->getRealPath();
+            $fileSize = $file->getSize();
+            $mimeType = $file->getMimeType();
+
+            // Valid File Extensions
+            $valid_extension = array("csv");
+
+            // 2MB in Bytes
+            $maxFileSize = 2097152555;
+
+            // Check file extension
+            if (in_array(strtolower($extension), $valid_extension)) {
+
+                // Check file size
+                if ($fileSize <= $maxFileSize) {
+
+                    // File upload location
+                    $location = 'uploads/appsetting/';
+
+                    // Upload file
+                    $file->move($location, $filename);
+
+                    // Import CSV to Database
+                    $filepath = ($location . "/" . $filename);
+
+                    // Reading file
+                    $file = fopen($filepath, "r");
+
+                    $importData_arr = array();
+                    $i = 0;
+                    $key_word = termConditionQuestion::truncate();
+                    $i = 0;
+                    while (($filedata = fgetcsv($file, 1000, ",")) !== FALSE) {
+                        $num = count($filedata);
+
+
+                        if ($i != 0) {
+
+                            for ($c = 0; $c < $num; $c++) {
+                                $importData_arr[$i][] = $filedata [$c];
+
+                            }
+                        }
+
+                        $i++;
+
+
+                    }
+                    fclose($file);
+
+
+                    foreach ($importData_arr as $importData) {
+
+                        if ($importData[0] != "") {
+                            $keyword = new termConditionQuestion();
+                            $keyword->condition_id = intval(utf8_decode($importData[0]));
+                            $keyword->condition = utf8_decode($importData[1]);
+                            $keyword->question = utf8_decode($importData[2]);
+                            $keyword->question_id = intval(utf8_decode($importData[3]));
+                            $keyword->type_id = intval(utf8_decode($importData[4]));
+                            $keyword->if_yes = intval(utf8_decode($importData[5]));
+                            $keyword->if_no = intval(utf8_decode($importData[6]));
+                            $keyword->save();
+
+                        }
+                    }
+
+
+                }
+            }
+        }
+
+        //term Medications
+        if ($request->hasFile('termmedication')) {
+            $file = $request->file('termmedication');
+
+            // File Details
+            $filename = $file->getClientOriginalName() . time();
+            $extension = $file->getClientOriginalExtension();
+            $tempPath = $file->getRealPath();
+            $fileSize = $file->getSize();
+            $mimeType = $file->getMimeType();
+
+            // Valid File Extensions
+            $valid_extension = array("csv");
+
+            // 2MB in Bytes
+            $maxFileSize = 2097152555;
+
+            // Check file extension
+            if (in_array(strtolower($extension), $valid_extension)) {
+
+                // Check file size
+                if ($fileSize <= $maxFileSize) {
+
+                    // File upload location
+                    $location = 'uploads/appsetting/';
+
+                    // Upload file
+                    $file->move($location, $filename);
+
+                    // Import CSV to Database
+                    $filepath = ($location . "/" . $filename);
+
+                    // Reading file
+                    $file = fopen($filepath, "r");
+
+                    $importData_arr = array();
+                    $i = 0;
+                    $key_word = termMedication::truncate();
+                    $i = 0;
+                    while (($filedata = fgetcsv($file, 1000, ",")) !== FALSE) {
+                        $num = count($filedata);
+
+                        if ($i != 0) {
+
+                            for ($c = 0; $c < $num; $c++) {
+                                $importData_arr[$i][] = $filedata [$c];
+
+                            }
+                        }
+
+                        $i++;
+
+
+                    }
+                    fclose($file);
+
+
+                    foreach ($importData_arr as $importData) {
+
+                        if ($importData[0] != "") {
+                            $keyword = new termMedication();
+                            $keyword->medication_id = utf8_decode(intval($importData[0]));
+                            $keyword->medication_e = utf8_decode($importData[1]);
+                            $keyword->condition_e = utf8_decode($importData[2]);
+                            $keyword->condition_id = intval(utf8_decode($importData[3]));
+                            $keyword->medication_s = utf8_decode($importData[4]);
+                            $keyword->condition_s = utf8_decode($importData[5]);
+
+                            $keyword->save();
+
+                        }
+                    }
+
+
+                }
+            }
+        }
+
+        //term combocondition
+        if ($request->hasFile('termcombocondition')) {
+            $file = $request->file('termcombocondition');
+
+            // File Details
+            $filename = $file->getClientOriginalName() . time();
+            $extension = $file->getClientOriginalExtension();
+            $tempPath = $file->getRealPath();
+            $fileSize = $file->getSize();
+            $mimeType = $file->getMimeType();
+
+            // Valid File Extensions
+            $valid_extension = array("csv");
+
+            // 2MB in Bytes
+            $maxFileSize = 2097152555;
+
+            // Check file extension
+            if (in_array(strtolower($extension), $valid_extension)) {
+
+                // Check file size
+                if ($fileSize <= $maxFileSize) {
+
+                    // File upload location
+                    $location = 'uploads/appsetting/';
+
+                    // Upload file
+                    $file->move($location, $filename);
+
+                    // Import CSV to Database
+                    $filepath = ($location . "/" . $filename);
+
+                    // Reading file
+                    $file = fopen($filepath, "r");
+
+                    $importData_arr = array();
+                    $i = 0;
+                    $key_word = termComboCondition::truncate();
+                    $i = 0;
+                    while (($filedata = fgetcsv($file, 1000, ",")) !== FALSE) {
+                        $num = count($filedata);
+
+                        if ($i != 0) {
+
+                            for ($c = 0; $c < $num; $c++) {
+                                $importData_arr[$i][] = $filedata [$c];
+
+                            }
+                        }
+
+                        $i++;
+
+
+                    }
+                    fclose($file);
+
+
+                    foreach ($importData_arr as $importData) {
+
+                        if ($importData[0] != "") {
+                            $keyword = new termComboCondition();
+                            $keyword->condition_id = utf8_decode(intval($importData[0]));
+                            $keyword->group_1 = utf8_decode($importData[1]);
+                            $keyword->group_2 = utf8_decode($importData[2]);
+                            $keyword->group_3 =utf8_decode($importData[3]);
+                            $keyword->group_4 = utf8_decode($importData[4]);
+                            $keyword->group_5 = utf8_decode($importData[5]);
+                            $keyword->group_6 = utf8_decode($importData[6]);
+                            $keyword->group_7 = utf8_decode($importData[7]);
+                            $keyword->group_8 = utf8_decode($importData[8]);
 
                             $keyword->save();
 

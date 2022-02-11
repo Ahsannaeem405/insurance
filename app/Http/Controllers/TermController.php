@@ -2,12 +2,52 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ComboCondition;
 use App\Models\companies;
 use App\Models\condition;
+use App\Models\conditionQuestion;
+use App\Models\Medication;
+use App\Models\termComboCondition;
+use App\Models\termCompany;
+use App\Models\termCondition;
+use App\Models\termConditionQuestion;
+use App\Models\termMedication;
 use Illuminate\Http\Request;
 
 class TermController extends Controller
 {
+    public $lang;
+
+    public function  __construct()
+    {
+
+        $this->middleware(function ($request, $next){
+            $language=  \Session::get('lang');
+            if($language=='sp')
+            {
+                $language='s';
+                $this->lang='s';
+                $reason='reason_'.$language.'';
+                $plan='plan_info_'.$language.'';
+                $agent='agent_compensation_'.$language.'';
+
+            }
+            else{
+                $language='e';
+                $this->lang='e';
+
+                $reason='reason_'.$language.'';
+                $plan='plan_info_'.$language.'';
+                $agent='agent_compensation_'.$language.'';
+            }
+            \View::share(compact('language','reason','plan','agent'));
+            return $next($request);
+        });
+
+
+
+    }
+
     public function quoter(Request $request)
     {
 
@@ -20,22 +60,16 @@ class TermController extends Controller
         $year_data = $request->year;
 
 
-        if ($type == '10') {
-
+        if ($type == 'tens') {
             $userselection = 1;
-        } elseif ($type == '15') {
+        } elseif ($type == 'fifteens') {
             $userselection = 2;
-
-        } elseif ($type == '20') {
+        } elseif ($type == 'twenties') {
             $userselection = 3;
-
-        } elseif ($type == '25') {
+        } elseif ($type == 'twentyfives') {
             $userselection = 4;
-
-        }
-        elseif ($type == '30') {
+        } elseif ($type == 'thirties') {
             $userselection = 5;
-
         }
 
 
@@ -47,7 +81,7 @@ class TermController extends Controller
 
         $data = array();
         $datanot = array();
-        $companies = companies::with('disableterm')->get();
+        $companies = termCompany::with('disableterm')->get();
 //dd($request->input());
         if ($request->condition_ids) {
 
@@ -82,7 +116,7 @@ class TermController extends Controller
                     if (isset($treatment) && isset($diagnose)) {
 
                         //query part 1
-                        $cond = condition::where('company', $com->name)->
+                        $cond = termCondition::where('company', $com->name)->
                         where('condition_id', $conditions)
                             //->where('tagline', $com->tagline)
                             ->where('decline', '!=', 'Yes')
@@ -106,13 +140,14 @@ class TermController extends Controller
                                     $query->where('diagnose_allowed_from', '<=', $diagnose);
                                 });
 
-                            })->first();
+                            })
+                            ->first();
 
 
                         //query part2
 
                         //main
-                        $cond2 = condition::where('company', $com->name)
+                        $cond2 = termCondition::where('company', $com->name)
                             ->where('condition_id', $conditions)
                             //   ->where('tagline', $com->tagline)
                             ->where('decline', '!=', 'Yes')
@@ -147,25 +182,34 @@ class TermController extends Controller
 
                             })
                             ->first();
+
+
+
                         if ($cond && !$cond2) {
-                            if ($cond->category == 'Level') {
-                                $cat = 'levels';
+                            if ($cond->category == '10') {
+                                $cat = 'tens';
                                 $cat2 = 1;
-                            } elseif ($cond->category == 'Graded') {
-                                $cat = 'modifieds';
+                            } elseif ($cond->category == '15') {
+                                $cat = 'fifteens';
                                 $cat2 = 2;
-                            } elseif ($cond->category == 'Guaranteed') {
-                                $cat = 'guaranteeds';
+                            } elseif ($cond->category == '20') {
+                                $cat = 'twenties';
                                 $cat2 = 3;
-                            } elseif ($cond->category == 'Limited') {
-                                $cat = 'limiteds';
+                            } elseif ($cond->category == '25') {
+                                $cat = 'twentyfives';
                                 $cat2 = 4;
-                            } else {
+                            }
+                            elseif ($cond->category == '30') {
+                                $cat = 'thirties';
+                                $cat2 = 5;
+                            }
+                            else {
                                 $cat = $type;
                                 $cat2 = $userselection;
                             }
 
                             $table2 = $gender . '_' . $cigrate . '_' . $cat;
+
                             $rec = \DB::table($table2)->where('Age', $request->age)->where('Amount', $request->face_amount)->where('company_id', $com->id)->first();
                             //if rec yes
                             if ($rec) {
@@ -293,7 +337,7 @@ class TermController extends Controller
             $data->values()->all();
 
 
-            return view('Logged_pages.fex.response.fex.quoter', compact('data', 'datanot', 'age', 'gender', 'face_amount', 'type', 'cigrate', 'year_data'));
+            return view('Logged_pages.term.response.term.quoter', compact('data', 'datanot', 'age', 'gender', 'face_amount', 'type', 'cigrate', 'year_data'));
 
 
         }
@@ -329,15 +373,13 @@ class TermController extends Controller
     public function setting()
     {
 
-        $companies=companies::with('disableterm')->get();
-
+        $companies=termCompany::with('disableterm')->get();
         return view('Logged_pages.term.setting',compact('companies'));
     }
 
-
     public function compare(Request $request)
     {
-        $companies = companies::with('disableterm')->get();
+        $companies = termCompany::with('disableterm')->get();
 
         if ($request->gender) {
             $gender = $request->gender;
@@ -361,7 +403,6 @@ class TermController extends Controller
         return view('Logged_pages.term.compare', compact('companies', 'request', 'age', 'gender', 'year'));
     }
 
-
     public function compare_term(Request $request)
     {
         $gender = $request->gender;
@@ -371,8 +412,8 @@ class TermController extends Controller
         $company_id = intval($request->company);
         $company_id2 = intval($request->company2);
 
-        $company1=companies::find($company_id);
-        $company2=companies::find($company_id2);
+        $company1=termCompany::find($company_id);
+        $company2=termCompany::find($company_id2);
 
         $table = $gender . '_' . $cigrate . '_' . $type;
         $table2 = $gender . '_' . $cigrate . '_' . $type2;
@@ -388,5 +429,251 @@ class TermController extends Controller
         return view('Logged_pages.term.response.term.compare.compare', compact('rec1', 'rec2', 'rec3','rec4','rec5','rec6','company1','company2'));
     }
 
+    public function condition(Request $request)
+    {
+
+        $condition = $request->condition;
+        $rec = termCondition::where('condition_'.$this->lang.'', 'like', "%$condition%")->get()->unique('condition_'.$this->lang.'');
+        $rec = collect($rec);
+
+        $rec=$rec->take(5);
+        return view('Logged_pages.term.response.term.condition', compact('rec'));
+
+    }
+
+    public function condition_qa(Request $request)
+    {
+        $rec = termCondition::with(['conditionQuestions' => function ($q) {
+            $q->with('ifyes');
+            $q->with('ifno');
+        }])->where('condition_id',$request->id)->first();
+
+        return view('Logged_pages.term.response.term.condition_qa', compact('rec'));
+
+
+    }
+
+    public function condition_qa_next(Request $request)
+    {
+
+        $question = termConditionQuestion::where('question_id', $request->id)->first();
+        $answer = $request->answer;
+        $rand = $request->rand;
+        return view('Logged_pages.term.response.term.condition_qa_next', compact('question', 'answer', 'rand'));
+
+
+    }
+
+    public function medications(Request $request)
+    {
+        $medication = $request->medication;
+        $rec = termMedication::where('medication_'.$this->lang.'','like', "%$medication%")->get()->unique('medication_'.$this->lang.'');
+        $rec = collect($rec);
+        $rec=$rec->take(5);
+
+
+        return view('Logged_pages.term.response.term.medication.medication', compact('rec'));
+    }
+
+    public function medication_condition(Request $request)
+    {
+        $rec = termMedication::where('medication_'.$this->lang.'', $request->name)->get();
+        return view('Logged_pages.term.response.term.medication.medication_condition', compact('rec'));
+
+
+    }
+
+
+    public function condition_qa_med(Request $request)
+    {
+        $rec = termCondition::with(['conditionQuestions' => function ($q) {
+            $q->with('ifyes');
+            $q->with('ifno');
+        }])->where('condition_id',$request->id)->first();
+        $rand = $request->rand;
+
+        return view('Logged_pages.term.response.term.medication.medication_condition_qa', compact('rec', 'rand'));
+    }
+
+    public function condition_qa_med_len(Request $request)
+    {
+        $rec = termCondition::with(['conditionQuestions' => function ($q) {
+            $q->with('ifyes');
+            $q->with('ifno');
+        }])->where('condition_id',$request->id)->first();
+        $length=Count($rec->conditionQuestions);
+        return response()->json($length);
+    }
+
+    public function get_combo_fex(Request $request)
+    {
+        $medications= $request->medication_ids;
+        $comboCond=termComboCondition::all();
+
+        foreach ($comboCond as $combo)
+        {
+
+            $condition1=$condition2=$condition3=$condition4=$condition5=$condition6=$condition7=$condition8=false;
+
+
+            $grpup1=$combo->group_1;
+            $grpup2=$combo->group_2;
+            $grpup3=$combo->group_3;
+            $grpup4=$combo->group_4;
+            $grpup5=$combo->group_5;
+            $grpup6=$combo->group_6;
+            $grpup7=$combo->group_7;
+            $grpup8=$combo->group_8;
+
+            if($grpup1=='' || $grpup1==null)
+            {
+                $condition1=true;
+            }
+            else{
+                $grpup1=explode(', ',$grpup1);
+                foreach ($medications as $med)
+                {
+                    $res= in_array($med,$grpup1);
+                    if($res==true)
+                    {
+                        $condition1=true;
+                        break;
+                    }
+                }
+
+            }
+            if($grpup2=='' || $grpup2==null)
+            {
+                $condition2=true;
+            }
+            else{
+                $grpup2=explode(', ',$grpup2);
+                foreach ($medications as $med)
+                {
+                    $res= in_array($med,$grpup2);
+                    if($res==true)
+                    {
+                        $condition2=true;
+                        break;
+                    }
+                }
+
+            }
+            if($grpup3=='' || $grpup2==null)
+            {
+                $condition3=true;
+            }
+            else{
+                $grpup3=explode(', ',$grpup3);
+                foreach ($medications as $med)
+                {
+                    $res= in_array($med,$grpup3);
+                    if($res==true)
+                    {
+                        $condition3=true;
+                        break;
+                    }
+                }
+
+            }
+            if($grpup4=='' || $grpup4==null)
+            {
+                $condition4=true;
+            }
+            else{
+                $grpup4=explode(', ',$grpup4);
+                foreach ($medications as $med)
+                {
+                    $res= in_array($med,$grpup4);
+                    if($res==true)
+                    {
+                        $condition4=true;
+                        break;
+                    }
+                }
+
+            }
+            if($grpup5=='' || $grpup5==null)
+            {
+                $condition5=true;
+            }
+            else{
+                $grpup5=explode(', ',$grpup5);
+                foreach ($medications as $med)
+                {
+                    $res= in_array($med,$grpup5);
+                    if($res==true)
+                    {
+                        $condition5=true;
+                        break;
+                    }
+                }
+
+            }
+            if($grpup6=='' || $grpup6==null)
+            {
+                $condition6=true;
+            }
+            else{
+                $grpup6=explode(', ',$grpup6);
+                foreach ($medications as $med)
+                {
+                    $res= in_array($med,$grpup6);
+                    if($res==true)
+                    {
+                        $condition6=true;
+                        break;
+                    }
+                }
+
+            }
+            if($grpup7=='' || $grpup7==null)
+            {
+                $condition7=true;
+            }
+            else{
+                $grpup7=explode(', ',$grpup7);
+                foreach ($medications as $med)
+                {
+                    $res= in_array($med,$grpup7);
+                    if($res==true)
+                    {
+                        $condition7=true;
+                        break;
+                    }
+                }
+
+            }
+            if($grpup8=='' || $grpup8==null)
+            {
+
+                $condition8=true;
+            }
+            else{
+                $grpup8=explode(', ',$grpup8);
+                foreach ($medications as $med)
+                {
+                    $res= in_array($med,$grpup8);
+                    if($res==true)
+                    {
+                        $condition8=true;
+                        break;
+                    }
+                }
+
+            }
+
+
+            if($condition1==true && $condition2==true && $condition3==true && $condition4==true && $condition5==true && $condition6==true && $condition7==true && $condition8==true)
+            {
+                return response()->json(['success'=>true,'condition'=>$combo->condition_id]);
+            }
+
+        }
+        return response()->json(['success'=>false]);
+
+
+
+    }
 
 }

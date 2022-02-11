@@ -97,7 +97,7 @@ $(document).ready(function () {
 
         $.ajax({
             type: 'get',
-            url: "" + baseurl + "/user/get_condition_fex",
+            url: "" + baseurl + "/user/get_condition_term",
             data: { 'condition': condition },
 
 
@@ -123,7 +123,7 @@ var res=conditionCheck(id);
         {
             $.ajax({
                 type: 'get',
-                url: "" + baseurl + "/user/get_condition_qa_fex",
+                url: "" + baseurl + "/user/get_condition_qa_term",
                 data: { 'id': id },
 
 
@@ -193,7 +193,7 @@ var res=conditionCheck(id);
                         var id = $(currentPosition).attr('ifyes');
                         $.ajax({
                             type: 'get',
-                            url: "" + baseurl + "/user/get_condition_qa_fex_next",
+                            url: "" + baseurl + "/user/get_condition_qa_term_next",
                             data: { 'id': id, 'answer': 'yes', 'rand': rand },
                             async: false,
 
@@ -211,7 +211,7 @@ var res=conditionCheck(id);
                         var id = $(currentPosition).attr('ifno');
                         $.ajax({
                             type: 'get',
-                            url: "" + baseurl + "/user/get_condition_qa_fex_next",
+                            url: "" + baseurl + "/user/get_condition_qa_term_next",
                             data: { 'id': id, 'answer': 'no', 'rand': rand },
                             async: false,
 
@@ -363,7 +363,7 @@ var res=conditionCheck(id);
 
         $.ajax({
             type: 'get',
-            url: "" + baseurl + "/user/get_medication_fex",
+            url: "" + baseurl + "/user/get_medication_term",
             data: { 'medication': medication },
 
 
@@ -390,7 +390,7 @@ if (res==true)
 {
     $.ajax({
         type: 'get',
-        url: "" + baseurl + "/user/get_medication_condition_fex",
+        url: "" + baseurl + "/user/get_medication_condition_term",
         data: { 'name': name },
 
 
@@ -425,7 +425,7 @@ else {
 
         $.ajax({
             type: 'POST',
-            url: "" + baseurl + "/user/get_combo_fex",
+            url: "" + baseurl + "/user/get_combo_term",
             data: formData,
             cache: false,
             contentType: false,
@@ -447,7 +447,7 @@ else {
 
                     $.ajax({
                         type: 'get',
-                        url: "" + baseurl + "/user/get_condition_qa_fex",
+                        url: "" + baseurl + "/user/get_condition_qa_term",
                         data: { 'id': id },
 
                         success: function (response) {
@@ -523,7 +523,7 @@ var response=true;
 
                 $.ajax({
                     type: 'get',
-                    url: "" + baseurl + "/user/get_condition_qa_med_length_fex",
+                    url: "" + baseurl + "/user/get_condition_qa_med_length_term",
                     data: { 'id': selection, 'rand': rand },
                     async: false,
 
@@ -536,7 +536,7 @@ var response=true;
                 if (length >= 1) {
                     $.ajax({
                         type: 'get',
-                        url: "" + baseurl + "/user/get_condition_qa_med_fex",
+                        url: "" + baseurl + "/user/get_condition_qa_med_term",
                         data: { 'id': selection, 'rand': rand },
                         async: false,
 
@@ -623,7 +623,7 @@ var response=true;
                             var id = $(currentPosition).attr('ifyes');
                             $.ajax({
                                 type: 'get',
-                                url: "" + baseurl + "/user/get_condition_qa_fex_next",
+                                url: "" + baseurl + "/user/get_condition_qa_term_next",
                                 data: { 'id': id, 'answer': 'yes', 'rand': rand },
                                 async: false,
 
@@ -639,7 +639,7 @@ var response=true;
                             var id = $(currentPosition).attr('ifno');
                             $.ajax({
                                 type: 'get',
-                                url: "" + baseurl + "/user/get_condition_qa_fex_next",
+                                url: "" + baseurl + "/user/get_condition_qa_term_next",
                                 data: { 'id': id, 'answer': 'no', 'rand': rand },
                                 async: false,
 

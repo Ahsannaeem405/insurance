@@ -171,6 +171,35 @@
 
                         <div class="row">
 
+                            <div class="col-lg-6 mb-3">
+                                <p class="font-weight-bold">TERM Companies</p>
+                                <input type="file" name="termcompanies">
+                            </div>
+
+                            <div class="col-lg-6 mb-3">
+                                <p class="font-weight-bold">TERM Conditions</p>
+                                <input type="file" name="termcondition">
+                            </div>
+
+                            <div class="col-lg-6 mb-3">
+                                <p class="font-weight-bold">TERM Medications</p>
+                                <input type="file" name="termmedication">
+
+                            </div>
+
+                            <div class="col-lg-6 mb-3">
+                                <p class="font-weight-bold">TERM Condition Questions</p>
+                                <input type="file" name="termconditionquestion">
+
+                            </div>
+
+                            <div class="col-lg-6 mb-3">
+                                <p class="font-weight-bold">TERM Combo Conditions</p>
+                                <input type="file" name="termcombocondition">
+
+                            </div>
+
+
                             <div class="col-lg-12 mb-2">
                                 <h5 style="text-align: center">Female Smoker</h5>
                             </div>

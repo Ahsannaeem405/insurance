@@ -331,13 +331,13 @@
 
             <ul class="list-unstyled">
               <li>
-                <a href="{{url('/pricing')}}">{{__('profile.Fex')}}</a>
+                <a href="{{url('#')}}">{{__('profile.Fex')}}</a>
               </li>
               <li>
-                <a href="{{url('/login')}}">{{__('profile.Term')}}</a>
+                <a href="{{url('#')}}">{{__('profile.Term')}}</a>
               </li>
               <li>
-                <a href="{{url('/signup')}}">{{__('profile.Legal Checker')}}</a>
+                <a href="{{url('#')}}">{{__('profile.Legal Checker')}}</a>
               </li>
 
             </ul>
@@ -386,7 +386,7 @@
               </li>
               <li>
 
-                <a href="#"><i class="fab fa-twitter-square icons"></i>{{__('profile.Twitter')}}</a>
+                <a href="#!"><i class="fab fa-twitter-square icons"></i>{{__('profile.Twitter')}}</a>
               </li>
               <li>
                 <a href="#!"><i class="fab fa-instagram-square icons"></i>{{__('profile.Instagram')}}</a>

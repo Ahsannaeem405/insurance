@@ -1,6 +1,6 @@
 @extends('MainLayout.header')
 @section('title')
-<title>Fex</title>
+<title>Term</title>
 @endsection
 <style>
     .table {
@@ -159,7 +159,7 @@
                         <div class="row" style="margin-top: 40px;">
                             <div class="col-lg-12 col-12">
                                 <!-- <h4>{{__('profile.Drug and Health Information')}}</h4><br> -->
-                                <div class="row" style="justify-content: space-between;display: none">
+                                <div class="row" style="justify-content: space-between;">
                                     <div class="col-lg-6">
                                         <label for="">Health Condition</label>
                                         <input type="text" style="padding:20px;background-color:#ECECEC" class="form-control condition" placeholder="Enter Health Condition">

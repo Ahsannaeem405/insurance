@@ -68,6 +68,22 @@ Route::view('/term','Logged_pages.term.term');
     Route::post('get_quote_compare_term',[\App\Http\Controllers\TermController::class,'compare_term']);
 
 
+    //condition
+    Route::get('/get_condition_term', [\App\Http\Controllers\TermController::class,'condition']);
+    Route::get('/get_condition_qa_term', [\App\Http\Controllers\TermController::class,'condition_qa']);
+    Route::get('/get_condition_qa_term_next', [\App\Http\Controllers\TermController::class,'condition_qa_next']);
+    Route::post('/get_combo_term', [\App\Http\Controllers\TermController::class,'get_combo_fex']);
+
+
+    //medication
+
+    Route::get('/get_medication_term', [\App\Http\Controllers\TermController::class,'medications']);
+    Route::get('/get_medication_condition_term', [\App\Http\Controllers\TermController::class,'medication_condition']);
+
+    Route::get('/get_condition_qa_med_term', [\App\Http\Controllers\FexController::class,'condition_qa_med']);
+    Route::get('/get_condition_qa_med_length_term', [\App\Http\Controllers\FexController::class,'condition_qa_med_len']);
+
+
     Route::view('/quoter','Logged_pages.medd');
 
 Route::view('/legeal/checker','Logged_pages.legeal');

@@ -6,15 +6,14 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Auth;
 
-class companies extends Model
+class termCompany extends Model
 {
     use HasFactory;
 
-    public function disable()
+    public function disableterm()
     {
         return $this->hasOne('App\Models\companyDisable','company_id','id')
-            ->where('type','fex')
+            ->where('type','term')
             ->where('user_id',Auth::user()->id);
     }
-
 }
