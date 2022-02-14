@@ -16,7 +16,8 @@
     <input type="hidden" value="treatment" name="q_type{{$rec->condition_id}}[]">
     @elseif($question->question=="Date of diagnosis?")
     <input type="hidden" value="diagnos" name="q_type{{$rec->condition_id}}[]">
-
+    @else
+        <input type="hidden" value="nothing" name="q_type{{$rec->condition_id}}[]">
     @endif
 
     <div class="container">
@@ -116,12 +117,11 @@
     <div class="container">
         <div class="row m-0 mt-3">
             <div class="col-6 " style="margin: auto;cursor: pointer">
-                <p class="p-2 selection selection_{{$rand}}_{{$question->id}} " next_ques="{{$question->if_yes}}" rand="{{$rand}}" data_id="{{$question->id}}" i="{{$i}}" data="yes" style="border-radius: 10px;color: white;background-color:#41E5DB ; text-align: center">
+                <p class="p-2 selection selection_{{$rand}}_{{$question->id}} blue-color" next_ques="{{$question->if_yes}}" rand="{{$rand}}" data_id="{{$question->id}}" i="{{$i}}" data="yes" style="border-radius: 10px; text-align: center">
                     Yes</p>
             </div>
-
             <div class="col-6 " style="margin: auto;cursor: pointer">
-                <p class="p-2 selection selection_{{$rand}}_{{$question->id}}" data="no" i="{{$i}}" next_ques="{{$question->if_no}}" rand="{{$rand}}" data_id="{{$question->id}}" style="border-radius: 10px;color: white;text-align:center;background-color:#FF3366">
+                <p class="p-2 selection selection_{{$rand}}_{{$question->id}} pink-color" data="no" i="{{$i}}" next_ques="{{$question->if_no}}" rand="{{$rand}}" data_id="{{$question->id}}" style="border-radius: 10px;color: white;text-align:center;">
                     No</p>
             </div>
 

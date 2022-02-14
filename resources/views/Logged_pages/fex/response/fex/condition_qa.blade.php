@@ -27,7 +27,8 @@ $rand = random_int(100000, 999999);
                 <input type="hidden" value="treatment" name="q_type{{$rec->condition_id}}[]">
                 @elseif($question->question=="Date of diagnosis?")
                 <input type="hidden" value="diagnos" name="q_type{{$rec->condition_id}}[]">
-
+                @else
+                    <input type="hidden" value="nothing" name="q_type{{$rec->condition_id}}[]">
                 @endif
 
                 <div class="container">

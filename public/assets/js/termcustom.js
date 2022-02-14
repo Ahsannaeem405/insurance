@@ -3,8 +3,6 @@ $(document).ready(function () {
 
     var baseurl = '';
 
-
-
     //age calculation
     $(document).on('keyup', '#year', function () {
 

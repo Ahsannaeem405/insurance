@@ -238,8 +238,8 @@
         <li class="nav-item {{ ((request()->is('user/term'))  ||  (request()->is('user/term/quote/compare')) || (request()->is('user/term/setting')))  ? 'lsit-style' : ''}}" style="padding-right: 10px;">
           <a class="nav-link " id="term" href="{{url('/user/term')}}">{{__('profile.TERM')}}</a>
         </li>
-        <li class="nav-item {{ (request()->is('user/legeal/checker')) ? 'lsit-style' : '' }}" style="padding-right: 10px;">
-          <a class="nav-link" id="term" href="{{url('/user/legeal/checker')}}">{{__('profile.Legeal checker')}}</a>
+        <li class="nav-item {{ (request()->is('user/legeal/checker/term')) ? 'lsit-style' : '' }}" style="padding-right: 10px;">
+          <a class="nav-link" id="term" href="{{url('/user/legeal/checker/term')}}">{{__('profile.Legeal checker term')}}</a>
         </li>
       </ul>
       <ul class="navbar-nav ml-auto">
@@ -337,7 +337,7 @@
                 <a href="{{url('#')}}">{{__('profile.Term')}}</a>
               </li>
               <li>
-                <a href="{{url('#')}}">{{__('profile.Legal Checker')}}</a>
+                <a href="{{url('#')}}">{{__('profile.Legal Checker Term')}}</a>
               </li>
 
             </ul>

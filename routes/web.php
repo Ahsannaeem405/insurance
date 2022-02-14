@@ -59,7 +59,7 @@ Route::post('fex/setting/update',[\App\Http\Controllers\CompanyDisableController
 
 //term routes
 
-Route::view('/term','Logged_pages.term.term');
+  Route::view('/term','Logged_pages.term.term');
     Route::post('/get_quote_term', [\App\Http\Controllers\TermController::class,'quoter']);
     Route::get('term/setting',[\App\Http\Controllers\TermController::class,'setting']);
     Route::post('term/setting/update',[\App\Http\Controllers\CompanyDisableController::class,'setting_update_term']);
@@ -84,9 +84,14 @@ Route::view('/term','Logged_pages.term.term');
     Route::get('/get_condition_qa_med_length_term', [\App\Http\Controllers\FexController::class,'condition_qa_med_len']);
 
 
+    //legeal checker term
+
+    Route::get('/get_condition_qa_lterm', [\App\Http\Controllers\LegealCheckerTermController::class,'condition_qa']);
+    Route::get('/get_condition_qa_lterm_next', [\App\Http\Controllers\LegealCheckerTermController::class,'condition_qa_next']);
+    Route::post('/get_quote_lterm', [\App\Http\Controllers\LegealCheckerTermController::class,'quoter']);
     Route::view('/quoter','Logged_pages.medd');
 
-Route::view('/legeal/checker','Logged_pages.legeal');
+Route::get('/legeal/checker/term',[\App\Http\Controllers\LegealCheckerTermController::class,'index']);
 Route::view('/crm','Logged_pages.crm');
 Route::get('/account',[\App\Http\Controllers\UserController::class,'account']);
 Route::post('/update/profile',[\App\Http\Controllers\UserController::class,'profile_update']);

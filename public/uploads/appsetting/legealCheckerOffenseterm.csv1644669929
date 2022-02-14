@@ -1,0 +1,119 @@
+Offenses ID,Offense,Offense Spanish,Company,Tagline,Allowed,Decline,Offence Currently?,Offense Allowed Year from,Offense Allowed Year to,Offense Decline Year from,Offense Decline Year to,Offense Decline Month from,Offense Decline Month to,Category,Reason to Display,Reason to Display spanish,Plan Info,Plan Info spanish,Agent Compensation,Agent Compensation,Coverage Type
+1,Illegal Drugs,Drogas ilegales,American Amicable,(Easy Term),,,,,,0,5,,,,"If treated within 5 years, Decline","If treated within 5 years, Decline",,,,,
+2,Jail/incarcerated,Cárcel/encarcelado,American Amicable,(Easy Term),,,,,,0,5,,,,"Convicted of misdemeanor or 
+felony within 5 yrs - DECLINE","Convicted of misdemeanor or 
+felony within 5 yrs - DECLINE",,,,,
+3,"Parole/Probation 
+(currently)","Libertad condicional/libertad condicional
+(actualmente)",American Amicable,(Easy Term),,,,,,,,0,6,,"If It happened within 6 months, Decline","If It happened within 6 months, Decline",,,,,
+4,DUI / DWI,,American Amicable,(Easy Term),,,,,,0,3,,,,"If it happened within 3 years, Decline","If it happened within 3 years, Decline",,,,,
+5,Drivers License Suspended / Revoked (Due to DUI/DWI),,American Amicable,(Easy Term),,,,,,0,3,,,,"If it happened within 3 years, Decline","If it happened within 3 years, Decline",,,,,
+6,Drivers License Suspended / Revoked (Not due to DUI/DWI),,American Amicable,(Easy Term),,,If yes Decline,,,,,,,,"If currently, Decline","If currently, Decline",,,,,
+1,Illegal Drugs,Drogas ilegales,American Amicable,(Home Certainty),,,,,,0,5,,,,"If treated within 5 years, Decline","If treated within 5 years, Decline",,,,,
+2,Jail/incarcerated,Cárcel/encarcelado,American Amicable,(Home Certainty),,,,,,0,5,,,,"Convicted of misdemeanor or 
+felony within 5 yrs - DECLINE","Convicted of misdemeanor or 
+felony within 5 yrs - DECLINE",,,,,
+3,"Parole/Probation 
+(currently)","Libertad condicional/libertad condicional
+(actualmente)",American Amicable,(Home Certainty),,,,,,,,0,6,,"If It happened within 6 months, Decline","If It happened within 6 months, Decline",,,,,
+4,DUI / DWI,,American Amicable,(Home Certainty),,,,,,0,3,,,,"If it happened within 3 years, Decline","If it happened within 3 years, Decline",,,,,
+5,,,American Amicable,(Home Certainty),,,,,,0,3,,,,"If it happened within 3 years, Decline","If it happened within 3 years, Decline",,,,,
+6,Drivers License Suspended / Revoked (Not due to DUI/DWI),,American Amicable,(Home Certainty),,,If Yes Decline,,,,,,,,"If currently, Decline","If currently, Decline",,,,,
+1,Illegal Drugs,Drogas ilegales,American Amicable,(Home Protector),,,,,,0,5,,,,"If treated within 5 years, Decline","If treated within 5 years, Decline",,,,,
+2,Jail/incarcerated,Cárcel/encarcelado,American Amicable,(Home Protector),,,,,,0,5,,,,"Convicted of misdemeanor or 
+felony within 5 yrs - DECLINE","Convicted of misdemeanor or 
+felony within 5 yrs - DECLINE",,,,,
+3,"Parole/Probation 
+(currently)","Libertad condicional/libertad condicional
+(actualmente)",American Amicable,(Home Protector),,,,,,,,0,6,,"If It happened within 6 months, Decline","If It happened within 6 months, Decline",,,,,
+4,DUI / DWI,,American Amicable,(Home Protector),,,,,,0,3,,,,"If it happened within 3 years, Decline","If it happened within 3 years, Decline",,,,,
+5,Drivers License Suspended / Revoked (Due to DUI/DWI),,American Amicable,(Home Protector),,,,,,0,3,,,,"If it happened within 3 years, Decline","If it happened within 3 years, Decline",,,,,
+6,Drivers License Suspended / Revoked (Not due to DUI/DWI),,American Amicable,(Home Protector),,,If yes Decline,,,,,,,,"If currently, Decline","If currently, Decline",,,,,
+1,Illegal Drugs,Drogas ilegales,American Amicable,(Survivor Protector),,,,,,0,5,,,,"If treated within 5 years, Decline","If treated within 5 years, Decline",,,,,
+2,Jail/incarcerated,Cárcel/encarcelado,American Amicable,(Survivor Protector),,,,,,0,5,,,,"Convicted of misdemeanor or 
+felony within 5 yrs - DECLINE","Convicted of misdemeanor or 
+felony within 5 yrs - DECLINE",,,,,
+3,"Parole/Probation 
+(currently)","Libertad condicional/libertad condicional
+(actualmente)",American Amicable,(Survivor Protector),,,,,,,,0,6,,"If It happened within 6 months, Decline","If It happened within 6 months, Decline",,,,,
+4,DUI / DWI,,American Amicable,(Survivor Protector),,,,,,0,3,,,,"If it happened within 3 years, Decline","If it happened within 3 years, Decline",,,,,
+5,Drivers License Suspended / Revoked (Due to DUI/DWI),,American Amicable,(Survivor Protector),,,,,,0,3,,,,"If it happened within 3 years, Decline","If it happened within 3 years, Decline",,,,,
+6,Drivers License Suspended / Revoked (Not due to DUI/DWI),,American Amicable,(Survivor Protector),,,If yes Decline,,,,,,,,"If currently, Decline","If currently, Decline",,,,,
+1,Illegal Drugs,Drogas ilegales,American Amicable,(Term Made Simple),,,,,,0,10,,,,"If treated within 10 years, Decline","If treated within 10 years, Decline",,,,,
+2,Jail/incarcerated,Cárcel/encarcelado,American Amicable,(Term Made Simple),,,,,,0,5,,,,"Convicted of misdemeanor or 
+felony within 5 yrs - DECLINE","Convicted of misdemeanor or 
+felony within 5 yrs - DECLINE",,,,,
+3,"Parole/Probation 
+(currently)","Libertad condicional/libertad condicional
+(actualmente)",American Amicable,(Term Made Simple),,,,,,,,0,6,,"If It happened within 6 months, Decline","If It happened within 6 months, Decline",,,,,
+4,DUI / DWI,,American Amicable,(Term Made Simple),,,,,,0,3,,,,"If it happened within 3 years, Decline","If it happened within 3 years, Decline",,,,,
+5,Drivers License Suspended / Revoked (Due to DUI/DWI),,American Amicable,(Term Made Simple),,,,,,0,3,,,,"If it happened within 3 years, Decline","If it happened within 3 years, Decline",,,,,
+6,Drivers License Suspended / Revoked (Not due to DUI/DWI),,American Amicable,(Term Made Simple),,,If yes Decline,,,,,,,,"If currently, Decline","If currently, Decline",,,,,
+1,Illegal Drugs,Drogas ilegales,Americo,(HMS),,,,,,0,10,,,,"If treated within 10 years, Decline","If treated within 10 years, Decline",,,,,
+2,Jail/incarcerated,Cárcel/encarcelado,Americo,(HMS),,,,,,0,10,,,,Within 10 years-DECLINE,Within 10 years-DECLINE,,,,,
+3,"Parole/Probation 
+(currently)","Libertad condicional/libertad condicional
+(actualmente)",Americo,(HMS),,,,,,0,10,,,,"If It happened within 10 Years, Decline","If It happened within 10 Years, Decline",,,,,
+4,DUI / DWI,,Americo,(HMS),,,,,,0,2,,,,"If it happened within 2 years, Decline","If it happened within 2 years, Decline",,,,,
+5,Drivers License Suspended / Revoked (Due to DUI/DWI),,Americo,(HMS),,,,,,0,2,,,,"If it happened within 2 years, Decline","If it happened within 2 years, Decline",,,,,
+6,Drivers License Suspended / Revoked (Not due to DUI/DWI),,Americo,(HMS),,,,,,0,2,,,,"If it happened within 2 years, Decline","If it happened within 2 years, Decline",,,,,
+1,Illegal Drugs,Drogas ilegales,Americo,(Payment Protector),,,,,,0,10,,,,"If treated within 10 years, Decline","If treated within 10 years, Decline",,,,,
+2,Jail/incarcerated,Cárcel/encarcelado,Americo,(Payment Protector),,,,,,0,10,,,,Within 10 years-DECLINE,Within 10 years-DECLINE,,,,,
+3,"Parole/Probation 
+(currently)","Libertad condicional/libertad condicional
+(actualmente)",Americo,(Payment Protector),,,,,,0,10,,,,"If It happened within 10 Years, Decline","If It happened within 10 Years, Decline",,,,,
+4,DUI / DWI,,Americo,(Payment Protector),,,,,,0,2,,,,"If it happened within 2 years, Decline","If it happened within 2 years, Decline",,,,,
+5,Drivers License Suspended / Revoked (Due to DUI/DWI),,Americo,(Payment Protector),,,,,,0,2,,,,"If it happened within 2 years, Decline","If it happened within 2 years, Decline",,,,,
+6,Drivers License Suspended / Revoked (Not due to DUI/DWI),,Americo,(Payment Protector),,,,,,0,2,,,,"If it happened within 2 years, Decline","If it happened within 2 years, Decline",,,,,
+1,Illegal Drugs,Drogas ilegales,Americo,(Payment Protector Continuation),,,,,,0,10,,,,"If treated within 10 years, Decline","If treated within 10 years, Decline",,,,,
+2,Jail/incarcerated,Cárcel/encarcelado,Americo,(Payment Protector Continuation),,,,,,0,10,,,,Within 10 years-DECLINE,Within 10 years-DECLINE,,,,,
+3,"Parole/Probation 
+(currently)","Libertad condicional/libertad condicional
+(actualmente)",Americo,(Payment Protector Continuation),,,,,,0,10,,,,"If It happened within 10 Years, Decline","If It happened within 10 Years, Decline",,,,,
+4,DUI / DWI,,Americo,(Payment Protector Continuation),,,,,,0,2,,,,"If it happened within 2 years, Decline","If it happened within 2 years, Decline",,,,,
+5,Drivers License Suspended / Revoked (Due to DUI/DWI),,Americo,(Payment Protector Continuation),,,,,,0,2,,,,"If it happened within 2 years, Decline","If it happened within 2 years, Decline",,,,,
+6,Drivers License Suspended / Revoked (Not due to DUI/DWI),,Americo,(Payment Protector Continuation),,,,,,0,2,,,,"If it happened within 2 years, Decline","If it happened within 2 years, Decline",,,,,
+1,Illegal Drugs,Drogas ilegales,CFG,(SafeShield),Yes,,,,,,,,,,,,,,,,
+2,Jail/incarcerated,Cárcel/encarcelado,CFG,(SafeShield),,YES,,,,,,,,,,,,,,,
+3,"Parole/Probation 
+(currently)","Libertad condicional/libertad condicional
+(actualmente)",CFG,(SafeShield),,,,,,0,3,,,,"If It happened within 10 Years, Decline","If It happened within 10 Years, Decline",,,,,
+4,DUI / DWI,,CFG,(SafeShield),,,,,,0,3,,,,"If it happened within 3 years, Decline. If more than 1 dui in the past 10 years, Decline","If it happened within 3 years, Decline. If more than 1 dui in the past 10 years, Decline",,,,,
+5,Drivers License Suspended / Revoked (Due to DUI/DWI),,CFG,(SafeShield),,,,,,0,3,,,,"If treated within 3 years, Decline. If more than 1 dui in the past 10 years, Decline","If treated within 3 years, Decline. If more than 1 dui in the past 10 years, Decline",,,,,
+6,Drivers License Suspended / Revoked (Not due to DUI/DWI),,CFG,(SafeShield),,,,,,0,3,,,,"If it happened within 3 years, Decline","If it happened within 3 years, Decline",,,,,
+1,Illegal Drugs,Drogas ilegales,Foresters,(Strong Foundation),Yes,,,,,,,,,,,,,,,,
+2,Jail/incarcerated,Cárcel/encarcelado,Foresters,(Strong Foundation),,,,,,0,5,,,,"If currently on parole or probation - DECLINE; 
+after 5 years of jail time - OK","If currently on parole or probation - DECLINE; 
+after 5 years of jail time - OK",,,,,
+3,"Parole/Probation 
+(currently)","Libertad condicional/libertad condicional
+(actualmente)",Foresters,(Strong Foundation),,,,,,0,5,,,,"If It happened within 5 Years, Decline","If It happened within 5 Years, Decline",,,,,
+4,DUI / DWI,,Foresters,(Strong Foundation),,,,,,0,5,,,,"If more than 1 dui in the past 5 years, Decline. If more than 3 moving violations in the past 5 years, Decline","If more than 1 dui in the past 5 years, Decline. If more than 3 moving violations in the past 5 years, Decline",,,,,
+5,Drivers License Suspended / Revoked (Due to DUI/DWI),,Foresters,(Strong Foundation),,,,,,0,5,,,,"If It happened within 5 Years, Decline","If It happened within 5 Years, Decline",,,,,
+6,Drivers License Suspended / Revoked (Not due to DUI/DWI),,Foresters,(Strong Foundation),,,,,,0,5,,,,"If It happened within 5 Years, Decline","If It happened within 5 Years, Decline",,,,,
+1,Illegal Drugs,Drogas ilegales,John Hancock,(Simple Term with Vitality),,,,,,0,10,,,,"If treated within 10 years, Decline","If treated within 10 years, Decline",,,,,
+2,Jail/incarcerated,Cárcel/encarcelado,John Hancock,(Simple Term with Vitality),,YES,,,,,,,,,"any history of criminal record 
+-DECLINE","any history of criminal record 
+-DECLINE",,,,,
+3,"Parole/Probation 
+(currently)","Libertad condicional/libertad condicional
+(actualmente)",John Hancock,(Simple Term with Vitality),,,,,,0,10,,,,"If It happened within 10 Years, Decline","If It happened within 10 Years, Decline",,,,,
+4,DUI / DWI,,John Hancock,(Simple Term with Vitality),,,,,,0,5,,,,"If It happened within 5 Years, Decline","If It happened within 5 Years, Decline",,,,,
+5,Drivers License Suspended / Revoked (Due to DUI/DWI),,John Hancock,(Simple Term with Vitality),,,,,,0,5,,,,"If It happened within 5 Years, Decline","If It happened within 5 Years, Decline",,,,,
+6,Drivers License Suspended / Revoked (Not due to DUI/DWI),,John Hancock,(Simple Term with Vitality),,,,,,0,1,,,,"If It happened within 1 Year, Decline","If It happened within 1 Year, Decline",,,,,
+1,Illegal Drugs,Drogas ilegales,Mutual of Omaha,(Term Life Express),,,,,,0,10,,,,"If treated within 10 years, Decline","If treated within 10 years, Decline",,,,,
+2,Jail/incarcerated,Cárcel/encarcelado,Mutual of Omaha,(Term Life Express),,,,,,0,10,,,,Within 10 years - DECLINE,Within 10 years - DECLINE,,,,,
+3,"Parole/Probation 
+(currently)","Libertad condicional/libertad condicional
+(actualmente)",Mutual of Omaha,(Term Life Express),,YES,,,,,,,,,,,,,,,
+4,DUI / DWI,,Mutual of Omaha,(Term Life Express),,,,,,0,5,,,,"If It happened within 5 Years, Decline","If It happened within 5 Years, Decline",,,,,
+5,Drivers License Suspended / Revoked (Due to DUI/DWI),,Mutual of Omaha,(Term Life Express),,,,,,0,5,,,,"If It happened within 5 Years, Decline","If It happened within 5 Years, Decline",,,,,
+6,Drivers License Suspended / Revoked (Not due to DUI/DWI),,Mutual of Omaha,(Term Life Express),,,,,,,,,,,"If more than 3 moving violations in the past 5 years, Decline","If more than 3 moving violations in the past 5 years, Decline",,,,,
+1,Illegal Drugs,Drogas ilegales,UHL,(Simple Term),,,,,,0,1,,,,"If treated within 1 years, Decline","If treated within 1 years, Decline",,,,,
+2,Jail/incarcerated,Cárcel/encarcelado,UHL,(Simple Term),,,,,,,,,,,,,,,,,
+3,"Parole/Probation 
+(currently)","Libertad condicional/libertad condicional
+(actualmente)",UHL,(Simple Term),,YES,,,,,,,,,,,,,,,
+4,DUI / DWI,,UHL,(Simple Term),,,,0,5,,,,,,"If it happened within 5 years, Simple Term Deluxe","If it happened within 5 years, Simple Term Deluxe",Deluxe,Deluxe,,,
+5,Drivers License Suspended / Revoked (Due to DUI/DWI),,UHL,(Simple Term),,,,0,5,,,,,,"If it happened within 5 years, Simple Term Deluxe","If it happened within 5 years, Simple Term Deluxe",Deluxe,Deluxe,,,
+6,Drivers License Suspended / Revoked (Not due to DUI/DWI),,UHL,(Simple Term),,,,0,5,,,,,,"If it happened within 5 years, Simple Term Deluxe","If it happened within 5 years, Simple Term Deluxe",Deluxe,Deluxe,,,

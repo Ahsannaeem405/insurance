@@ -5,7 +5,7 @@ return [
     // header
     'FEX' => 'FEX',
     'TERM' => 'TERM',
-    'Legeal checker'=>'Legeal checker',
+    'Legeal checker term'=>'Legeal checker term',
     'Accounts'=>'Accounts',
     'QUOTES' => 'QUOTES',
     'PRICING' => 'PRICING',
@@ -37,7 +37,7 @@ return [
     'About'=>'About',
     'Fex' => 'Fex',
     'Term' => 'Term',
-    'Legal Checker' => 'Legal Checker',
+    'Legal Checker Term' => 'Legal Checker Term',
     'Navigation' => 'Navigation',
     'INSURANCE' => 'INSURANCE',
     'TOOLS' => 'TOOLS',

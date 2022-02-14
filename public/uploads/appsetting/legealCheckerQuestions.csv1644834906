@@ -1,0 +1,18 @@
+Offenses ID,Date Question,Question,Question ID,ID Type,IF Yes,IF No
+4,,Driving Violations,1,2,2,2
+,,Have you been convicted of more than one DUI/DWI?,2,2,3,4
+,question,How long ago was the last DUI/DWI?,3,1,,
+,question,How long ago was the DUI/DWI?,4,1,,
+1,question,Date of last use,5,1,,
+2,,When where you arrested?,6,1,,
+2,,Have you been arrested more than once?,7,2,8,9
+,question,How long ago was the last Arrest?,8,1,,
+,question,How long ago did you get arrested?,9,1,,
+3,question,Date of completion,10,1,,
+3,,Are you currently on Parole/Probation?,11,3,12,
+,,"If the prospect served jail time prior to being placed on parole, have they been off of parole for at least 5 years?",12,2,,
+3,,Due to a conviction for a felony?,13,2,,
+5,question,Date (leave as today if currently suspended),14,1,,
+5,,More than 1 DUI/DWI in the past 10 years?,15,2,,
+6,question,Date (leave as today if currently suspended),16,1,,
+6,,More than 3 moving violations in the past 5 years?,17,2,,

@@ -321,6 +321,26 @@
                         </div>
 
 
+                        <div class="row">
+
+                            <div class="col-lg-12 mb-2">
+                                <h1 style="color: #8b8be1">Legeal Checker </h1>
+                            </div>
+
+                            <div class="col-lg-6">
+
+                                <p class="font-weight-bold">Legeal Checker Questions</p>
+                                <input type="file" name="legealcheckerquestion">
+                            </div>
+
+                            <div class="col-lg-6">
+
+                                <p class="font-weight-bold">Legeal Checker Offense Term </p>
+                                <input type="file" name="legealcheckeroffenseterm">
+                            </div>
+                        </div>
+
+
                         <div class="row my-4">
                             <Button class="btn btn-primary m-auto">Submit</Button>
 
