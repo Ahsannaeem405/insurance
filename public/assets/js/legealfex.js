@@ -9,7 +9,7 @@ $(document).ready(function () {
         if(res==true) {
             $.ajax({
                 type: 'get',
-                url: "" + baseurl + "/user/get_condition_qa_lterm",
+                url: "" + baseurl + "/user/get_condition_qa_lfex",
                 data: {'id': id},
 
 
@@ -104,7 +104,7 @@ $(document).ready(function () {
 
             $.ajax({
                 type: 'POST',
-                url: "" + baseurl + "/user/get_quote_lterm",
+                url: "" + baseurl + "/user/get_quote_lfex",
                 data: formData,
                 cache: false,
                 contentType: false,
@@ -168,7 +168,7 @@ $(document).ready(function () {
                         var id = $(currentPosition).attr('ifyes');
                         $.ajax({
                             type: 'get',
-                            url: "" + baseurl + "/user/get_condition_qa_lterm_next",
+                            url: "" + baseurl + "/user/get_condition_qa_lfex_next",
                             data: { 'id': id, 'answer': 'yes', 'rand': rand },
                             async: false,
 
@@ -186,7 +186,7 @@ $(document).ready(function () {
                         var id = $(currentPosition).attr('ifno');
                         $.ajax({
                             type: 'get',
-                            url: "" + baseurl + "/user/get_condition_qa_lterm_next",
+                            url: "" + baseurl + "/user/get_condition_qa_lfex_next",
                             data: { 'id': id, 'answer': 'no', 'rand': rand },
                             async: false,
 
@@ -379,6 +379,8 @@ $(document).ready(function () {
         $(this).next().hide();
 
     });
+
+
 
 
 

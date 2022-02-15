@@ -85,13 +85,28 @@ Route::post('fex/setting/update',[\App\Http\Controllers\CompanyDisableController
 
 
     //legeal checker term
+    Route::get('/legeal/checker/term',[\App\Http\Controllers\LegealCheckerTermController::class,'index']);
 
     Route::get('/get_condition_qa_lterm', [\App\Http\Controllers\LegealCheckerTermController::class,'condition_qa']);
     Route::get('/get_condition_qa_lterm_next', [\App\Http\Controllers\LegealCheckerTermController::class,'condition_qa_next']);
     Route::post('/get_quote_lterm', [\App\Http\Controllers\LegealCheckerTermController::class,'quoter']);
+
+
+    //legeal checker fex
+
+    Route::get('/legeal/checker/fex',[\App\Http\Controllers\LegealCheckerFexController::class,'index']);
+
+    Route::get('/get_condition_qa_lfex', [\App\Http\Controllers\LegealCheckerFexController::class,'condition_qa']);
+    Route::get('/get_condition_qa_lfex_next', [\App\Http\Controllers\LegealCheckerFexController::class,'condition_qa_next']);
+    Route::post('/get_quote_lfex', [\App\Http\Controllers\LegealCheckerFexController::class,'quoter']);
+
+
+
+
+
+
     Route::view('/quoter','Logged_pages.medd');
 
-Route::get('/legeal/checker/term',[\App\Http\Controllers\LegealCheckerTermController::class,'index']);
 Route::view('/crm','Logged_pages.crm');
 Route::get('/account',[\App\Http\Controllers\UserController::class,'account']);
 Route::post('/update/profile',[\App\Http\Controllers\UserController::class,'profile_update']);

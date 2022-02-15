@@ -3,18 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Models\companies;
-use App\Models\condition;
+use App\Models\legealCheckerFexOffense;
 use App\Models\legealCheckerQuestion;
 use App\Models\legealCheckerTermOffense;
 use App\Models\termCompany;
-use App\Models\termCondition;
-use App\Models\termConditionQuestion;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 
-class LegealCheckerTermController extends Controller
+class LegealCheckerFexController extends Controller
 {
-
     public $lang;
 
     public function  __construct()
@@ -46,19 +43,21 @@ class LegealCheckerTermController extends Controller
 
 
     }
-  public function index()
-  {
-      $offends=legealCheckerTermOffense::where('offense_e','!=',' ')->get()->unique('offense_'.$this->lang.'');
 
-      return view('Logged_pages.legalChecker.legelcheckerTerm',compact('offends'));
-  }
+
+    public function index()
+    {
+        $offends=legealCheckerFexOffense::where('offense_e','!=',' ')->get()->unique('offense_'.$this->lang.'');
+
+        return view('Logged_pages.legalChecker.legelcheckerFex',compact('offends'));
+    }
 
     public function condition_qa(Request $request)
     {
-        $rec = legealCheckerTermOffense::with('offenseQuestions')->where('offense_id',$request->id)->first();
+        $rec = legealCheckerFexOffense::with('offenseQuestions')->where('offense_id',$request->id)->first();
 
 
-        return view('Logged_pages.legalChecker.response.term.condition_qa', compact('rec'));
+        return view('Logged_pages.legalChecker.response.fex.condition_qa', compact('rec'));
 
 
     }
@@ -69,7 +68,7 @@ class LegealCheckerTermController extends Controller
         $question = legealCheckerQuestion::where('question_id', $request->id)->first();
         $answer = $request->answer;
         $rand = $request->rand;
-        return view('Logged_pages.legalChecker.response.term.condition_qa_next', compact('question', 'answer', 'rand'));
+        return view('Logged_pages.legalChecker.response.fex.condition_qa_next', compact('question', 'answer', 'rand'));
 
 
     }
@@ -78,7 +77,6 @@ class LegealCheckerTermController extends Controller
     public function quoter(Request $request)
     {
 
-//dd($request->input());
         $gender = $request->gender;
         $age = ($request->age);
         $cigrate = $request->cigrate;
@@ -87,16 +85,18 @@ class LegealCheckerTermController extends Controller
         $year_data = $request->year;
 
 
-        if ($type == 'tens') {
+        if ($type == 'levels') {
+
             $userselection = 1;
-        } elseif ($type == 'fifteens') {
+        } elseif ($type == 'modifieds') {
             $userselection = 2;
-        } elseif ($type == 'twenties') {
+
+        } elseif ($type == 'guaranteeds') {
             $userselection = 3;
-        } elseif ($type == 'twentyfives') {
+
+        } elseif ($type == 'limiteds') {
             $userselection = 4;
-        } elseif ($type == 'thirties') {
-            $userselection = 5;
+
         }
 
 
@@ -108,10 +108,10 @@ class LegealCheckerTermController extends Controller
 
         $data = array();
         $datanot = array();
-        $companies = termCompany::with('disableterm')->get();
+        $companies = companies::with('disable')->get();
 
         if ($request->offense_ids) {
-          //  dd($request->input());
+            //  dd($request->input());
             //$treatment = $diagnose = 0;
             foreach ($request->offense_ids as $conditions) {
                 foreach ($companies as $com) {
@@ -142,7 +142,7 @@ class LegealCheckerTermController extends Controller
 
                         }
                         if ($request->$types[$i] == "decline") {
-                            $decline=true;
+                            $decline=false;
                         }
                     }
 //dd($treatment);
@@ -153,7 +153,7 @@ class LegealCheckerTermController extends Controller
                     }
 
                     if (!isset($decline)) {
-                        $decline = false;
+                        $decline = true;
                     }
 
 
@@ -161,7 +161,7 @@ class LegealCheckerTermController extends Controller
                     if (isset($offense_year) ) {
 
                         //query part 1
-                        $cond = legealCheckerTermOffense::where('company', $com->name)->
+                        $cond = legealCheckerFexOffense::where('company', $com->name)->
                         where('offense_id', $conditions)
                             //->where('tagline', $com->tagline)
                             ->where('decline', '!=', 'Yes')
@@ -186,7 +186,7 @@ class LegealCheckerTermController extends Controller
                         //query part2
 
                         //main
-                        $cond2 = legealCheckerTermOffense::where('company', $com->name)
+                        $cond2 = legealCheckerFexOffense::where('company', $com->name)
                             ->where('offense_id', $conditions)
 
                             ->where('decline', '!=', 'Yes')
@@ -220,37 +220,32 @@ class LegealCheckerTermController extends Controller
                             })
                             ->first();
 
-                        if ($cond)
-                        {
-                         if ($cond->offense_curretly=='If yes Decline' && $decline==true)
-                         {
-                             $cond=null;
-                         }
-                        }
+//                        if ($cond)
+//                        {
+//                            if ($cond->offense_curretly=='If yes Decline' && $decline==true)
+//                            {
+//                                $cond=null;
+//                            }
+//                        }
 
 
 
 
 
                         if ($cond && !$cond2) {
-                            if ($cond->category == '10') {
-                                $cat = 'tens';
+                            if ($cond->category == 'Level') {
+                                $cat = 'levels';
                                 $cat2 = 1;
-                            } elseif ($cond->category == '15') {
-                                $cat = 'fifteens';
+                            } elseif ($cond->category == 'Graded') {
+                                $cat = 'modifieds';
                                 $cat2 = 2;
-                            } elseif ($cond->category == '20') {
-                                $cat = 'twenties';
+                            } elseif ($cond->category == 'Guaranteed') {
+                                $cat = 'guaranteeds';
                                 $cat2 = 3;
-                            } elseif ($cond->category == '25') {
-                                $cat = 'twentyfives';
+                            } elseif ($cond->category == 'Limited') {
+                                $cat = 'limiteds';
                                 $cat2 = 4;
-                            }
-                            elseif ($cond->category == '30') {
-                                $cat = 'thirties';
-                                $cat2 = 5;
-                            }
-                            else {
+                            } else {
                                 $cat = $type;
                                 $cat2 = $userselection;
                             }
@@ -291,7 +286,6 @@ class LegealCheckerTermController extends Controller
 
 
                                 } else {
-
 
                                     $testing_array['company_status' . $com->id . ''] = 0;
                                     $testing_array['condition_record' . $com->id . ''] = $cond;
@@ -385,7 +379,7 @@ class LegealCheckerTermController extends Controller
             $data->values()->all();
 
 
-            return view('Logged_pages.legalChecker.response.term.quoter', compact('data', 'datanot', 'age', 'gender', 'face_amount', 'type', 'cigrate', 'year_data'));
+            return view('Logged_pages.legalChecker.response.fex.quoter', compact('data', 'datanot', 'age', 'gender', 'face_amount', 'type', 'cigrate', 'year_data'));
 
 
         }
@@ -412,7 +406,7 @@ class LegealCheckerTermController extends Controller
 
             }
 
-            return view('Logged_pages.legalChecker.response.term.quoter', compact('data', 'datanot', 'age', 'gender', 'face_amount', 'type', 'cigrate', 'year_data'));
+            return view('Logged_pages.legalChecker.response.fex.quoter', compact('data', 'datanot', 'age', 'gender', 'face_amount', 'type', 'cigrate', 'year_data'));
         }
 
 

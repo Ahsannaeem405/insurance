@@ -241,6 +241,9 @@
         <li class="nav-item {{ (request()->is('user/legeal/checker/term')) ? 'lsit-style' : '' }}" style="padding-right: 10px;">
           <a class="nav-link" id="term" href="{{url('/user/legeal/checker/term')}}">{{__('profile.Legeal checker term')}}</a>
         </li>
+          <li class="nav-item {{ (request()->is('user/legeal/checker/fex')) ? 'lsit-style' : '' }}" style="padding-right: 10px;">
+              <a class="nav-link" id="term" href="{{url('/user/legeal/checker/fex')}}">{{('Legeal checker fex')}}</a>
+          </li>
       </ul>
       <ul class="navbar-nav ml-auto">
         <li class="nav-item ">

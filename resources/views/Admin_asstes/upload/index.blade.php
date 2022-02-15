@@ -338,6 +338,13 @@
                                 <p class="font-weight-bold">Legeal Checker Offense Term </p>
                                 <input type="file" name="legealcheckeroffenseterm">
                             </div>
+
+
+                            <div class="col-lg-6">
+
+                                <p class="font-weight-bold">Legeal Checker Offense Fex </p>
+                                <input type="file" name="legealcheckeroffensefex">
+                            </div>
                         </div>
 
 

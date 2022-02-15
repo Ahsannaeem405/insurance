@@ -1,0 +1,98 @@
+Offense ID,Offense,Offense Spanish,Company,Tagline,Allowed,Decline,offense curently,Offense Allowed Year from,Offense Allowed Year to,Offense Decline Year from,Offense Decline Year to,Offense Decline month from,Offense Decline month to,Category,Reason to Display,Reason to Display spanish,Plan Info ,Plan Info spanish,Agent Compensation,Agent Compensation spanish,Coverage Type
+1,Illegal Drugs,Drogas ilegales,Mutual Of Omaha,Living Promise,,,,0,2,,,,,Graded,"If it is within 2 years, Graded","If it is within 2 years, Graded",`Years 1-2 - ROP +10% Year 3+ - 100% of the face amount,`Years 1-2 - ROP +10% Year 3+ - 100% of the face amount,"
+For Living Promise Graded, commission cut is up to 40% for clients between the ages of 45 and 80.","
+For Living Promise Graded, commission cut is up to 40% for clients between the ages of 45 and 80.",
+2,Jail/incarcerated,Cárcel/encarcelado,Mutual Of Omaha,Living Promise,,Yes,Yes,,,,,,,,"If Jail/incarcerated, Decline","If Jail/incarcerated, Decline",,,,,
+3,"Parole/Probation 
+(currently)","Libertad condicional/libertad condicional
+(actualmente)",Mutual Of Omaha,Living Promise,Yes,,,,,,,,,Level,,,,,,,
+4,DUI / DWI,,Mutual Of Omaha,Living Promise,,,,0,2,,,,,Level,"If It happened within 2 years, Level. If more than 1 dui conviction in the past 2 years, Graded","If It happened within 2 years, Level. If more than 1 dui conviction in the past 2 years, Graded",,,,,
+5,Drivers License Suspended / Revoked (Due to DUI/DWI),,Mutual Of Omaha,Living Promise,,,,0,2,,,,,Level,"If It happened within 2 years, Level. If more than 1 dui conviction in the past 2 years, Graded","If It happened within 2 years, Level. If more than 1 dui conviction in the past 2 years, Graded",,,,,
+6,Drivers License Suspended / Revoked (Not due to DUI/DWI),,Mutual Of Omaha,Living Promise,Yes,,,,,,,,,Level,,,,,,,
+1,Illegal Drugs Use,Uso de drogas ilegales,Americo,Eagle Level,Yes,,,,,,,,,Level,,,,,"For Eagle Level, commission cut is up to 15% for clients between the ages of 50 and 59.","For Eagle Level, commission cut is up to 15% for clients between the ages of 50 and 59.",Level
+2,Jail/incarcerated,Cárcel/encarcelado,Americo,Eagle Level,,Yes,Yes,,,,,,,,If Incarcerated Decline,If Incarcerated Decline,,,,,
+3,"Parole/Probation 
+(currently)","Libertad condicional/libertad condicional
+(actualmente)",Americo,Eagle LEVEL,Yes,,,,,,,,,Level,,,,,"For Eagle Level, commission cut is up to 15% for clients between the ages of 50 and 59.","For Eagle Level, commission cut is up to 15% for clients between the ages of 50 and 59.",Level
+4,DUI / DWI,,Americo,Eagle LEVEL,Yes,,,,,,,,,Level,,,,,,,
+5,Drivers License Suspended / Revoked (Due to DUI/DWI),,Americo,Eagle LEVEL,Yes,,,,,,,,,Level,,,,,,,
+6,Drivers License Suspended / Revoked (Not due to DUI/DWI),,Americo,Eagle LEVEL,Yes,,,,,,,,,Level,,,,,,,
+1,Illegal Drugs Use,Uso de drogas ilegales,Prosperity,New Vista,Yes,,,,,,,,,Level,,,,,,,
+2,Jail/incarcerated,Cárcel/encarcelado,Prosperity,New Vista,Yes,,,,,,,,,Level,,,,,,,
+3,"Parole/Probation 
+(currently)","Libertad condicional/libertad condicional
+(actualmente)",Prosperity,New Vista,Yes,,,,,,,,,Level,,,,,,,
+4,DUI / DWI,,Prosperity,New Vista,,,,0,2,,,,,Level,"If it happened within 2 years, Level. If more than 1 dui conviction in the past 2 years, Modified","If it happened within 2 years, Level. If more than 1 dui conviction in the past 2 years, Modified",,,,,
+5,Drivers License Suspended / Revoked (Due to DUI/DWI),,Prosperity,New Vista,,,,0,2,,,,,Level,"If it happened within 2 years, Level. If more than 1 dui conviction in the past 2 years, Modified","If it happened within 2 years, Level. If more than 1 dui conviction in the past 2 years, Modified",,,,,
+6,Drivers License Suspended / Revoked (Not due to DUI/DWI),,Prosperity,New Vista,Yes,,,,,,,,,Level,,,,,,,
+1,Illegal Drugs Use,Uso de drogas ilegales,Aetna,Accendo,,,,0,2,,,,,Graded,"If treated within 2 years, Modified","If treated within 2 years, Modified",Years 1-2 - ROP +10%. Year 3+ - 100% of the face amount,Years 1-2 - ROP +10%. Year 3+ - 100% of the face amount,"For Accendo Modified, commission cut is up to 10% for clients between the ages of 40 and 75.","For Accendo Modified, commission cut is up to 10% for clients between the ages of 40 and 75.",
+2,Jail/incarcerated,Cárcel/encarcelado,Aetna,Accendo,Yes,,,,,,,,,Level,,,,,,,Preferred
+3,"Parole/Probation 
+(currently)","Libertad condicional/libertad condicional
+(actualmente)",Aetna,Accendo,Yes,,,,,,,,,Level,,,,,,,Preferred
+4,DUI / DWI,,Aetna,Accendo,,,,0,2,,,,,Graded,If it happened within 2 years,If it happened within 2 years,Years 1-2 - ROP +10%. Year 3+ - 100% of the face amount,Years 1-2 - ROP +10%. Year 3+ - 100% of the face amount,"For Accendo Modified, commission cut is up to 10% for clients between the ages of 40 and 75.","For Accendo Modified, commission cut is up to 10% for clients between the ages of 40 and 75.",
+5,Drivers License Suspended / Revoked (Due to DUI/DWI),,Aetna,Accendo,,,,0,2,,,,,Graded,If it happened within 2 years,If it happened within 2 years,Years 1-2 - ROP +10%. Year 3+ - 100% of the face amount,Years 1-2 - ROP +10%. Year 3+ - 100% of the face amount,"For Accendo Modified, commission cut is up to 10% for clients between the ages of 40 and 75.","For Accendo Modified, commission cut is up to 10% for clients between the ages of 40 and 75.",
+6,Drivers License Suspended / Revoked (Not due to DUI/DWI),,Aetna,Accendo,Yes,,,,,,,,,Level,,,,,,,Preferred
+1,Illegal Drugs Use,Uso de drogas ilegales,American Amicable,Senior Choice,,,,0,2,,,,,Graded,"If treated within 2 years, ROP","If treated within 2 years, ROP","Years 1-3 - 110% ROP
+
+Year 4+ - 100% of the face amount","Years 1-3 - 110% ROP
+
+Year 4+ - 100% of the face amount","For Senior Choice ROP, commission cut is up to 15% for clients between the ages of 50 and 79.","For Senior Choice ROP, commission cut is up to 15% for clients between the ages of 50 and 79.",ROP
+2,Jail/incarcerated,Cárcel/encarcelado,American Amicable,Senior Choice,,Yes,Yes,,,,,,,,If Jail/incarcerated Decline,If Jail/incarcerated Decline,,,,,
+3,"Parole/Probation 
+(currently)","Libertad condicional/libertad condicional
+(actualmente)",American Amicable,Senior Choice,Yes,,,,,,,,,Level,,,,,,,Immediate
+4,DUI / DWI,,American Amicable,Senior Choice,Yes,,,,,,,,,Level,,,,,,,Immediate
+5,Drivers License Suspended / Revoked (Due to DUI/DWI),,American Amicable,Senior Choice,Yes,,,,,,,,,Level,,,,,,,Immediate
+6,Drivers License Suspended / Revoked (Not due to DUI/DWI),,American Amicable,Senior Choice,Yes,,,,,,,,,Level,,,,,,,Immediate
+1,Illegal Drugs Use,Uso de drogas ilegales,Foresters,Plan Right,,,,0,2,,,,,Graded,"If treated within 2 years, Basic","If treated within 2 years, Basic",Years 1-2 - ROP +10%. Year 3+ - 100% of the face amount,Years 1-2 - ROP +10%. Year 3+ - 100% of the face amount,"For PlanRight Basic, commission cut is up to 57.50% for clients between the ages of 50 and 80.","For PlanRight Basic, commission cut is up to 57.50% for clients between the ages of 50 and 80.",Basic
+2,Jail/incarcerated,Cárcel/encarcelado,Foresters,Plan Right,Yes,,,,,,,,,Level,,,,,,,Preferred
+3,"Parole/Probation 
+(currently)","Libertad condicional/libertad condicional
+(actualmente)",Foresters,Plan Right,Yes,,,,,,,,,Level,,,,,,,Preferred
+4,DUI / DWI,,Foresters,Plan Right,Yes,,,,,,,,,Level,,,,,,,Preferred
+5,Drivers License Suspended / Revoked (Due to DUI/DWI),,Foresters,Plan Right,Yes,,,,,,,,,Level,,,,,,,Preferred
+6,Drivers License Suspended / Revoked (Not due to DUI/DWI),,Foresters,Plan Right,Yes,,,,,,,,,Level,,,,,,,Preferred
+1,Illegal Drugs Use,Uso de drogas ilegales,Transamerica,Immediate Solutions,,,,0,2,,,,,Graded,"If treated within 2 years, Graded.","If treated within 2 years, Graded.",Years 1-2 - ROP +10%. Year 3+ - 100% of the face amount,Years 1-2 - ROP +10%. Year 3+ - 100% of the face amount,,,Graded
+2,Jail/incarcerated,Cárcel/encarcelado,Transamerica,Immediate Solutions,,Yes,Yes,,,,,,,,If Jail/incarcerated Decline,If Jail/incarcerated Decline,,,,,
+3,"Parole/Probation 
+(currently)","Libertad condicional/libertad condicional
+(actualmente)",Transamerica,Immediate Solutions,,,,,,0,2,,,,"If within 2 years, Decline","If within 2 years, Decline",,,,,
+4,DUI / DWI,,Transamerica,Immediate Solutions,,,,2,4,,,,,Level,,,,,,,Standard
+5,Drivers License Suspended / Revoked (Due to DUI/DWI),,Transamerica,Immediate Solutions,,,,2,4,,,,,Level,,,,,,,Standard
+6,Drivers License Suspended / Revoked (Not due to DUI/DWI),,Transamerica,Immediate Solutions,Yes,,,,,,,,,Level,,,,,,,Preferred
+1,Illegal Drugs Use,Uso de drogas ilegales,Royal Neighbors,Simplified Issue,Yes,,,,,,,,,Level,,,,,,,
+2,Jail/incarcerated,Cárcel/encarcelado,Royal Neighbors,Simplified Issue,,,,,,,,,,,,,,,,,
+3,"Parole/Probation 
+(currently)","Libertad condicional/libertad condicional
+(actualmente)",Royal Neighbors,Simplified Issue,Yes,,,,,,,,,Level,,,,,,,
+4,DUI / DWI,,Royal Neighbors,Simplified Issue,Yes,,,,,,,,,Level,,,,,,,
+5,Drivers License Suspended / Revoked (Due to DUI/DWI),,Royal Neighbors,Simplified Issue,Yes,,,,,,,,,Level,,,,,,,
+6,Drivers License Suspended / Revoked (Not due to DUI/DWI),,Royal Neighbors,Simplified Issue,Yes,,,,,,,,,Level,,,,,,,
+1,Illegal Drugs Use,Uso de drogas ilegales,UHL,,,,,0,1,,,,,Graded,"If treated within 1 year, EIWL","If treated within 1 year, EIWL","Year 1 - ROP +12% interest (30% of the face amount in PA, AR, KS, NV). Year 2 - ROP +24% interest (60% of the face amount in PA, AR, KS, NV) Year 3+ - 100% of the face amount","Year 1 - ROP +12% interest (30% of the face amount in PA, AR, KS, NV). Year 2 - ROP +24% interest (60% of the face amount in PA, AR, KS, NV) Year 3+ - 100% of the face amount",,,EIWL
+2,Jail/incarcerated,Cárcel/encarcelado,UHL,,,,,,,,,,,,,,,,,,
+3,"Parole/Probation 
+(currently)","Libertad condicional/libertad condicional
+(actualmente)",UHL,,Yes,,,,,,,,,Graded,"If currently, EIWL","If currently, EIWL","Year 1 - ROP +12% interest (30% of the face amount in PA, AR, KS, NV). Year 2 - ROP +24% interest (60% of the face amount in PA, AR, KS, NV) Year 3+ - 100% of the face amount","Year 1 - ROP +12% interest (30% of the face amount in PA, AR, KS, NV). Year 2 - ROP +24% interest (60% of the face amount in PA, AR, KS, NV) Year 3+ - 100% of the face amount",,,EIWL
+4,DUI / DWI,,UHL,,,,,0,2,,,,,Level,,,,,,,Deluxe
+5,Drivers License Suspended / Revoked (Due to DUI/DWI),,UHL,,,,,0,2,,,,,Level,,,,,,,Deluxe
+6,Drivers License Suspended / Revoked (Not due to DUI/DWI),,UHL,,,,,0,2,,,,,Level,,,,,,,Deluxe
+1,Illegal Drugs Use,Uso de drogas ilegales,CFG,Advantage,Yes,,,,,,,,,Level,,,,,,,Elite
+2,Jail/incarcerated,Cárcel/encarcelado,CFG,Advantage,,,,,,,,,,,,,,,,,
+3,"Parole/Probation 
+(currently)","Libertad condicional/libertad condicional
+(actualmente)",CFG,Advantage,,,,0,3,,,,,Graded,"If It happened within 3 years, Advantage Graded","If It happened within 3 years, Advantage Graded",Years 1-2 - ROP +6% Year 3+ - 100% of the face amount,Years 1-2 - ROP +6% Year 3+ - 100% of the face amount,"For Classic Advantage Graded, commission cut is up to 20% for clients between the ages of 40 and 80.","For Classic Advantage Graded, commission cut is up to 20% for clients between the ages of 40 and 80.",
+4,DUI / DWI,,CFG,Advantage,,,,0,3,,,,,Graded,"If It happened within 3 years, Advantage Graded","If It happened within 3 years, Advantage Graded",Years 1-2 - ROP +6% Year 3+ - 100% of the face amount,Years 1-2 - ROP +6% Year 3+ - 100% of the face amount,"For Classic Advantage Graded, commission cut is up to 20% for clients between the ages of 40 and 80.","For Classic Advantage Graded, commission cut is up to 20% for clients between the ages of 40 and 80.",
+5,Drivers License Suspended / Revoked (Due to DUI/DWI),,CFG,Advantage,,,,0,3,,,,,Graded,"If It happened within 3 years, Advantage Graded","If It happened within 3 years, Advantage Graded",Years 1-2 - ROP +6% Year 3+ - 100% of the face amount,Years 1-2 - ROP +6% Year 3+ - 100% of the face amount,"For Classic Advantage Graded, commission cut is up to 20% for clients between the ages of 40 and 80.","For Classic Advantage Graded, commission cut is up to 20% for clients between the ages of 40 and 80.",
+6,Drivers License Suspended / Revoked (Not due to DUI/DWI),,CFG,Advantage,Yes,,,,,,,,,Level,,,,,,,Elite
+1,Illegal Drugs Use,Uso de drogas ilegales,Transamerica,Immediate Solutions,,,,2,4,,,,,Level,"If treated between 1 and 2 years ago, Standard","If treated between 1 and 2 years ago, Standard",,,,,Standard
+1,Illegal Drugs Use,Uso de drogas ilegales,Liberty Bankers,,,,,,,0,2,,,,"If treated within 2 years, Decline","If treated within 2 years, Decline",,,,,
+2,Jail/incarcerated,Cárcel/encarcelado,Liberty Bankers,,,Yes,Yes,,,,,,,,,,,,,,
+3,"Parole/Probation 
+(currently)","Libertad condicional/libertad condicional
+(actualmente)",Liberty Bankers,,,Yes,Yes,,,,,,,,,,,,,,
+4,DUI / DWI,,Liberty Bankers,,Yes,,,,,,,,,Level,,,,,,,Preferred
+5,Drivers License Suspended / Revoked (Due to DUI/DWI),,Liberty Bankers,,Yes,,,,,,,,,Level,,,,,,,Preferred
+6,Drivers License Suspended / Revoked (Not due to DUI/DWI),,Liberty Bankers,,Yes,,,,,,,,,Level,,,,,,,Preferred
+4,DUI / DWI,,Transamerica,Immediate Solutions,,,,,,0,2,,,,"If It happened within 2 years, Decline. If treated between 2 and 4 years ago, Standard","If It happened within 2 years, Decline. If treated between 2 and 4 years ago, Standard",,,,,
+5,Drivers License Suspended / Revoked (Due to DUI/DWI),,Transamerica,Immediate Solutions,,,,,,0,2,,,,"If It happened within 2 years, Decline. If treated between 2 and 4 years ago, Standard","If It happened within 2 years, Decline. If treated between 2 and 4 years ago, Standard",,,,,

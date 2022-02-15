@@ -23,6 +23,7 @@ use App\Models\femaleSmokerTen;
 use App\Models\femaleSmokerThirty;
 use App\Models\femaleSmokerTwenty;
 use App\Models\femaleSmokerTwentyfive;
+use App\Models\legealCheckerFexOffense;
 use App\Models\legealCheckerQuestion;
 use App\Models\legealCheckerTermOffense;
 use App\Models\maleNotSmokerFifteen;
@@ -796,6 +797,161 @@ class AdminController extends Controller
                 }
             }
         }
+
+
+        //legeal checker offense fex
+        if ($request->hasFile('legealcheckeroffensefex')) {
+            $file = $request->file('legealcheckeroffensefex');
+
+            // File Details
+            $filename = $file->getClientOriginalName() . time();
+            $extension = $file->getClientOriginalExtension();
+            $tempPath = $file->getRealPath();
+            $fileSize = $file->getSize();
+            $mimeType = $file->getMimeType();
+
+            // Valid File Extensions
+            $valid_extension = array("csv");
+
+            // 2MB in Bytes
+            $maxFileSize = 2097152555;
+
+            // Check file extension
+            if (in_array(strtolower($extension), $valid_extension)) {
+
+                // Check file size
+                if ($fileSize <= $maxFileSize) {
+
+                    // File upload location
+                    $location = 'uploads/appsetting/';
+
+                    // Upload file
+                    $file->move($location, $filename);
+
+                    // Import CSV to Database
+                    $filepath = ($location . "/" . $filename);
+
+                    // Reading file
+                    $file = fopen($filepath, "r");
+
+                    $importData_arr = array();
+                    $i = 0;
+                    $key_word = legealCheckerFexOffense::truncate();
+                    $i = 0;
+                    while (($filedata = fgetcsv($file, 1000, ",")) !== FALSE) {
+                        $num = count($filedata);
+
+
+                        if ($i != 0) {
+
+
+                            for ($c = 0; $c < $num; $c++) {
+                                $importData_arr[$i][] = $filedata [$c];
+
+                            }
+                        }
+
+                        $i++;
+
+
+                    }
+                    fclose($file);
+
+
+                    foreach ($importData_arr as $importData) {
+
+                        if ($importData[0] != "") {
+                            $keyword = new legealCheckerFexOffense();
+                            $keyword->offense_id = intval($importData[0]);
+                            $keyword->offense_e = utf8_decode($importData[1]);
+                            $keyword->offense_s = utf8_decode(($importData[2]));
+                            $keyword->company = utf8_decode(($importData[3]));
+                            $keyword->tagline = utf8_decode(($importData[4]));
+                            $keyword->allowed = utf8_decode(($importData[5]));
+                            $keyword->decline = utf8_decode(($importData[6]));
+                            $keyword->offense_curretly = utf8_decode(($importData[7]));
+
+
+                            if (utf8_decode($importData[8]) == "") {
+                                $keyword->offense_allowed_from = 0;
+
+                            } else {
+                                $keyword->offense_allowed_from = utf8_decode(intval($importData[8]));
+
+                            }
+
+
+                            if (utf8_decode($importData[9]) == "") {
+                                $keyword->offense_allowed_to = 1000;
+
+                            } else {
+                                $keyword->offense_allowed_to = utf8_decode(intval($importData[9]));
+
+                            }
+
+
+                            //dec
+
+
+                            if (utf8_decode($importData[10]) == "") {
+                                $keyword->offense_decline_from = 1500;
+
+                            } else {
+                                $keyword->offense_decline_from = utf8_decode(intval($importData[10]));
+
+                            }
+
+
+                            if (utf8_decode($importData[11]) == "") {
+                                $keyword->offense_decline_to = 2000;
+
+                            } else {
+                                $keyword->offense_decline_to = utf8_decode(intval($importData[11]));
+                            }
+
+
+                            if (utf8_decode($importData[12]) == "") {
+                                $keyword->offense_decline_month_from = 150000;
+
+                            } else {
+                                $keyword->offense_decline_month_from = utf8_decode(intval($importData[12]));
+
+                            }
+
+
+                            if (utf8_decode($importData[13]) == "") {
+                                $keyword->offense_decline_month_to = 200000;
+
+                            } else {
+                                $keyword->offense_decline_month_to = utf8_decode(intval($importData[13]));
+
+                            }
+
+
+
+
+
+                            $keyword->category = utf8_decode(($importData[14]));
+                            $keyword->reason_e = utf8_decode(($importData[15]));
+                            $keyword->reason_s = utf8_decode(($importData[16]));
+                            $keyword->plan_info_e = utf8_decode(($importData[17]));
+                            $keyword->plan_info_s = utf8_decode(($importData[18]));
+                            $keyword->agent_compensation_e = utf8_decode(($importData[19]));
+                            $keyword->agent_compensation_s = utf8_decode(($importData[20]));
+                            $keyword->coverage_type = utf8_decode(($importData[21]));
+
+
+                            $keyword->save();
+
+
+                        }
+                    }
+
+
+                }
+            }
+        }
+
 
 
         //Medications
