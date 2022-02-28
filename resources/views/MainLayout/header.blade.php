@@ -9,10 +9,12 @@
   <link rel="stylesheet" href="{{asset('css/custom.css')}}">
 
   <!-- Bootstrap CSS -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.0/css/font-awesome.css" integrity="sha512-CB+XYxRC7cXZqO/8cP3V+ve2+6g6ynOnvJD6p4E4y3+wwkScH9qEOla+BTHzcwB4xKgvWn816Iv0io5l3rAOBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.11.4/datatables.min.css"/>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+{{--  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">--}}
 
   @section('title')
   <title>Insurance</title>
@@ -162,16 +164,16 @@
     /*left: -130px*/
   }
 
-  @media screen and (max-width: 990px) {
-    .margin-class {
-      margin-right: 0px;
-      color: black;
-      background-color: white;
-    }
+  /*@media screen and (max-width: 990px) {*/
+  /*  .margin-class {*/
+  /*    margin-right: 0px;*/
+  /*    color: black;*/
+  /*    background-color: white;*/
+  /*  }*/
 
 
 
-  }
+
 </style>
 
 <body>
@@ -231,7 +233,7 @@
 
     </div> -->
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav ml-auto margin-class" style="">
+      <ul class="navbar-nav m-auto margin-class" style="">
         <li class="nav-item  {{ ((request()->is('user/fex'))  ||  (request()->is('user/fex/quote/compare')) || (request()->is('user/fex/setting')))  ? 'lsit-style' : '' }}">
           <a class="nav-link "  id="fex" href="{{url('/user/fex')}}">{{__('profile.FEX')}} </a>
         </li>
@@ -242,10 +244,14 @@
           <a class="nav-link" id="term" href="{{url('/user/legeal/checker/term')}}">{{__('profile.Legeal checker term')}}</a>
         </li>
           <li class="nav-item {{ (request()->is('user/legeal/checker/fex')) ? 'lsit-style' : '' }}" style="padding-right: 10px;">
-              <a class="nav-link" id="term" href="{{url('/user/legeal/checker/fex')}}">{{('Legeal checker fex')}}</a>
+              <a class="nav-link" id="term" href="{{url('/user/legeal/checker/fex')}}">{{('Legal Fex')}}</a>
+          </li>
+
+          <li class="nav-item {{ (request()->is('user/dashboard')) ? 'lsit-style' : '' }}" style="padding-right: 10px;">
+              <a class="nav-link" id="term" href="{{url('/user/dashboard')}}">{{('Dashboard')}}</a>
           </li>
       </ul>
-      <ul class="navbar-nav ml-auto">
+      <ul class="navbar-nav ">
         <li class="nav-item ">
           <a class="nav-link" id="login" href="{{url('/user/account')}}">{{__('profile.Accounts')}}</a>
         </li>

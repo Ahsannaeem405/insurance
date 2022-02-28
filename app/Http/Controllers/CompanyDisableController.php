@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\commision;
 use App\Models\companies;
 use App\Models\companyDisable;
 use Illuminate\Http\Request;
@@ -13,6 +14,7 @@ class CompanyDisableController extends Controller
     {
    $company=companies::all();
    $del=companyDisable::where('user_id',Auth::user()->id)->where('type','fex')->delete();
+   $del=commision::where('user_id',Auth::user()->id)->where('type','fex')->delete();
    if($request->company)
    {
        foreach ($request->company as $com)
@@ -26,6 +28,19 @@ class CompanyDisableController extends Controller
        }
    }
 
+   foreach ($company as $com)
+   {
+       $comm="commition$com->id";
+
+     $commision=new commision();
+     $commision->user_id=Auth::user()->id;
+     $commision->company_id=$com->id;
+
+     $commision->commision=$request->$comm;
+     $commision->type='fex';
+     $commision->save();
+   }
+
    return back()->with('success','Setting updating successfully');
 
 
@@ -37,6 +52,7 @@ class CompanyDisableController extends Controller
     {
         $company=companies::all();
         $del=companyDisable::where('user_id',Auth::user()->id)->where('type','term')->delete();
+        $del=commision::where('user_id',Auth::user()->id)->where('type','term')->delete();
         if($request->company)
         {
             foreach ($request->company as $com)
@@ -48,6 +64,20 @@ class CompanyDisableController extends Controller
                 $disable->type='term';
                 $disable->save();
             }
+        }
+
+
+        foreach ($company as $com)
+        {
+            $comm="commition$com->id";
+
+            $commision=new commision();
+            $commision->user_id=Auth::user()->id;
+            $commision->company_id=$com->id;
+
+            $commision->commision=$request->$comm;
+            $commision->type='term';
+            $commision->save();
         }
 
         return back()->with('success','Setting updating successfully');

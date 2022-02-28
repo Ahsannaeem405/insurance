@@ -17,4 +17,11 @@ class companies extends Model
             ->where('user_id',Auth::user()->id);
     }
 
+    public function commision()
+    {
+        return $this->hasOne(commision::class,'company_id','id')
+            ->where('type','fex')
+            ->where('user_id',Auth::user()->id);
+    }
+
 }

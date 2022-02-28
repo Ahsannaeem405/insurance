@@ -246,9 +246,10 @@
                                     <div class="col-lg-4">
                                         <label for="cars">{{__('profile.State:')}}</label>
                                         <select name="state" class="form-control input-background">
-                                            <option value="Graded/Modified">UnitedKingdom</option>
-                                            <option value="Guaranteed">UnitedKingdom</option>
-                                            <option value="Limited Pay">UnitedKingdom</option>
+
+                                            @foreach($states as $state)
+                                                <option value="{{$state->state}}">{{$state->state}}</option>
+                                            @endforeach
                                         </select>
                                     </div>
                                     <div class="col-lg-4">

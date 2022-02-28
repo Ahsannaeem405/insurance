@@ -3,14 +3,10 @@ $(document).ready(function () {
 
     var baseurl = '';
    //  var baseurl='/public';
-
-
     //age calculation
     $(document).on('keyup', '#year', function () {
 
-
         var year = $(this).val();
-
         var date = new Date().getFullYear()
         $('#age').val(date - year);
 
@@ -770,6 +766,18 @@ var response=true;
                 }
             });
         }
+
+    });
+
+    $(document).on('click', '.pushtocrm', function () {
+
+var price=$(this).attr('price');
+var tagline=$(this).attr('tagline');
+var company=$(this).attr('company');
+
+$('#pricedata').val(price);
+$('#taglinedata').val(tagline);
+$('#companydata').val(company);
 
     });
 

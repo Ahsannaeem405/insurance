@@ -34,6 +34,11 @@ Route::view('/term', 'term')->middleware('lang');
 Route::get('/lang/{lang}', [\App\Http\Controllers\UserController::class,'lang'])->middleware('lang');
 
 Route::prefix('user')->middleware(['auth','user','lang'])->group(function () {
+
+    //crm
+Route::post('/pushToCrm',[\App\Http\Controllers\CrmController::class,'push']);
+Route::get('/dashboard',[\App\Http\Controllers\CrmController::class,'dashboard']);
+
     //fex routes
 Route::get('/fex',[\App\Http\Controllers\FexController::class,'index']);
 Route::get('/fex/quote/compare',[\App\Http\Controllers\FexController::class,'compare']);
@@ -58,8 +63,7 @@ Route::post('fex/setting/update',[\App\Http\Controllers\CompanyDisableController
     Route::get('/get_condition_qa_med_length_fex', [\App\Http\Controllers\FexController::class,'condition_qa_med_len']);
 
 //term routes
-
-  Route::view('/term','Logged_pages.term.term');
+    Route::get('/term',[\App\Http\Controllers\TermController::class,'index']);
     Route::post('/get_quote_term', [\App\Http\Controllers\TermController::class,'quoter']);
     Route::get('term/setting',[\App\Http\Controllers\TermController::class,'setting']);
     Route::post('term/setting/update',[\App\Http\Controllers\CompanyDisableController::class,'setting_update_term']);

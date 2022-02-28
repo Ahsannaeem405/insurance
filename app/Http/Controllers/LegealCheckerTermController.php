@@ -6,6 +6,7 @@ use App\Models\companies;
 use App\Models\condition;
 use App\Models\legealCheckerQuestion;
 use App\Models\legealCheckerTermOffense;
+use App\Models\states;
 use App\Models\termCompany;
 use App\Models\termCondition;
 use App\Models\termConditionQuestion;
@@ -48,9 +49,10 @@ class LegealCheckerTermController extends Controller
     }
   public function index()
   {
+      $states=states::all();
       $offends=legealCheckerTermOffense::where('offense_e','!=',' ')->get()->unique('offense_'.$this->lang.'');
 
-      return view('Logged_pages.legalChecker.legelcheckerTerm',compact('offends'));
+      return view('Logged_pages.legalChecker.legelcheckerTerm',compact('states','offends'));
   }
 
     public function condition_qa(Request $request)
@@ -145,6 +147,8 @@ class LegealCheckerTermController extends Controller
                             $decline=true;
                         }
                     }
+
+
 //dd($treatment);
 
 
@@ -169,11 +173,11 @@ class LegealCheckerTermController extends Controller
 
 
                                 $query->where(function ($query) use ($offense_year) {
-                                    $query->where('offense_allowed_from', '>=', $offense_year);
+                                    $query->where('offense_allowed_to', '>=', $offense_year);
                                 });
 
                                 $query->where(function ($query) use ($offense_year) {
-                                    $query->where('offense_allowed_to', '<=', $offense_year);
+                                    $query->where('offense_allowed_from', '<=', $offense_year);
 
                                 });
 
@@ -207,11 +211,11 @@ class LegealCheckerTermController extends Controller
                                 })
                                     ->Orwhere(function ($query) use ($offense_month) {
                                         $query->where(function ($query) use ($offense_month) {
-                                            $query->where('offense_decline_month_from', '>=', $offense_month);
+                                            $query->where('offense_decline_month_to', '>=', $offense_month);
                                         });
 
                                         $query->where(function ($query) use ($offense_month) {
-                                            $query->where('offense_decline_month_to', '<=', $offense_month);
+                                            $query->where('offense_decline_month_from', '<=', $offense_month);
 
                                         });
 
@@ -219,6 +223,7 @@ class LegealCheckerTermController extends Controller
                                     });
                             })
                             ->first();
+
 
                         if ($cond)
                         {

@@ -4,7 +4,7 @@
 @if($question->type_id==1)
 
 <div class="current_ques_{{$rand}}_{{$i}} all_ques_{{$rand}} childques{{$rand}}" rand="{{$rand}}" jump="1" i="{{$i}}" parentanswer="{{$answer}}" @if($i>=2) style="display: none" @endif>
-    <h3 class="text-center mt-2">{{$question->question}} 123</h3>
+    <h3 class="text-center mt-2">{{$question->question}} </h3>
 
     @if($question->question_type=="question")
         <input type="hidden" value="offense" name="q_type{{$question->offense_id_next}}[]">

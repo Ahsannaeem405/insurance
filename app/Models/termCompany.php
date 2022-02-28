@@ -16,4 +16,11 @@ class termCompany extends Model
             ->where('type','term')
             ->where('user_id',Auth::user()->id);
     }
+
+    public function commisionterm()
+    {
+        return $this->hasOne(commision::class,'company_id','id')
+            ->where('type','term')
+            ->where('user_id',Auth::user()->id);
+    }
 }

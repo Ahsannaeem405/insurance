@@ -5,7 +5,7 @@ return [
     // header
     'FEX' => 'FEX',
     'TERM' => 'TERM',
-    'Legeal checker term'=>'Legeal checker term',
+    'Legeal checker term'=>'Legal Term',
     'Accounts'=>'Accounts',
     'QUOTES' => 'QUOTES',
     'PRICING' => 'PRICING',

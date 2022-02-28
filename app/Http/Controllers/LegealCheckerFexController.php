@@ -6,6 +6,7 @@ use App\Models\companies;
 use App\Models\legealCheckerFexOffense;
 use App\Models\legealCheckerQuestion;
 use App\Models\legealCheckerTermOffense;
+use App\Models\states;
 use App\Models\termCompany;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -47,9 +48,10 @@ class LegealCheckerFexController extends Controller
 
     public function index()
     {
+        $states=states::all();
         $offends=legealCheckerFexOffense::where('offense_e','!=',' ')->get()->unique('offense_'.$this->lang.'');
 
-        return view('Logged_pages.legalChecker.legelcheckerFex',compact('offends'));
+        return view('Logged_pages.legalChecker.legelcheckerFex',compact('states','offends'));
     }
 
     public function condition_qa(Request $request)
@@ -169,11 +171,11 @@ class LegealCheckerFexController extends Controller
 
 
                                 $query->where(function ($query) use ($offense_year) {
-                                    $query->where('offense_allowed_from', '>=', $offense_year);
+                                    $query->where('offense_allowed_to', '>=', $offense_year);
                                 });
 
                                 $query->where(function ($query) use ($offense_year) {
-                                    $query->where('offense_allowed_to', '<=', $offense_year);
+                                    $query->where('offense_allowed_from', '<=', $offense_year);
 
                                 });
 
@@ -207,11 +209,11 @@ class LegealCheckerFexController extends Controller
                                 })
                                     ->Orwhere(function ($query) use ($offense_month) {
                                         $query->where(function ($query) use ($offense_month) {
-                                            $query->where('offense_decline_month_from', '>=', $offense_month);
+                                            $query->where('offense_decline_month_to', '>=', $offense_month);
                                         });
 
                                         $query->where(function ($query) use ($offense_month) {
-                                            $query->where('offense_decline_month_to', '<=', $offense_month);
+                                            $query->where('offense_decline_month_from', '<=', $offense_month);
 
                                         });
 

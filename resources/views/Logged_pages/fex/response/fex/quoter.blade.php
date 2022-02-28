@@ -14,7 +14,47 @@
 
 
 
+<!-- Modal -->
+<div class="modal fade" id="pushtocrm" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">PUSH TO CRM</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="{{url('user/pushToCrm')}}" method="post">
+                    @csrf
+                    <div class="row">
+                        <div class="col-lg-12 mb-3">
+                            <input type="text" placeholder="Please enter name" name="name" class="form-control" required>
+                        </div>
+                        <div class="col-lg-12 mb-3">
+                            <input type="email" placeholder="Please enter email" name="email" class="form-control" >
+                        </div>
+
+                            <input type="hidden"  name="price" id="pricedata" class="form-control">
+                            <input type="hidden"  name="tagline" id="taglinedata" class="form-control" >
+                            <input type="hidden"  name="company" id="companydata" class="form-control" >
+                            <input type="hidden"  name="typedata" id="typedata" value="fex" class="form-control">
+
+                    </div>
+                    <div class="modal-footer" style="border-top: none">
+                        <button type="submit" class="btn btn-primary ">Save</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
 @foreach($data as $record)
+
 @if(!$record['disable'])
     <div class="row w-100 data mr-0 ml-0">
         <div class="col-lg-3  col-12 center">
@@ -32,9 +72,9 @@
 @if(isset($record['conditiondata']))
 
                 @if($record['conditiondata']->$agent!="")
-                    <div class="position-relative p-2">
+                    <div class="position-relative p-1 pt-0">
 
-                        <span class="infoplan"  alt="" style="cursor: pointer;font-size: 27px;color: green">$</span>
+                        <span class="infoplan"  alt="" style="cursor: pointer;font-size: 18px;color: green">$</span>
 
                         <div class="text-center position-absolute popup">
                             <div class="">
@@ -47,9 +87,9 @@
                 @endif
 
     @if($record['conditiondata']->$plan!="")
-            <div class="position-relative p-2">
+            <div class="position-relative p-1">
 
-                <img class="infoplan" src="{{asset('images/info.png')}}" alt="" style="cursor: pointer">
+                <img class="infoplan" src="{{asset('images/info.png')}}" alt="" style="cursor: pointer;width: 18px">
 
                 <div class="text-center position-absolute popup"
                      style="">
@@ -63,9 +103,9 @@
             @endif
 
         @if($record['conditiondata']->$reason!="")
-            <div class="position-relative p-2">
+            <div class="position-relative p-1">
 
-                <img class="infoplan" src="{{asset('images/question-mark.png')}}" alt="" style="cursor: pointer;width: 30px">
+                <img class="infoplan" src="{{asset('images/question-mark.png')}}" alt="" style="cursor: pointer;width: 18px">
 
                 <div class="text-center position-absolute popup"
                      style="">
@@ -86,8 +126,12 @@
 
 {{--            &nbsp;<i class="fas fa-chevron-down p-2" id="{{$record['data']->id}}"></i>--}}
     <a target="_blank" href="{{url('user/fex/quote/compare?company='.$record['data']->company_id.'&age='.$age.'&gender='.$gender.'&face='.$face_amount.'&cigrate='.$cigrate.'&type='.$type.'&year='.$year_data.'')}}">    <button class="btn btn-warning m-auto" style="color: white">compare</button>
-
     </a>
+
+    <a class="ml-1">
+        <button  data-toggle="modal" price="{{$record['data']->price}}" tagline="{{$record['data']->Tagline}}" company="{{$record['data']->company_id}}" data-target="#pushtocrm" class="btn btn-warning m-auto pushtocrm" style="color: white">push to crm</button>
+    </a>
+
 
 
         </div>

@@ -7,6 +7,7 @@ use App\Models\companies;
 use App\Models\condition;
 use App\Models\conditionQuestion;
 use App\Models\Medication;
+use App\Models\states;
 use App\Models\Subsription;
 use App\Models\User;
 use Carbon\Carbon;
@@ -50,11 +51,14 @@ public $lang;
     public function index()
     {
 
-    return view('Logged_pages.fex.fex');
+        $states=states::all();
+    return view('Logged_pages.fex.fex',compact('states'));
     }
 
     public function compare(Request $request)
     {
+        $states=states::all();
+
         $companies = companies::with('disable')->get();
 
         if ($request->gender) {
@@ -76,7 +80,7 @@ public $lang;
         }
 
 
-        return view('Logged_pages.fex.compare', compact('companies', 'request', 'age', 'gender', 'year'));
+        return view('Logged_pages.fex.compare', compact('states','companies', 'request', 'age', 'gender', 'year'));
     }
 
     public function compare_fex(Request $request)
@@ -107,7 +111,7 @@ public $lang;
 
     public function setting()
     {
-        $companies=companies::with('disable')->get();
+        $companies=companies::with('disable','commision')->get();
         return view('Logged_pages.fex.setting',compact('companies'));
     }
 

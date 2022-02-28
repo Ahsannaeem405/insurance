@@ -173,17 +173,26 @@
                              style="padding: 2rem;box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;">
                             @foreach($companies as $company)
 
-                                <div class="col-lg-6 p-2">
-                                    <span>     {{$company->name}}</span>
+                                <div class="col-lg-6 p-2 d-flex justify-content-between">
+                                    <div>
+                                        <p>     {{$company->name}}</p>
+                                    </div>
 
-                                    <label class="switch float-right">
-                                        <input name="company[]" type="checkbox" @if($company->disableterm) checked
-                                               @endif value="{{$company->id}}">
-                                        <span class="slider round"></span>
-                                    </label>
+                                    <div class="d-flex ">
+                                        <input type="number" class="form-control ml-5 w-75" name="commition{{$company->id}}" value="{{$company->commisionterm!=null ? $company->commisionterm->commision : 20}}"  placeholder="Commission%">
 
-                                    <hr style="">
+                                        <label class="switch  ml-2">
+                                            <input name="company[]" type="checkbox" @if($company->disableterm) checked
+                                                   @endif value="{{$company->id}}">
+                                            <span class="slider round"></span>
+                                        </label>
+                                    </div>
+
+
                                 </div>
+
+
+
 
                             @endforeach
 

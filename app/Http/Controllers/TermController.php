@@ -7,6 +7,7 @@ use App\Models\companies;
 use App\Models\condition;
 use App\Models\conditionQuestion;
 use App\Models\Medication;
+use App\Models\states;
 use App\Models\termComboCondition;
 use App\Models\termCompany;
 use App\Models\termCondition;
@@ -46,6 +47,13 @@ class TermController extends Controller
 
 
 
+    }
+
+    public function index()
+    {
+
+        $states=states::all();
+        return view('Logged_pages.term.term',compact('states'));
     }
 
     public function quoter(Request $request)
@@ -373,12 +381,13 @@ class TermController extends Controller
     public function setting()
     {
 
-        $companies=termCompany::with('disableterm')->get();
+        $companies=termCompany::with('disableterm','commisionterm')->get();
         return view('Logged_pages.term.setting',compact('companies'));
     }
 
     public function compare(Request $request)
     {
+        $states=states::all();
         $companies = termCompany::with('disableterm')->get();
 
         if ($request->gender) {
@@ -400,7 +409,7 @@ class TermController extends Controller
         }
 
 
-        return view('Logged_pages.term.compare', compact('companies', 'request', 'age', 'gender', 'year'));
+        return view('Logged_pages.term.compare', compact('states','companies', 'request', 'age', 'gender', 'year'));
     }
 
     public function compare_term(Request $request)
