@@ -20,29 +20,36 @@
                                 <th scope="col">No</th>
                                 <th scope="col">Name</th>
                                 <th scope="col">Email</th>
+                                <th scope="col">Status</th>
                                 <th scope="col">Action</th>
                             </tr>
                             </thead>
                             <tbody>
 
 
-
-
-
-
-
-
-
-
-
-
-                          @php $count=1; @endphp
+                            @php $count=1; @endphp
                             @foreach($user as $user)
                                 <tr>
                                     <th scope="row">{{$count++}}</th>
                                     <td>{{$user->name}}</td>
                                     <td>{{$user->email}}</td>
                                     <td>
+                                        @if($user->enable==0)
+                                            <a class="btn btn-danger text-white">Disabled</a>
+                                        @else
+                                            <a
+                                               class="btn btn-primary text-white">Enabled</a>
+                                        @endif
+                                    </td>
+                                    <td>
+                                        @if($user->enable==1)
+                                            <a href="{{url('/admin/enable/user/'.$user->id.'/disable')}}"
+                                               class="btn btn-danger">Disable Now</a>
+                                        @else
+                                            <a href="{{url('/admin/enable/user/'.$user->id.'/enable')}}"
+                                               class="btn btn-primary">Enable Now</a>
+                                        @endif
+
                                         <a href="{{url('/admin/edit/user/'.$user->id.'')}}"
                                            class="btn btn-primary">Edit</a>
 

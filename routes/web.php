@@ -23,6 +23,8 @@ Route::post('register_user',[\App\Http\Controllers\Auth\RegisterController::clas
 Route::get('/logout', [\App\Http\Controllers\HomeController::class,'logout'])->middleware('lang');
 Route::get('/promo', [\App\Http\Controllers\UserController::class,'promo'])->middleware('lang');
 
+
+
 // App::setlocale('en');
 
 
@@ -34,7 +36,8 @@ Route::view('/term', 'term')->middleware('lang');
 Route::get('/lang/{lang}', [\App\Http\Controllers\UserController::class,'lang'])->middleware('lang');
 
 Route::prefix('user')->middleware(['auth','user','lang'])->group(function () {
-
+//disable
+    Route::get('/disable', [\App\Http\Controllers\UserController::class,'disable']);
     //crm
 Route::post('/pushToCrm',[\App\Http\Controllers\CrmController::class,'push']);
 Route::get('/dashboard',[\App\Http\Controllers\CrmController::class,'dashboard']);
@@ -130,6 +133,7 @@ Route::view('/overview', 'Logged_pages.overview');
     Route::get('/viewuser', [\App\Http\Controllers\AdminController::class,'user']);
     Route::get('/delete/user/{id}', [\App\Http\Controllers\AdminController::class,'user_del']);
     Route::get('/edit/user/{id}', [\App\Http\Controllers\AdminController::class,'user_edit']);
+    Route::get('/enable/user/{id}/{status}', [\App\Http\Controllers\AdminController::class,'user_enable']);
     Route::post('/update/user/{id}', [\App\Http\Controllers\AdminController::class,'user_update']);
     Route::post('/update/profile/{id}', [\App\Http\Controllers\AdminController::class,'user_update']);
 

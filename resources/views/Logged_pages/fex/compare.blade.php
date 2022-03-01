@@ -272,13 +272,13 @@
                                         <div class="col-sm-12 p-0" style="margin: auto;cursor: pointer">
                                             <!-- <p class="p-2 gender" data="male" style="@if($gender=='male') border: 1px solid #22339e;border-radius: 10px;color: white;background-color:#22339e @else  border: 1px solid #22339e;border-radius: 10px  @endif ">
                                             Male</p> -->
-                                            <p class="p-2 gender blue-color" data="male" style="border-radius:10px">
+                                            <p class="p-2 gender blue-color gender_border" data="male" style="border-radius:10px">
                                                 Male</p>
                                         </div>
                                     </div>
                                     <div class="col-lg-6 text-center">
                                         <div class="col-sm-12 p-0" style="margin: auto;cursor: pointer;">
-                                            <p class="p-2 gender pink-color" data="female" style="border-radius:10px">
+                                            <p class="p-2 gender pink-color " data="female" style="border-radius:10px">
                                                 Female
                                             </p>
                                         </div>

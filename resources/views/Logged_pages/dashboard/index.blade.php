@@ -72,7 +72,7 @@
                                 <i class="feather icon-users text-primary font-medium-5"></i>
                             </div>
                         </div>
-                        <h2 class="text-bold-700 mt-1">1</h2>
+                        <h2 class="text-bold-700 mt-1">{{$eight+$nine+$twelwe}}</h2>
                         <h1 class="mb-0"><i class="fa fa-rub mr-2"></i>Policies</h1>
                     </div>
 
@@ -88,8 +88,8 @@
                                 <i class="feather icon-users text-primary font-medium-5"></i>
                             </div>
                         </div>
-                        <h2 class="text-bold-700 mt-1">1</h2>
-                        <h1 class="mb-0"><i class="fa fa-money mr-2"></i>Amount</h1>
+                        <h2 class="text-bold-700 mt-1">{{$nine}}</h2>
+                        <h1 class="mb-0"><i class="fa fa-calendar mr-2"></i>9 Months</h1>
                     </div>
 
                 </div>
@@ -104,7 +104,7 @@
                                 <i class="feather icon-users text-primary font-medium-5"></i>
                             </div>
                         </div>
-                        <h2 class="text-bold-700 mt-1">1</h2>
+                        <h2 class="text-bold-700 mt-1">{{$twelwe}}</h2>
                         <h1 class="mb-0"><i class="fa fa-calendar mr-2"></i>12 Months</h1>
                     </div>
 
@@ -118,15 +118,22 @@
 
         </div>
 
-<div style="border: 1px solid #d2cece;border-radius: 25px;padding: 20px" class="my-5">
-        <table id="example" class="display" style="width:100%;padding:20px;">
+<div style="border: 1px solid #d2cece;border-radius: 25px;padding: 20px" class="my-5 table-responsive">
+        <table id="example" class="display w-100" style="width:100%;padding:20px">
             <thead>
             <tr>
                 <th>Name</th>
                 <th>Email</th>
+                <th>Product name</th>
+                <th>Address</th>
+                <th>Phone</th>
+                <th>Date Added</th>
                 <th>Monthly price</th>
                 <th>Total Price</th>
                 <th>Total Earned Price</th>
+                <th>8 Months</th>
+                <th>9 Months</th>
+                <th>12 Months</th>
 
             </tr>
             </thead>
@@ -136,9 +143,18 @@
                <tr>
                    <td>{{$crm->name}}</td>
                    <td>{{$crm->email}}</td>
+                   <td>{{$crm->tagline}}</td>
+                   <td>{{$crm->addreess}}</td>
+                   <td>{{$crm->phone}}</td>
+                   <td>{{$crm->created}}</td>
                    <td>${{$crm->monthly_price}}</td>
                    <td>${{$crm->total_price}}</td>
                    <td>${{$crm->total_earned_price}}</td>
+                   <td>{{$crm->eightMonth>=\Carbon\Carbon::now() ? "YES" : "NO"}}</td>
+                   <td>{{($crm->eightMonth<\Carbon\Carbon::now() && $crm->NineMonth>=\Carbon\Carbon::now()) ? "YES" : "NO"}}</td>
+                   <td>{{($crm->NineMonth<\Carbon\Carbon::now() && $crm->twelveMonth>=\Carbon\Carbon::now()) ? "YES" : "NO"}}</td>
+
+
 
                </tr>
            @endforeach

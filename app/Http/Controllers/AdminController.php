@@ -95,6 +95,21 @@ class AdminController extends Controller
 
    }
 
+   public function user_enable($id,$status)
+   {
+       $user=User::find($id);
+       if ($status=='disable')
+       {
+           $user->enable=0;
+       }
+       else{
+           $user->enable=1;
+       }
+       $user->update();
+
+       return back()->with('success','status updated syccessfully');
+   }
+
    public function user_update(Request $request,$id)
    {
 

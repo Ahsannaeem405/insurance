@@ -18,8 +18,8 @@
 <div class="modal fade" id="pushtocrm" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">PUSH TO CRM</h5>
+            <div class="modal-header text-center">
+                <h5 class="modal-title" id="exampleModalLabel">Client Information</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -28,15 +28,51 @@
                 <form action="{{url('user/pushToCrm')}}" method="post">
                     @csrf
                     <div class="row">
-                        <div class="col-lg-12 mb-3">
-                            <input type="text" placeholder="Please enter name" name="name" class="form-control" required>
+                        <div class="col-lg-12 mb-3 d-flex">
+                            <lable class="d-block mr-2" style="white-space: pre;" >Client Name</lable>
+                            <input type="text"  name="name" class="form-control" required>
                         </div>
-                        <div class="col-lg-12 mb-3">
-                            <input type="email" placeholder="Please enter email" name="email" class="form-control" >
+                        <div class="col-lg-12 mb-3 d-flex">
+                            <lable class="d-block mr-2" style="white-space: pre;" >Client Email</lable>
+                            <input type="email"  name="email" class="form-control" >
+                        </div>
+                        <div class="col-lg-12 mb-3 d-flex">
+                            <lable class="d-block mr-2" style="white-space: pre;" >Date Added</lable>
+                            <input type="date"  name="created" value="{{date('Y-m-d')}}" class="form-control" >
                         </div>
 
-                            <input type="hidden"  name="price" id="pricedata" class="form-control">
-                            <input type="hidden"  name="tagline" id="taglinedata" class="form-control" >
+                        <div class="col-lg-12 mb-3 d-flex">
+                            <lable class="d-block mr-2" style="white-space: pre;" >Product Name</lable>
+                            <input type="text"  name="tagline" id="taglinedata" class="form-control" >
+                        </div>
+
+                        <div class="col-lg-12 mb-3 d-flex">
+                            <lable class="d-block mr-2" style="white-space: pre;" >Monthly Premium</lable>
+                            <input type="text"  name="price" id="pricedata" class="form-control">
+                        </div>
+
+                        <div class="col-lg-12 mb-3 d-flex">
+                            <lable class="d-block mr-2" style="white-space: pre;" >Date of Birth</lable>
+                            <input type="date"  name="dob"  class="form-control">
+                        </div>
+
+                        <div class="col-lg-12 mb-3 d-flex">
+                            <lable class="d-block mr-2" style="white-space: pre;" >Address</lable>
+                            <input type="text"  name="addreess"  class="form-control">
+                        </div>
+
+                        <div class="col-lg-12 mb-3 d-flex">
+                            <lable class="d-block mr-2" style="white-space: pre;" >Phone</lable>
+                            <input type="text"  name="phone"  class="form-control">
+                        </div>
+
+                        <div class="col-lg-12 mb-3 d-flex">
+                            <lable class="d-block mr-2" style="white-space: pre;" >Notes</lable>
+                            <input type="text"  name="notes"  class="form-control">
+                        </div>
+
+
+
                             <input type="hidden"  name="company" id="companydata" class="form-control" >
                             <input type="hidden"  name="typedata" id="typedata" value="fex" class="form-control">
 

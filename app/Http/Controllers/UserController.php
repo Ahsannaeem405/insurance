@@ -41,6 +41,12 @@ class UserController extends Controller
         //  \App::setLocale('sp');
     }
 
+    public function disable()
+    {
+        \Auth::logout();
+        return redirect('login')->withErrors(['email'=>'Your account was disabled']);
+    }
+
     public function import()
     {
         return view('import');

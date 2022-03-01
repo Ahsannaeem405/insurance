@@ -26,14 +26,18 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected function redirectTo(){
+    protected function redirectTo()
+    {
 
 
-        if (auth()->user()->role== 'user') {
+        if (auth()->user()->role == 'user') {
 
-            return '/user/fex';
-        }
-        elseif (auth()->user()->role== 'admin') {
+            if (auth()->user()->enable == 1) {
+                return '/user/fex';
+            } else {
+               return 'user/disable';
+            }
+        } elseif (auth()->user()->role == 'admin') {
             return '/admin/index';
         }
 

@@ -179,10 +179,10 @@
                                     </div>
 
                                     <div class="d-flex ">
-                                        <input type="number" class="form-control ml-5 w-75" name="commition{{$company->id}}" value="{{$company->commisionterm!=null ? $company->commisionterm->commision : 20}}"  placeholder="Commission%">
+                                        <input type="number" class="form-control ml-5 w-75" name="commition{{$company->id}}" value="{{$company->commisionterm!=null ? $company->commisionterm->commision : null}}"  placeholder="Commission%">
 
                                         <label class="switch  ml-2">
-                                            <input name="company[]" type="checkbox" @if($company->disableterm) checked
+                                            <input name="company[{{$company->id}}]" type="checkbox" @if(!$company->disableterm) checked
                                                    @endif value="{{$company->id}}">
                                             <span class="slider round"></span>
                                         </label>

@@ -203,7 +203,7 @@
                                     <div class="col-lg-2  text-center">
                                         <div class="col-sm-12 p-0" style="margin: auto;cursor: pointer;">
                                             <p class="m-0">{{__('profile.Sex:')}}</p>
-                                            <p class="p-2 gender blue-color" data="male" style=" border-radius: 10px;color: white;">
+                                            <p class="p-2 gender blue-color gender_border" data="male" style=" border-radius: 10px;color: white;">
                                                 Male</p>
                                         </div>
                                     </div>

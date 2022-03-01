@@ -24,6 +24,7 @@ class CreateCrmsTable extends Migration
             $table->float('total_price')->nullable();
             $table->float('total_earned_price')->nullable();
             $table->integer('user_id')->nullable();
+
             $table->timestamps();
         });
     }

@@ -22,7 +22,15 @@
 
 </head>
 <style>
-  nav {
+
+    .gender_border{
+        box-shadow: rgb(66, 229, 219) 0px 7px 20px 0px;
+    }
+    .dropdown:nth-child(1){
+        font-size: 1.75rem;
+    }
+
+    nav {
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
   }
 

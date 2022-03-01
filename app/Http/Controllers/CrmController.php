@@ -6,6 +6,7 @@ use App\Models\commision;
 use App\Models\companies;
 use App\Models\crm;
 use App\Models\termCompany;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use DB;
 class CrmController extends Controller
@@ -22,7 +23,7 @@ class CrmController extends Controller
         $per=commision::where('user_id',\Auth::user()->id)->where('company_id',$company->id)->first();
         if ($per)
         {
-            $per=$per->commision;
+            $per=$per->commision!=null ? $per->commision : 20;
         }
         else{
             $per=20;
@@ -30,8 +31,8 @@ class CrmController extends Controller
 
 
         $price = floatval(str_replace('$', '', $request->price));
-
-        $earn = ($price * 12) * (floatval($per) / 100);
+        $startDate=Carbon::createFromFormat('Y-m-d',$request->created);
+        $earn = ($price * 9) * (floatval($per) / 100);
         $crm = new crm();
         $crm->name = $request->name;
         $crm->email = $request->email;
@@ -42,6 +43,15 @@ class CrmController extends Controller
         $crm->total_price = $price * 12;
         $crm->total_earned_price = $earn;
         $crm->user_id = \Auth::user()->id;
+        $crm->dob = $request->dob;
+        $crm->addreess = $request->addreess;
+        $crm->phone = $request->phone;
+        $crm->notes = $request->notes;
+        $crm->created = $request->created;
+        $crm->eightMonth = $startDate->addMonths(8);
+        $crm->NineMonth = $startDate->addMonths(9);
+        $crm->twelveMonth = $startDate->addMonths(12);
+
         $crm->save();
 
         return redirect('user/dashboard')->with('success', 'user push to crm successfully');
@@ -59,12 +69,26 @@ class CrmController extends Controller
             )
             ->first();
 
-        $crm=crm::where('user_id',\Auth::user()->id)->get();
+        $crm=crm::where('user_id',\Auth::user()->id)->where('twelveMonth','>=',Carbon::now())->get();
+
+        $eight=crm::where('user_id',\Auth::user()->id)
+          -> where('eightMonth','>=',Carbon::now())
+            ->count();
+
+        $nine=crm::where('user_id',\Auth::user()->id)
+            -> where('eightMonth','<',Carbon::now())
+            -> where('NineMonth','>=',Carbon::now())
+            ->count();
+
+
+        $twelwe=crm::where('user_id',\Auth::user()->id)
+            -> where('NineMonth','<',Carbon::now())
+            -> where('twelveMonth','>=',Carbon::now())
+            ->count();
 
 
 
 
-
-        return view('Logged_pages.dashboard.index',compact('customer','crm'));
+        return view('Logged_pages.dashboard.index',compact('customer','crm','eight','nine','twelwe'));
     }
 }

@@ -29,10 +29,12 @@ $(document).ready(function () {
     $(".gender").click(function () {
 
         $(this).addClass('blue-color');
+        $(this).addClass('gender_border');
         $(this).removeClass('pink-color');
 
         $('.gender').not(this).addClass('pink-color');
         $('.gender').not(this).removeClass('blue-color');
+        $('.gender').not(this).removeClass('gender_border');
 
 
         $('#gender').val($(this).attr('data'));

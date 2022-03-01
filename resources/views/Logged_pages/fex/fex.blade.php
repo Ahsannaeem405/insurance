@@ -183,7 +183,7 @@
                             <!-- <div class="col-lg-6 col-12">
                         </div> -->
                             <div class="col-lg-12 col-12">
-                                <h5>{{__('Coverage Options.TERM')}}</h5>
+                                <h5>{{__('FEX Coverage Options')}}</h5>
                                 <div class="row" style="margin-top: 40px;">
                                     <div class="col-lg-4">
                                         <p style="margin: 0;">{{'Face Amount'}}</p>
@@ -207,7 +207,7 @@
                                     <div class="col-lg-2  text-center">
                                         <div class="col-sm-12 p-0" style="margin: auto;cursor: pointer;">
                                             <p class="m-0">{{__('profile.Sex:')}}</p>
-                                            <p class="p-2 gender blue-color" data="male" style=" border-radius: 10px;color: white;">
+                                            <p class="p-2 gender blue-color gender_border" data="male" style=" border-radius: 10px;color: white;">
                                                 Male</p>
                                         </div>
                                     </div>
