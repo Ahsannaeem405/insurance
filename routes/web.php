@@ -40,6 +40,7 @@ Route::prefix('user')->middleware(['auth','user','lang'])->group(function () {
     Route::get('/disable', [\App\Http\Controllers\UserController::class,'disable']);
     //crm
 Route::post('/pushToCrm',[\App\Http\Controllers\CrmController::class,'push']);
+Route::post('/pushToCrm/manual',[\App\Http\Controllers\CrmController::class,'pushManual']);
 Route::get('/dashboard',[\App\Http\Controllers\CrmController::class,'dashboard']);
 
     //fex routes

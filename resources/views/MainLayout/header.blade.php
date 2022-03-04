@@ -186,7 +186,7 @@
 
 <body>
 
-
+@include('partials.component')
   @section('header')
 
   @if(!Auth::check())

@@ -790,8 +790,6 @@ class AdminController extends Controller
 
 
 
-
-
                             $keyword->category = utf8_decode(($importData[14]));
                             $keyword->reason_e = utf8_decode(($importData[15]));
                             $keyword->reason_s = utf8_decode(($importData[16]));
@@ -800,8 +798,6 @@ class AdminController extends Controller
                             $keyword->agent_compensation_e = utf8_decode(($importData[19]));
                             $keyword->agent_compensation_s = utf8_decode(($importData[20]));
                             $keyword->coverage_type = utf8_decode(($importData[21]));
-
-
                             $keyword->save();
 
 
@@ -1207,7 +1203,7 @@ class AdminController extends Controller
         }
         //male not smoker level
         if ($request->hasFile('male_not_smoker_level')) {
-            $file = $request->file('male_smoker_level');
+            $file = $request->file('male_not_smoker_level');
 
             // File Details
             $filename = $file->getClientOriginalName() . time();
