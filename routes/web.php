@@ -30,6 +30,8 @@ Route::get('/promo', [\App\Http\Controllers\UserController::class,'promo'])->mid
 
 Route::get('/pricing', [\App\Http\Controllers\PricingController::class,'pricing'])->middleware('lang');
 Route::view('/fex', 'fex')->middleware('lang');
+Route::view('/policysummary', 'policysummary')->middleware('lang');
+Route::view('/terms', 'termandneeds')->middleware('lang');
 
 Route::view('/quotes', 'med')->middleware('lang');
 Route::view('/term', 'term')->middleware('lang');
