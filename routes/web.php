@@ -14,6 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 
+Route::view('/policysummary', 'policysummary')->middleware('lang');
+Route::view('/termandneeds', 'termandneeds')->middleware('lang');
+
+
 Route::get('import',[\App\Http\Controllers\UserController::class,'import']);
 Route::post('import/data',[\App\Http\Controllers\UserController::class,'import_data']);
 
@@ -30,8 +34,7 @@ Route::get('/promo', [\App\Http\Controllers\UserController::class,'promo'])->mid
 
 Route::get('/pricing', [\App\Http\Controllers\PricingController::class,'pricing'])->middleware('lang');
 Route::view('/fex', 'fex')->middleware('lang');
-Route::view('/policysummary', 'policysummary')->middleware('lang');
-Route::view('/terms', 'termandneeds')->middleware('lang');
+
 
 Route::view('/quotes', 'med')->middleware('lang');
 Route::view('/term', 'term')->middleware('lang');
@@ -131,7 +134,7 @@ Route::view('/overview', 'Logged_pages.overview');
 
 });
 
-    Route::prefix('admin')->middleware(['auth','admin'])->group(function () {
+Route::prefix('admin')->middleware(['auth','admin'])->group(function () {
     Route::get('/index',[\App\Http\Controllers\AdminController::class,'dashboard']);
     Route::get('/viewuser', [\App\Http\Controllers\AdminController::class,'user']);
     Route::get('/delete/user/{id}', [\App\Http\Controllers\AdminController::class,'user_del']);

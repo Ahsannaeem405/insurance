@@ -99,12 +99,21 @@ class CrmController extends Controller
         $crm->twelveMonth = $startDate->addMonths(12);
 
         $crm->save();
-
         return back()->with('success', 'USER PUSH TO CRM SUCCESSFULLY');
     }
 
     public function dashboard()
     {
+//        $data=crm::select(
+//
+//            '*',
+//                DB::raw('date_add(`created`, interval 8 month ) AS eight'),
+//                DB::raw('date_add(`created`, interval 9 month ) AS nine'),
+//                DB::raw('date_add(`created`, interval 1 year ) AS twelve'),
+//        )->get();
+
+
+
         $fex=companies::all();
         $term=termCompany::all();
 
