@@ -70,3 +70,207 @@
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
 }
+
+/* policy summary style */
+.policy-summary{
+    background-color: #fff;
+}
+.ps-page-creator{
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+
+}
+.policy-summary h3{
+    font-family: Inter;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: 0em;
+    text-align: center;
+    background: -webkit-linear-gradient(180deg, #6B5EFF 4.67%, #3222E8 95.68%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@media screen and (max-width:425px){
+    .policy-summary h3{
+        font-size: 16px;
+    }
+}
+.policy-summary label{
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 0px;
+}
+.policy-summary input{
+    background-color: #ECECEC;
+    color: rgb(160, 160, 160);
+}
+.policy-summary .custom-select{
+    background-color: #ECECEC;
+    color: rgb(160, 160, 160);
+}
+.policy-summary textarea{
+    background-color: #ECECEC;
+    color: rgb(160, 160, 160);
+}
+.sub-btn{
+    color: white !important;
+    background-image: linear-gradient(90deg, #6B5EFF 4.67%, #3222E8 95.68%);
+    border: none !important;
+    border-radius: 6px;
+}
+.image-upload{
+    padding: 50px 35px;
+    background-color: #C4C4C4;
+    ;
+    width: 150px;
+    border-radius: 10px;
+}
+.image-upload img{
+    width: 80px;
+    height: auto;
+    object-fit: contain;
+
+}
+.policy-summary h5{
+font-family: Inter;
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: 22px;
+letter-spacing: 0em;
+text-align: left;
+
+}
+.policy-summary h5 span{
+    color: #6B5EFF;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+.policy-summary  h2{
+    font-family: Inter;
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 53px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+@media screen and (max-width:1024px){
+    .policy-summary h5 {
+        font-size: 14px;
+    }
+    .policy-summary  h2{
+        font-size: 26px;
+        
+    }
+}
+.add-exp-btn{
+    background: linear-gradient(92.09deg, #FFBC11 6.72%, #FF7A00 101.29%);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 18px;
+}
+.result-div span {
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #6B5EFF;
+}
+.result-div .list-inline{
+   
+    border-radius: 11px;
+}
+.result-div .list-inline-item{
+    margin-right: -15px !important;
+    margin: 0px;
+    padding: 10px 30px;
+    border-radius: 10px 0px 0px 10px; 
+}
+.result-div .list-inline-item button{
+    background-color: rgba(255,255,255,0.8);
+    font-family: Inter;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        letter-spacing: 0em;
+        text-align: center;
+        border: none;
+        padding: 2px 25px;
+        border-radius: 10px;
+}
+.result-div .list-inline-item button.btn2{
+    background-color: transparent;
+    color: white;
+}
+.result-div .list-inline-item:nth-child(1){
+    background-color: #A39BFF;
+}
+.result-div .list-inline-item:nth-child(2){
+    background-color:  #6B5EFF;
+}
+.result-div .list-inline-item:nth-child(3){
+    background-color: #3222E8;
+}
+.result-div .list-inline-item:nth-child(4){
+    background-color: #281CB5;
+    ;
+}
+.result-div .list-inline-item:nth-child(5){
+    background-color:#150B89;
+    border-radius: 10px; 
+}
+
+@media screen and (max-width:1024px){
+    .result-div .list-inline-item button {
+        font-size: 30px;
+        padding: 2px 20px;
+    }
+    .result-div .list-inline-item {
+        margin-right: -10px !important;
+        padding: 10px 15px;
+    }
+}
+@media screen and (max-width:425px){
+    .result-div .list-inline-item button {
+        font-size: 18px;
+        padding: 2px 11px;
+    }
+    .result-div .list-inline-item {
+        margin-right: -12px !important;
+        padding: 10px 16px;
+    }
+}
+@media screen and (max-width:375px){
+    .result-div .list-inline-item button {
+        font-size: 15px;
+        padding: 2px 8px;
+    }
+    .result-div .list-inline-item {
+        margin-right: -11px !important;
+        padding: 6px 12px;
+    }
+}
+
+@media screen and (max-width:320px){
+    .result-div .list-inline-item button {
+        font-size: 12px;
+        padding: 2px 8px;
+    }
+    .result-div .list-inline-item {
+        margin-right: -11px !important;
+        padding: 6px 12px;
+    }
+}
