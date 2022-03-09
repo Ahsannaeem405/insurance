@@ -455,7 +455,6 @@ public $lang;
     public function condition_qa_next(Request $request)
     {
 
-
         $question = conditionQuestion::where('question_id', $request->id)->first();
         $answer = $request->answer;
         $rand = $request->rand;
