@@ -15,7 +15,8 @@
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 {{--  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">--}}
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js">
+    </script>
   @section('title')
   <title>Insurance</title>
   @show
@@ -242,6 +243,11 @@
     </div> -->
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav m-auto margin-class" style="">
+          <li class="nav-item {{ (request()->is('user/dashboard')) ? 'lsit-style' : '' }}" style="padding-right: 10px;">
+              <a class="nav-link" id="term" href="{{url('/user/dashboard')}}">{{('Dashboard')}}</a>
+          </li>
+
+
         <li class="nav-item  {{ ((request()->is('user/fex'))  ||  (request()->is('user/fex/quote/compare')) || (request()->is('user/fex/setting')))  ? 'lsit-style' : '' }}">
           <a class="nav-link "  id="fex" href="{{url('/user/fex')}}">{{__('profile.FEX')}} </a>
         </li>
@@ -255,9 +261,11 @@
               <a class="nav-link" id="term" href="{{url('/user/legeal/checker/fex')}}">{{('Legal Fex')}}</a>
           </li>
 
-          <li class="nav-item {{ (request()->is('user/dashboard')) ? 'lsit-style' : '' }}" style="padding-right: 10px;">
-              <a class="nav-link" id="term" href="{{url('/user/dashboard')}}">{{('Dashboard')}}</a>
+          <li class="nav-item {{ (request()->is('user/policy')) || (request()->is('user/policy/index')) ? 'lsit-style' : '' }}" style="padding-right: 10px;">
+              <a class="nav-link" id="term" href="{{url('/user/policy')}}">{{('Policy')}}</a>
           </li>
+
+
       </ul>
       <ul class="navbar-nav ">
         <li class="nav-item ">

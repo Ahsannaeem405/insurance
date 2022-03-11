@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::view('/policysummary', 'policysummary')->middleware('lang');
+
 Route::view('/termandneeds', 'termandneeds')->middleware('lang');
 
 
@@ -130,6 +130,11 @@ Route::view('/creditcard', 'Logged_pages.creditcard');
 Route::view('/overview', 'Logged_pages.overview');
 
 
+//policy
+
+    Route::get('/policy/index', [\App\Http\Controllers\PolicyController::class,'index'])->middleware('lang');
+    Route::get('/policy', [\App\Http\Controllers\PolicyController::class,'policy'])->middleware('lang');
+    Route::post('/policy/create', [\App\Http\Controllers\PolicyController::class,'policyCreate'])->middleware('lang');
 
 
 });

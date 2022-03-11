@@ -23,6 +23,7 @@ use App\Models\maleSmokerLevel;
 use App\Models\maleSmokerModified;
 use App\Models\Medication;
 use App\Models\Setting;
+use App\Models\socialLink;
 use App\Models\Subsription;
 use App\Models\User;
 use Carbon\Carbon;
@@ -299,15 +300,21 @@ class UserController extends Controller
     public function account()
     {
 
-        $setting = Setting::first();
 
-        return view('Logged_pages.profile', compact('setting'));
+        $setting = Setting::first();
+        $links=socialLink::where('user_id',\Auth::user()->id)->get();
+
+        return view('Logged_pages.profile', compact('setting','links'));
     }
 
     public function profile_update(Request $request)
 
     {
+
+
         $user = User::find(\Auth::user()->id);
+
+
         $user->name = $request->name;
 
         if ($request->password != null and $request->old_password) {
@@ -315,7 +322,6 @@ class UserController extends Controller
             $request->validate([
 
                 'password' => ['required', 'confirmed'],
-
 
             ]);
 
@@ -333,8 +339,47 @@ class UserController extends Controller
 
         }
 
+        $user->phone=$request->phone;
+        $user->fb=$request->fb;
+        $user->linkin=$request->linkin;
+        $user->twitter=$request->twitter;
+
+        if ($request->hasfile('businessCard')) {
+
+            $file = $request->file('businessCard');
+            $extension = $file->getClientOriginalExtension(); // getting image extension
+            $filename = time().'.' . $extension;
+            $file->move('businesscard/', $filename);
+
+            $user->businessCard = $filename;
+
+        }
+
 
         $user->update();
+
+        $social=socialLink::where('user_id',\Auth::user()->id)->delete();
+
+        if($request->customlink)
+        {
+            foreach ($request->customlink as $link)
+            {
+                if ($link!=null)
+                {
+                $social=new socialLink();
+                $social->link=$link;
+                $social->user_id=\Auth::user()->id;
+                $social->save();
+                }
+
+            }
+
+
+
+        }
+
+
+
 
         return back()->with('success', 'Profile updated successfully');
     }

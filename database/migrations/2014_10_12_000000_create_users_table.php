@@ -26,6 +26,9 @@ class CreateUsersTable extends Migration
             $table->integer('status')->default(1);
             $table->string('profile')->default('img_avatar.png');
             $table->integer('refral_id')->nullable();
+
+
+
             $table->rememberToken();
             $table->timestamps();
         });

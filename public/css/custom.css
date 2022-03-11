@@ -45,19 +45,19 @@
     -moz-border-radius: 14px;
     -ms-border-radius: 14px;
     -o-border-radius: 14px;
-    background-color: white; 
+    background-color: white;
       box-shadow: 0 3px 15px 0 rgb(0 0 0 / 20%);
-      padding:1rem;  
+      padding:1rem;
 }
 .promise-level{
-   
+
     border-radius:15px;
     color: white;
     background-color: #6B5EFF;
 }
 .package-price{
     margin:5px;
- 
+
     border-radius: 13px;
     background-color:white;
     color:black;
@@ -122,9 +122,8 @@
     border-radius: 6px;
 }
 .image-upload{
-    padding: 50px 35px;
-    background-color: #C4C4C4;
-    ;
+
+
     width: 150px;
     border-radius: 10px;
 }
@@ -169,7 +168,7 @@ text-align: left;
     }
     .policy-summary  h2{
         font-size: 26px;
-        
+
     }
 }
 .add-exp-btn{
@@ -190,14 +189,14 @@ text-align: left;
     color: #6B5EFF;
 }
 .result-div .list-inline{
-   
+
     border-radius: 11px;
 }
 .result-div .list-inline-item{
     margin-right: -15px !important;
     margin: 0px;
     padding: 10px 30px;
-    border-radius: 10px 0px 0px 10px; 
+    border-radius: 10px 0px 0px 10px;
 }
 .result-div .list-inline-item button{
     background-color: rgba(255,255,255,0.8);
@@ -230,7 +229,7 @@ text-align: left;
 }
 .result-div .list-inline-item:nth-child(5){
     background-color:#150B89;
-    border-radius: 10px; 
+    border-radius: 10px;
 }
 
 @media screen and (max-width:1024px){
