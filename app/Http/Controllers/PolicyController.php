@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\companies;
 use App\Models\Policy;
 use App\Models\socialLink;
+use App\Models\termCompany;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -37,6 +38,34 @@ class PolicyController extends Controller
 
     }
 
+
+    public function pushToPolicy(Request $request)
+    {
+
+        if ($request->typedata=='fex')
+        {
+            $company=companies::find($request->company);
+        }
+        else{
+            $company=termCompany::find($request->company);
+        }
+        $price = floatval(str_replace('$', '', $request->monthly));
+//dd($price);
+        $policy=new Policy();
+        $policy->name=$request->name;
+        $policy->type=$request->type;
+        $policy->company=$company->name;
+        $policy->amount=$price *12;
+        $policy->monthly=$price;
+        $policy->number=$request->number;
+        $policy->date=$request->date;
+        $policy->notes=$request->notes;
+        $policy->user_id=\Auth::user()->id;
+        $policy->save();
+
+        return redirect('user/policy/index')->with('success','policy added successfully');
+
+    }
     public function index()
     {
         $policy=Policy::where('user_id',\Auth::user()->id)->get();

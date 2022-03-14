@@ -784,4 +784,18 @@ $('#companydata').val(company);
     });
 
 
+
+    $(document).on('click', '.pushtopolicy', function () {
+
+        var price=$(this).attr('price');
+        var tagline=$(this).attr('tagline');
+        var company=$(this).attr('company');
+
+        $('#pricedataPolicy').val(price);
+        $('#taglinedataPolicy').val(tagline);
+        $('#companydataPolicy').val(company);
+
+    });
+
+
 });

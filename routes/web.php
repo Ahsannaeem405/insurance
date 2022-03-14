@@ -135,6 +135,7 @@ Route::view('/overview', 'Logged_pages.overview');
     Route::get('/policy/index', [\App\Http\Controllers\PolicyController::class,'index'])->middleware('lang');
     Route::get('/policy', [\App\Http\Controllers\PolicyController::class,'policy'])->middleware('lang');
     Route::post('/policy/create', [\App\Http\Controllers\PolicyController::class,'policyCreate'])->middleware('lang');
+    Route::post('/pushToPolicy', [\App\Http\Controllers\PolicyController::class,'pushToPolicy'])->middleware('lang');
 
 
 });
@@ -162,6 +163,7 @@ Route::prefix('admin')->middleware(['auth','admin'])->group(function () {
 
     });
 
+Route::get('/policy-report/{id}', [\App\Http\Controllers\AdminController::class,'policy']);
 
 
 Auth::routes();

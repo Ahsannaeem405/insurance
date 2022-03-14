@@ -111,8 +111,7 @@
                                 <td>{{$policy->type}}</td>
                                 <td>${{$policy->amount}}</td>
                                 <td>${{$policy->monthly}}</td>
-                                <td>{{$policy->url}}</td>
-
+                                <td><button class="btn btn-primary copy" link="{{url("/policy-report/$policy->id")}}">COPY URL</button></td>
 
 
 
@@ -143,6 +142,24 @@
 
 
         });
+    </script>
+
+
+    <script>
+        $(".copy").click(function () {
+
+
+            var link=  $(this).attr('link');
+
+
+            /* Copy the text inside the text field */
+            navigator.clipboard.writeText(link);
+            swal("Link Copied successfully", "", "success", {
+                button: "Close",
+
+            });
+        });
+
     </script>
 
 @endsection

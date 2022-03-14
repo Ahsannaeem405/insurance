@@ -43,7 +43,9 @@ use App\Models\maleSmokerThirty;
 use App\Models\maleSmokerTwenty;
 use App\Models\maleSmokerTwentyfive;
 use App\Models\Medication;
+use App\Models\Policy;
 use App\Models\Setting;
+use App\Models\socialLink;
 use App\Models\Subsription;
 use App\Models\termComboCondition;
 use App\Models\termCompany;
@@ -64,6 +66,15 @@ class AdminController extends Controller
         $sub_total=User::where('role','user')->where('status',1)->count();
 
         \View::share(compact('user_all','revenu_total','monthy_sub','sub_total'));
+    }
+
+    public function policy($id)
+    {
+        $policy=Policy::find($id);
+        $user=User::find($policy->user_id);
+        $links = socialLink::where('user_id', $user->id)->get();
+      //  dd($policy);
+        return view('Logged_pages.policy.policydetail',compact('user','policy','links'));
     }
 
     public function dashboard()

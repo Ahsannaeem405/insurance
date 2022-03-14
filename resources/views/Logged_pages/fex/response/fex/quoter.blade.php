@@ -14,7 +14,7 @@
 
 
 
-<!-- Modal -->
+<!-- Modal crm -->
 <div class="modal fade" id="pushtocrm" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -74,6 +74,69 @@
 
 
                             <input type="hidden"  name="company" id="companydata" class="form-control" >
+                            <input type="hidden"  name="typedata" id="typedata" value="fex" class="form-control">
+
+                    </div>
+                    <div class="modal-footer" style="border-top: none">
+                        <button type="submit" class="btn btn-primary ">Save</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- Modal policy -->
+<div class="modal fade" id="pushtopolicy" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h5 class="modal-title" id="exampleModalLabel">Client Information</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="{{url('user/pushToPolicy')}}" method="post">
+                    @csrf
+                    <div class="row">
+                        <div class="col-lg-12 mb-3 d-flex">
+                            <lable class="d-block mr-2" style="white-space: pre;" >CUSTOMER NAME</lable>
+                            <input type="text"  name="name" class="form-control" required>
+                        </div>
+
+
+                        <div class="col-lg-12 mb-3 d-flex">
+                            <lable class="d-block mr-2" style="white-space: pre;" >POLICY TYPE</lable>
+                            <input type="text"  name="type" id="taglinedataPolicy" class="form-control" >
+                        </div>
+
+                        <div class="col-lg-12 mb-3 d-flex">
+                            <lable class="d-block mr-2" style="white-space: pre;" >MONTHLY PAYMENT</lable>
+                            <input type="text"  name="monthly" id="pricedataPolicy" class="form-control">
+                        </div>
+
+
+                        <div class="col-lg-12 mb-3 d-flex">
+                            <lable class="d-block mr-2" style="white-space: pre;" >POLICY NUMBER</lable>
+                            <input type="text"  name="number"  class="form-control">
+                        </div>
+
+                        <div class="col-lg-12 mb-3 d-flex">
+                            <lable class="d-block mr-2" style="white-space: pre;" >DATE</lable>
+                            <input type="date"  name="date" value="{{date('Y-m-d')}}" class="form-control" >
+                        </div>
+
+                        <div class="col-lg-12 mb-3 d-flex">
+                            <lable class="d-block mr-2" style="white-space: pre;" >Notes</lable>
+                            <textarea   name="notes"  class="form-control"></textarea>
+                        </div>
+
+
+
+                            <input type="hidden"  name="company" id="companydataPolicy" class="form-control" >
                             <input type="hidden"  name="typedata" id="typedata" value="fex" class="form-control">
 
                     </div>
@@ -161,11 +224,14 @@
 
 
 {{--            &nbsp;<i class="fas fa-chevron-down p-2" id="{{$record['data']->id}}"></i>--}}
-    <a target="_blank" href="{{url('user/fex/quote/compare?company='.$record['data']->company_id.'&age='.$age.'&gender='.$gender.'&face='.$face_amount.'&cigrate='.$cigrate.'&type='.$type.'&year='.$year_data.'')}}">    <button class="btn btn-warning m-auto" style="color: white">compare</button>
+    <a target="_blank" href="{{url('user/fex/quote/compare?company='.$record['data']->company_id.'&age='.$age.'&gender='.$gender.'&face='.$face_amount.'&cigrate='.$cigrate.'&type='.$type.'&year='.$year_data.'')}}">    <button class="btn btn-warning m-auto" style="color: white">COMPARE</button>
     </a>
 
     <a class="ml-1">
-        <button  data-toggle="modal" price="{{$record['data']->price}}" tagline="{{$record['data']->Tagline}}" company="{{$record['data']->company_id}}" data-target="#pushtocrm" class="btn btn-warning m-auto pushtocrm" style="color: white">push to crm</button>
+        <button  data-toggle="modal" price="{{$record['data']->price}}" tagline="{{$record['data']->Tagline}}" company="{{$record['data']->company_id}}" data-target="#pushtocrm" class="btn btn-warning m-auto pushtocrm" style="color: white">CRM</button>
+    </a>
+    <a class="ml-1">
+        <button  data-toggle="modal" price="{{$record['data']->price}}" tagline="{{$record['data']->Tagline}}" company="{{$record['data']->company_id}}" data-target="#pushtopolicy" class="btn btn-warning m-auto pushtopolicy" style="color: white">POLICY</button>
     </a>
 
 
