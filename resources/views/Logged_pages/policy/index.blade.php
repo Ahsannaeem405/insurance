@@ -111,7 +111,7 @@
                                 <td>{{$policy->type}}</td>
                                 <td>${{$policy->amount}}</td>
                                 <td>${{$policy->monthly}}</td>
-                                <td><button class="btn btn-primary copy" link="{{url("/policy-report/$policy->id")}}">COPY URL</button></td>
+                                <td><button class="btn btn-primary copy" link="{{url("/policy-report/$policy->id?id=$policy->random")}}">COPY URL</button></td>
 
 
 

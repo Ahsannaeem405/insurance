@@ -22,6 +22,8 @@ class PolicyController extends Controller
     public function policyCreate(Request $request)
     {
 
+        $id=bin2hex(random_bytes(24));
+
         $policy=new Policy();
         $policy->name=$request->name;
         $policy->type=$request->type;
@@ -32,6 +34,7 @@ class PolicyController extends Controller
         $policy->date=$request->date;
         $policy->notes=$request->notes;
         $policy->user_id=\Auth::user()->id;
+        $policy->random=$id;
         $policy->save();
 
         return redirect('user/policy/index')->with('success','policy added successfully');
@@ -42,6 +45,7 @@ class PolicyController extends Controller
     public function pushToPolicy(Request $request)
     {
 
+        $id=bin2hex(random_bytes(24));
         if ($request->typedata=='fex')
         {
             $company=companies::find($request->company);
@@ -61,6 +65,7 @@ class PolicyController extends Controller
         $policy->date=$request->date;
         $policy->notes=$request->notes;
         $policy->user_id=\Auth::user()->id;
+        $policy->random=$id;
         $policy->save();
 
         return redirect('user/policy/index')->with('success','policy added successfully');

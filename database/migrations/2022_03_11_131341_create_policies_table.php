@@ -24,6 +24,7 @@ class CreatePoliciesTable extends Migration
             $table->string('number')->nullable();
             $table->date('date')->nullable();
             $table->text('notes')->nullable();
+            $table->text('random')->nullable();
             $table->timestamps();
         });
     }
