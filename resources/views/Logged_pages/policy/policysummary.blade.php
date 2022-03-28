@@ -166,7 +166,7 @@
                                     @foreach($links as $link)
                                         <div class="col-lg-4 col-12  mt-0 mt-md-3">
                                             <div class="form-group">
-                                                <label >Twitter</label>
+                                                <label >Custom Link</label>
                                                 <input type="text" value="{{$link->link}}" readonly class="form-control py-2"  placeholder="Type Here">
                                             </div>
                                         </div>

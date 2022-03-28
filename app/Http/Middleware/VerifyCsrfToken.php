@@ -18,6 +18,7 @@ class VerifyCsrfToken extends Middleware
         'user/get_quote_term',
         'user/get_quote_compare_term',
         'user/get_quote_lterm',
-        'user/get_quote_lfex'
+        'user/get_medication_condition_fex',
+        'user/get_medication_condition_term',
     ];
 }

@@ -152,7 +152,7 @@
 
     <div class="row">
         <div class="col-lg-3 d-flex justify-content-center align-items-center">
-            <h4 style="color:#6B5EFF">{{$company1->name}} </h4>
+            <h4 style="color:#6B5EFF">{{$company2->name}} </h4>
         </div>
 
         <div class="col-lg-9">

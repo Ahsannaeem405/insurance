@@ -187,7 +187,7 @@
                                 <br>
                                 <div class="col-lg-5 ml-lg-5" style="margin-top: 20px;display: block">
                                     <label for="">{{__('profile.Coverage Type:')}}</label>
-                                    <select name="type" class="form-control input-background">
+                                    <select name="type" id="company1" class="form-control input-background">
                                         <option @if($request->type=="levels") selected @endif value="levels">Level
                                         </option>
                                         <option @if($request->type=="modifieds") selected @endif value="modifieds">
@@ -201,7 +201,7 @@
                                 </div>
                                 <div class="col-lg-5" style="margin-top: 20px;">
                                     <label for="">{{__('profile.Company:')}}</label>
-                                    <select name="company" class="form-control input-background">
+                                    <select name="company" id="com1" class="form-control input-background">
                                         @foreach($companies as $company)
                                         @if(!$company->disable)
                                         <option @if($request->company==$company->id) selected
@@ -233,7 +233,7 @@
                                 <br>
                                 <div class="col-lg-5 ml-lg-5" style="margin-top: 20px;display: block">
                                     <label for="">{{__('profile.Coverage Type:')}}</label>
-                                    <select name="type2" class="form-control input-background">
+                                    <select name="type2" id="company2" class="form-control input-background">
                                         <option @if($request->type=="levels") selected @endif value="levels">Level
                                         </option>
                                         <option @if($request->type=="modifieds") selected @endif value="modifieds">
@@ -247,7 +247,7 @@
                                 </div>
                                 <div class="col-lg-5 " style="margin-top: 20px;">
                                     <label for="">{{__('profile.Company:')}}</label>
-                                    <select name="company2" class="form-control input-background">
+                                    <select name="company2" id="com2" class="form-control input-background">
                                         @foreach($companies as $company)
                                         @if(!$company->disable)
                                         <option @if($request->company==$company->id) selected
@@ -364,11 +364,13 @@
         </div>
     </div>
 
-    <div class=" result ">
+    <div class="result">
     </div>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="{{asset('assets/js/fexcustom.js')}}"></script>
+
+
 
 @endsection

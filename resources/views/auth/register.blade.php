@@ -327,9 +327,7 @@
                 </div>
                 <div class="col-lg-6 col-md-6 col-12" style="padding-top: 20px;">
                     <p><span style="font-size: 19px; font-weight:bold">Total:
-                        $
-
-                            <span id="total_bill">{{$price->p_cost}}</span>
+                        $<span id="total_bill">{{$price->p_cost}}</span>
 
 
 

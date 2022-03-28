@@ -389,7 +389,7 @@ var res=medicationCheck(id);
 if (res==true)
 {
     $.ajax({
-        type: 'get',
+        type: 'POST',
         url: "" + baseurl + "/user/get_medication_condition_term",
         data: { 'name': name },
 

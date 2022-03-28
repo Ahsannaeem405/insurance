@@ -28,6 +28,7 @@ use App\Models\Subsription;
 use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Testing\Fluent\Concerns\Has;
@@ -45,7 +46,7 @@ class UserController extends Controller
     public function disable()
     {
         \Auth::logout();
-        return redirect('login')->withErrors(['email'=>'Your account was disabled']);
+        return redirect('login')->withErrors(['email'=>'Your account was disabled.']);
     }
 
     public function import()
@@ -305,6 +306,15 @@ class UserController extends Controller
         $links=socialLink::where('user_id',\Auth::user()->id)->get();
 
         return view('Logged_pages.profile', compact('setting','links'));
+    }
+
+    public function cancelSub()
+    {
+$user=Auth::user();
+$user->enable=0;
+$user->update();
+
+return redirect('/user/disable');
     }
 
     public function profile_update(Request $request)

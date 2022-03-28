@@ -1,0 +1,36 @@
+Company,Tagline,ID,Coverage Type
+Mutual of Omaha,Living Promise Level,12,levels
+TransAmerica,Immediate Solution Preferred,16,levels
+TransAmerica,Immediate Solution Standard,17,levels
+Foresters,Plan Right Preferred,21,levels
+Foresters,Plan Right Standard,22,levels
+Columbian Financial Group, Classic Elite,19,levels
+Columbian Financial Group, Classic Select,20,levels
+Prosperity,New Vista Level,15,levels
+American Amicable,Senior Choice Immediate,18,levels
+CVS Health,Accendo Preferred,13,levels
+CVS Health,Accendo Standard,14,levels
+Americo ,Eagle Level,23,levels
+Liberty Bankers Life,SIMPL Preferred,24,levels
+Liberty Bankers Life,SIMPL Standard,26,levels
+Royal Neightbors of America,Simplified Issue Level,27,levels
+Great Western,Assurance Plus,29,levels
+United Home Life (UHL),Premier,25,levels
+United Home Life (UHL),Deluxe,28,levels
+Mutual Of Omaha,Living promise graded,1,modifieds
+American amicable,Senior choice graded,2,modifieds
+Prosperity ,Prime term 100,3,modifieds
+American Amicable,Senior choice ROP,4,modifieds
+CVS Health ,Accendo Modified,5,modifieds
+Foresters ,Plan RightBasic,6,modifieds
+Royal Neighbors Of america,Simplified issued graded,7,modifieds
+UHL ,EIWL,8,modifieds
+CFG ,Classic advantage graded,9,modifieds
+Transamerica ,Easy graded solutions,10,modifieds
+Prosperity ,New Vista Modified,11,modifieds
+Gerber Life Insurance Company,Guaranteed Issue,30,guaranteeds
+Great Western,Assurance Guaranteed,31,guaranteeds
+UHL(United Home Life),Guaranteed Issue,33,guaranteeds
+AIG,Guaranteed Issue,32,guaranteeds
+Lincoln Heritage,Funeral Advantage Level,34,levels
+Lincoln Heritage,Funeral Advantage Modified,35,modifieds

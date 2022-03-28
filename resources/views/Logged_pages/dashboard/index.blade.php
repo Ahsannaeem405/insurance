@@ -26,7 +26,7 @@
             text-align: center;
         }
 
-        #example {
+        #example  {
             border-collapse: separate;
             border-spacing: 0 15px;
         }
@@ -51,8 +51,23 @@
             border-radius: 20px;
         }
 
+
+        .result2 {
+
+            width: 100%;
+            background-color: white;
+            text-align: center;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 20px 0px;
+            border-radius: 20px;
+        }
+
+
+
         .result td {
             padding: 15px;
+        }
+        .result2 td {
+            padding: 10px;
         }
 
         .header th {
@@ -60,17 +75,19 @@
         }
 
         .main-card1 {
-            background-image: linear-gradient(90deg, #6053fa, #3a2beb);
+            background: linear-gradient(95.83deg, #6B5EFF -0.59%, #3222E8 98.36%);
+            box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.15);
+            border-radius: 8px;
             color: white;
-            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-            border-radius: 10px
         }
 
+
         .main-card2 {
-            background-image: linear-gradient(90deg, #3ee0d6, #14b3a9);
+            background: linear-gradient(95.22deg, #41E5DB 2.57%, #08A79D 101.71%);
+            box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.15);
+            border-radius: 8px;
             color: white;
-            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-            border-radius: 10px
+
         }
     </style>
     <div class="container-fluid" style="">
@@ -91,7 +108,7 @@
                                 <div class=" d-flex">
                                     <div class="mr-3 w-25">
 
-                                        <img src="{{asset('images/question-mark.png')}}" style="width: 100%" alt="">
+                                        <img src="{{asset('images/Ellipse.png')}}" style="width: 100%" alt="">
                                     </div>
 
                                     <div class="">
@@ -109,7 +126,7 @@
                                 <div class=" d-flex">
                                     <div class="mr-3 w-25">
 
-                                        <img src="{{asset('images/question-mark.png')}}" style="width: 100%" alt="">
+                                        <img src="{{asset('images/Ellipse.png')}}" style="width: 100%" alt="">
                                     </div>
 
                                     <div class="">
@@ -127,7 +144,7 @@
                                 <div class=" d-flex">
                                     <div class="mr-3 w-25">
 
-                                        <img src="{{asset('images/question-mark.png')}}" style="width: 100%" alt="">
+                                        <img src="{{asset('images/Ellipse.png')}}" style="width: 100%" alt="">
                                     </div>
 
                                     <div class="">
@@ -146,7 +163,7 @@
                                 <div class=" d-flex">
                                     <div class="mr-3 w-25">
 
-                                        <img src="{{asset('images/question-mark.png')}}" style="width: 100%" alt="">
+                                        <img src="{{asset('images/Ellipse.png')}}" style="width: 100%" alt="">
                                     </div>
 
                                     <div class="">
@@ -166,7 +183,7 @@
                                 <div class=" d-flex">
                                     <div class="mr-3 w-25">
 
-                                        <img src="{{asset('images/question-mark.png')}}" style="width: 100%" alt="">
+                                        <img src="{{asset('images/Ellipse.png')}}" style="width: 100%" alt="">
                                     </div>
 
                                     <div class="">
@@ -186,7 +203,7 @@
                                 <div class=" d-flex">
                                     <div class="mr-3 w-25">
 
-                                        <img src="{{asset('images/question-mark.png')}}" style="width: 100%" alt="">
+                                        <img src="{{asset('images/Ellipse.png')}}" style="width: 100%" alt="">
                                     </div>
 
                                     <div class="">
@@ -339,10 +356,19 @@
                         Customer
                     </button>
                 </div>
+                <form id="form1" action="">
+                    <select name="q" id="filter" style="float:right;">
+                        <option value="" {{isset($_GET['q']) ?  $_GET['q']=='' ? 'selected' : null : null}}>All</option>
+                        <option value="day" {{isset($_GET['q']) ?  $_GET['q']=='day' ? 'selected' : null : null}}>Day</option>
+                        <option value="week" {{isset($_GET['q']) ?  $_GET['q']=='week' ? 'selected' : null : null}}>Week</option>
+                        <option value="month" {{isset($_GET['q']) ?  $_GET['q']=='month' ? 'selected' : null : null}}>Month</option>
+                        <option value="year" {{isset($_GET['q']) ?  $_GET['q']=='year' ? 'selected' : null : null}}>Year</option>
+                    </select>
+                </form>
 
-                <div style=""
-                     class="my-1 table-responsive">
+                <div style="" class="my-1 table-responsive">
                     <table id="example" class="display w-100" style="width:100%;padding:10px">
+
                         <thead>
                         <tr class="header">
                             <th>Customer Name</th>
@@ -359,11 +385,21 @@
 
                         <tbody class="">
 
+                        <tr class="result2">
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td style="color:white;background: linear-gradient(93.43deg, #FF3366 6.57%, #E71D36 22.27%);border-radius: 6px 0px 0px 6px;">{{$eight}} Policies</td>
+                            <td style="color:white;background: linear-gradient(93.11deg, #FFBC11 6.6%, #FF7A00 29.42%);">{{$nine}} Policies</td>
+                            <td style="color:white;background: linear-gradient(93.43deg, #9CDB4C 6.57%, #81C728 52.83%);">{{$twelwe}} Policies</td>
+                            <td style="color:white;background: linear-gradient(92.09deg, #27A861 6.72%, #198A4B 101.29%);border-radius:0px 6px 6px 0px;">{{$twelwePlus}} Policies</td>
+                        </tr>
                         @foreach($crm as $crm)
                             <tr class="result">
                                 <td>{{$crm->name}}</td>
                                 <td>{{$crm->tagline}}</td>
                                 <td>${{$crm->total_price}}</td>
+
                                 <td>{{$crm->eightMonth>=\Carbon\Carbon::now() ? "YES" : "NO"}}</td>
                                 <td>{{($crm->eightMonth<\Carbon\Carbon::now() && $crm->NineMonth>=\Carbon\Carbon::now()) ? "YES" : "NO"}}</td>
                                 <td>{{($crm->NineMonth<\Carbon\Carbon::now() && $crm->twelveMonth>=\Carbon\Carbon::now()) ? "YES" : "NO"}}</td>
@@ -406,6 +442,10 @@
                   $('#termcompany').show();
               }
             });
+
+            $('#filter').change(function () {
+                $('#form1').submit();
+            })
         });
     </script>
 

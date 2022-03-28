@@ -32,6 +32,10 @@ class CrmController extends Controller
 
         $price = floatval(str_replace('$', '', $request->price));
         $startDate=Carbon::createFromFormat('Y-m-d',$request->created);
+        $eight=Carbon::createFromFormat('Y-m-d',$request->created)->addMonths(8);
+        $nine=Carbon::createFromFormat('Y-m-d',$request->created)->addMonths(9);
+        $twelve=Carbon::createFromFormat('Y-m-d',$request->created)->addMonths(12);
+
         $earn = ($price * 9) * (floatval($per) / 100);
         $crm = new crm();
         $crm->name = $request->name;
@@ -48,9 +52,9 @@ class CrmController extends Controller
         $crm->phone = $request->phone;
         $crm->notes = $request->notes;
         $crm->created = $request->created;
-        $crm->eightMonth = $startDate->addMonths(8);
-        $crm->NineMonth = $startDate->addMonths(9);
-        $crm->twelveMonth = $startDate->addMonths(12);
+        $crm->eightMonth = $eight;
+        $crm->NineMonth = $nine;
+        $crm->twelveMonth = $twelve;
 
         $crm->save();
 
@@ -78,6 +82,9 @@ class CrmController extends Controller
 
         $price = floatval($request->price);
         $startDate=Carbon::createFromFormat('Y-m-d',$request->created);
+        $eight=Carbon::createFromFormat('Y-m-d',$request->created)->addMonths(8);
+        $nine=Carbon::createFromFormat('Y-m-d',$request->created)->addMonths(9);
+        $twelve=Carbon::createFromFormat('Y-m-d',$request->created)->addMonths(12);
         $earn = ($price * 9) * (floatval($per) / 100);
         $crm = new crm();
         $crm->name = $request->name;
@@ -94,15 +101,15 @@ class CrmController extends Controller
         $crm->phone = $request->phone;
         $crm->notes = $request->notes;
         $crm->created = $request->created;
-        $crm->eightMonth = $startDate->addMonths(8);
-        $crm->NineMonth = $startDate->addMonths(9);
-        $crm->twelveMonth = $startDate->addMonths(12);
+        $crm->eightMonth = $eight;
+        $crm->NineMonth = $nine;
+        $crm->twelveMonth = $twelve;
 
         $crm->save();
         return back()->with('success', 'USER PUSH TO CRM SUCCESSFULLY');
     }
 
-    public function dashboard()
+    public function dashboard(Request $request)
     {
 //        $data=crm::select(
 //
@@ -111,41 +118,138 @@ class CrmController extends Controller
 //                DB::raw('date_add(`created`, interval 9 month ) AS nine'),
 //                DB::raw('date_add(`created`, interval 1 year ) AS twelve'),
 //        )->get();
+//        dd($data);
 
+        $search =  $request->input('q');
 
 
         $fex=companies::all();
         $term=termCompany::all();
 
         $customer=crm::where('user_id',\Auth::user()->id)
+            ->when($search=='day', function ($query) use ($search) {
+                $query->whereDate('created_at', Carbon::today());
+            })
+
+            ->when($search=='week', function ($query) use ($search) {
+                $query->whereBetween('created_at', [Carbon::now()->startOfWeek(), Carbon::now()->endOfWeek()]);
+            })
+            ->when($search=='month', function ($query) use ($search) {
+                $query->whereMonth('created_at', date('m'))
+                    ->whereYear('created_at', date('Y'));
+            })
+            ->when($search=='year', function ($query) use ($search) {
+                $query->whereYear('created_at', date('Y'));
+            })
+
             ->select(
 
                 DB::raw('sum(total_price) as total_price'),
                 DB::raw('sum(total_earned_price) as total_earned_price'),
-                DB::raw('COUNT(id) as coustomer')
+                DB::raw('COUNT(*) as coustomer')
             )
             ->first();
 
-        $crm=crm::where('user_id',\Auth::user()->id)->where('twelveMonth','>=',Carbon::now())->get();
+        $crm=crm::where('user_id',\Auth::user()->id)
+            ->when($search=='day', function ($query) use ($search) {
+                $query->whereDate('created_at', Carbon::today());
+            })
+            ->when($search=='week', function ($query) use ($search) {
+                $query->whereBetween('created_at', [Carbon::now()->startOfWeek(), Carbon::now()->endOfWeek()]);
+            })
+            ->when($search=='month', function ($query) use ($search) {
+                $query->whereMonth('created_at', date('m'))
+                    ->whereYear('created_at', date('Y'));
+            })
+            ->when($search=='year', function ($query) use ($search) {
+                $query->whereYear('created_at', date('Y'));
+            })
+
+
+            ->get();
 
         $eight=crm::where('user_id',\Auth::user()->id)
+
+            ->when($search=='day', function ($query) use ($search) {
+                $query->whereDate('created_at', Carbon::today());
+            })
+
+            ->when($search=='week', function ($query) use ($search) {
+                $query->whereBetween('created_at', [Carbon::now()->startOfWeek(), Carbon::now()->endOfWeek()]);
+            })
+            ->when($search=='month', function ($query) use ($search) {
+                $query->whereMonth('created_at', date('m'))
+                    ->whereYear('created_at', date('Y'));
+            })
+            ->when($search=='year', function ($query) use ($search) {
+                $query->whereYear('created_at', date('Y'));
+            })
+
           -> where('eightMonth','>=',Carbon::now())
             ->count();
 
         $nine=crm::where('user_id',\Auth::user()->id)
+
+            ->when($search=='day', function ($query) use ($search) {
+                $query->whereDate('created_at', Carbon::today());
+            })
+
+            ->when($search=='week', function ($query) use ($search) {
+                $query->whereBetween('created_at', [Carbon::now()->startOfWeek(), Carbon::now()->endOfWeek()]);
+            })
+            ->when($search=='month', function ($query) use ($search) {
+                $query->whereMonth('created_at', date('m'))
+                    ->whereYear('created_at', date('Y'));
+            })
+            ->when($search=='year', function ($query) use ($search) {
+                $query->whereYear('created_at', date('Y'));
+            })
+
             -> where('eightMonth','<',Carbon::now())
             -> where('NineMonth','>=',Carbon::now())
             ->count();
 
 
         $twelwe=crm::where('user_id',\Auth::user()->id)
+            ->when($search=='day', function ($query) use ($search) {
+                $query->whereDate('created_at', Carbon::today());
+            })
+            ->when($search=='week', function ($query) use ($search) {
+                $query->whereBetween('created_at', [Carbon::now()->startOfWeek(), Carbon::now()->endOfWeek()]);
+            })
+            ->when($search=='month', function ($query) use ($search) {
+                $query->whereMonth('created_at', date('m'))
+                    ->whereYear('created_at', date('Y'));
+            })
+            ->when($search=='year', function ($query) use ($search) {
+                $query->whereYear('created_at', date('Y'));
+            })
+
             -> where('NineMonth','<',Carbon::now())
             -> where('twelveMonth','>=',Carbon::now())
             ->count();
 
 
+        $twelwePlus=crm::where('user_id',\Auth::user()->id)
+            ->when($search=='day', function ($query) use ($search) {
+                $query->whereDate('created_at', Carbon::today());
+            })
+            ->when($search=='week', function ($query) use ($search) {
+                $query->whereBetween('created_at', [Carbon::now()->startOfWeek(), Carbon::now()->endOfWeek()]);
+            })
+            ->when($search=='month', function ($query) use ($search) {
+                $query->whereMonth('created_at', date('m'))
+                    ->whereYear('created_at', date('Y'));
+            })
+            ->when($search=='year', function ($query) use ($search) {
+                $query->whereYear('created_at', date('Y'));
+            })
+
+            -> where('twelveMonth','<',Carbon::now())
+            ->count();
 
 
-        return view('Logged_pages.dashboard.index',compact('customer','crm','eight','nine','twelwe','fex','term'));
+
+        return view('Logged_pages.dashboard.index',compact('customer','crm','eight','nine','twelwe','twelwePlus','fex','term'));
     }
 }

@@ -34,7 +34,7 @@
                         </ul>
                         <div class="pricingTable-signup">
                             @if(Auth::check())
-                                <a href="{{url('user/buy/plan')}}">{{'BUY NOW'}}</a>
+                                <a href="{{url('buy/plan')}}">{{'BUY NOW'}}</a>
                             @else
                                 <a href="{{url('register')}}">{{'BUY NOW'}}</a>
                             @endif

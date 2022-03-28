@@ -42,7 +42,7 @@
     <div class="tab-content">
         <div role="tabpanel" class="tab-pane  active" id="info">
             <div class="container p-5">
-                <form method="post" action="{{url('user/update/profile')}}" enctype="multipart/form-data">
+                <form method="post" action="{{url('update/profile')}}" enctype="multipart/form-data">
                     @csrf
 
                     <div class="row">
@@ -51,7 +51,7 @@
                                 <h3 class="text-center mb-5"
                                     style="color: #340856">{{__('profile.Personal Information')}}</h3>
                                 <div class="row">
-                                    <div class="col-lg-6 col-12">
+                                    <div class="col-lg-12 col-12">
 
                                         @if(session()->has('success'))
                                             <div class="alert alert-success">
@@ -116,15 +116,15 @@
 
 
                                     </div>
-                                    <div class="col-lg-6 col-12">
-                                        <h5>Referral Link</h5><br>
-                                        <input type="text"
-                                               value="{{Request::root().'/register/?referral='.Auth::user()->id}}"
-                                               class="form-control" readonly><br>
-                                        <b style="color: #340856">*Special Offer</b><br>
-                                        <p style="color: gray">Get a $20 credit for every person you refer that
-                                            successfully signs up and pays for Insurance Toolkits using your link.</p>
-                                    </div>
+{{--                                    <div class="col-lg-6 col-12">--}}
+{{--                                        <h5>Referral Link</h5><br>--}}
+{{--                                        <input type="text"--}}
+{{--                                               value="{{Request::root().'/register/?referral='.Auth::user()->id}}"--}}
+{{--                                               class="form-control" readonly><br>--}}
+{{--                                        <b style="color: #340856">*Special Offer</b><br>--}}
+{{--                                        <p style="color: gray">Get a $20 credit for every person you refer that--}}
+{{--                                            successfully signs up and pays for Insurance Toolkits using your link.</p>--}}
+{{--                                    </div>--}}
 
 
                                 </div>
@@ -242,18 +242,18 @@
                         <p>
 
                             @php
-
                                 $date1=  Auth::user()->created_at->addDays(Auth::user()->register);
-
-
-
-
-
-
                             @endphp
                             Your subscription is valid until <span style="font-weight: bold">  {{\Carbon\Carbon::parse($date1)->format('Y-M-d')}}.
                         </span>
                         </p><br>
+                        <a href="{{url('cancel/subscription')}}" onclick="return confirm('Are you sure you want cancel your subscription?');">
+                            <button class="btn btn-danger" style="">
+                                Cancel Subscription
+                            </button>
+                        </a>
+
+
                         <a href="{{url('pricing')}}">
                             <button class="btn btn-dark" style="background-color: #340856;float: right;">Resume
                                 Subscription

@@ -14,7 +14,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.11.4/datatables.min.css"/>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-{{--  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">--}}
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js">
     </script>
   @section('title')
@@ -265,11 +265,15 @@
               <a class="nav-link" id="term" href="{{url('/user/policy')}}">{{('Policy')}}</a>
           </li>
 
+          <li class="nav-item {{ (request()->is('user/calculator'))   ? 'lsit-style' : '' }}" style="padding-right: 10px;">
+              <a class="nav-link" id="term" href="{{url('/user/calculator')}}">{{('Calculator')}}</a>
+          </li>
+
 
       </ul>
       <ul class="navbar-nav ">
         <li class="nav-item ">
-          <a class="nav-link" id="login" href="{{url('/user/account')}}">{{__('profile.Accounts')}}</a>
+          <a class="nav-link" id="login" href="{{url('/account')}}">{{__('profile.Accounts')}}</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{{url('/logout')}}">Logout</a>

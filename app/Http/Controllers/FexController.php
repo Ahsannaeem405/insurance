@@ -13,6 +13,7 @@ use App\Models\User;
 use Carbon\Carbon;
 use http\Env\Response;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redis;
 
 class FexController extends Controller
 {
@@ -51,15 +52,33 @@ public $lang;
     public function index()
     {
 
+
+        Redis::setName('fex',1);
+        dd(Redis::get('fex'));
         $states=states::all();
     return view('Logged_pages.fex.fex',compact('states'));
+    }
+
+    public function getCompany(Request $request)
+    {
+        $type=$request->type;
+        $companies = companies::where('type',$type)->with('disable')->get();
+        return view('Logged_pages.fex.response.fex.compare.companies',compact('companies'));
     }
 
     public function compare(Request $request)
     {
         $states=states::all();
 
-        $companies = companies::with('disable')->get();
+
+        if ($request->type)
+        {
+            $type=$request->type;
+        }
+        else{
+            $type='levels';
+         }
+        $companies = companies::where('type',$type)->with('disable')->get();
 
         if ($request->gender) {
             $gender = $request->gender;
@@ -361,6 +380,7 @@ public $lang;
                     if ($testing_array['company_status' . $com->id . ''] == 1) {
                         $data[] = array(
                             'data' => $testing_array['company_record' . $com->id . ''],
+                            'amount' => $testing_array['company_record' . $com->id . '']->price,
                             'conditiondata' => $testing_array['condition_record' . $com->id . ''],
                             'level' => $testing_array['company_cat' . $com->id . ''],
                             'disable'=>$com->disable
@@ -390,10 +410,15 @@ public $lang;
             $datanot->values()->all();
 
 
+
+
             $data = collect($data);
             $data = $data->sortByDesc('level');
             $data->values()->all();
 
+//            $data = collect($data);
+//            $data = $data->sortBy('amount');
+//            $data->values()->all();
 
             return view('Logged_pages.fex.response.fex.quoter', compact('data', 'datanot', 'age', 'gender', 'face_amount', 'type', 'cigrate', 'year_data'));
 
@@ -409,6 +434,7 @@ public $lang;
                     $data[] = array(
 
                         'data' => $rec,
+                        'amount'=>$rec->price,
                         'disable'=>$com->disable
                     );
                 } else {
@@ -421,6 +447,11 @@ public $lang;
                 }
 
             }
+
+            $data = collect($data);
+            $data = $data->sortBy('amount');
+            $data->values()->all();
+
 
             return view('Logged_pages.fex.response.fex.quoter', compact('data', 'datanot', 'age', 'gender', 'face_amount', 'type', 'cigrate', 'year_data'));
         }
@@ -477,6 +508,7 @@ public $lang;
 
     public function medication_condition(Request $request)
     {
+
         $rec = Medication::where('medication_'.$this->lang.'', $request->name)->get();
         return view('Logged_pages.fex.response.fex.medication.medication_condition', compact('rec'));
 

@@ -4,6 +4,7 @@ namespace App\Http;
 
 use App\Http\Middleware\admin;
 use App\Http\Middleware\language;
+use App\Http\Middleware\paymentCheck;
 use App\Http\Middleware\user;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
@@ -44,7 +45,7 @@ class Kernel extends HttpKernel
 
         'api' => [
             // \Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful::class,
-            'throttle:api',
+            'throttle:150,1',
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
         ],
         'user' => [
@@ -55,6 +56,9 @@ class Kernel extends HttpKernel
         ],
         'lang' => [
             language::class,
+        ],
+        'payment' => [
+            paymentCheck::class,
         ],
     ];
 

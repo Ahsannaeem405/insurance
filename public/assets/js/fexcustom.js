@@ -387,7 +387,7 @@ var res=medicationCheck(id);
 if (res==true)
 {
     $.ajax({
-        type: 'get',
+        type: 'POST',
         url: "" + baseurl + "/user/get_medication_condition_fex",
         data: { 'name': name },
 
@@ -770,6 +770,37 @@ var response=true;
         }
 
     });
+
+
+    $("#company1").change(function(){
+        var type=$(this).val();
+        $.ajax({
+            type: 'get',
+            url: "" + baseurl + "/user/getCompany",
+            data: { 'type': type },
+            async: false,
+
+            success: function (response) {
+$('#com1').empty().append(response);
+            }
+        });
+    });
+
+
+    $("#company2").change(function(){
+        var type=$(this).val();
+        $.ajax({
+            type: 'get',
+            url: "" + baseurl + "/user/getCompany",
+            data: { 'type': type },
+            async: false,
+
+            success: function (response) {
+                $('#com2').empty().append(response);
+            }
+        });
+    });
+
 
     $(document).on('click', '.pushtocrm', function () {
 

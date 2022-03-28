@@ -206,7 +206,7 @@
                 <section class="ps-page-creator px-4 py-4">
                     <div class="row">
                         <div class="col-12 pt-3">
-                            <h3>Policy Summary Page Creator</h3>
+                            <h3>Policy Summary</h3>
 
                             <div class="row flex-lg-row-reverse">
                                 <div class="col-lg-4 col-12 mt-3">
@@ -312,35 +312,51 @@
                     <div class="row">
                         <div class="col-12 pt-3">
                             <h3>Agent Social Media Links</h3>
-
-                            <div class="row">
+                            <div class="row mt-3">
                                 <div class="col-12">
                                     <div class="row align-items-end ">
                                         <div class="col-lg-4 col-12  mt-0 mt-md-3">
-                                            <div class="form-group">
-                                                <label >Facebook</label>
-                                                <input type="text" value="{{$user->fb}}"  class="form-control py-2"  placeholder="Type Here">
+                                            <div class="form-group text-center">
+                                                <a href="{{$user->fb}}" target="_blank">
+                                                    <img src="{{asset('social/fb.png')}}" width="100" height="100" alt="">
+
+                                                </a>
                                             </div>
                                         </div>
                                         <div class="col-lg-4 col-12  mt-0 mt-md-3">
-                                            <div class="form-group">
-                                                <label >LinkedIn</label>
-                                                <input type="text" value="{{$user->linkin}}"  class="form-control py-2"  placeholder="Type Here">
+                                            <div class="form-group text-center">
+
+                                                <a href="{{$user->linkin}}" target="_blank">
+                                                    <img src="{{asset('social/Linkedin.png')}}" width="100" height="100" alt="">
+
+                                                </a>
+
+
                                             </div>
                                         </div>
                                         <div class="col-lg-4 col-12  mt-0 mt-md-3">
-                                            <div class="form-group">
-                                                <label >Twitter</label>
-                                                <input type="text" value="{{$user->twitter}}"  class="form-control py-2"  placeholder="Type Here">
+                                            <div class="form-group text-center">
+
+
+                                                <a href="{{$user->twitter}}" target="_blank">
+                                                    <img src="{{asset('social/twitter.png')}}" width="100" height="100" alt="">
+
+                                                </a>
+
                                             </div>
                                         </div>
 
 
                                         @foreach($links as $link)
                                             <div class="col-lg-4 col-12  mt-0 mt-md-3">
-                                                <div class="form-group">
-                                                    <label >Twitter</label>
-                                                    <input type="text" value="{{$link->link}}"  class="form-control py-2"  placeholder="Type Here">
+                                                <div class="form-group text-center">
+
+                                                    <a href="{{$link->link}}" target="_blank">
+                                                        <img src="{{asset('social/social.webp')}}" width="100" height="100" alt="">
+
+                                                    </a>
+
+
                                                 </div>
                                             </div>
                                         @endforeach

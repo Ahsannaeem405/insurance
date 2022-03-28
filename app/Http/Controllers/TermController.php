@@ -311,6 +311,7 @@ class TermController extends Controller
                     if ($testing_array['company_status' . $com->id . ''] == 1) {
                         $data[] = array(
                             'data' => $testing_array['company_record' . $com->id . ''],
+                            'amount' => $testing_array['company_record' . $com->id . '']->price,
                             'conditiondata' => $testing_array['condition_record' . $com->id . ''],
                             'level' => $testing_array['company_cat' . $com->id . ''],
                             'disable'=>$com->disableterm
@@ -344,6 +345,10 @@ class TermController extends Controller
             $data = $data->sortByDesc('level');
             $data->values()->all();
 
+//            $data = collect($data);
+//            $data = $data->sortBy('amount');
+//            $data->values()->all();
+
 
             return view('Logged_pages.term.response.term.quoter', compact('data', 'datanot', 'age', 'gender', 'face_amount', 'type', 'cigrate', 'year_data'));
 
@@ -359,6 +364,7 @@ class TermController extends Controller
                     $data[] = array(
 
                         'data' => $rec,
+                        'amount'=>$rec->price,
                         'disable'=>$com->disableterm
                     );
                 } else {
@@ -371,6 +377,10 @@ class TermController extends Controller
                 }
 
             }
+
+            $data = collect($data);
+            $data = $data->sortBy('amount');
+            $data->values()->all();
 
             return view('Logged_pages.term.response.term.quoter', compact('data', 'datanot', 'age', 'gender', 'face_amount', 'type', 'cigrate', 'year_data'));
         }

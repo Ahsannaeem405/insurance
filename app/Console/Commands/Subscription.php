@@ -1,26 +1,45 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Console\Commands;
 
 use App\Mail\SubscriptionAlert;
 use App\Models\Setting;
 use Carbon\Carbon;
-use Illuminate\Http\Request;
+use http\Client\Curl\User;
+use Illuminate\Console\Command;
 
-class HomeController extends Controller
+class Subscription extends Command
 {
     /**
-     * Create a new controller instance.
+     * The name and signature of the console command.
+     *
+     * @var string
+     */
+    protected $signature = 'Subscription:setting';
+
+    /**
+     * The console command description.
+     *
+     * @var string
+     */
+    protected $description = 'Command description';
+
+    /**
+     * Create a new command instance.
      *
      * @return void
      */
     public function __construct()
     {
-
-        $this->middleware('auth');
+        parent::__construct();
     }
 
-    public function testing()
+    /**
+     * Execute the console command.
+     *
+     * @return int
+     */
+    public function handle()
     {
         $pricing = Setting::first();
 
@@ -52,21 +71,6 @@ class HomeController extends Controller
 
             }
         }
-    }
 
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
-    public function index()
-    {
-        return view('home');
-    }
-
-    public function logout()
-    {
-        \Auth::logout();
-        return redirect('/');
     }
 }

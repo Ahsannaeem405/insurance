@@ -330,6 +330,7 @@ class AdminController extends Controller
                             $keyword->name = utf8_decode($importData[0]);
                             $keyword->tagline = utf8_decode($importData[1]);
                             $keyword->id = intval(utf8_decode($importData[2]));
+                            $keyword->type = (utf8_decode($importData[3]));
                             $keyword->save();
 
                         }
